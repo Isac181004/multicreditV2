@@ -1,0 +1,752 @@
+<?php
+// Cargar los estilos y librerías ANTES de encabezado.php.
+// El archivo encabezado.php utiliza clases Tailwind, por eso deben estar disponibles desde el inicio.
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEPRODEMIC MULTICREDIT - Créditos</title>
+    <script>
+        tailwind = window.tailwind || {};
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#2e9e43',
+                        'brand-green-dark': '#1c7a30',
+                        'brand-orange': '#f26e22'
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* ===== SIMULADOR: SOLO ESTILOS DEL BLOQUE DEL SIMULADOR ===== */
+        .simulator-section {
+            background: linear-gradient(180deg, #f7f9f8 0%, #eef3ef 100%);
+        }
+        .simulator-shell {
+            border: 1px solid #e3e9e4;
+            border-radius: 28px;
+            box-shadow: 0 22px 60px rgba(15, 23, 42, .09);
+            overflow: hidden;
+        }
+        .sim-card {
+            background: #fff;
+            border: 1px solid #e8ece9;
+            border-radius: 22px;
+        }
+        .sim-label {
+            color: #475569;
+            font-size: .82rem;
+            font-weight: 700;
+        }
+        .sim-number {
+            border: 1px solid #dbe3dd;
+            border-radius: 12px;
+            background: #fbfcfb;
+            color: #166534;
+            font-weight: 800;
+            padding: .55rem .7rem;
+            outline: none;
+        }
+        .sim-number:focus {
+            border-color: #2e9e43;
+            box-shadow: 0 0 0 4px rgba(46,158,67,.10);
+        }
+        .sim-range {
+            width: 100%;
+            accent-color: #2e9e43;
+            cursor: pointer;
+        }
+        .sim-result {
+            background:
+                radial-gradient(circle at 90% 8%, rgba(255,255,255,.16), transparent 25%),
+                linear-gradient(145deg, #176b2b 0%, #23863a 60%, #2e9e43 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .sim-result::after {
+            content: "";
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.06);
+            left: -105px;
+            bottom: -120px;
+        }
+        .sim-result > * { position: relative; z-index: 1; }
+        .sim-main-number {
+            font-size: clamp(2.3rem, 4vw, 3.25rem);
+            line-height: 1;
+            font-weight: 900;
+            letter-spacing: -.04em;
+        }
+        .sim-result-box {
+            background: rgba(255,255,255,.10);
+            border: 1px solid rgba(255,255,255,.14);
+            border-radius: 18px;
+        }
+        .sim-result-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,.13);
+        }
+        .sim-result-row:last-child { border-bottom: 0; }
+        .sim-muted { color: rgba(255,255,255,.70); }
+        .sim-chart-card {
+            background: #fff;
+            border: 1px solid #e7ece8;
+            border-radius: 20px;
+            padding: 18px;
+            min-height: 315px;
+        }
+        .sim-chart-wrap {
+            height: 235px;
+            position: relative;
+        }
+        .sim-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sim-table th {
+            background: #176b2b;
+            color: #fff;
+            padding: 12px 10px;
+            font-size: .72rem;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            text-align: right;
+            white-space: nowrap;
+        }
+        .sim-table th:first-child,
+        .sim-table td:first-child { text-align: center; }
+        .sim-table td {
+            padding: 10px;
+            border-bottom: 1px solid #edf1ee;
+            color: #475569;
+            font-size: .78rem;
+            text-align: right;
+            white-space: nowrap;
+        }
+        .sim-table tbody tr:nth-child(even) { background: #f8faf9; }
+        .sim-table tbody tr:hover { background: #edf8ef; }
+        .sim-toggle {
+            border: 1px solid #dbe5dd;
+            background: #fff;
+            color: #166534;
+        }
+        .sim-toggle:hover { background: #f0f8f2; }
+        .sim-whatsapp {
+            background: #20c765;
+            box-shadow: 0 10px 25px rgba(32,199,101,.18);
+        }
+        .sim-whatsapp:hover { background: #18ae56; }
+        @media (max-width: 767px) {
+            .simulator-shell { border-radius: 20px; }
+            .sim-chart-card { min-height: 290px; }
+            .sim-chart-wrap { height: 215px; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+
+<?php
+include 'encabezado.php';
+?>
+<section class="bg-gradient-to-r from-brand-green to-brand-green-dark text-white py-16 px-4 md:px-10 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+        <span class="bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Soluciones Rápidas</span>
+        <h1 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4 tracking-tight">Nuestras Líneas de Crédito</h1>
+        <p class="text-base md:text-xl text-green-100 max-w-2xl mx-auto font-light">
+            Financiamos tus metas con las tasas más competitivas del mercado. Elige el crédito que mejor se adapte a tus necesidades y haz crecer tu negocio hoy mismo.
+        </p>
+    </div>
+</section>
+
+<section class="py-16 px-4 md:px-10 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-4xl font-bold text-gray-800">Créditos Hechos a tu Medida</h2>
+        <p class="text-gray-600 mt-2">Evaluación inmediata y desembolsos rápidos para que no detengas tus proyectos.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center text-xl mb-4">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Crédito Emprendedor</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Diseñado exclusivamente para micro y pequeños empresarios. Ideal para la compra de mercadería, materia prima o ampliación de local.
+                </p>
+            </div>
+            <ul class="text-xs text-gray-500 space-y-2 border-t pt-4 mt-4">
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Capital de trabajo o activo fijo</li>
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Desembolso en menos de 48 horas</li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-green-100 text-brand-green flex items-center justify-center text-xl mb-4">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Crédito Agropecuario</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Apoyamos el desarrollo del campo. Financiamiento estructurado según tus periodos de siembra, cosecha o crianza de animales.
+                </p>
+            </div>
+            <ul class="text-xs text-gray-500 space-y-2 border-t pt-4 mt-4">
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Calendario de pagos flexible</li>
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Tasas preferenciales rurales</li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-4">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Crédito Personal</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Para libre disponibilidad. Afronta gastos imprevistos, estudios, viajes familiares, salud o consolidación de deudas.
+                </p>
+            </div>
+            <ul class="text-xs text-gray-500 space-y-2 border-t pt-4 mt-4">
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Mínimos requisitos sustentables</li>
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Plazos cómodos de pago</li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Mejora de Vivienda</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    Construye, techa, remodela o amplía tu hogar. Te ofrecemos el respaldo económico que necesitas para mejorar tu calidad de vida.
+                </p>
+            </div>
+            <ul class="text-xs text-gray-500 space-y-2 border-t pt-4 mt-4">
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Financiamiento por etapas</li>
+                <li><i class="fas fa-check text-brand-green mr-1"></i> Asesoría técnica opcional</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="simulador" class="simulator-section py-16 px-4 md:px-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="inline-flex items-center gap-2 bg-green-50 text-brand-green px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider">
+                <i class="fas fa-calculator"></i> Simulador financiero
+            </span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mt-4">Calcula tu crédito</h2>
+            <p class="text-gray-500 mt-3">
+                Ajusta el monto, plazo y tasa para conocer una cuota referencial y visualizar cómo evoluciona tu crédito.
+            </p>
+        </div>
+
+        <div class="simulator-shell bg-white">
+            <div class="grid grid-cols-1 lg:grid-cols-12">
+
+                <!-- CONTROLES -->
+                <div class="lg:col-span-4 p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-gray-200">
+                    <div class="flex items-center justify-between mb-7">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest text-gray-400 font-bold">Paso 1</span>
+                            <h3 class="text-xl font-extrabold text-gray-800 mt-1">Ajusta tu crédito</h3>
+                        </div>
+                        <div class="w-11 h-11 rounded-xl bg-green-50 text-brand-green flex items-center justify-center">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-7">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="sim-label">Monto a solicitar</label>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-xs font-bold text-gray-400">S/</span>
+                                    <input type="number" id="monto-input" value="5000" min="500" max="50000" step="100"
+                                           class="sim-number w-28 text-right">
+                                </div>
+                            </div>
+                            <input type="range" id="monto-slider" min="500" max="50000" step="100" value="5000" class="sim-range">
+                            <div class="flex justify-between text-[10px] text-gray-400 mt-2"><span>S/ 500</span><span>S/ 50,000</span></div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="sim-label">Plazo de pago</label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="plazo-input" value="12" min="1" max="36"
+                                           class="sim-number w-20 text-right">
+                                    <span class="text-xs font-bold text-gray-400">meses</span>
+                                </div>
+                            </div>
+                            <input type="range" id="plazo-slider" min="1" max="36" value="12" class="sim-range">
+                            <div class="flex justify-between text-[10px] text-gray-400 mt-2"><span>1 mes</span><span>36 meses</span></div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="sim-label">Tasa efectiva mensual</label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="tasa-input" value="3.6" min="3.0" max="4.0" step="0.1"
+                                           class="sim-number w-20 text-right">
+                                    <span class="text-xs font-bold text-gray-400">%</span>
+                                </div>
+                            </div>
+                            <input type="range" id="tasa-slider" min="3.0" max="4.0" step="0.1" value="3.6" class="sim-range">
+                            <div class="flex justify-between text-[10px] text-gray-400 mt-2"><span>3.0%</span><span>4.0%</span></div>
+                        </div>
+
+                        <div class="bg-gray-50 border border-gray-100 rounded-2xl p-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-white text-brand-green flex items-center justify-center shadow-sm">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-700">Simulación referencial</p>
+                                    <p class="text-[11px] leading-relaxed text-gray-500 mt-1">El resultado puede variar según evaluación, condiciones y políticas de crédito.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="requisitosBtn" class="w-full bg-gray-800 hover:bg-gray-900 text-white text-xs font-bold py-3 px-4 rounded-xl transition shadow flex items-center justify-center">
+                            <i class="fas fa-file-alt mr-2"></i> VER REQUISITOS GENERALES
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RESULTADO -->
+                <div class="lg:col-span-4 p-6 md:p-8 sim-result">
+                    <div class="flex items-center justify-between mb-7">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest sim-muted font-bold">Paso 2</span>
+                            <h3 class="text-xl font-extrabold text-white mt-1">Tu resultado</h3>
+                        </div>
+                        <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+
+                    <div class="sim-result-box p-6 text-center">
+                        <span class="text-[11px] uppercase tracking-widest sim-muted font-bold">Cuota mensual fija</span>
+                        <div id="cuota-display" class="sim-main-number mt-3">S/ 0.00</div>
+                        <p class="text-[11px] sim-muted mt-3">Estimación de cuota mensual</p>
+                    </div>
+
+                    <div class="mt-5">
+                        <div class="sim-result-row">
+                            <span class="text-sm sim-muted">Capital solicitado</span>
+                            <strong id="capital-display" class="text-base">S/ 0.00</strong>
+                        </div>
+                        <div class="sim-result-row">
+                            <span class="text-sm sim-muted">Intereses aproximados</span>
+                            <strong id="interes-display" class="text-base">S/ 0.00</strong>
+                        </div>
+                        <div class="sim-result-row">
+                            <span class="text-sm font-bold">Total a pagar</span>
+                            <strong id="total-display" class="text-lg">S/ 0.00</strong>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 mt-6">
+                        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                            <span class="text-[10px] sim-muted uppercase font-bold block">Tasa mensual</span>
+                            <strong id="tasa-resumen" class="text-sm block mt-1">3.6%</strong>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                            <span class="text-[10px] sim-muted uppercase font-bold block">Plazo</span>
+                            <strong id="plazo-resumen" class="text-sm block mt-1">12 meses</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOLICITUD -->
+                <div class="lg:col-span-4 p-6 md:p-8">
+                    <div class="flex items-center justify-between mb-7">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest text-gray-400 font-bold">Paso 3</span>
+                            <h3 class="text-xl font-extrabold text-gray-800 mt-1">Solicita tu crédito</h3>
+                        </div>
+                        <div class="w-11 h-11 rounded-xl bg-green-50 text-green-500 flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </div>
+                    </div>
+
+                    <form id="wa-form" class="space-y-4">
+                        <div>
+                            <label class="text-xs font-bold text-gray-600 block mb-1.5">Nombres y Apellidos</label>
+                            <input type="text" id="wa-nombre" required placeholder="Ej. Juan Pérez"
+                                   class="w-full border border-gray-200 rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-brand-green focus:ring-4 focus:ring-green-50">
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-gray-600 block mb-1.5">¿Tienes un negocio? / Ocupación</label>
+                            <input type="text" id="wa-negocio" required placeholder="Ej. Tienda de abarrotes"
+                                   class="w-full border border-gray-200 rounded-xl px-3.5 py-3 text-sm focus:outline-none focus:border-brand-green focus:ring-4 focus:ring-green-50">
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-gray-600 block mb-1.5">Monto de validación</label>
+                            <input type="text" id="wa-monto" readonly
+                                   class="w-full border border-gray-200 bg-gray-50 rounded-xl px-3.5 py-3 text-sm font-extrabold text-brand-green">
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-gray-600 block mb-1.5">Oficina más cercana</label>
+                            <select id="wa-oficina" required
+                                    class="w-full border border-gray-200 rounded-xl px-3.5 py-3 text-sm bg-white focus:outline-none focus:border-brand-green focus:ring-4 focus:ring-green-50">
+                                <option value="Cajamarca">Sede Principal - Cajamarca</option>
+                                <option value="Huamachuco">Agencia Huamachuco</option>
+                                <option value="Cajabamba">Agencia Cajabamba</option>
+                                <option value="San Marcos">Agencia San Marcos</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="sim-whatsapp w-full text-white font-bold py-3.5 px-4 rounded-xl transition uppercase text-xs tracking-wider flex items-center justify-center mt-2">
+                            <i class="fab fa-whatsapp text-lg mr-2"></i> Enviar a un asesor
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- GRÁFICOS -->
+            <div class="p-6 md:p-8 bg-gray-50 border-t border-gray-200">
+                <div class="flex items-center justify-between mb-5">
+                    <div>
+                        <span class="text-[11px] uppercase tracking-widest text-gray-400 font-bold">Análisis</span>
+                        <h3 class="text-xl font-extrabold text-gray-800 mt-1">Conoce mejor tu crédito</h3>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-2 text-xs text-gray-400">
+                        <i class="fas fa-chart-pie text-brand-green"></i> Visualización referencial
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-5">
+                    <div class="sim-chart-card">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Distribución del pago</h4>
+                                <p class="text-xs text-gray-400 mt-1">Capital frente a intereses</p>
+                            </div>
+                            <span class="w-9 h-9 rounded-lg bg-green-50 text-brand-green flex items-center justify-center"><i class="fas fa-chart-pie"></i></span>
+                        </div>
+                        <div class="sim-chart-wrap mt-3">
+                            <canvas id="cost-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="sim-chart-card">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Evolución del saldo</h4>
+                                <p class="text-xs text-gray-400 mt-1">Reducción estimada de la deuda</p>
+                            </div>
+                            <span class="w-9 h-9 rounded-lg bg-orange-50 text-brand-orange flex items-center justify-center"><i class="fas fa-chart-line"></i></span>
+                        </div>
+                        <div class="sim-chart-wrap mt-3">
+                            <canvas id="balance-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLA -->
+                <div class="sim-card mt-5 overflow-hidden">
+                    <div class="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <div>
+                            <h4 class="font-extrabold text-gray-800">Tabla de amortización</h4>
+                            <p class="text-xs text-gray-400 mt-1">Detalle estimado de cada cuota.</p>
+                        </div>
+                        <button id="toggle-amort" type="button" class="sim-toggle px-4 py-2 rounded-xl text-xs font-bold transition">
+                            <i class="fas fa-table mr-2"></i> Ver tabla
+                        </button>
+                    </div>
+
+                    <div id="amort-container" class="hidden border-t border-gray-100">
+                        <div class="overflow-x-auto">
+                            <table class="sim-table">
+                                <thead>
+                                    <tr>
+                                        <th>Cuota</th>
+                                        <th>Pago</th>
+                                        <th>Interés</th>
+                                        <th>Capital</th>
+                                        <th>Saldo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="amort-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="panelRequisitos" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden animate-[fadeIn_0.2s_ease-out]">
+        <div class="bg-gray-800 text-white p-4 flex justify-between items-center">
+            <h4 class="font-bold text-sm uppercase tracking-wide"><i class="fas fa-file-invoice mr-2 text-brand-orange"></i>Requisitos Generales</h4>
+            <button id="cerrarPanel" class="text-white hover:text-brand-orange text-lg focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="p-6 space-y-4 text-sm text-gray-600 leading-relaxed">
+            <p class="font-semibold text-gray-800 border-b pb-1">Para Personas Naturales o Negocios:</p>
+            <ul class="space-y-2.5 list-none pl-0">
+                <div class="flex items-start"><i class="fas fa-id-card text-brand-green mt-1 mr-3 text-xs"></i><li>Copia de DNI vigente (titular y cónyuge en caso aplique).</li></div>
+                <div class="flex items-start"><i class="fas fa-receipt text-brand-green mt-1 mr-3 text-xs"></i><li>Recibo de servicios públicos (Luz o Agua) de tu domicilio actual.</li></div>
+                <div class="flex items-start"><i class="fas fa-file-signature text-brand-green mt-1 mr-3 text-xs"></i><li>Documentos que acrediten tus ingresos (Boletas de compra, facturas, cuadernos de control o constancias).</li></div>
+                <div class="flex items-start"><i class="fas fa-map-marker-alt text-brand-green mt-1 mr-3 text-xs"></i><li>Tener una antigüedad mínima de 6 meses operando tu negocio o actividad productiva en la región.</li></div>
+            </ul>
+            <div class="bg-orange-50 border-l-4 border-brand-orange p-3 rounded text-xs text-brand-orange mt-4">
+                <i class="fas fa-exclamation-circle mr-1"></i> <strong>Sujeto a evaluación:</strong> Recuerda que tu asesor técnico de campo te visitará para darte las máximas facilidades de trámite.
+            </div>
+        </div>
+        <div class="bg-gray-50 px-6 py-3 flex justify-end border-t">
+            <button onclick="document.getElementById('panelRequisitos').classList.add('hidden')" class="bg-brand-green hover:bg-green-700 text-white text-xs font-bold py-2 px-5 rounded-lg transition shadow">Entendido</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const $ = (id) => document.getElementById(id);
+    const montoInput = $('monto-input');
+    const montoSlider = $('monto-slider');
+    const plazoInput = $('plazo-input');
+    const plazoSlider = $('plazo-slider');
+    const tasaInput = $('tasa-input');
+    const tasaSlider = $('tasa-slider');
+
+    let costChart = null;
+    let balanceChart = null;
+
+    const money = (n) => 'S/ ' + Number(n || 0).toLocaleString('es-PE', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
+    function clamp(v, min, max) {
+        return Math.min(max, Math.max(min, v));
+    }
+
+    function syncPair(input, slider, min, max, step) {
+        input.addEventListener('input', () => {
+            let value = parseFloat(input.value);
+            if (!Number.isFinite(value)) return;
+            value = clamp(value, min, max);
+            slider.value = value;
+            input.value = value;
+            calcular();
+        });
+        slider.addEventListener('input', () => {
+            input.value = slider.value;
+            calcular();
+        });
+    }
+
+    syncPair(montoInput, montoSlider, 500, 50000, 100);
+    syncPair(plazoInput, plazoSlider, 1, 36, 1);
+    syncPair(tasaInput, tasaSlider, 3.0, 4.0, 0.1);
+
+    function calcular() {
+        const P = Number(montoInput.value);
+        const n = Number(plazoInput.value);
+        const tasa = Number(tasaInput.value);
+        const i = tasa / 100;
+
+        if (!P || !n || !i) return;
+
+        const cuota = P * (i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
+        const total = cuota * n;
+        const intereses = total - P;
+
+        $('cuota-display').textContent = money(cuota);
+        $('capital-display').textContent = money(P);
+        $('interes-display').textContent = money(intereses);
+        $('total-display').textContent = money(total);
+        $('tasa-resumen').textContent = tasa.toFixed(1) + '%';
+        $('plazo-resumen').textContent = n + (n === 1 ? ' mes' : ' meses');
+        $('wa-monto').value = money(P);
+
+        const rows = [];
+        let saldo = P;
+
+        for (let k = 1; k <= n; k++) {
+            const interesMes = saldo * i;
+            let amortizacion = cuota - interesMes;
+            let pago = cuota;
+
+            if (k === n) {
+                amortizacion = saldo;
+                pago = amortizacion + interesMes;
+            }
+
+            saldo = Math.max(0, saldo - amortizacion);
+
+            rows.push({
+                cuota: k,
+                pago,
+                interes: interesMes,
+                capital: amortizacion,
+                saldo
+            });
+        }
+
+        $('amort-body').innerHTML = rows.map(r => `
+            <tr>
+                <td>${r.cuota}</td>
+                <td>${money(r.pago)}</td>
+                <td>${money(r.interes)}</td>
+                <td>${money(r.capital)}</td>
+                <td>${money(r.saldo)}</td>
+            </tr>
+        `).join('');
+
+        actualizarGraficos(P, intereses, rows);
+    }
+
+    function actualizarGraficos(P, intereses, rows) {
+        if (typeof Chart === 'undefined') return;
+
+        if (costChart) costChart.destroy();
+        if (balanceChart) balanceChart.destroy();
+
+        const costCtx = $('cost-chart').getContext('2d');
+        costChart = new Chart(costCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Capital', 'Intereses'],
+                datasets: [{
+                    data: [P, Math.max(0, intereses)],
+                    backgroundColor: ['#2e9e43', '#f26e22'],
+                    borderWidth: 0,
+                    hoverOffset: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '68%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { usePointStyle: true, padding: 18, font: { size: 12 } }
+                    }
+                }
+            }
+        });
+
+        const balanceCtx = $('balance-chart').getContext('2d');
+        balanceChart = new Chart(balanceCtx, {
+            type: 'line',
+            data: {
+                labels: ['Inicio', ...rows.map(r => 'C' + r.cuota)],
+                datasets: [{
+                    label: 'Saldo',
+                    data: [P, ...rows.map(r => r.saldo)],
+                    borderColor: '#2e9e43',
+                    backgroundColor: 'rgba(46,158,67,.10)',
+                    fill: true,
+                    tension: .35,
+                    pointRadius: 2,
+                    pointHoverRadius: 5,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'index', intersect: false },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => 'S/ ' + Number(value).toLocaleString('es-PE')
+                        },
+                        grid: { color: '#edf1ee' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { maxTicksLimit: 8 }
+                    }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    }
+
+    $('toggle-amort').addEventListener('click', function () {
+        const box = $('amort-container');
+        const visible = !box.classList.contains('hidden');
+        box.classList.toggle('hidden');
+        this.innerHTML = visible
+            ? '<i class="fas fa-table mr-2"></i> Ver tabla'
+            : '<i class="fas fa-chevron-up mr-2"></i> Ocultar tabla';
+    });
+
+    $('wa-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nombre = $('wa-nombre').value.trim();
+        const negocio = $('wa-negocio').value.trim();
+        const monto = $('monto-input').value;
+        const plazo = $('plazo-input').value;
+        const tasa = $('tasa-input').value;
+        const cuota = $('cuota-display').textContent;
+        const oficina = $('wa-oficina').value;
+
+        const mensaje = `Hola, deseo solicitar información sobre un crédito.%0A%0A` +
+            `Nombre: ${encodeURIComponent(nombre)}%0A` +
+            `Ocupación/Negocio: ${encodeURIComponent(negocio)}%0A` +
+            `Monto: S/ ${encodeURIComponent(Number(monto).toLocaleString('es-PE'))}%0A` +
+            `Plazo: ${encodeURIComponent(plazo)} meses%0A` +
+            `Tasa mensual: ${encodeURIComponent(tasa)}%%0A` +
+            `Cuota referencial: ${encodeURIComponent(cuota)}%0A` +
+            `Oficina: ${encodeURIComponent(oficina)}`;
+
+        window.open('https://wa.me/51968876759?text=' + mensaje, '_blank');
+    });
+
+    const btnReq = $('requisitosBtn');
+    const panel = $('panelRequisitos');
+    const cerrar = $('cerrarPanel');
+
+    if (btnReq && panel && cerrar) {
+        btnReq.addEventListener('click', () => panel.classList.remove('hidden'));
+        cerrar.addEventListener('click', () => panel.classList.add('hidden'));
+        panel.addEventListener('click', (e) => {
+            if (e.target === panel) panel.classList.add('hidden');
+        });
+    }
+
+    calcular();
+});
+</script>
+
+<?php include 'footer.php'; ?>

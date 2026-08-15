@@ -1,0 +1,1 @@
+V4: simulador V2 con panel de resultados reforzado por CSS explícito para evitar que quede invisible si Tailwind no genera colores personalizados.

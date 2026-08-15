@@ -1,0 +1,18 @@
+SIMULADOR V3 - AL REBATIR / CUOTA FIJA
+
+Se actualizó el motor para:
+- Calcular interés sobre saldo insoluto.
+- Calcular el interés por días reales del período: saldo x tasa mensual x días / 30.
+- Generar fechas mensuales a partir de la fecha de emisión.
+- Resolver la cuota fija considerando los períodos reales.
+- Redondear la cuota regular al sol superior.
+- Ajustar la última cuota para cerrar el saldo en cero.
+- Mostrar fecha y días de cada período en la tabla.
+- Mantener Diario con 18.55% total en 30 días.
+
+Prueba patrón de la captura:
+S/ 1,000 | 3.6% | 6 meses | emisión 11/08/2026
+Debe quedar muy próximo a:
+189.00, 189.00, 189.00, 189.00, 189.00, 187.36
+Interés total: 132.36
+Total: 1,132.36

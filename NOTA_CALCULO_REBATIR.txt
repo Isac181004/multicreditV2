@@ -1,0 +1,18 @@
+METODOLOGÍA ACTUALIZADA
+
+La evidencia del cronograma real muestra que el interés de 31 días
+no coincide con 3.6% x 31/30 (37.20), sino con aproximadamente 37.22.
+Esto coincide con una tasa mensual efectiva prorateada:
+
+Interés = saldo * ((1 + tasa_mensual)^(días/30) - 1)
+
+Además:
+- interés sobre saldo insoluto;
+- cuota regular fija y redondeada al sol superior;
+- última cuota ajustada;
+- fechas mensuales reales;
+- días reales entre vencimientos.
+
+Prueba de referencia:
+S/ 1,000 | 3.6% | 6 meses | 11/08/2026.
+El cronograma debe compararse con el sistema legado de la captura.
