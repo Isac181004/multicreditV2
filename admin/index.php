@@ -1,8 +1,39 @@
 <?php
-require_once __DIR__ . '/_init.php'; mc_admin_require_login();
-$news=mc_news(false); $pub=count(array_filter($news,function($n){return !empty($n['published']);}));
-$uploads=0; foreach(['news','media'] as $d){$dir=MC_ROOT.'/uploads/'.$d;if(is_dir($dir)){$files=glob($dir.'/*');$uploads+=is_array($files)?count($files):0;}}
-$site=mc_site(); mc_admin_header('Dashboard'); ?>
-<div class="grid stats"><div class="card stat"><b><?=count($news)?></b><small>Noticias registradas</small></div><div class="card stat"><b><?=$pub?></b><small>Noticias publicadas</small></div><div class="card stat"><b><?=$uploads?></b><small>Imágenes subidas</small></div><div class="card stat"><b>JSON</b><small>Base de contenido · sin SQL</small></div></div>
-<div class="grid" style="grid-template-columns:1.2fr .8fr;margin-top:18px"><section class="card"><h2>Acciones rápidas</h2><div class="actions"><a class="btn primary" href="noticias.php?new=1">+ Nueva noticia</a><a class="btn light" href="contenido.php">Editar página principal</a><a class="btn light" href="media.php">Subir imágenes</a><a class="btn orange" target="_blank" href="../index.php">Ver sitio</a></div><p class="help" style="margin-top:18px">Los cambios de contenido y noticias se guardan en archivos JSON. No necesita MySQL ni phpMyAdmin.</p></section><section class="card"><h2>Datos públicos actuales</h2><p><b><?=mc_h($site['brand_name'])?></b></p><p class="help"><?=mc_nl2br($site['address'])?></p><p class="help"><?=mc_h($site['email'])?> · <?=mc_h($site['phone1'])?></p></section></div>
+require_once __DIR__ . '/_init.php';
+mc_admin_require_login();
+$news=mc_news(false);
+$pub=count(array_filter($news,function($n){return !empty($n['published']);}));
+$uploads=0;
+foreach(['news','media','logo','hero','home','modules'] as $d){$dir=MC_ROOT.'/uploads/'.$d;if(is_dir($dir)){$files=glob($dir.'/*');$uploads+=is_array($files)?count($files):0;}}
+$site=mc_site();
+$pages=mc_pages();
+$customized=count(array_filter($pages,function($p){return is_array($p)&&!empty($p['enabled']);}));
+mc_admin_header('Dashboard'); ?>
+<div class="grid stats">
+  <div class="card stat"><b><?=$customized?></b><small>Módulos personalizados</small></div>
+  <div class="card stat"><b><?=count($news)?></b><small>Noticias registradas</small></div>
+  <div class="card stat"><b><?=$pub?></b><small>Noticias publicadas</small></div>
+  <div class="card stat"><b><?=$uploads?></b><small>Imágenes subidas</small></div>
+</div>
+<div class="grid" style="grid-template-columns:1.25fr .75fr;margin-top:18px">
+  <section class="card">
+    <h2>Edición total del sitio</h2>
+    <div class="actions">
+      <a class="btn primary" href="modulos.php">▦ Editar módulos</a>
+      <a class="btn light" href="encabezado.php">▤ Editar encabezado</a>
+      <a class="btn light" href="pie.php">▥ Editar pie de página</a>
+      <a class="btn light" href="contenido.php">✎ Editar inicio</a>
+      <a class="btn light" href="noticias.php">📰 Gestionar noticias</a>
+      <a class="btn orange" target="_blank" href="../index.php">↗ Ver sitio</a>
+    </div>
+    <p class="help" style="margin-top:18px">El editor por módulos trabaja sobre configuración CMS y puede reemplazar el contenido central de cada página sin tocar directamente su archivo PHP. El encabezado y el pie tienen editores independientes.</p>
+  </section>
+  <section class="card">
+    <h2>Datos institucionales</h2>
+    <p><b><?=mc_h($site['brand_name'])?></b></p>
+    <p class="help"><?=mc_nl2br($site['address1']??'')?></p>
+    <p class="help"><?=mc_h($site['email']??'')?> · <?=mc_h($site['telefono']??'')?></p>
+    <p class="help" style="margin-top:12px">Recuperación por WhatsApp: <?=trim((string)(mc_admin_credentials()['recoveryPhone']??''))!==''?'configurada':'pendiente de configurar'?></p>
+  </section>
+</div>
 <?php mc_admin_footer(); ?>
