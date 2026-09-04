@@ -82,7 +82,7 @@ $mcOverlayLogged = mc_admin_logged_in();
   if(close)close.addEventListener('click',hide);
   overlay.addEventListener('click',function(e){if(e.target===overlay)hide()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open'))hide()});
-  document.querySelectorAll('[data-mc-admin-open]').forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();open()})});
+  document.addEventListener('click',function(e){var el=e.target.closest?e.target.closest('[data-mc-admin-open]'):null;if(el){e.preventDefault();open();}});
 
   var tabs=overlay.querySelectorAll('.mc-admin-tab');
   tabs.forEach(function(tab){tab.addEventListener('click',function(){
@@ -115,5 +115,6 @@ $mcOverlayLogged = mc_admin_logged_in();
   });
   submitAjax(resetForm,function(data){if(data.redirect)window.location.href=data.redirect});
   var resend=document.getElementById('mc-admin-resend-code');if(resend)resend.addEventListener('click',function(){if(resetForm)resetForm.style.display='none';if(requestForm)requestForm.style.display='block';clearMsg()});
+  try{var params=new URLSearchParams(window.location.search);if(params.get('admin_login')==='1'||window.location.hash==='#admin'){setTimeout(open,0)}}catch(e){}
 })();
 </script>
