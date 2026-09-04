@@ -1218,7 +1218,7 @@
          
 
         <a
-            href="index.php"
+            href="<?= mc_h($mcSiteHeader['nav_home_url']) ?>"
             class="mc-logo"
             aria-label="CEPRODEMIC MULTICREDIT"
         >
@@ -1235,18 +1235,18 @@
 
         <nav class="mc-desktop-nav">
 
-            <a href="index.php">
-                Inicio
+            <a href="<?= mc_h($mcSiteHeader['nav_home_url']) ?>">
+                <?= mc_h($mcSiteHeader['nav_home_label']) ?>
             </a>
 
             <div class="mc-credit-menu">
 
                 <a
-                    href="creditos.php"
+                    href="<?= mc_h($mcSiteHeader['nav_credits_url']) ?>"
                     class="mc-credit-trigger"
                     aria-haspopup="true"
                 >
-                    Créditos
+                    <?= mc_h($mcSiteHeader['nav_credits_label']) ?>
 
                     <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </a>
@@ -1263,11 +1263,11 @@
                             <div>
 
                                 <strong>
-                                    Encuentra el crédito ideal para ti
+                                    <?= mc_h($mcSiteHeader['credit_mega_title']) ?>
                                 </strong>
 
                                 <span>
-                                    Soluciones para impulsar tu negocio y cumplir tus objetivos.
+                                    <?= mc_h($mcSiteHeader['credit_mega_subtitle']) ?>
                                 </span>
 
                             </div>
@@ -1275,9 +1275,9 @@
                         </div>
 
 
-                        <a href="creditos.php" class="mc-credit-mega-all">
+                        <a href="<?= mc_h($mcSiteHeader['credit_mega_all_url']) ?>" class="mc-credit-mega-all">
 
-                            Ver todos los créditos
+                            <?= mc_h($mcSiteHeader['credit_mega_all_label']) ?>
 
                             <i class="fas fa-arrow-right" aria-hidden="true"></i>
 
@@ -1294,22 +1294,22 @@
 
                                 <i class="fas fa-store" aria-hidden="true"></i>
 
-                                Crédito Microempresa
+                                <?= mc_h($mcSiteHeader['credit_micro_title']) ?>
 
                             </div>
 
 
                             <div class="mc-credit-grid">
 
-                                <a href="credito-ordinario.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_ordinario_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-briefcase" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Crédito Ordinario</strong>
-                                        <small>Capital flexible para tu negocio.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_ordinario_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_ordinario_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1317,15 +1317,15 @@
                                 </a>
 
 
-                                <a href="credito-diario.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_diario_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-calendar-day" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Crédito Diario</strong>
-                                        <small>Cuotas adaptadas al flujo diario.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_diario_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_diario_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1333,15 +1333,15 @@
                                 </a>
 
 
-                                <a href="crediempeno.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_empeno_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-gem" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Crediempeño</strong>
-                                        <small>Liquidez con respaldo prendario.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_empeno_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_empeno_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1349,15 +1349,15 @@
                                 </a>
 
 
-                                <a href="credimoto.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_moto_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-motorcycle" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Credimoto</strong>
-                                        <small>Financia la moto que necesitas.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_moto_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_moto_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1365,15 +1365,15 @@
                                 </a>
 
 
-                                <a href="credito-grupal.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_grupal_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-people-group" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Crédito Grupal</strong>
-                                        <small>Bancos comunales y grupos solidarios.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_grupal_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_grupal_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1391,22 +1391,22 @@
 
                                 <i class="fas fa-house-user" aria-hidden="true"></i>
 
-                                Crédito Consumo
+                                <?= mc_h($mcSiteHeader['credit_consumo_title']) ?>
 
                             </div>
 
 
                             <div class="mc-credit-grid mc-credit-grid-consumo">
 
-                                <a href="educacion.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_educacion_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Educación</strong>
-                                        <small>Invierte en estudios y capacitación.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_educacion_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_educacion_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1414,15 +1414,15 @@
                                 </a>
 
 
-                                <a href="salud.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_salud_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-heart-pulse" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Salud</strong>
-                                        <small>Respaldo para cuidar a tu familia.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_salud_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_salud_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1430,15 +1430,15 @@
                                 </a>
 
 
-                                <a href="esparcimiento.php" class="mc-credit-card">
+                                <a href="<?= mc_h($mcSiteHeader['credit_esparcimiento_url']) ?>" class="mc-credit-card">
 
                                     <span class="mc-credit-card-icon">
                                         <i class="fas fa-umbrella-beach" aria-hidden="true"></i>
                                     </span>
 
                                     <span>
-                                        <strong>Esparcimiento</strong>
-                                        <small>Haz realidad tus planes personales.</small>
+                                        <strong><?= mc_h($mcSiteHeader['credit_esparcimiento_label']) ?></strong>
+                                        <small><?= mc_h($mcSiteHeader['credit_esparcimiento_desc']) ?></small>
                                     </span>
 
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -1455,18 +1455,18 @@
 
             </div>
 
-            <a href="servicios.php">
-                Servicios
+            <a href="<?= mc_h($mcSiteHeader['nav_services_url']) ?>">
+                <?= mc_h($mcSiteHeader['nav_services_label']) ?>
             </a>
 
-            <a href="conocenos.php">
-                Nosotros
+            <a href="<?= mc_h($mcSiteHeader['nav_about_url']) ?>">
+                <?= mc_h($mcSiteHeader['nav_about_label']) ?>
             </a>
 
-            <a href="contacto.php">
-                Contacto
+            <a href="<?= mc_h($mcSiteHeader['nav_contact_url']) ?>">
+                <?= mc_h($mcSiteHeader['nav_contact_label']) ?>
             </a>
-            <a href="admin/login.php">
+            <a href="#admin" data-mc-admin-open aria-label="Abrir administración">
                 👤
             </a>
 
@@ -1476,7 +1476,7 @@
          
 
         <a
-            href="https://wa.me/51968782473?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20un%20cr%C3%A9dito."
+            href="<?= mc_h($mcSiteHeader['header_cta_url']) ?>"
             target="_blank"
             rel="noopener noreferrer"
             class="mc-header-button"
@@ -1484,7 +1484,7 @@
 
             <i class="fab fa-whatsapp"></i>
 
-            Solicitar crédito
+            <?= mc_h($mcSiteHeader['header_cta_label']) ?>
 
         </a>
 
@@ -1512,16 +1512,16 @@
     <nav id="mc-mobile-menu">
 
 
-        <a href="index.php">
+        <a href="<?= mc_h($mcSiteHeader['nav_home_url']) ?>">
 
             <i class="fas fa-house"></i>
 
-            Inicio
+            <?= mc_h($mcSiteHeader['nav_home_label']) ?>
 
         </a>
 
 
-        <a href="creditos.php">
+        <a href="<?= mc_h($mcSiteHeader['nav_credits_url']) ?>">
 
             <i class="fas fa-hand-holding-dollar"></i>
 
@@ -1530,35 +1530,40 @@
         </a>
 
 
-        <a href="servicios.php">
+        <a href="<?= mc_h($mcSiteHeader['nav_services_url']) ?>">
 
             <i class="fas fa-layer-group"></i>
 
-            Servicios
+            <?= mc_h($mcSiteHeader['nav_services_label']) ?>
 
         </a>
 
 
-        <a href="conocenos.php">
+        <a href="<?= mc_h($mcSiteHeader['nav_about_url']) ?>">
 
             <i class="fas fa-building"></i>
 
-            Nosotros
+            <?= mc_h($mcSiteHeader['nav_about_label']) ?>
 
         </a>
 
 
-        <a href="contacto.php">
+        <a href="<?= mc_h($mcSiteHeader['nav_contact_url']) ?>">
 
             <i class="fas fa-headset"></i>
 
-            Contacto
+            <?= mc_h($mcSiteHeader['nav_contact_label']) ?>
 
+        </a>
+
+        <a href="#admin" data-mc-admin-open class="mobile-admin">
+            <i class="fas fa-user-shield"></i>
+            Administración
         </a>
 
 
         <a
-            href="https://wa.me/51968782473?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20un%20cr%C3%A9dito."
+            href="<?= mc_h($mcSiteHeader['header_cta_url']) ?>"
             target="_blank"
             rel="noopener noreferrer"
             class="mobile-whatsapp"
@@ -1566,7 +1571,7 @@
 
             <i class="fab fa-whatsapp"></i>
 
-            Solicitar crédito
+            <?= mc_h($mcSiteHeader['header_cta_label']) ?>
 
         </a>
 
@@ -1575,6 +1580,7 @@
 
 </header>
 
+<?php require_once __DIR__ . '/admin/login_overlay.php'; mc_render_module_runtime(); ?>
 
 <script>
 
