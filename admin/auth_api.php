@@ -16,10 +16,28 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     mc_auth_json(false, 'Método no permitido.', [], 405);
 }
 
-try {
-    mc_csrf_check(true);
-} catch (Throwable $e) {
-    mc_auth_json(false, 'La sesión expiró. Recarga la página e inténtalo nuevamente.', [], 419);
+/*
+ * El login overlay puede renderizarse dentro de módulos que ya enviaron HTML
+ * antes de cargar el encabezado. En ese caso no es seguro depender de un CSRF
+ * generado tarde en esa misma página porque la sesión puede no haber iniciado
+ * a tiempo. Para este endpoint AJAX validamos que la petición venga del mismo
+ * sitio y que sea la llamada XMLHttpRequest esperada. Los formularios internos
+ * del panel continúan usando mc_csrf_check().
+ */
+$requestedWith = strtolower(trim((string)($_SERVER['HTTP_X_REQUESTED_WITH'] ?? '')));
+if ($requestedWith !== 'xmlhttprequest') {
+    mc_auth_json(false, 'Solicitud no válida.', [], 403);
+}
+
+$host = strtolower(preg_replace('/:\d+$/', '', (string)($_SERVER['HTTP_HOST'] ?? '')));
+$origin = trim((string)($_SERVER['HTTP_ORIGIN'] ?? ''));
+$referer = trim((string)($_SERVER['HTTP_REFERER'] ?? ''));
+$sourceUrl = $origin !== '' ? $origin : $referer;
+if ($sourceUrl !== '') {
+    $sourceHost = strtolower((string)parse_url($sourceUrl, PHP_URL_HOST));
+    if ($sourceHost !== '' && $host !== '' && !hash_equals($host, $sourceHost)) {
+        mc_auth_json(false, 'Origen de solicitud no permitido.', [], 403);
+    }
 }
 
 $action = trim((string)($_POST['action'] ?? ''));
