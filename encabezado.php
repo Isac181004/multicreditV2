@@ -1525,7 +1525,7 @@
 
             <i class="fas fa-hand-holding-dollar"></i>
 
-            Créditos
+            <?= mc_h($mcSiteHeader['nav_credits_label']) ?>
 
         </a>
 
