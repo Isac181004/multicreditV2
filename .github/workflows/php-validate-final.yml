@@ -1,13 +1,17 @@
-name: Validar CMS administrativo final
+name: Validar PHP y CMS Multicredit
 
 on:
   push:
     branches:
+      - main
       - feat/admin-cms-total
     paths:
       - '**/*.php'
       - 'cms/data/*.json'
       - '.github/workflows/php-validate-final.yml'
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
