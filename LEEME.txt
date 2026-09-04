@@ -1,0 +1,20 @@
+MULTICREDIT · PRODUCTOS ULTRA PREMIUM V2
+
+Cambios visuales:
+- Se redujo drásticamente el blanco plano.
+- Secciones alternadas en verde profundo, negro verdoso, gradientes suaves y color de acento.
+- Cada producto tiene un color de personalidad propio.
+- Hero cinematográfico con imagen, auroras, rejilla, parallax y Ken Burns.
+- Tarjetas glassmorphism con bordes de color, sombras y spotlight 3D.
+- Botones con gradiente y brillo animado.
+- Reveal escalonado al hacer scroll.
+- FAQ y pasos con microinteracciones.
+- CTA final más fuerte y visual.
+- Respeta prefers-reduced-motion.
+
+Archivos comunes que deben conservarse junto a los PHP:
+css/mc-productos-ultra.css
+js/mc-productos-ultra.js
+img/ (imágenes usadas por los fondos)
+
+No se cambió la información ni la lógica financiera de las páginas.

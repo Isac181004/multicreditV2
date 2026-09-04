@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
     cerrar.addEventListener('click', () => {
         panel.classList.add('hidden');
     })
-    // Inputs Numéricos (Digitar)
+    
 })

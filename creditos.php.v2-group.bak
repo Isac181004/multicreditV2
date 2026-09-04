@@ -1,6 +1,6 @@
 <?php
-// Cargar los estilos y librerías ANTES de encabezado.php.
-// El archivo encabezado.php utiliza clases Tailwind, por eso deben estar disponibles desde el inicio.
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,7 +31,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* ===== SIMULADOR: SOLO ESTILOS DEL BLOQUE DEL SIMULADOR ===== */
+         
         .simulator-section {
             background: linear-gradient(180deg, #f7f9f8 0%, #eef3ef 100%);
         }
@@ -169,7 +169,7 @@
 <?php
 include 'encabezado.php';
 ?>
-<!-- ================= HERO CRÉDITOS ================= -->
+ 
 <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
     <div class="absolute -right-24 -top-24 w-72 h-72 rounded-full bg-white/10"></div>
@@ -209,7 +209,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= PRESENTACIÓN ================= -->
+ 
 <section class="py-14 md:py-16 px-4 md:px-10 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="grid lg:grid-cols-3 gap-5">
@@ -242,7 +242,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= MICROEMPRESA ================= -->
+ 
 <section id="microempresa" class="py-16 md:py-20 px-4 md:px-10 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
@@ -263,7 +263,7 @@ include 'encabezado.php';
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-            <!-- Ordinario -->
+             
             <article class="credit-product-card bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center text-xl">
@@ -282,7 +282,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- Diario -->
+             
             <article class="credit-product-card bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-green-50 text-brand-green flex items-center justify-center text-xl">
@@ -301,7 +301,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- CrediEmpeño -->
+             
             <article class="credit-product-card bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl">
@@ -320,7 +320,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- CrediMoto -->
+             
             <article class="credit-product-card bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl">
@@ -339,7 +339,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- Grupal -->
+             
             <article class="credit-product-card bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl">
@@ -365,7 +365,7 @@ include 'encabezado.php';
                 </div>
             </article>
 
-            <!-- CTA -->
+             
             <article class="rounded-3xl bg-gradient-to-br from-brand-green to-brand-green-dark text-white p-6 md:p-7 flex flex-col justify-between shadow-lg">
                 <div>
                     <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-xl">
@@ -388,7 +388,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= CONSUMO ================= -->
+ 
 <section id="consumo" class="py-16 md:py-20 px-4 md:px-10 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="mb-10">
@@ -455,7 +455,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= COMPARADOR / ORIENTACIÓN ================= -->
+ 
 <section class="py-16 px-4 md:px-10 bg-gray-50">
     <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-10">
@@ -498,7 +498,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- Nota institucional -->
+ 
 <section class="px-4 md:px-10 pb-10 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         <div class="rounded-2xl border border-gray-200 bg-white p-5 text-xs md:text-sm text-gray-500 leading-relaxed">
@@ -527,7 +527,7 @@ include 'encabezado.php';
         <div class="simulator-shell bg-white">
             <div class="grid grid-cols-1 lg:grid-cols-12">
 
-                <!-- CONTROLES -->
+                 
                 <div class="lg:col-span-4 p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-gray-200">
                     <div class="flex items-center justify-between mb-7">
                         <div>
@@ -597,7 +597,7 @@ include 'encabezado.php';
                     </div>
                 </div>
 
-                <!-- RESULTADO -->
+                 
                 <div class="lg:col-span-4 p-6 md:p-8 sim-result">
                     <div class="flex items-center justify-between mb-7">
                         <div>
@@ -642,7 +642,7 @@ include 'encabezado.php';
                     </div>
                 </div>
 
-                <!-- SOLICITUD -->
+                 
                 <div class="lg:col-span-4 p-6 md:p-8">
                     <div class="flex items-center justify-between mb-7">
                         <div>
@@ -691,7 +691,7 @@ include 'encabezado.php';
                 </div>
             </div>
 
-            <!-- GRÁFICOS -->
+             
             <div class="p-6 md:p-8 bg-gray-50 border-t border-gray-200">
                 <div class="flex items-center justify-between mb-5">
                     <div>
@@ -731,7 +731,7 @@ include 'encabezado.php';
                     </div>
                 </div>
 
-                <!-- TABLA -->
+                 
                 <div class="sim-card mt-5 overflow-hidden">
                     <div class="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                         <div>

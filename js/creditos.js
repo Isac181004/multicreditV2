@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. LÓGICA DEL MODAL DE REQUISITOS
+    
     const btn = document.getElementById('requisitosBtn');
     const panel = document.getElementById('panelRequisitos');
     const cerrar = document.getElementById('cerrarPanel');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cerrar.addEventListener('click', () => panel.classList.add('hidden'));
     }
 
-    // 2. VARIABLES DEL SIMULADOR
+    
     const montoInput = document.getElementById('monto-input');
     const plazoInput = document.getElementById('plazo-input');
     const tasaInput = document.getElementById('tasa-input'); 
@@ -25,16 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalDisplay = document.getElementById('total-display');
     const waMonto = document.getElementById('wa-monto');
 
-    // Formateador de moneda para pintar el resultado de forma bonita
+    
     const formatoSoles = new Intl.NumberFormat('es-PE', {
         style: 'currency',
         currency: 'PEN',
         minimumFractionDigits: 2
     });
 
-    // 3. FUNCIÓN DE CÁLCULO FINANCIERO (FÓRMULA)
+    
     function calcularCredito() {
-        if (!montoInput) return; // Abortar si no estamos en la página correcta
+        if (!montoInput) return; 
 
         let capital = parseFloat(montoInput.value) || 0;
         let meses = parseInt(plazoInput.value) || 1;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tasaMensualDecimal === 0) {
             cuota = capital / meses;
         } else {
-            // Fórmula Francesa de Cuota Constante
+            
             const factor = Math.pow(1 + tasaMensualDecimal, meses);
             cuota = capital * (tasaMensualDecimal * factor) / (factor - 1);
         }
@@ -53,24 +53,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalAPagar = cuota * meses;
         const interesTotal = totalAPagar - capital;
 
-        // Imprimir los resultados en las etiquetas del panel verde
+        
         cuotaDisplay.textContent = formatoSoles.format(cuota);
         capitalDisplay.textContent = formatoSoles.format(capital);
         interesDisplay.textContent = formatoSoles.format(interesTotal);
         totalDisplay.textContent = formatoSoles.format(totalAPagar);
         
-        // Bloquear y mostrar el monto en el mini-formulario de WhatsApp
+        
         if (waMonto) {
             waMonto.value = 'S/ ' + capital.toLocaleString('es-PE');
         }
 
-        // Pintar la barrita de verde progresivo
+        
         actualizarFondoSlider(montoSlider);
         actualizarFondoSlider(plazoSlider);
         actualizarFondoSlider(tasaSlider);
     }
 
-    // 4. FUNCIÓN PARA PINTAR LAS BARRAS (Slider)
+    
     function actualizarFondoSlider(slider) {
         if (!slider) return;
         const min = parseFloat(slider.min) || 0;
@@ -78,21 +78,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const val = parseFloat(slider.value) || 0;
         const percentage = ((val - min) / (max - min)) * 100;
         
-        // Verde CEPRODEMIC (#8CC63F)
+        
         slider.style.background = `linear-gradient(to right, #8CC63F 0%, #8CC63F ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`;
     }
 
-    // 5. VINCULAR LA BARRA CON LA CAJITA DE TEXTO
+    
     function vincularControles(inputEl, sliderEl) {
         if (!inputEl || !sliderEl) return;
         
-        // Cuando tipean un número
+        
         inputEl.addEventListener('input', () => {
             sliderEl.value = inputEl.value;
             calcularCredito();
         });
         
-        // Cuando arrastran la barra
+        
         sliderEl.addEventListener('input', () => {
             inputEl.value = sliderEl.value;
             calcularCredito();
@@ -103,10 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
     vincularControles(plazoInput, plazoSlider);
     vincularControles(tasaInput, tasaSlider);
 
-    // Arrancar el cálculo apenas cargue la página
+    
     calcularCredito();
 
-    // 6. LÓGICA DEL FORMULARIO WHATSAPP
+    
     const waForm = document.getElementById('wa-form');
     if (waForm) {
         waForm.addEventListener('submit', function(e) {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const montoRequerido = montoInput.value; 
             const oficina = document.getElementById('wa-oficina').value; 
 
-            // Base de datos de números de asesores (actualiza con los reales)
+            
             const telefonosPorOficina = {
                 "Cajamarca": "51968782473",
                 "Huamachuco": "51976737240",

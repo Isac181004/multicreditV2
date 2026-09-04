@@ -1,0 +1,2 @@
+Build: MULTICREDIT V2 + módulo administrativo sin SQL
+Fecha: 26/08/2026

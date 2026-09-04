@@ -1,0 +1,21 @@
+MULTICREDIT - PAGINAS PREMIUM
+
+Se aplicó a las páginas de créditos una línea visual inspirada en conocenos.php y en el video de referencia:
+- hero fotográfico de gran formato con overlay verde profundo;
+- tipografías Inter + Poppins;
+- entrada Reveal al hacer scroll;
+- tarjetas con elevación, luz y movimiento 3D sutil;
+- botones con efecto de brillo;
+- CTA finales con fotografía y degradado;
+- parallax suave en el hero;
+- responsive y soporte prefers-reduced-motion.
+
+Archivos comunes nuevos:
+css/mc-productos-premium.css
+js/mc-productos-premium.js
+
+IMPORTANTE:
+Mantén las carpetas css, js e img junto a estas páginas dentro del proyecto.
+No se modificó el contenido financiero ni la lógica de los productos; el trabajo es visual/interactivo.
+
+No se incluyó esparcimiento.php porque no fue adjuntado en este envío.

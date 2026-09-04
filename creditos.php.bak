@@ -1,6 +1,6 @@
 <?php
-// Cargar los estilos y librerías ANTES de encabezado.php.
-// El archivo encabezado.php utiliza clases Tailwind, por eso deben estar disponibles desde el inicio.
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,7 +30,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* ===== SIMULADOR: SOLO ESTILOS DEL BLOQUE DEL SIMULADOR ===== */
+         
         .simulator-section {
             background: linear-gradient(180deg, #f7f9f8 0%, #eef3ef 100%);
         }
@@ -267,7 +267,7 @@ include 'encabezado.php';
         <div class="simulator-shell bg-white">
             <div class="grid grid-cols-1 lg:grid-cols-12">
 
-                <!-- CONTROLES -->
+                 
                 <div class="lg:col-span-4 p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-gray-200">
                     <div class="flex items-center justify-between mb-7">
                         <div>
@@ -337,7 +337,7 @@ include 'encabezado.php';
                     </div>
                 </div>
 
-                <!-- RESULTADO -->
+                 
                 <div class="lg:col-span-4 p-6 md:p-8 sim-result">
                     <div class="flex items-center justify-between mb-7">
                         <div>
@@ -382,7 +382,7 @@ include 'encabezado.php';
                     </div>
                 </div>
 
-                <!-- SOLICITUD -->
+                 
                 <div class="lg:col-span-4 p-6 md:p-8">
                     <div class="flex items-center justify-between mb-7">
                         <div>
@@ -431,7 +431,7 @@ include 'encabezado.php';
                 </div>
             </div>
 
-            <!-- GRÁFICOS -->
+             
             <div class="p-6 md:p-8 bg-gray-50 border-t border-gray-200">
                 <div class="flex items-center justify-between mb-5">
                     <div>
@@ -471,7 +471,7 @@ include 'encabezado.php';
                     </div>
                 </div>
 
-                <!-- TABLA -->
+                 
                 <div class="sim-card mt-5 overflow-hidden">
                     <div class="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                         <div>

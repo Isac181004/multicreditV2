@@ -1,5 +1,5 @@
 <?php
-// Página individual de producto: Crédito Esparcimiento
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,12 +20,17 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mc-productos-ultra.css">
 </head>
-<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="esparcimiento">
 <?php include 'encabezado.php'; ?>
 
 <main class="pt-[88px] md:pt-[96px]">
-    <!-- HERO -->
+     
     <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
         <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-white/10"></div>
@@ -50,7 +55,7 @@
         </div>
     </section>
 
-    <!-- INTRO + CTA -->
+     
     <section class="py-14 md:py-16 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-7">
             <div class="lg:col-span-2">
@@ -78,7 +83,7 @@
         </div>
     </section>
 
-    <!-- PARA QUIÉN -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
             <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
@@ -103,7 +108,7 @@
         </div>
     </section>
 
-    <!-- CARACTERÍSTICAS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto">
@@ -137,7 +142,7 @@
         </div>
     </section>
 
-    <!-- REQUISITOS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-5xl mx-auto">
             <div class="text-center">
@@ -160,7 +165,7 @@
         </div>
     </section>
 
-    <!-- PROCESO -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center">
@@ -176,7 +181,7 @@
         </div>
     </section>
 
-    <!-- FAQ -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-4xl mx-auto">
             <div class="text-center">
@@ -202,7 +207,7 @@
         </div>
     </section>
 
-    <!-- CTA FINAL -->
+     
     <section class="px-4 md:px-10 py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
             <div>
@@ -219,5 +224,7 @@
 </main>
 
 <?php include 'footer.php'; ?>
+
+<script src="js/mc-productos-ultra.js" defer></script>
 </body>
 </html>

@@ -1,12 +1,32 @@
-<?php 
-// microcredito.php - Página del Componente de Microcrédito
-include 'encabezado.php'; 
-?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente de Microcrédito | CEPRODEMIC MULTICREDIT</title>
+    <meta name="description" content="Conoce el componente de microcrédito y la trayectoria de Bancos Comunales de CEPRODEMIC MULTICREDIT.">
+    <script>
+        tailwind = window.tailwind || {};
+        tailwind.config = {theme:{extend:{colors:{
+            'brand-green':'#0d5c2e',
+            'brand-green-dark':'#063718',
+            'brand-orange':'#f26e22'
+        }}}};
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mc-productos-ultra.css">
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="microcredito">
+<?php include 'encabezado.php'; ?>
+<main class="pt-[82px]">
 
-<!-- ================= BANNER HERO ================= -->
+ 
 <section class="bg-gray-900 text-white py-20 px-4 md:px-10 relative overflow-hidden">
-    <!-- Imagen de fondo oscura o patrón (puedes reemplazar la URL por tu foto real) -->
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
+    <div class="absolute inset-0 bg-[url('img/target5.webp')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-brand-green-dark/90 to-transparent"></div>
     
     <div class="max-w-7xl mx-auto relative z-10">
@@ -18,7 +38,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= INTRODUCCIÓN Y COMPONENTES ================= -->
+ 
 <section class="py-16 px-4 md:px-10 max-w-7xl mx-auto">
     <div class="flex flex-col lg:flex-row gap-12 items-center mb-16">
         <div class="lg:w-1/2">
@@ -51,7 +71,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= HISTORIA Y EVOLUCIÓN (Línea de tiempo) ================= -->
+ 
 <section class="bg-gray-50 py-16 px-4 md:px-10">
     <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
@@ -61,7 +81,7 @@ include 'encabezado.php';
 
         <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
             
-            <!-- 2010 -->
+             
             <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-orange text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-xs">
                     '10
@@ -72,7 +92,7 @@ include 'encabezado.php';
                 </div>
             </div>
 
-            <!-- 2011 -->
+             
             <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-orange text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-xs">
                     '11
@@ -83,7 +103,7 @@ include 'encabezado.php';
                 </div>
             </div>
 
-            <!-- 2015 -->
+             
             <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-green text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-xs">
                     '15+
@@ -99,7 +119,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= INFORMES MENSUALES CTA ================= -->
+ 
 <section class="py-12 px-4 md:px-10">
     <div class="max-w-4xl mx-auto mb-8 rounded-2xl border border-green-100 bg-green-50 p-5 text-sm text-gray-600"><i class="fas fa-clock-rotate-left text-brand-green mr-2"></i><strong>Historia del proyecto:</strong> esta página conserva información histórica sobre el desarrollo del componente de Bancos Comunales. Para conocer la oferta actual, visita <a href="bancos-comunales.php" class="text-brand-green font-bold hover:underline">Bancos Comunales</a>.</div>
     <div class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl shadow-sm p-8 text-center">
@@ -109,12 +129,14 @@ include 'encabezado.php';
         <h3 class="text-2xl font-bold text-gray-800 mb-2">Transparencia y Resultados</h3>
         <p class="text-gray-600 mb-6">Puede acceder a los informes mensuales sobre la formación e impacto de los Bancos Comunales.</p>
         
-        <a href="#" class="inline-flex items-center justify-center bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+        <a href="docs/septiembre-2010.doc" download class="inline-flex items-center justify-center bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
             Haga click aquí para ver los informes <i class="fas fa-external-link-alt ml-2"></i>
         </a>
     </div>
 </section>
+</main>
 
-<?php 
-include 'footer.php'; 
-?>
+<?php include 'footer.php'; ?>
+<script src="js/mc-productos-ultra.js" defer></script>
+</body>
+</html>

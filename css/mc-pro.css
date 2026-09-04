@@ -1,20 +1,20 @@
-/* ============================================================
-   MULTICREDIT PRO KIT  — paleta esmeralda + animaciones 3D
-   Uso: <link rel="stylesheet" href="css/mc-pro.css">
-   Cargar DESPUÉS del script de Tailwind CDN.
-   ============================================================ */
+
+
+
+
+
 
 :root{
   --mc-green:#0d5c2e;
   --mc-green-dark:#083d1f;
   --mc-green-deep:#052712;
   --mc-orange:#f26e22;
-  /* Retrocompatible con conocenos.php */
+   
   --green:#0d5c2e;
   --green2:#1c7a30;
 }
 
-/* ---------- 1. Forzar verde esmeralda sobre utilidades brand ---------- */
+ 
 .bg-brand-green{background-color:#0d5c2e!important}
 .bg-brand-green-dark{background-color:#083d1f!important}
 .text-brand-green{color:#0d5c2e!important}
@@ -32,19 +32,19 @@
 .bg-green-50{background-color:#f0fdf4!important}
 .text-green-100{color:#dcfce7!important}
 
-/* ---------- 2. Héroes con gradiente esmeralda + grano ---------- */
+ 
 .service-hero,
 .contact-hero,
 .credit-page .credit-hero{
   background:
     linear-gradient(90deg,rgba(5,39,18,.94),rgba(8,61,31,.62),rgba(13,92,46,.22)),
-    url('img/cajamarca.jpg') center/cover no-repeat!important;
+    url('../img/cajamarca.webp') center/cover no-repeat!important;
   position:relative;
 }
 .about-hero{
   background:
     linear-gradient(90deg,rgba(5,39,18,.93),rgba(8,61,31,.62),rgba(13,92,46,.28)),
-    url('img/image.png') center/cover no-repeat!important;
+    url('../img/image.png') center/cover no-repeat!important;
 }
 .service-hero::after,.contact-hero::after,.credit-page .credit-hero::after,.about-hero::after{
   content:"";position:absolute;inset:0;pointer-events:none;
@@ -53,7 +53,7 @@
 }
 .service-hero>*,.contact-hero>*,.credit-page .credit-hero>*,.about-hero>*{position:relative;z-index:2}
 
-/* ---------- 3. Cards de ayuda / asesor / simulador ---------- */
+ 
 .credit-page .credit-help-card,
 .credit-page .credit-advisor-card{
   background:linear-gradient(135deg,#083d1f 0%,#0d5c2e 100%)!important;
@@ -71,7 +71,7 @@
 .sim-number:focus{border-color:#0d5c2e!important;box-shadow:0 0 0 4px rgba(13,92,46,.12)!important}
 .sim-range{accent-color:#0d5c2e!important}
 
-/* conocenos: cta + year-card + dot */
+ 
 .about-wrap .cta{background:linear-gradient(135deg,#083d1f,#0d5c2e)!important}
 .about-wrap .timeline-card .dot{background:#0d5c2e!important}
 .about-wrap .mv-card.mission{border-top-color:#0d5c2e!important}
@@ -82,24 +82,24 @@
 .about-wrap .value i{color:#0d5c2e!important}
 .about-wrap .focus h2{color:#0d5c2e!important}
 
-/* ---------- 4. TILT 3D ---------- */
+ 
 .tilt-3d{transform-style:preserve-3d;transition:transform .25s cubic-bezier(.23,1,.32,1);will-change:transform;position:relative}
 .tilt-3d .tilt-glare{position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.18),transparent 45%);opacity:0;transition:opacity .3s ease;pointer-events:none;z-index:1}
 .tilt-3d:hover .tilt-glare{opacity:1}
 .tilt-3d .tilt-layer{transform:translateZ(40px);position:relative;z-index:2}
 
-/* ---------- 5. REVEAL (sustituye/complementa AOS) ---------- */
+ 
 .mc-reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
 .mc-reveal.in{opacity:1;transform:none}
 .mc-reveal[data-mc-delay]{transition-delay:var(--mc-delay,0s)}
 
-/* ---------- 6. SHINE en botones naranja ---------- */
+ 
 .btn-shine{position:relative;overflow:hidden}
 .btn-shine::after{content:"";position:absolute;top:0;left:-130%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);transition:left .65s ease;pointer-events:none}
 .btn-shine:hover::after{left:130%}
 .btn-shine:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(242,110,34,.32)}
 
-/* ---------- 7. Esquinas institucionales ---------- */
+ 
 .rounded-3xl{border-radius:1rem!important}
 .rounded-full{border-radius:9999px}
 

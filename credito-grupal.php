@@ -1,5 +1,5 @@
 <?php
-// Página individual de producto: Crédito Grupal
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crédito Grupal | CEPRODEMIC MULTICREDIT</title>
     <meta name="description" content="Crecer juntos también es una forma de avanzar. Conoce Crédito Grupal, una alternativa de financiamiento de Multicredit.">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind = window.tailwind || {};
         tailwind.config = {
             theme: { extend: { colors: {
                 'brand-green':'#2e9e43',
@@ -18,14 +18,18 @@
             } } }
         };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mc-productos-ultra.css">
 </head>
-<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="grupal">
 <?php include 'encabezado.php'; ?>
 
 <main class="pt-[88px] md:pt-[96px]">
-    <!-- HERO -->
+     
     <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
         <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-white/10"></div>
@@ -50,7 +54,7 @@
         </div>
     </section>
 
-    <!-- MODALIDADES -->
+     
     <section class="py-12 md:py-16 px-4 md:px-10 bg-gray-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto">
@@ -58,14 +62,14 @@
                 <h2 class="text-3xl md:text-4xl font-black mt-2">Elige la alternativa que corresponde a tu grupo</h2>
                 <p class="text-gray-600 mt-3">Conoce las características generales de cada modalidad y consulta las condiciones vigentes con un asesor.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-6 mt-9">
-                <a href="bancos-comunales.php" class="group bg-white rounded-3xl border border-gray-200 p-7 md:p-9 hover:-translate-y-1 hover:shadow-xl transition">
+            <div class="grid md:grid-cols-2 gap-6 mt-9 mc-group-options mc-visible">
+                <a href="bancos-comunales.php" class="group bg-white rounded-3xl border border-gray-200 p-7 md:p-9 hover:-translate-y-1 hover:shadow-xl transition mc-ultra-card mc-group-option-card mc-visible">
                     <div class="w-14 h-14 rounded-2xl bg-green-100 text-brand-green flex items-center justify-center text-2xl"><i class="fas fa-landmark"></i></div>
                     <h3 class="text-2xl font-black mt-5">Bancos Comunales</h3>
                     <p class="text-gray-600 mt-2 leading-relaxed">Organización grupal, financiamiento, capacitación y acompañamiento bajo una metodología específica.</p>
                     <span class="inline-flex items-center gap-2 text-brand-green font-extrabold text-sm mt-5">Conocer Bancos Comunales <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i></span>
                 </a>
-                <a href="grupos-solidarios.php" class="group bg-white rounded-3xl border border-gray-200 p-7 md:p-9 hover:-translate-y-1 hover:shadow-xl transition">
+                <a href="grupos-solidarios.php" class="group bg-white rounded-3xl border border-gray-200 p-7 md:p-9 hover:-translate-y-1 hover:shadow-xl transition mc-ultra-card mc-group-option-card mc-visible">
                     <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl"><i class="fas fa-people-group"></i></div>
                     <h3 class="text-2xl font-black mt-5">Grupos Solidarios</h3>
                     <p class="text-gray-600 mt-2 leading-relaxed">Una alternativa basada en organización, confianza y responsabilidad compartida.</p>
@@ -75,7 +79,7 @@
         </div>
     </section>
 
-    <!-- INTRO + CTA -->
+     
     <section class="py-14 md:py-16 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-7">
             <div class="lg:col-span-2">
@@ -103,7 +107,7 @@
         </div>
     </section>
 
-    <!-- PARA QUIÉN -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
             <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
@@ -129,7 +133,7 @@
         </div>
     </section>
 
-    <!-- CARACTERÍSTICAS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto">
@@ -163,7 +167,7 @@
         </div>
     </section>
 
-    <!-- REQUISITOS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-5xl mx-auto">
             <div class="text-center">
@@ -186,7 +190,7 @@
         </div>
     </section>
 
-    <!-- PROCESO -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center">
@@ -202,7 +206,7 @@
         </div>
     </section>
 
-    <!-- FAQ -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-4xl mx-auto">
             <div class="text-center">
@@ -228,7 +232,7 @@
         </div>
     </section>
 
-    <!-- CTA FINAL -->
+     
     <section class="px-4 md:px-10 py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
             <div>
@@ -245,5 +249,7 @@
 </main>
 
 <?php include 'footer.php'; ?>
+
+<script src="js/mc-productos-ultra.js" defer></script>
 </body>
 </html>

@@ -1,12 +1,12 @@
-/* ============================================================
-   MULTICREDIT PRO KIT — JS de animaciones (3D tilt + reveal)
-   Uso: <script src="js/mc-pro.js" defer></script>
-   ============================================================ */
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const fine   = window.matchMedia('(pointer:fine)').matches;
   const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-  /* ---------- REVEAL con stagger ---------- */
+   
   const reveals = document.querySelectorAll('.mc-reveal');
   if ('IntersectionObserver' in window && !reduce) {
     const io = new IntersectionObserver((entries) => {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach((el) => el.classList.add('in'));
   }
 
-  /* ---------- 3D TILT con glare ---------- */
+   
   if (fine && !reduce) {
     document.querySelectorAll('.tilt-3d').forEach((card) => {
       if (!card.querySelector('.tilt-glare')) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         g.className = 'tilt-glare';
         card.prepend(g);
       }
-      const max = 9; // grados
+      const max = 9; 
       card.addEventListener('mousemove', (e) => {
         const r  = card.getBoundingClientRect();
         const px = (e.clientX - r.left) / r.width;
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Botones magnéticos ---------- */
+   
   if (fine && !reduce) {
     document.querySelectorAll('.btn-magnetic').forEach((btn) => {
       btn.addEventListener('mousemove', (e) => {

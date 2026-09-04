@@ -1,5 +1,5 @@
 <?php
-// Página individual de producto: Crédito Ordinario
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,12 +20,318 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/mc-productos-ultra.css?v=<?= filemtime(__DIR__ . '/css/mc-productos-ultra.css') ?>">
+
+<style id="mc-ordinario-legibilidad-final">
+:root{
+    --mc-green:#176b2b;
+    --mc-green-dark:#0b4d26;
+    --mc-orange:#e85b10;
+    --mc-text:#172b20;
+    --mc-text-soft:#3f5146;
+}
+
+ 
+main > section:first-of-type{
+    min-height:68vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(100deg,
+            rgba(5,31,15,.84) 0%,
+            rgba(9,66,31,.68) 42%,
+            rgba(9,66,31,.40) 72%,
+            rgba(9,66,31,.18) 100%),
+        url("img/img7.webp")
+        center/cover no-repeat !important;
+}
+main > section:first-of-type h1,
+main > section:first-of-type p,
+main > section:first-of-type a,
+main > section:first-of-type span{
+    color:#fff !important;
+}
+main > section:first-of-type h1{
+    text-shadow:0 8px 28px rgba(0,0,0,.35);
+}
+main > section:first-of-type p{
+    color:#f2fff5 !important;
+    text-shadow:0 3px 14px rgba(0,0,0,.28);
+}
+
+ 
+main > section:nth-of-type(2){
+    background:
+        linear-gradient(rgba(248,250,248,.84),rgba(248,250,248,.84)),
+        url("img/font1.jpg")
+        center/cover no-repeat !important;
+}
+main > section:nth-of-type(3){
+    background:
+        linear-gradient(rgba(242,247,243,.72),rgba(247,249,247,.78)),
+        url("img/font1.jpg")
+        center/cover no-repeat !important;
+}
+main > section:nth-of-type(4){
+    background:
+        linear-gradient(rgba(250,250,250,.86),rgba(248,250,248,.88)),
+        url("img/font1.jpg")
+        center/cover no-repeat !important;
+}
+main > section:nth-of-type(5){
+    background:
+        linear-gradient(rgba(243,247,244,.74),rgba(249,250,249,.80)),
+        url("img/font1.jpg")
+        center/cover no-repeat !important;
+}
+main > section:nth-of-type(6){
+    background:
+        linear-gradient(rgba(249,250,249,.86),rgba(247,249,247,.88)),
+        url("img/font1.jpg")
+        center/cover no-repeat !important;
+}
+main > section:nth-of-type(7){
+    background:
+        linear-gradient(rgba(242,247,243,.78),rgba(249,250,249,.84)),
+        url("img/font1s.jpg")
+        center/cover no-repeat !important;
+}
+
+
+
+
+
+ 
+main > section:nth-of-type(n+2):not(:last-of-type) h2,
+main > section:nth-of-type(n+2):not(:last-of-type) h3{
+    color:var(--mc-text) !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    text-shadow:none !important;
+}
+
+ 
+main > section:nth-of-type(n+2):not(:last-of-type) p,
+main > section:nth-of-type(n+2):not(:last-of-type) li,
+main > section:nth-of-type(n+2):not(:last-of-type) li span,
+main > section:nth-of-type(n+2):not(:last-of-type) .text-gray-600,
+main > section:nth-of-type(n+2):not(:last-of-type) .text-gray-500,
+main > section:nth-of-type(n+2):not(:last-of-type) .text-gray-400{
+    color:var(--mc-text-soft) !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    text-shadow:none !important;
+}
+
+ 
+main > section:nth-of-type(n+2):not(:last-of-type) .text-brand-green{
+    color:var(--mc-green-dark) !important;
+    opacity:1 !important;
+}
+main > section:nth-of-type(n+2):not(:last-of-type) .text-brand-orange{
+    color:var(--mc-orange) !important;
+    opacity:1 !important;
+}
+
+ 
+main > section:nth-of-type(n+2):not(:last-of-type) .bg-white.rounded-3xl,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border,
+main > section:nth-of-type(n+2):not(:last-of-type) details.group{
+    background:rgba(255,255,255,.93) !important;
+    border-color:rgba(255,255,255,.78) !important;
+    box-shadow:0 18px 45px rgba(16,34,24,.12) !important;
+    backdrop-filter:blur(10px);
+}
+
+ 
+main > section:nth-of-type(n+2):not(:last-of-type) .bg-white.rounded-3xl *,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 *,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border *,
+main > section:nth-of-type(n+2):not(:last-of-type) details.group *{
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+ 
+main > section:nth-of-type(n+2):not(:last-of-type) .bg-white.rounded-3xl h2,
+main > section:nth-of-type(n+2):not(:last-of-type) .bg-white.rounded-3xl h3,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 h2,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 h3,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border h3,
+main > section:nth-of-type(n+2):not(:last-of-type) details.group summary{
+    color:#163222 !important;
+}
+
+ 
+main > section:nth-of-type(n+2):not(:last-of-type) .bg-white.rounded-3xl p,
+main > section:nth-of-type(n+2):not(:last-of-type) .bg-white.rounded-3xl li,
+main > section:nth-of-type(n+2):not(:last-of-type) .bg-white.rounded-3xl li span,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 p,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 li,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 li span,
+main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border p,
+main > section:nth-of-type(n+2):not(:last-of-type) details.group p{
+    color:#42554a !important;
+}
+
+ 
+main > section:nth-of-type(3) .grid > div{
+    background:rgba(255,255,255,.94) !important;
+}
+main > section:nth-of-type(3) .grid > div:first-child{
+    border-top:4px solid #2e9e43 !important;
+}
+main > section:nth-of-type(3) .grid > div:last-child{
+    border-top:4px solid #f26e22 !important;
+}
+main > section:nth-of-type(3) h2{
+    color:#153a25 !important;
+}
+main > section:nth-of-type(3) ul,
+main > section:nth-of-type(3) li,
+main > section:nth-of-type(3) li span{
+    color:#33483b !important;
+}
+main > section:nth-of-type(3) li i{
+    color:#17783b !important;
+}
+
+ 
+main > section:nth-of-type(5) > div > .text-center span{
+    color:#0f6b35 !important;
+}
+main > section:nth-of-type(5) > div > .text-center h2{
+    color:#10331f !important;
+}
+main > section:nth-of-type(5) > div > .text-center p{
+    color:#405348 !important;
+}
+main > section:nth-of-type(5) .mt-9.bg-white{
+    background:rgba(255,255,255,.94) !important;
+}
+main > section:nth-of-type(5) .mt-9.bg-white span{
+    color:#394c41 !important;
+}
+main > section:nth-of-type(5) .mt-9.bg-white i{
+    color:#e85b10 !important;
+}
+
+ 
+main > section:nth-of-type(4) .grid > div{
+    background:rgba(255,255,255,.95) !important;
+}
+main > section:nth-of-type(4) .grid > div h3{
+    color:#143923 !important;
+}
+main > section:nth-of-type(4) .grid > div p{
+    color:#506257 !important;
+}
+
+ 
+main > section:nth-of-type(6) .grid > div h3{
+    color:#133b23 !important;
+}
+main > section:nth-of-type(6) .grid > div p{
+    color:#52655a !important;
+}
+
+ 
+main > section:nth-of-type(7) summary span{
+    color:#173522 !important;
+}
+main > section:nth-of-type(7) details p{
+    color:#46594d !important;
+}
+
+ 
+main > section:last-of-type .rounded-3xl{
+    background:
+        linear-gradient(115deg,rgba(7,54,27,.88),rgba(36,128,57,.82)),
+        url("img/img4.png")
+        center/cover no-repeat !important;
+}
+main > section:last-of-type h2,
+main > section:last-of-type p,
+main > section:last-of-type span{
+    color:#fff !important;
+}
+main > section:last-of-type h2{
+    text-shadow:0 4px 16px rgba(0,0,0,.26);
+}
+
+ 
+main .bg-white.rounded-3xl,
+main .rounded-3xl.bg-gray-50,
+main .rounded-2xl.border,
+main details.group{
+    transition:transform .28s ease, box-shadow .28s ease;
+}
+main .bg-white.rounded-3xl:hover,
+main .rounded-3xl.bg-gray-50:hover,
+main .rounded-2xl.border:hover,
+main details.group:hover{
+    transform:translateY(-4px);
+    box-shadow:0 25px 55px rgba(16,34,24,.16) !important;
+}
+
+ 
+footer,
+footer *{
+    visibility:visible !important;
+}
+footer{
+    display:block !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+    position:relative !important;
+    z-index:50 !important;
+    overflow:visible !important;
+}
+footer [data-aos],
+footer .aos-init,
+footer .aos-animate,
+footer .mc-reveal,
+footer .mc-reveal-left,
+footer .mc-reveal-right{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    filter:none !important;
+}
+
+ 
+main *{
+    visibility:visible;
+}
+main .mc-reveal.mc-visible,
+main .aos-animate{
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+}
+
+@media(max-width:900px){
+    main > section:first-of-type{
+        min-height:58vh;
+        background-position:62% center !important;
+    }
+}
+</style>
+
 </head>
-<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="ordinario">
 <?php include 'encabezado.php'; ?>
 
 <main class="pt-[88px] md:pt-[96px]">
-    <!-- HERO -->
+     
     <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
         <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-white/10"></div>
@@ -50,7 +356,7 @@
         </div>
     </section>
 
-    <!-- INTRO + CTA -->
+     
     <section class="py-14 md:py-16 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-7">
             <div class="lg:col-span-2">
@@ -66,7 +372,7 @@
                 <span class="text-xs font-extrabold uppercase tracking-wider text-gray-400">¿Quieres saber más?</span>
                 <h3 class="text-2xl font-black mt-2">Habla con un asesor</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3">Recibe orientación sobre requisitos, condiciones y el proceso de evaluación.</p>
-                <a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Ordinario." target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Ordinario." target="_blank" rel="noopener noreferrer"
                    class="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-5 py-3.5 rounded-full font-extrabold transition">
                     <i class="fab fa-whatsapp text-lg"></i> Solicitar información
                 </a>
@@ -78,7 +384,7 @@
         </div>
     </section>
 
-    <!-- PARA QUIÉN -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
             <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
@@ -104,7 +410,7 @@
         </div>
     </section>
 
-    <!-- CARACTERÍSTICAS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto">
@@ -138,7 +444,7 @@
         </div>
     </section>
 
-    <!-- REQUISITOS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-5xl mx-auto">
             <div class="text-center">
@@ -161,7 +467,7 @@
         </div>
     </section>
 
-    <!-- PROCESO -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center">
@@ -177,7 +483,7 @@
         </div>
     </section>
 
-    <!-- FAQ -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-4xl mx-auto">
             <div class="text-center">
@@ -203,7 +509,7 @@
         </div>
     </section>
 
-    <!-- CTA FINAL -->
+     
     <section class="px-4 md:px-10 py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
             <div>
@@ -211,7 +517,7 @@
                 <h2 class="text-3xl md:text-4xl font-black mt-2">¿Quieres conocer si este crédito es para ti?</h2>
                 <p class="text-green-50 mt-3 max-w-2xl">Habla con un asesor y recibe orientación sobre el producto y el proceso de evaluación.</p>
             </div>
-            <a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Ordinario." target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Ordinario." target="_blank" rel="noopener noreferrer"
                class="shrink-0 inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-7 py-4 rounded-full font-extrabold shadow-lg transition">
                 <i class="fab fa-whatsapp text-xl"></i> Hablar con un asesor
             </a>
@@ -220,5 +526,40 @@
 </main>
 
 <?php include 'footer.php'; ?>
+
+<script src="js/mc-productos-ultra.js" defer></script>
+
+<script id="mc-ordinario-visibility-failsafe">
+document.addEventListener('DOMContentLoaded', function(){
+    function showAll(){
+        document.querySelectorAll('main [data-aos], main .mc-reveal, main .mc-reveal-left, main .mc-reveal-right').forEach(function(el){
+            el.classList.add('aos-animate','mc-visible');
+            el.style.setProperty('opacity','1','important');
+            el.style.setProperty('visibility','visible','important');
+            el.style.setProperty('transform','none','important');
+            el.style.setProperty('filter','none','important');
+        });
+
+        const footer=document.querySelector('footer');
+        if(footer){
+            footer.style.setProperty('display','block','important');
+            footer.style.setProperty('opacity','1','important');
+            footer.style.setProperty('visibility','visible','important');
+            footer.style.setProperty('transform','none','important');
+            footer.querySelectorAll('*').forEach(function(el){
+                el.style.setProperty('visibility','visible','important');
+                if(el.hasAttribute('data-aos') || el.classList.contains('mc-reveal') || el.classList.contains('aos-init')){
+                    el.style.setProperty('opacity','1','important');
+                    el.style.setProperty('transform','none','important');
+                    el.style.setProperty('filter','none','important');
+                }
+            });
+        }
+    }
+    setTimeout(showAll,250);
+    setTimeout(showAll,1000);
+});
+</script>
+
 </body>
 </html>

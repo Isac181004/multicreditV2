@@ -1,5 +1,5 @@
 <?php
-// Página individual de producto: Crédito Diario
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,12 +20,236 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/mc-productos-ultra.css?v=<?= filemtime(__DIR__ . '/css/mc-productos-ultra.css') ?>">
+
+<style id="mc-diario-color-visible">
+:root{
+  --verde-oscuro:#0a3f22;
+  --verde:#16813a;
+  --verde-claro:#e8f7ed;
+  --naranja:#e85c12;
+  --azul:#1f5f9e;
+  --morado:#7042a5;
+  --dorado:#9a6500;
+  --rojo:#b73d49;
+  --texto:#23352a;
+  --texto-suave:#465b4d;
+  --blanco:#ffffff;
+}
+
+html{scroll-behavior:smooth}
+body.mc-ultra-page{background:#eef4ef!important;color:var(--texto)!important;font-family:'Inter',sans-serif!important}
+body.mc-ultra-page h1,body.mc-ultra-page h2,body.mc-ultra-page h3{font-family:'Poppins',sans-serif!important}
+
+ 
+main > section:nth-of-type(1){
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(100deg,rgba(4,27,14,.82) 0%,rgba(8,56,29,.66) 43%,rgba(8,56,29,.30) 75%,rgba(8,56,29,.12) 100%),
+    url('img/font11.webp') center/cover no-repeat!important;
+  position:relative;
+}
+main > section:nth-of-type(1)::after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(to top,#eef4ef,transparent);pointer-events:none}
+main > section:nth-of-type(1)>div{position:relative;z-index:2}
+main > section:nth-of-type(1) h1{color:#fff!important;text-shadow:0 7px 24px rgba(0,0,0,.38)}
+main > section:nth-of-type(1) p{color:#f2fff5!important;text-shadow:0 3px 14px rgba(0,0,0,.34)}
+main > section:nth-of-type(1) a{color:#f7fff9!important}
+main > section:nth-of-type(1) a:hover{color:#fff!important}
+main > section:nth-of-type(1) span{color:#fff!important}
+main > section:nth-of-type(1) .w-20{background:rgba(255,255,255,.94)!important;color:var(--verde)!important}
+
+ 
+main > section:nth-of-type(2){
+  background:
+    linear-gradient(90deg,rgba(244,249,245,.76),rgba(244,249,245,.70)),
+    url('img/font3.jpg') center/cover no-repeat!important;
+}
+main > section:nth-of-type(2) .lg\\:col-span-2{background:rgba(255,255,255,.80);padding:28px;border-radius:28px;box-shadow:0 18px 44px rgba(12,24,19,.10);backdrop-filter:blur(10px)}
+main > section:nth-of-type(2) .lg\\:col-span-2>span{color:var(--naranja)!important}
+main > section:nth-of-type(2) h2{color:var(--verde-oscuro)!important}
+main > section:nth-of-type(2) p{color:#2d4636!important}
+main > section:nth-of-type(2) .rounded-3xl{background:rgba(255,255,255,.91)!important;border-color:rgba(255,255,255,.72)!important;box-shadow:0 20px 48px rgba(10,63,34,.14)!important}
+main > section:nth-of-type(2) .rounded-3xl>span{color:var(--azul)!important}
+main > section:nth-of-type(2) .rounded-3xl h3{color:var(--verde-oscuro)!important}
+main > section:nth-of-type(2) .rounded-3xl p{color:#3f5547!important}
+main > section:nth-of-type(2) a.border{color:var(--verde-oscuro)!important;border-color:var(--verde)!important;background:#f4fff7!important}
+
+ 
+main > section:nth-of-type(3){
+  background:
+    linear-gradient(180deg,rgba(232,242,234,.72),rgba(243,248,244,.80)),
+    url('img/font3.jpg') center/cover no-repeat!important;
+}
+main > section:nth-of-type(3) .bg-white{background:rgba(255,255,255,.89)!important;backdrop-filter:blur(10px);box-shadow:0 20px 48px rgba(12,24,19,.11)!important}
+main > section:nth-of-type(3) .bg-white:first-child>span{color:var(--verde)!important}
+main > section:nth-of-type(3) .bg-white:last-child>span{color:var(--naranja)!important}
+main > section:nth-of-type(3) h2{color:var(--verde-oscuro)!important}
+main > section:nth-of-type(3) li span{color:#32483a!important;font-weight:600}
+main > section:nth-of-type(3) li i{color:var(--verde)!important}
+
+ 
+main > section:nth-of-type(4){
+  background:
+    linear-gradient(180deg,rgba(248,250,248,.77),rgba(248,250,248,.83)),
+    url('img/font3.jpg') center/cover no-repeat!important;
+}
+main > section:nth-of-type(4) .text-center>span{color:var(--naranja)!important}
+main > section:nth-of-type(4) .text-center h2{color:var(--verde-oscuro)!important}
+main > section:nth-of-type(4) .text-center p{color:#3d5546!important}
+main > section:nth-of-type(4) .grid>div{background:rgba(255,255,255,.90)!important;border-color:rgba(255,255,255,.74)!important;box-shadow:0 16px 38px rgba(12,24,19,.10);transition:transform .28s ease,box-shadow .28s ease}
+main > section:nth-of-type(4) .grid>div:hover{transform:translateY(-6px);box-shadow:0 24px 52px rgba(12,24,19,.15)}
+main > section:nth-of-type(4) .grid>div:nth-child(1) i,main > section:nth-of-type(4) .grid>div:nth-child(1) h3{color:var(--verde)!important}
+main > section:nth-of-type(4) .grid>div:nth-child(2) i,main > section:nth-of-type(4) .grid>div:nth-child(2) h3{color:var(--azul)!important}
+main > section:nth-of-type(4) .grid>div:nth-child(3) i,main > section:nth-of-type(4) .grid>div:nth-child(3) h3{color:var(--naranja)!important}
+main > section:nth-of-type(4) .grid>div:nth-child(4) i,main > section:nth-of-type(4) .grid>div:nth-child(4) h3{color:var(--morado)!important}
+main > section:nth-of-type(4) .grid p{color:#465a4d!important}
+
+ 
+main > section:nth-of-type(5){
+  background:
+    linear-gradient(180deg,rgba(236,244,238,.75),rgba(246,249,246,.82)),
+    url('img/font3.jpg') center/cover no-repeat!important;
+}
+main > section:nth-of-type(5) .text-center>span{color:var(--verde)!important}
+main > section:nth-of-type(5) .text-center h2{color:var(--verde-oscuro)!important}
+main > section:nth-of-type(5) .text-center p{color:#42584a!important}
+main > section:nth-of-type(5) .mt-9.bg-white{background:rgba(255,255,255,.91)!important;box-shadow:0 20px 48px rgba(12,24,19,.12)!important}
+main > section:nth-of-type(5) .grid span{color:#344a3b!important;font-weight:600}
+main > section:nth-of-type(5) .grid i{color:var(--naranja)!important}
+main > section:nth-of-type(5) .bg-orange-50{background:#fff1e7!important;color:#75431f!important;border-color:#ffd6bd!important}
+main > section:nth-of-type(5) .bg-orange-50 i{color:var(--naranja)!important}
+
+ 
+main > section:nth-of-type(6){
+  background:
+    linear-gradient(180deg,rgba(248,250,248,.80),rgba(248,250,248,.84)),
+    url('img/font3.jpg') center/cover no-repeat!important;
+}
+main > section:nth-of-type(6) .text-center>span{color:var(--naranja)!important}
+main > section:nth-of-type(6) .text-center h2{color:var(--verde-oscuro)!important}
+main > section:nth-of-type(6) .grid>div{background:rgba(255,255,255,.88);border-radius:22px;padding:24px 16px;box-shadow:0 14px 34px rgba(12,24,19,.09)}
+main > section:nth-of-type(6) .grid>div:nth-child(1) .rounded-full{background:#e8f7ed!important;color:var(--verde)!important}
+main > section:nth-of-type(6) .grid>div:nth-child(2) .rounded-full{background:#eaf2fb!important;color:var(--azul)!important}
+main > section:nth-of-type(6) .grid>div:nth-child(3) .rounded-full{background:#fff0e6!important;color:var(--naranja)!important}
+main > section:nth-of-type(6) .grid>div:nth-child(4) .rounded-full{background:#f2ebfb!important;color:var(--morado)!important}
+main > section:nth-of-type(6) h3{color:#173d27!important}
+main > section:nth-of-type(6) p{color:#52665a!important}
+
+ 
+main > section:nth-of-type(7){
+  background:
+    linear-gradient(180deg,rgba(236,244,238,.76),rgba(247,249,247,.84)),
+    url('img/font3.jpg') center/cover no-repeat!important;
+}
+main > section:nth-of-type(7) .text-center>span{color:var(--verde)!important}
+main > section:nth-of-type(7) .text-center h2{color:var(--verde-oscuro)!important}
+main > section:nth-of-type(7) details{background:rgba(255,255,255,.91)!important;border-color:rgba(255,255,255,.76)!important;box-shadow:0 12px 30px rgba(12,24,19,.08)}
+main > section:nth-of-type(7) summary span{color:#173d27!important}
+main > section:nth-of-type(7) summary i{color:var(--naranja)!important}
+main > section:nth-of-type(7) details p{color:#465a4d!important}
+
+ 
+main > section:nth-of-type(8){
+  background:
+    linear-gradient(180deg,rgba(236,244,238,.72),rgba(247,249,247,.84)),
+    url('img/font3.jpg') center/cover no-repeat!important;
+}
+main > section:nth-of-type(8) .rounded-3xl{
+  background:
+    linear-gradient(105deg,rgba(5,47,22,.78),rgba(31,126,54,.70)),
+    url('img/bank.webp') center/cover no-repeat!important;
+  box-shadow:0 24px 58px rgba(8,54,27,.24)!important;
+}
+main > section:nth-of-type(8) span{color:#bdf6cb!important}
+main > section:nth-of-type(8) h2{color:#fff!important;text-shadow:0 4px 14px rgba(0,0,0,.28)}
+main > section:nth-of-type(8) p{color:#effff3!important}
+main > section:nth-of-type(8) a{color:#fff!important;background:var(--naranja)!important}
+
+ 
+main .text-gray-800{color:#173d27!important}
+main .text-gray-600{color:#3f5547!important}
+main .text-gray-500{color:#52665a!important}
+main .text-gray-400{color:#68796d!important}
+main .text-brand-green{color:var(--verde)!important}
+main .text-brand-orange{color:var(--naranja)!important}
+
+ 
+main .rounded-3xl,main .rounded-2xl,main details{transition:transform .28s ease,box-shadow .28s ease}
+main .rounded-3xl:hover,main .rounded-2xl:hover,main details:hover{transform:translateY(-4px)}
+
+@media(max-width:900px){
+ main>section:nth-of-type(1){min-height:60vh;background-position:66% center!important}
+ main>section:nth-of-type(n+2){background-position:center!important}
+ main>section:nth-of-type(2) .lg\\:col-span-2{padding:22px}
+}
+</style>
+
+
+<style id="mc-footer-visibility-fix">
+
+
+
+
+
+footer,
+footer *{
+    visibility:visible !important;
+}
+
+footer{
+    display:block !important;
+    position:relative !important;
+    z-index:30 !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+    min-height:0 !important;
+    height:auto !important;
+    overflow:visible !important;
+    isolation:isolate;
+}
+
+footer [data-aos],
+footer .aos-init,
+footer .aos-animate,
+footer .mc-reveal,
+footer .mc-reveal-left,
+footer .mc-reveal-right{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    filter:none !important;
+}
+
+ 
+body.mc-ultra-page > footer,
+body.mc-ultra-page footer{
+    opacity:1 !important;
+}
+
+ 
+main .mc-reveal{
+    visibility:visible !important;
+}
+main .mc-reveal.mc-visible{
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+}
+</style>
+
 </head>
-<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="diario">
 <?php include 'encabezado.php'; ?>
 
 <main class="pt-[88px] md:pt-[96px]">
-    <!-- HERO -->
+     
     <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
         <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-white/10"></div>
@@ -50,7 +274,7 @@
         </div>
     </section>
 
-    <!-- INTRO + CTA -->
+     
     <section class="py-14 md:py-16 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-7">
             <div class="lg:col-span-2">
@@ -66,7 +290,7 @@
                 <span class="text-xs font-extrabold uppercase tracking-wider text-gray-400">¿Quieres saber más?</span>
                 <h3 class="text-2xl font-black mt-2">Habla con un asesor</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3">Recibe orientación sobre requisitos, condiciones y el proceso de evaluación.</p>
-                <a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Diario." target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Diario." target="_blank" rel="noopener noreferrer"
                    class="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-5 py-3.5 rounded-full font-extrabold transition">
                     <i class="fab fa-whatsapp text-lg"></i> Solicitar información
                 </a>
@@ -78,7 +302,7 @@
         </div>
     </section>
 
-    <!-- PARA QUIÉN -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
             <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
@@ -104,7 +328,7 @@
         </div>
     </section>
 
-    <!-- CARACTERÍSTICAS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto">
@@ -138,7 +362,7 @@
         </div>
     </section>
 
-    <!-- REQUISITOS -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-5xl mx-auto">
             <div class="text-center">
@@ -161,7 +385,7 @@
         </div>
     </section>
 
-    <!-- PROCESO -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center">
@@ -177,7 +401,7 @@
         </div>
     </section>
 
-    <!-- FAQ -->
+     
     <section class="py-14 md:py-18 px-4 md:px-10 bg-gray-50">
         <div class="max-w-4xl mx-auto">
             <div class="text-center">
@@ -203,7 +427,7 @@
         </div>
     </section>
 
-    <!-- CTA FINAL -->
+     
     <section class="px-4 md:px-10 py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
             <div>
@@ -211,7 +435,7 @@
                 <h2 class="text-3xl md:text-4xl font-black mt-2">¿Quieres conocer si este crédito es para ti?</h2>
                 <p class="text-green-50 mt-3 max-w-2xl">Habla con un asesor y recibe orientación sobre el producto y el proceso de evaluación.</p>
             </div>
-            <a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Diario." target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Diario." target="_blank" rel="noopener noreferrer"
                class="shrink-0 inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-7 py-4 rounded-full font-extrabold shadow-lg transition">
                 <i class="fab fa-whatsapp text-xl"></i> Hablar con un asesor
             </a>
@@ -220,5 +444,44 @@
 </main>
 
 <?php include 'footer.php'; ?>
+
+<script src="js/mc-productos-ultra.js" defer></script>
+
+<script id="mc-footer-reveal-failsafe">
+document.addEventListener('DOMContentLoaded', function () {
+    function asegurarVisibilidad() {
+        document.querySelectorAll('main .mc-reveal').forEach(function (el) {
+            el.classList.add('mc-visible');
+        });
+
+        const footer = document.querySelector('footer');
+        if (footer) {
+            footer.style.setProperty('display', 'block', 'important');
+            footer.style.setProperty('opacity', '1', 'important');
+            footer.style.setProperty('visibility', 'visible', 'important');
+            footer.style.setProperty('transform', 'none', 'important');
+
+            footer.querySelectorAll('*').forEach(function (el) {
+                el.style.setProperty('visibility', 'visible', 'important');
+
+                if (
+                    el.hasAttribute('data-aos') ||
+                    el.classList.contains('aos-init') ||
+                    el.classList.contains('mc-reveal')
+                ) {
+                    el.style.setProperty('opacity', '1', 'important');
+                    el.style.setProperty('transform', 'none', 'important');
+                    el.style.setProperty('filter', 'none', 'important');
+                }
+            });
+        }
+    }
+
+     
+    setTimeout(asegurarVisibilidad, 350);
+    setTimeout(asegurarVisibilidad, 1200);
+});
+</script>
+
 </body>
 </html>

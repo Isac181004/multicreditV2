@@ -1,6 +1,6 @@
 <?php
-// Cargar los estilos y librerías ANTES de encabezado.php.
-// El archivo encabezado.php utiliza clases Tailwind, por eso deben estar disponibles desde el inicio.
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -29,7 +29,7 @@
     .service-hero {
         background:
             linear-gradient(90deg, rgba(10,55,20,.92), rgba(10,55,20,.62), rgba(10,55,20,.18)),
-            url('img/cajamarca.jpg') center/cover no-repeat;
+            url('img/cajamarca.webp') center/cover no-repeat;
     }
 </style>
 <style>
@@ -40,7 +40,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         
-        /* ===== SIMULADOR: SOLO ESTILOS DEL BLOQUE DEL SIMULADOR ===== */
+         
         .simulator-section {
             background: linear-gradient(180deg, #f7f9f8 0%, #eef3ef 100%);
         }
@@ -174,7 +174,7 @@
     </style>
 
 <style id="credit-visual-fix">
-/* ===== CREDITS PAGE: VISUAL STABILITY / TEXT VISIBILITY ===== */
+ 
 .credit-page{
     overflow-x:hidden;
     color:#17221a;
@@ -187,7 +187,7 @@
     padding:80px 0 !important;
     background:
         linear-gradient(90deg, rgba(10,55,20,.92), rgba(10,55,20,.62), rgba(10,55,20,.18)),
-        url('img/cajamarca.jpg') center/cover no-repeat !important;
+        url('img/cajamarca.webp') center/cover no-repeat !important;
     overflow:hidden;
 }
 .credit-page .credit-hero > div{
@@ -212,7 +212,7 @@
     color:#f26e22 !important;
 }
 
-/* Intro block: prevent clipping, inherited colors or collapsed layout. */
+ 
 .credit-page .credit-intro-grid{
     display:grid;
     grid-template-columns:minmax(0,2fr) minmax(280px,1fr);
@@ -239,8 +239,8 @@
     visibility:visible !important;
 }
 
-/* The "¿No sabes cuál elegir?" card was showing white text on a light
-   background. Force the intended green card and its text. */
+
+
 .credit-page .credit-help-card{
     min-width:0;
     background:linear-gradient(135deg,#1c7a30 0%,#2e9e43 100%) !important;
@@ -269,8 +269,8 @@
     margin-top:8px !important;
 }
 
-/* Microenterprise advisor CTA: same problem class of white text on a
-   washed-out background. */
+
+
 .credit-page .credit-advisor-card{
     background:linear-gradient(135deg,#1c7a30 0%,#145a25 100%) !important;
     color:#fff !important;
@@ -302,7 +302,7 @@
     color:#fff !important;
 }
 
-/* Prevent cards or their contents from becoming invisible due to external CSS. */
+ 
 .credit-page .credit-product-card-fix{
     min-width:0;
     min-height:310px !important;
@@ -325,7 +325,7 @@
     visibility:visible !important;
 }
 
-/* Mobile layout */
+ 
 @media (max-width:900px){
     .credit-page .credit-intro-grid{
         grid-template-columns:1fr;
@@ -346,13 +346,598 @@
 }
 </style>
 
+
+<style id="mc-creditos-premium-safe">
+
+
+
+
+
+:root{
+    --mc-deep:#062713;
+    --mc-deep-2:#0b3a20;
+    --mc-green:#2e9e43;
+    --mc-orange:#f26e22;
+    --mc-ink:#132019;
+}
+
+html{scroll-behavior:smooth}
+
+body.credit-page{
+    background:#f3f7f4;
+    color:var(--mc-ink);
+}
+
+ 
+.credit-page .credit-hero{
+    min-height:68vh !important;
+    padding:110px 0 105px !important;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    isolation:isolate;
+    background:
+        linear-gradient(100deg,
+            rgba(3,24,12,.95) 0%,
+            rgba(5,45,22,.86) 38%,
+            rgba(7,61,29,.62) 68%,
+            rgba(7,61,29,.28) 100%),
+        url("img/font1.jpg")
+        center 42% / cover no-repeat !important;
+}
+
+.credit-page .credit-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 18% 25%,rgba(46,158,67,.30),transparent 26%),
+        radial-gradient(circle at 82% 18%,rgba(242,110,34,.18),transparent 23%);
+    animation:mcGlow 7s ease-in-out infinite alternate;
+}
+
+.credit-page .credit-hero::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:120px;
+    z-index:0;
+    pointer-events:none;
+    background:linear-gradient(to top,#f3f7f4 0%,rgba(243,247,244,0) 100%);
+}
+
+.credit-page .credit-hero > div{
+    z-index:2 !important;
+}
+
+.credit-page .credit-hero h1{
+    text-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+
+.credit-page .credit-hero .max-w-3xl{
+    animation:mcHeroIn .9s cubic-bezier(.16,1,.3,1) both;
+}
+
+.credit-page .credit-hero a{
+    transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease;
+}
+.credit-page .credit-hero a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 36px rgba(0,0,0,.20);
+}
+
+ 
+.credit-page section:nth-of-type(2){
+    background:
+        linear-gradient(90deg,rgba(247,250,248,.97),rgba(247,250,248,.92)),
+        url("img/font4.jpg")
+        center/cover no-repeat !important;
+}
+
+.credit-page .credit-intro-main{
+    background:rgba(255,255,255,.88) !important;
+    border:1px solid rgba(255,255,255,.72) !important;
+    box-shadow:0 22px 55px rgba(15,23,42,.10) !important;
+    backdrop-filter:blur(13px);
+}
+
+.credit-page .credit-help-card{
+    background:
+        linear-gradient(135deg,rgba(8,58,28,.92),rgba(34,135,58,.88)),
+        url("img/font2.jpg")
+        center/cover no-repeat !important;
+    background-blend-mode:multiply;
+    box-shadow:0 24px 58px rgba(20,90,42,.22) !important;
+}
+
+ 
+#microempresa{
+    background:
+        linear-gradient(180deg,rgba(235,244,237,.94),rgba(247,249,247,.97)),
+        url("img/font3.jpg")
+        center/cover no-repeat !important;
+}
+
+#microempresa .credit-product-card-fix{
+    min-height:330px !important;
+    background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(250,252,250,.90)) !important;
+    border:1px solid rgba(255,255,255,.75) !important;
+    box-shadow:0 15px 38px rgba(15,23,42,.09);
+    transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease,border-color .35s ease;
+    position:relative;
+    overflow:hidden !important;
+}
+
+#microempresa .credit-product-card-fix::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:5px;
+    background:linear-gradient(90deg,var(--mc-green),var(--mc-orange));
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .35s ease;
+}
+
+#microempresa .credit-product-card-fix:hover{
+    transform:translateY(-9px);
+    box-shadow:0 28px 58px rgba(15,23,42,.16);
+    border-color:rgba(46,158,67,.28) !important;
+}
+
+#microempresa .credit-product-card-fix:hover::after{
+    transform:scaleX(1);
+}
+
+.credit-page .credit-advisor-card{
+    background:
+        linear-gradient(150deg,rgba(5,47,22,.91),rgba(28,122,48,.88)),
+        url("img/font2.jpg")
+        center/cover no-repeat !important;
+    background-blend-mode:multiply;
+    box-shadow:0 24px 55px rgba(17,83,39,.20) !important;
+    transition:transform .35s ease,box-shadow .35s ease;
+}
+
+.credit-page .credit-advisor-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 32px 68px rgba(17,83,39,.27) !important;
+}
+
+ 
+#consumo{
+    background:
+        linear-gradient(180deg,rgba(255,255,255,.94),rgba(247,249,247,.97)),
+        url("img/font4.jpg")
+        center/cover no-repeat !important;
+}
+
+#consumo article{
+    position:relative;
+    overflow:hidden;
+    background:rgba(255,255,255,.92) !important;
+    border:1px solid rgba(255,255,255,.78) !important;
+    box-shadow:0 16px 38px rgba(15,23,42,.09);
+    transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease;
+}
+
+#consumo article::before{
+    content:"";
+    position:absolute;
+    inset:0 auto 0 0;
+    width:5px;
+    background:linear-gradient(180deg,var(--mc-orange),var(--mc-green));
+    opacity:.80;
+}
+
+#consumo article:hover{
+    transform:translateY(-9px);
+    box-shadow:0 28px 58px rgba(15,23,42,.15);
+}
+
+ 
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50{
+    background:
+        linear-gradient(90deg,rgba(8,48,24,.94),rgba(17,84,39,.88)),
+        url("img/font4.jpg")
+        center/cover no-repeat !important;
+}
+
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 h2,
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 > div > div > p{
+    color:#fff !important;
+}
+
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a{
+    background:rgba(255,255,255,.93) !important;
+    border:1px solid rgba(255,255,255,.60) !important;
+    box-shadow:0 14px 34px rgba(0,0,0,.13);
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a:hover{
+    transform:translateY(-7px);
+    box-shadow:0 24px 45px rgba(0,0,0,.20);
+}
+
+ 
+.credit-page section.px-4.md\:px-10.pb-10.bg-gray-50{
+    background:#eef4ef !important;
+}
+
+ 
+#simulador{
+    background:
+        linear-gradient(180deg,rgba(238,245,240,.93),rgba(248,250,248,.97)),
+        url("img/requisitos.webp")
+        center/cover no-repeat !important;
+}
+
+#simulador > div > .grid > div:first-child{
+    background:rgba(255,255,255,.94) !important;
+    border:1px solid rgba(255,255,255,.78) !important;
+    box-shadow:0 25px 60px rgba(15,23,42,.12) !important;
+    backdrop-filter:blur(12px);
+}
+
+#simulador .sim-producto,
+#simulador .sim-plazo,
+#simulador .sim-monto{
+    transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+
+#simulador .sim-producto:hover,
+#simulador .sim-plazo:hover,
+#simulador .sim-monto:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 22px rgba(15,23,42,.08);
+}
+
+#simulador .sim-result-panel{
+    background:
+        linear-gradient(145deg,rgba(5,45,22,.93),rgba(23,112,48,.86)),
+        url("img/requisitos.webp")
+        center/cover no-repeat !important;
+    background-blend-mode:multiply;
+    box-shadow:0 28px 65px rgba(19,89,40,.26) !important;
+}
+
+#simTablaWrap{
+    background:rgba(255,255,255,.96) !important;
+    box-shadow:0 25px 60px rgba(15,23,42,.11) !important;
+}
+
+ 
+.credit-page .credit-intro-main,
+.credit-page .credit-help-card,
+.credit-page .credit-product-card-fix,
+.credit-page .credit-advisor-card,
+#consumo article{
+    animation:mcRise .65s cubic-bezier(.16,1,.3,1) both;
+}
+
+#microempresa article:nth-child(2),
+#consumo article:nth-child(2){animation-delay:.06s}
+#microempresa article:nth-child(3),
+#consumo article:nth-child(3){animation-delay:.12s}
+#microempresa article:nth-child(4){animation-delay:.18s}
+#microempresa article:nth-child(5){animation-delay:.24s}
+#microempresa article:nth-child(6){animation-delay:.30s}
+
+@keyframes mcHeroIn{
+    from{opacity:.15;transform:translateY(20px)}
+    to{opacity:1;transform:none}
+}
+@keyframes mcRise{
+    from{opacity:.55;transform:translateY(18px)}
+    to{opacity:1;transform:none}
+}
+@keyframes mcGlow{
+    from{opacity:.68;transform:scale(1)}
+    to{opacity:1;transform:scale(1.04)}
+}
+
+@media(max-width:900px){
+    .credit-page .credit-hero{
+        min-height:60vh !important;
+        padding:82px 0 88px !important;
+        background-position:62% center !important;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .credit-page .credit-hero::before,
+    .credit-page .credit-hero .max-w-3xl,
+    .credit-page .credit-intro-main,
+    .credit-page .credit-help-card,
+    .credit-page .credit-product-card-fix,
+    .credit-page .credit-advisor-card,
+    #consumo article{
+        animation:none !important;
+    }
+}
+</style>
+
+
+<style id="mc-creditos-claridad-colores">
+
+
+
+
+
+ 
+.credit-page .credit-hero{
+    background:
+        linear-gradient(100deg,
+            rgba(3,24,12,.78) 0%,
+            rgba(5,45,22,.60) 40%,
+            rgba(7,61,29,.34) 70%,
+            rgba(7,61,29,.16) 100%),
+        url("img/cajamarca.webp")
+        center 42% / cover no-repeat !important;
+}
+.credit-page .credit-hero::before{
+    opacity:.58 !important;
+}
+.credit-page .credit-hero h1{
+    color:#ffffff !important;
+    text-shadow:0 6px 24px rgba(0,0,0,.42);
+}
+.credit-page .credit-hero h1 .text-brand-orange{
+    color:#ff8a3d !important;
+}
+.credit-page .credit-hero p{
+    color:#f1fff4 !important;
+    text-shadow:0 3px 14px rgba(0,0,0,.34);
+}
+.credit-page .credit-hero > div > div > span{
+    color:#ffffff !important;
+}
+
+ 
+.credit-page section:nth-of-type(2){
+    background:
+        linear-gradient(90deg,rgba(247,250,248,.79),rgba(247,250,248,.70)),
+        url("img/font3.jpg")
+        center/cover no-repeat !important;
+}
+.credit-page .credit-intro-main{
+    background:rgba(255,255,255,.82) !important;
+}
+.credit-page .credit-intro-main span{
+    color:#e85c10 !important;
+}
+.credit-page .credit-intro-main h2{
+    color:#0b4c28 !important;
+}
+.credit-page .credit-intro-main p{
+    color:#263c30 !important;
+}
+.credit-page .credit-help-card{
+    background:
+        linear-gradient(135deg,rgba(8,58,28,.72),rgba(34,135,58,.66)),
+        url("img/target7.webp")
+        center/cover no-repeat !important;
+}
+.credit-page .credit-help-card h3{
+    color:#ffffff !important;
+    text-shadow:0 2px 10px rgba(0,0,0,.34);
+}
+.credit-page .credit-help-card p{
+    color:#effff3 !important;
+}
+
+ 
+#microempresa{
+    background:
+        linear-gradient(180deg,rgba(235,244,237,.74),rgba(247,249,247,.81)),
+        url("img/font4.jpg")
+        center/cover no-repeat !important;
+}
+#microempresa > div > div:first-child span{
+    color:#d9530b !important;
+}
+#microempresa > div > div:first-child h2{
+    color:#0a562c !important;
+    text-shadow:0 1px 0 rgba(255,255,255,.85);
+}
+#microempresa > div > div:first-child p{
+    color:#254334 !important;
+}
+#microempresa .credit-product-card-fix{
+    background:rgba(255,255,255,.88) !important;
+}
+#microempresa .credit-product-card-fix h3{
+    color:#0a562c !important;
+}
+#microempresa .credit-product-card-fix p{
+    color:#374a40 !important;
+}
+#microempresa .credit-product-card-fix a{
+    color:#d95b12 !important;
+}
+#microempresa .credit-product-card-fix a:hover{
+    color:#a84008 !important;
+}
+
+ 
+#microempresa article:nth-child(1) h3{color:#d95b12 !important;}
+#microempresa article:nth-child(2) h3{color:#16813a !important;}
+#microempresa article:nth-child(3) h3{color:#a66a00 !important;}
+#microempresa article:nth-child(4) h3{color:#2468b4 !important;}
+#microempresa article:nth-child(5) h3{color:#7042a5 !important;}
+
+ 
+.credit-page .credit-advisor-card{
+    background:
+        linear-gradient(150deg,rgba(5,47,22,.68),rgba(28,122,48,.61)),
+        url("img/historia.webp")
+        center/cover no-repeat !important;
+}
+.credit-page .credit-advisor-card h3{
+    color:#ffffff !important;
+    text-shadow:0 2px 10px rgba(0,0,0,.34);
+}
+.credit-page .credit-advisor-card p{
+    color:#effff3 !important;
+}
+
+ 
+#consumo{
+    background:
+        linear-gradient(180deg,rgba(255,255,255,.72),rgba(247,249,247,.80)),
+        url("img/font4.jpg")
+        center/cover no-repeat !important;
+}
+#consumo > div > div:first-child span{
+    color:#1d66b0 !important;
+}
+#consumo > div > div:first-child h2{
+    color:#123f70 !important;
+}
+#consumo > div > div:first-child p{
+    color:#33485d !important;
+}
+#consumo article{
+    background:rgba(255,255,255,.86) !important;
+}
+#consumo article:nth-child(1) h3{color:#1e65ae !important;}
+#consumo article:nth-child(2) h3{color:#bf3948 !important;}
+#consumo article:nth-child(3) h3{color:#7846a8 !important;}
+#consumo article p{
+    color:#3f4d56 !important;
+}
+#consumo article a{
+    color:#0c6c36 !important;
+}
+
+ 
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50{
+    background:
+        linear-gradient(90deg,rgba(7,43,21,.72),rgba(17,84,39,.61)),
+        url("img/font4.jpg")
+        center/cover no-repeat !important;
+}
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .text-brand-orange{
+    color:#ff9a55 !important;
+}
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 h2{
+    color:#ffffff !important;
+    text-shadow:0 4px 16px rgba(0,0,0,.35);
+}
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 > div > div > p{
+    color:#eaffef !important;
+}
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a h3{
+    color:#0b542b !important;
+}
+.credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a p{
+    color:#475569 !important;
+}
+
+ 
+.credit-page section.px-4.md\:px-10.pb-10.bg-gray-50{
+    background:linear-gradient(180deg,#eaf3ec,#f3f7f4) !important;
+}
+.credit-page section.px-4.md\:px-10.pb-10.bg-gray-50 > div > div{
+    background:rgba(255,255,255,.88) !important;
+    color:#43584b !important;
+}
+
+ 
+#simulador{
+    background:
+        linear-gradient(180deg,rgba(238,245,240,.72),rgba(248,250,248,.82)),
+        url("img/font1.jpg")
+        center/cover no-repeat !important;
+}
+#simulador > div > .max-w-3xl > span{
+    color:#d95b12 !important;
+}
+#simulador > div > .max-w-3xl > h2{
+    color:#0a562c !important;
+}
+#simulador > div > .max-w-3xl > p{
+    color:#31483a !important;
+}
+#simulador > div > .grid > div:first-child{
+    background:rgba(255,255,255,.89) !important;
+}
+#simulador .sim-result-panel{
+    background:
+        linear-gradient(145deg,rgba(5,45,22,.70),rgba(23,112,48,.61)),
+        url("img/requisitos.webp")
+        center/cover no-repeat !important;
+}
+#simulador .sim-result-panel .sim-main-number{
+    color:#ffffff !important;
+    text-shadow:0 5px 18px rgba(0,0,0,.30);
+}
+#simulador .sim-result-panel .sim-pill{
+    color:#ffffff !important;
+}
+#simulador .sim-result-panel .sim-row-label{
+    color:#d9f8e1 !important;
+}
+#simulador .sim-result-panel b{
+    color:#ffffff !important;
+}
+#simulador .sim-table-btn{
+    color:#0b5b2f !important;
+}
+#simulador .sim-whatsapp-btn{
+    color:#ffffff !important;
+}
+
+ 
+#simulador .sim-producto b{
+    color:#173d27 !important;
+}
+#simulador .sim-producto span{
+    color:#617166 !important;
+}
+#simulador .sim-producto.sim-activo b{
+    color:#0a6c32 !important;
+}
+#simulador #simMontoVista{
+    color:#0b6a34 !important;
+}
+#simulador #simTasa{
+    color:#0c5c30 !important;
+    background:#ffffff !important;
+}
+
+ 
+.credit-page .credit-hero,
+#microempresa,
+#consumo,
+#simulador{
+    background-color:#edf4ef;
+}
+
+ 
+@media(max-width:900px){
+    .credit-page .credit-hero{
+        background-position:62% center !important;
+    }
+    #microempresa,
+    #consumo,
+    #simulador{
+        background-position:center !important;
+    }
+}
+</style>
+
 </head>
 <body class="bg-gray-50 overflow-x-hidden credit-page">
 
 <?php
 include 'encabezado.php';
 ?>
-<!-- ================= HERO CRÉDITOS ================= -->
+ 
 <section class="credit-hero">
     <div class="max-w-7xl mx-auto w-full px-5 sm:px-8 py-20">
         <div class="max-w-3xl text-white">
@@ -391,7 +976,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= PRESENTACIÓN ================= -->
+ 
 <section class="py-14 md:py-16 px-4 md:px-10 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="credit-intro-grid">
@@ -424,7 +1009,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= MICROEMPRESA ================= -->
+ 
 <section id="microempresa" class="py-16 md:py-20 px-4 md:px-10 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
@@ -445,7 +1030,7 @@ include 'encabezado.php';
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-            <!-- Ordinario -->
+             
             <article class="credit-product-card credit-product-card-fix bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center text-xl">
@@ -464,7 +1049,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- Diario -->
+             
             <article class="credit-product-card credit-product-card-fix bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-green-50 text-brand-green flex items-center justify-center text-xl">
@@ -483,7 +1068,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- CrediEmpeño -->
+             
             <article class="credit-product-card credit-product-card-fix bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl">
@@ -502,7 +1087,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- CrediMoto -->
+             
             <article class="credit-product-card credit-product-card-fix bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl">
@@ -521,7 +1106,7 @@ include 'encabezado.php';
                 </a>
             </article>
 
-            <!-- Grupal -->
+             
             <article class="credit-product-card credit-product-card-fix bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-7 flex flex-col hover:-translate-y-1 hover:shadow-xl transition">
                 <div class="flex items-center justify-between">
                     <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl">
@@ -547,7 +1132,7 @@ include 'encabezado.php';
                 </div>
             </article>
 
-            <!-- CTA -->
+             
             <article class="credit-advisor-card">
                 <div>
                     <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-xl">
@@ -570,7 +1155,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= CONSUMO ================= -->
+ 
 <section id="consumo" class="py-16 md:py-20 px-4 md:px-10 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="mb-10">
@@ -637,7 +1222,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- ================= COMPARADOR / ORIENTACIÓN ================= -->
+ 
 <section class="py-16 px-4 md:px-10 bg-gray-50">
     <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-10">
@@ -680,7 +1265,7 @@ include 'encabezado.php';
     </div>
 </section>
 
-<!-- Nota institucional -->
+ 
 <section class="px-4 md:px-10 pb-10 bg-gray-50">
     <div class="max-w-7xl mx-auto">
         <div class="rounded-2xl border border-gray-200 bg-white p-5 text-xs md:text-sm text-gray-500 leading-relaxed">
@@ -739,9 +1324,12 @@ include 'encabezado.php';
 <button type="button" class="sim-monto bg-gray-100 px-4 py-2 rounded-full text-sm font-bold" data-monto="5000">S/ 5,000</button>
 </div>
 </div>
-<div id="simTasaWrap"><div class="flex items-center justify-between mb-3"><div><p class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Tasa</p><h3 class="font-display text-xl font-extrabold mt-1">Tasa referencial</h3></div><select id="simTasa" class="border border-gray-200 rounded-xl px-4 py-2 font-extrabold bg-white" aria-label="Tasa del crédito"></select></div><p class="text-sm text-gray-500">Puedes ajustar la tasa dentro del rango vigente.</p></div>
+<div id="simTasaWrap"><div class="flex items-center justify-between mb-3"><div><p class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Tasa</p><h3 class="font-display text-xl font-extrabold mt-1">Tasa referencial</h3></div><input id="simTasa" type="number" inputmode="decimal" class="border border-gray-200 rounded-xl px-4 py-2 font-extrabold bg-white w-28 text-right" aria-label="Tasa del crédito"></div><p class="text-sm text-gray-500">
+  Puedes ajustar la tasa dentro del rango permitido para cada producto.
+  <span id="simTasaRango" class="font-semibold text-brand-green"></span>
+</p></div>
 <div id="simPlazoWrap"><p class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Paso 3</p><h3 class="font-display text-xl font-extrabold mt-1 mb-3">¿En cuánto tiempo quieres pagarlo?</h3><div id="simPlazos" class="flex flex-wrap gap-2"></div></div>
-<div id="simDiarioInfo" class="hidden rounded-2xl bg-orange-50 p-5 text-sm"><b>30 pagos diarios.</b> El 18.55% corresponde al interés total de los 30 días.</div>
+<div id="simDiarioInfo" class="hidden rounded-2xl bg-orange-50 p-5 text-sm"><b>30 pagos diarios.</b> Tasa base 18.55% para los 30 días, ajustable entre 18.50% y 18.60%.</div>
 </div></div>
 <div class="lg:col-span-2 sim-result-panel rounded-3xl p-7 md:p-8 lg:sticky lg:top-24">
 <span class="sim-pill rounded-full px-3 py-1 text-xs font-extrabold uppercase">Tu simulación</span>
@@ -821,29 +1409,44 @@ include 'encabezado.php';
 .sim-producto.sim-activo{border-color:#187038;background:#f0fdf4}.sim-plazo{border:1px solid #e5e7eb;background:#fff;padding:.7rem 1rem;border-radius:9999px;font-weight:800}.sim-plazo.sim-activo{background:#187038;color:#fff}.sim-monto.sim-activo{background:#f0fdf4;color:#187038}
 </style>
 <script>
-/* MULTICREDIT V10 - SIMULADOR UNIFICADO Y FUNCIONAL */
+ 
 (()=>{const C={
-Ordinario:{a:3.6,b:4,t:6,T:24,m:20000,d:1},Diario:{a:18.55,b:18.55,t:30,T:30,m:10000,d:30},
-CrediEmpeño:{a:5,b:6,t:3,T:3,m:20000,d:1},CrediMoto:{a:3.6,b:4,t:6,T:24,m:30000,d:1},
-"Grupos Solidarios":{a:3.6,b:3.6,t:6,T:12,m:20000,d:1},"Bancos Comunales":{a:3,b:3,t:6,T:12,m:20000,d:1},
-Educación:{a:3,b:3.6,t:6,T:24,m:15000,d:1},Salud:{a:2.5,b:3,t:3,T:24,m:15000,d:1},
-Esparcimiento:{a:3.6,b:4,t:6,T:24,m:15000,d:1}};
+Ordinario:{a:3.6,b:4,r:3.6,s:.1,t:6,T:24,m:20000,d:1},
+Diario:{a:18.50,b:18.60,r:18.55,s:.01,t:30,T:30,m:10000,d:30},
+CrediEmpeño:{a:5,b:6,r:5,s:.1,t:3,T:3,m:20000,d:1},
+CrediMoto:{a:3.6,b:4,r:3.6,s:.1,t:6,T:24,m:30000,d:1},
+"Grupos Solidarios":{a:3.6,b:3.6,r:3.6,s:.1,t:6,T:12,m:20000,d:1},
+"Bancos Comunales":{a:3,b:3,r:3,s:.1,t:6,T:12,m:20000,d:1},
+Educación:{a:3,b:3.6,r:3,s:.1,t:6,T:24,m:15000,d:1},
+Salud:{a:2.5,b:3,r:2.5,s:.1,t:3,T:24,m:15000,d:1},
+Esparcimiento:{a:3.6,b:4,r:3.6,s:.1,t:6,T:24,m:15000,d:1}};
 let s={p:"Ordinario",a:100,r:3.6,n:12,rows:[]};const $=x=>document.getElementById(x),money=x=>"S/ "+Number(x||0).toLocaleString("es-PE",{minimumFractionDigits:2,maximumFractionDigits:2}),m0=x=>"S/ "+Math.round(x||0).toLocaleString("es-PE");
-function rates(){let c=C[s.p],q=$("simTasa");q.innerHTML="";for(let r=c.a;r<=c.b+.001;r+=.1){r=Math.round(r*10)/10;let o=new Option(r.toFixed(r%1?1:2)+"%",r);if(r===c.a)o.selected=true;q.add(o)}q.disabled=c.a===c.b;s.r=c.a}
+function rates(){
+  const c=C[s.p], q=$("simTasa");
+  q.min=c.a;
+  q.max=c.b;
+  q.step=c.s||.1;
+  q.disabled=c.a===c.b;
+  s.r=Number(c.r ?? c.a);
+  q.value=s.p==="Diario" ? s.r.toFixed(2) : String(s.r);
+  q.title=c.a===c.b
+    ? `Tasa fija: ${s.r}%`
+    : `Rango permitido: ${c.a}% a ${c.b}%`;
+}
 function terms(){let c=C[s.p],w=$("simPlazos");w.innerHTML="";$("simDiarioInfo").classList.toggle("hidden",s.p!=="Diario");$("simPlazoWrap").classList.toggle("hidden",s.p==="Diario");if(s.p==="Diario"){s.n=30;return} s.n=Math.min(c.T,Math.max(c.t,s.n));for(let n=c.t;n<=c.T;n++){let b=document.createElement("button");b.className="sim-plazo"+(n===s.n?" sim-activo":"");b.textContent=n+" meses";b.onclick=()=>{s.n=n;terms();calc()};w.appendChild(b)}}
 function amount(v){v=Math.round(Number(v)/100)*100;if(!isFinite(v))v=100;v=Math.max(100,Math.min(C[s.p].m,v));s.a=v;$("simMonto").value=v;$("simMontoSlider").value=v;$("simMontoVista").textContent=m0(v);$("simResultadoMonto").textContent=money(v);calc()}
 function monthly(){
   const P=Number(s.a);
   const displayedRate=Number(s.r)/100;
 
-  /*
-   * Legacy precision:
-   * the old system displays 3.6000%, but the observed six-row
-   * schedule is reproduced when the internal rate is 3.5999%.
-   * That is only 0.0001 percentage point below the displayed rate.
-   * We keep the public value at 3.6% and use the internal precision
-   * only for the calculation.
-   */
+  
+
+
+
+
+
+
+
   const r=Math.max(0, displayedRate-0.000001);
   const n=Number(s.n);
   const issue=$("simFecha")?.value || "2026-08-11";
@@ -868,7 +1471,7 @@ function monthly(){
   const periods=[];
   for(let i=0;i<n;i++) periods.push(daysBetween(dates[i],dates[i+1]));
 
-  // First determine the regular fixed installment.
+   
   function endBalance(payment){
     let bal=P;
     for(let i=0;i<n;i++){
@@ -886,8 +1489,8 @@ function monthly(){
   const exactPayment=(lo+hi)/2;
   const regular=Math.ceil(exactPayment-1e-9);
 
-  // Accounting table: balance and interest are rounded to cents
-  // at each installment, matching the displayed legacy schedule.
+   
+   
   let bal=cents(P), rows=[];
   for(let i=1;i<=n;i++){
     const opening=cents(bal);
@@ -919,7 +1522,7 @@ function monthly(){
 
 function daily(){
   const P=Number(s.a);
-  const totalRate=0.1855; // FIJO: 18.55% por los 30 días
+  const totalRate=Number(s.r)/100;  
   const totalInterest=Math.round(P*totalRate*100)/100;
   const totalToPay=Math.round((P+totalInterest)*100)/100;
   const dailyPayment=Math.ceil((totalToPay/30)*100)/100;
@@ -939,8 +1542,8 @@ function daily(){
   for(let i=1;i<=30;i++){
     const opening=i===1?P:rows[i-2].cl;
 
-    // 18.55% is the total interest for the 30-day operation.
-    // It is allocated over 30 days only for display.
+     
+     
     const interest=i===30
       ? cents(totalInterest-interestAccum)
       : cents(totalInterest/30);
@@ -976,14 +1579,14 @@ function calc(){
   $("simCuota").textContent=s.p==="Diario"?money(rows[0]?.payment||0):m0(rows[0]?.payment||0);
   $("simFrecuencia").textContent=s.p==="Diario"?"por día · 30 días":"por mes";
   $("simResultadoProducto").textContent=s.p;
-  $("simResultadoTasa").textContent=s.p==="Diario"?"18.55%":s.r.toFixed(s.r%1?1:2)+"%";
+  $("simResultadoTasa").textContent=s.p==="Diario"?s.r.toFixed(2)+"%":s.r.toFixed(s.r%1?1:2)+"%";
   $("simResultadoPlazo").textContent=s.p==="Diario"?"30 días":s.n+" meses";
   $("simTotal").textContent=money(total);
   $("simInteres").textContent=money(interest);
 
   $("cronProducto").textContent=s.p;
   $("cronMonto").textContent=money(s.a);
-  $("cronTasa").textContent=s.p==="Diario"?"18.55% total":""+s.r.toFixed(s.r%1?1:2)+"% mensual";
+  $("cronTasa").textContent=s.p==="Diario"?s.r.toFixed(2)+"% total":""+s.r.toFixed(s.r%1?1:2)+"% mensual";
   $("cronPlazo").textContent=s.p==="Diario"?"30 días":s.n+" meses";
 
   const fmtDate=d=>{
@@ -1060,15 +1663,49 @@ $("enviarSedeWhatsApp")?.addEventListener("click",()=>{
   const cuota=$("simCuota").textContent;
   const total=$("simTotal").textContent;
   const interes=$("simInteres").textContent;
-  const tasa=s.p==="Diario"?"18.55%":s.r.toFixed(s.r%1?1:2)+"%";
+  const tasa=s.p==="Diario"?s.r.toFixed(2)+"%":s.r.toFixed(s.r%1?1:2)+"%";
   const plazo=s.p==="Diario"?"30 días":s.n+" meses";
   const msg=`Hola Multicredit, deseo solicitar información sobre un préstamo.\n\n*Crédito:* ${s.p}\n*Monto solicitado:* ${money(s.a)}\n*Plazo:* ${plazo}\n*Tasa referencial:* ${tasa}\n*Cuota referencial:* ${cuota}\n*Total referencial:* ${total}\n*Interés estimado:* ${interes}\n*Sede elegida:* ${sedeSeleccionada}\n\nQuisiera recibir información sobre los requisitos y el proceso para solicitar el préstamo.`;
   window.open("https://wa.me/51968876759?text="+encodeURIComponent(msg),"_blank","noopener,noreferrer");
   cerrarSede();
 });
 
-function product(p){s.p=p;let c=C[p];s.a=Math.min(s.a,c.m);$("simProductoBadge").textContent=p;document.querySelectorAll(".sim-producto").forEach(x=>x.classList.toggle("sim-activo",x.dataset.producto===p));$("simMontoSlider").max=c.m;$("simMaxMontoLabel").textContent=m0(c.m);rates();terms();amount(s.a)}
-document.querySelectorAll(".sim-producto").forEach(b=>b.addEventListener("click",e=>{e.preventDefault();product(b.dataset.producto);}));document.querySelectorAll(".sim-monto").forEach(b=>b.onclick=()=>amount(b.dataset.monto));$("simMonto").oninput=e=>amount(e.target.value);$("simMontoSlider").oninput=e=>amount(e.target.value);$("simTasa").onchange=e=>{s.r=+e.target.value;calc()};
+function product(p){
+  s.p=p;
+  let c=C[p];
+  s.a=Math.min(s.a,c.m);
+  $("simProductoBadge").textContent=p;
+  document.querySelectorAll(".sim-producto").forEach(x=>x.classList.toggle("sim-activo",x.dataset.producto===p));
+  $("simMontoSlider").max=c.m;
+  $("simMaxMontoLabel").textContent=m0(c.m);
+  rates();
+  const rango=$("simTasaRango");
+  if(rango){
+    rango.textContent=c.a===c.b
+      ? ` Tasa fija: ${c.a}%.`
+      : ` Rango: ${c.a}% - ${c.b}%.`;
+  }
+  terms();
+  amount(s.a);
+}
+document.querySelectorAll(".sim-producto").forEach(b=>b.addEventListener("click",e=>{e.preventDefault();product(b.dataset.producto);}));document.querySelectorAll(".sim-monto").forEach(b=>b.onclick=()=>amount(b.dataset.monto));$("simMonto").oninput=e=>amount(e.target.value);$("simMontoSlider").oninput=e=>amount(e.target.value);$("simTasa").oninput=e=>{
+  const c=C[s.p];
+  let v=Number(e.target.value);
+  if(!Number.isFinite(v)) return;
+  if(v<c.a) v=c.a;
+  if(v>c.b) v=c.b;
+  s.r=v;
+  calc();
+};
+$("simTasa").onchange=e=>{
+  const c=C[s.p];
+  let v=Number(e.target.value);
+  if(!Number.isFinite(v)) v=Number(c.r ?? c.a);
+  v=Math.max(c.a,Math.min(c.b,v));
+  s.r=v;
+  e.target.value=s.p==="Diario" ? v.toFixed(2) : String(v);
+  calc();
+};
 $("simFecha").onchange=()=>calc();
 $("simTablaBtn").onclick=()=>{
   const w=$("simTablaWrap"), hidden=w.classList.toggle("hidden");
@@ -1079,10 +1716,17 @@ $("simTablaCerrar").onclick=()=>{
   $("simTablaWrap").classList.add("hidden");
   $("simTablaBtn").innerHTML='<i class="fas fa-calendar-check mr-2"></i>Ver mi cronograma';
 };
-rates();terms();$("simMaxMontoLabel").textContent=m0(C.Ordinario.m);if($("simFecha")&&!$("simFecha").value){$("simFecha").value="2026-08-11"}amount(100)})();
+rates();
+if($("simTasaRango")){
+  $("simTasaRango").textContent=` Rango: ${C.Ordinario.a}% - ${C.Ordinario.b}%.`;
+}
+terms();
+$("simMaxMontoLabel").textContent=m0(C.Ordinario.m);
+if($("simFecha")&&!$("simFecha").value){$("simFecha").value="2026-08-11"}
+amount(100)})();
 </script>
 
-<!-- MODAL DE SEDE PARA SOLICITAR INFORMACIÓN -->
+ 
 <div id="modalSedeCredito" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[80] hidden items-center justify-center p-4">
   <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden">
     <div class="bg-gradient-to-r from-brand-green-dark to-brand-green text-white px-6 py-6 md:px-8">
@@ -1172,3 +1816,6 @@ rates();terms();$("simMaxMontoLabel").textContent=m0(C.Ordinario.m);if($("simFec
 
 
 <?php include 'footer.php'; ?>
+
+</body>
+</html>

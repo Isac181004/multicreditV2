@@ -1,4 +1,3 @@
-<?php include 'encabezado.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,8 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{'brand-green':'#2e9e43','brand-green-dark':'#1c7a30','brand-orange':'#f26e22'}}}};</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mc-productos-ultra.css">
 </head>
-<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="bancos">
+<?php include 'encabezado.php'; ?>
 <main class="pt-[88px] md:pt-[96px]">
 <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
  <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
@@ -33,7 +38,7 @@
    <div class="w-14 h-14 rounded-2xl bg-green-100 text-brand-green flex items-center justify-center text-2xl"><i class="fas fa-landmark"></i></div>
    <h3 class="text-2xl font-black mt-5">¿Quieres participar?</h3>
    <p class="text-gray-600 text-sm leading-relaxed mt-3">Consulta con un asesor sobre formación de grupos, requisitos y condiciones actuales.</p>
-   <a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Bancos%20Comunales." target="_blank" rel="noopener noreferrer" class="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-5 py-3.5 rounded-full font-black"><i class="fab fa-whatsapp text-lg"></i> Hablar con un asesor</a>
+   <a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Bancos%20Comunales." target="_blank" rel="noopener noreferrer" class="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-5 py-3.5 rounded-full font-black"><i class="fab fa-whatsapp text-lg"></i> Hablar con un asesor</a>
   </div>
  </div>
 </section>
@@ -55,7 +60,9 @@
   <div class="rounded-3xl border border-gray-200 p-7"><i class="fas fa-store text-brand-green text-2xl"></i><h3 class="font-black text-xl mt-4">Fortalecimiento</h3><p class="text-gray-600 text-sm mt-2">El objetivo es contribuir al crecimiento de actividades económicas y pequeños negocios.</p></div>
  </div>
 </section>
-<section class="px-4 md:px-10 pb-14"><div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6"><div><span class="text-green-100 text-xs font-black uppercase tracking-widest">CEPRODEMIC – Multicredit</span><h2 class="text-3xl font-black mt-2">¿Quieres conocer la metodología?</h2><p class="text-green-50 mt-2">Conversa con un asesor para conocer las condiciones vigentes.</p></div><a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20quiero%20conocer%20la%20metodolog%C3%ADa%20de%20Bancos%20Comunales." target="_blank" rel="noopener noreferrer" class="bg-brand-orange hover:bg-orange-500 px-7 py-4 rounded-full font-black inline-flex items-center gap-2"><i class="fab fa-whatsapp text-xl"></i> Solicitar información</a></div></section>
+<section class="px-4 md:px-10 pb-14"><div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6"><div><span class="text-green-100 text-xs font-black uppercase tracking-widest">CEPRODEMIC – Multicredit</span><h2 class="text-3xl font-black mt-2">¿Quieres conocer la metodología?</h2><p class="text-green-50 mt-2">Conversa con un asesor para conocer las condiciones vigentes.</p></div><a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20quiero%20conocer%20la%20metodolog%C3%ADa%20de%20Bancos%20Comunales." target="_blank" rel="noopener noreferrer" class="bg-brand-orange hover:bg-orange-500 px-7 py-4 rounded-full font-black inline-flex items-center gap-2"><i class="fab fa-whatsapp text-xl"></i> Solicitar información</a></div></section>
 </main>
 <?php include 'footer.php'; ?>
+
+<script src="js/mc-productos-ultra.js" defer></script>
 </body></html>
