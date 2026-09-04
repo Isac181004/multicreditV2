@@ -16,7 +16,7 @@ text = text.replace('href="contacto.php"', 'href="<?= mc_h($mcSiteHeader[\'nav_c
 old_wa = 'href="https://wa.me/51968782473?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20un%20cr%C3%A9dito."'
 text = text.replace(old_wa, 'href="<?= mc_h($mcSiteHeader[\'header_cta_url\']) ?>"')
 
-# Textos de navegación desktop/mobile. Se usan reemplazos delimitados por saltos para no tocar contenido de páginas.
+# Textos de navegación desktop/mobile.
 labels = {
     'Inicio': "<?= mc_h($mcSiteHeader['nav_home_label']) ?>",
     'Servicios': "<?= mc_h($mcSiteHeader['nav_services_label']) ?>",
@@ -28,11 +28,12 @@ for old, new in labels.items():
     text = text.replace('\n                ' + old + '\n', '\n                ' + new + '\n')
     text = text.replace('\n            ' + old + '\n', '\n            ' + new + '\n')
 
-# Texto del trigger Créditos.
+# Créditos desktop + mobile.
 text = text.replace(
     '                    Créditos\n\n                    <i class="fas fa-chevron-down"',
     "                    <?= mc_h($mcSiteHeader['nav_credits_label']) ?>\n\n                    <i class=\"fas fa-chevron-down\"",
 )
+text = text.replace('\n            Créditos\n', "\n            <?= mc_h($mcSiteHeader['nav_credits_label']) ?>\n")
 
 # Mega menú.
 text = text.replace('                                    Encuentra el crédito ideal para ti', "                                    <?= mc_h($mcSiteHeader['credit_mega_title']) ?>")
