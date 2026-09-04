@@ -24,16 +24,30 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Aplicar parche de encabezado
+      - name: Aplicar integración CMS
         run: python tools/apply_admin_cms_total_patch.py
+      - name: Validar sintaxis PHP
+        run: |
+          php -l cms/bootstrap.php
+          php -l admin/_init.php
+          php -l admin/auth_api.php
+          php -l admin/login_overlay.php
+          php -l admin/index.php
+          php -l admin/setup.php
+          php -l admin/perfil.php
+          php -l admin/encabezado.php
+          php -l admin/modulos.php
+          php -l admin/pie.php
+          php -l encabezado.php
+          php -l footer.php
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add encabezado.php
+          git add encabezado.php admin/login_overlay.php
           if git diff --cached --quiet; then
             echo "Sin cambios"
           else
-            git commit -m "Integrar encabezado con CMS, login overlay y editor por módulos"
+            git commit -m "Completar integración CMS y login administrativo superpuesto"
             git push origin feat/admin-cms-total
           fi
