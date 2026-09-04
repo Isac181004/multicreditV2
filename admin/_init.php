@@ -1,5 +1,5 @@
 <?php
-if (session_status() !== PHP_SESSION_ACTIVE) session_start();
+if (session_status() !== PHP_SESSION_ACTIVE && !headers_sent()) session_start();
 require_once dirname(__DIR__) . '/cms/bootstrap.php';
 
 define('MC_ADMIN_CREDENTIAL_FILE', __DIR__ . '/config/admin_credentials.js');
