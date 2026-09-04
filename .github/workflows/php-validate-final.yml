@@ -1,0 +1,34 @@
+name: Validar CMS administrativo final
+
+on:
+  push:
+    branches:
+      - feat/admin-cms-total
+    paths:
+      - '**/*.php'
+      - 'cms/data/*.json'
+      - '.github/workflows/php-validate-final.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: PHP version
+        run: php -v
+      - name: Validar sintaxis de todos los PHP
+        run: find . -type f -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+      - name: Validar JSON del CMS
+        run: |
+          php -r '$files=["cms/data/site.json","cms/data/news.json","cms/data/pages.json"]; foreach($files as $f){$d=json_decode(file_get_contents($f),true); if(!is_array($d)){fwrite(STDERR,"JSON inválido: $f\n"); exit(1);} echo "JSON OK: $f\n";}'
+      - name: Smoke test del CMS
+        run: |
+          php -r 'require "cms/bootstrap.php"; $s=mc_site(); if(!is_array($s)||empty($s["brand_name"])) exit(1); $p=mc_page_config("index.php"); if(!array_key_exists("replace_main",$p)) exit(2); echo "CMS bootstrap OK\n";'
+      - name: Revisar encabezados usados por módulos
+        run: |
+          echo '--- referencias a encabezado.php ---'
+          grep -RIn --include='*.php' "encabezado.php" . || true
+          echo '--- referencias a encabezado1.php ---'
+          grep -RIn --include='*.php' "encabezado1.php" . || true
