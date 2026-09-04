@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 try {
-    mc_csrf_check();
+    mc_csrf_check(true);
 } catch (Throwable $e) {
     mc_auth_json(false, 'La sesión expiró. Recarga la página e inténtalo nuevamente.', [], 419);
 }
