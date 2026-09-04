@@ -1,0 +1,4 @@
+admin/config/whatsapp.php
+admin/config/recovery_state.json
+admin/config/*.tmp
+uploads/.tmp/
