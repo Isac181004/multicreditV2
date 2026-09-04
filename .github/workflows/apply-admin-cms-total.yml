@@ -1,0 +1,39 @@
+name: Aplicar CMS total Multicredit
+
+on:
+  push:
+    branches:
+      - feat/admin-cms-total
+    paths:
+      - 'tools/apply_admin_cms_total_patch.py'
+      - '.github/workflows/apply-admin-cms-total.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: feat/admin-cms-total
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Aplicar parche de encabezado
+        run: python tools/apply_admin_cms_total_patch.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add encabezado.php
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "Integrar encabezado con CMS, login overlay y editor por módulos"
+            git push origin feat/admin-cms-total
+          fi
