@@ -93,4 +93,5 @@ $mcPrimaryWa = preg_replace('/\D+/', '', (string)($mcSiteFooter['whatsapp1'] ?? 
 <?php endif; ?>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>if(window.AOS){AOS.init({once:true,offset:100});}</script>
+<script src="js/mc-opiniones.js"></script>
 <script src="js/mc-polish.js" defer></script>
