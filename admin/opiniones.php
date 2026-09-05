@@ -113,7 +113,7 @@ mc_admin_header('Opiniones y calificaciones');
 <div class="form-grid">
   <div class="field"><label>Nombre</label><input name="nombre" maxlength="80" value="<?=mc_h($editing['nombre']??'')?>" placeholder="Cliente de Multicredit"></div>
   <div class="field"><label>Sede</label><select name="sede"><?php foreach(mc_opinion_sedes() as $s):?><option value="<?=mc_h($s)?>" <?=$editing['sede']===$s?'selected':''?>><?=mc_h($s)?></option><?php endforeach;?></select></div>
-  <div class="field"><label>Calificación</label><select name="calificacion"><?php for($i=5;$i>=1;$i--):?><option value="<?=$i?>" ${(0)}<?php if((int)$editing['calificacion']===$i)echo 'selected';?>><?=$i?> estrella<?=$i===1?'':'s'?></option><?php endfor;?></select></div>
+  <div class="field"><label>Calificación</label><select name="calificacion"><?php for($i=5;$i>=1;$i--):?><option value="<?=$i?>" <?=((int)$editing['calificacion']===$i)?'selected':''?>><?=$i?> estrella<?=$i===1?'':'s'?></option><?php endfor;?></select></div>
   <div class="field"><label>Estado</label><select name="estado"><?php foreach(['pendiente','publicado','rechazado','oculto'] as $s):?><option value="<?=$s?>" <?=$editing['estado']===$s?'selected':''?>><?=ucfirst($s)?></option><?php endforeach;?></select></div>
   <div class="field full"><label>Comentario</label><textarea name="comentario" maxlength="600" required><?=mc_h($editing['comentario'])?></textarea></div>
   <div class="field full"><label><input type="checkbox" name="destacado" value="1" <?=!empty($editing['destacado'])?'checked':''?>> Destacar esta opinión antes que las demás</label></div>
