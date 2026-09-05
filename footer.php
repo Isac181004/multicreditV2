@@ -88,6 +88,8 @@ $mcPrimaryWa = preg_replace('/\D+/', '', (string)($mcSiteFooter['whatsapp1'] ?? 
 .wa-float{background:#25D366;box-shadow:0 8px 24px rgba(37,211,102,.45);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s ease}.wa-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 14px 32px rgba(37,211,102,.55)}.wa-float::after{content:'';position:absolute;inset:0;border-radius:9999px;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:waPulse 2.6s ease-out infinite}@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}@media(prefers-reduced-motion:reduce){.wa-float::after{animation:none}}
 </style>
 
+<?php require_once __DIR__ . '/cms/module_structured_runtime.php'; ?>
+
 <?php if ($mcPrimaryWa !== ''): ?>
 <a href="https://wa.me/<?= mc_h($mcPrimaryWa) ?>?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20un%20cr%C3%A9dito." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="wa-float fixed bottom-6 right-6 text-white rounded-2xl w-14 h-14 flex items-center justify-center text-3xl z-50"><i class="fab fa-whatsapp"></i></a>
 <?php endif; ?>
