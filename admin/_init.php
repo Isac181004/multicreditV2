@@ -189,6 +189,7 @@ function mc_admin_header($title) {
           <a href="encabezado.php">▤ Encabezado</a>
           <a href="modulos.php">▦ Módulos / páginas</a>
           <a href="contenido.php">✎ Inicio y contenido</a>
+          <a href="opiniones.php">★ Opiniones y calificaciones</a>
           <a href="noticias.php">📰 Noticias</a>
           <a href="media.php">▧ Biblioteca de imágenes</a>
           <a href="pie.php">▥ Pie de página</a>
@@ -204,7 +205,7 @@ function mc_admin_header($title) {
 }
 
 function mc_admin_footer() { ?>
-      <footer class="admin-footer">CEPRODEMIC MULTICREDIT · CMS por módulos · sin SQL</footer></main></div>
+      <footer class="admin-footer">CEPRODEMIC MULTICREDIT · CMS por módulos · opiniones MySQL</footer></main></div>
       <script>document.querySelectorAll('.sidebar a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop())a.classList.add('active')});</script>
     </body></html><?php }
 ?>
