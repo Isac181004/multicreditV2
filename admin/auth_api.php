@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/_init.php';
+require_once __DIR__ . '/whatsapp_cloud.php';
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 
@@ -108,7 +109,7 @@ if ($action === 'request_recovery') {
         mc_auth_json(false, 'No se pudo preparar el código de recuperación.', [], 500);
     }
 
-    $send = mc_send_whatsapp_recovery_code($phone, $code);
+    $send = mc_send_whatsapp_recovery_code_v2($phone, $code);
     if (empty($send['ok'])) {
         mc_clear_recovery_state();
         mc_auth_json(false, (string)($send['message'] ?? 'No se pudo enviar el código por WhatsApp.'), [], 502);
