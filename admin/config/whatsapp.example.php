@@ -15,8 +15,8 @@ return [
     // Si Meta muestra es_ES o es_MX, cambia este valor por ese código.
     'template_lang' => 'es',
 
-    // Versión de Graph API. Puede actualizarse sin cambiar el resto del sistema.
-    'graph_version' => 'v26.0',
+    // Usamos la misma versión que muestra actualmente el panel de prueba de Meta.
+    'graph_version' => 'v25.0',
 
     // Para plantilla AUTHENTICATION con botón OTP "Copiar código".
     // El sistema enviará el OTP tanto al BODY como al botón dinámico.
