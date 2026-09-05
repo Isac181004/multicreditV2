@@ -23,7 +23,7 @@ mc_admin_header('Dashboard'); ?>
   <section class="card">
     <h2>Edición total del sitio</h2>
     <div class="actions">
-      <a class="btn primary" href="modulos.php">▦ Editar módulos</a>
+      <a class="btn primary" href="modulos.php">▦ Editar páginas por módulo</a>
       <a class="btn light" href="encabezado.php">▤ Editar encabezado</a>
       <a class="btn light" href="pie.php">▥ Editar pie de página</a>
       <a class="btn light" href="contenido.php">✎ Editar inicio</a>
@@ -31,7 +31,7 @@ mc_admin_header('Dashboard'); ?>
       <a class="btn light" href="noticias.php">📰 Gestionar noticias</a>
       <a class="btn orange" target="_blank" href="../index.php">↗ Ver sitio</a>
     </div>
-    <p class="help" style="margin-top:18px">El editor por módulos trabaja sobre configuración CMS y puede reemplazar el contenido central de cada página sin tocar directamente su archivo PHP. El encabezado y el pie tienen editores independientes. Las opiniones enviadas por clientes se moderan antes de publicarse.</p>
+    <p class="help" style="margin-top:18px">Cada página tiene ahora un editor acorde con su diseño real. Por ejemplo, una ficha de crédito muestra portada, público objetivo, características, requisitos y preguntas frecuentes; Servicios muestra sus imágenes y tarjetas; Nosotros muestra historia, misión, visión y valores; Contacto muestra formulario, mapa, fotografía y CTA. Los colores e imágenes se cambian por módulo sin editar el PHP original.</p>
   </section>
   <section class="card">
     <h2>Datos institucionales</h2>
