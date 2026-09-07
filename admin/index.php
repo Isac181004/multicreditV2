@@ -38,7 +38,7 @@ mc_admin_header('Dashboard'); ?>
     <p><b><?=mc_h($site['brand_name'])?></b></p>
     <p class="help"><?=mc_nl2br($site['address1']??'')?></p>
     <p class="help"><?=mc_h($site['email']??'')?> · <?=mc_h($site['telefono']??'')?></p>
-    <p class="help" style="margin-top:12px">Recuperación por WhatsApp: <?=trim((string)(mc_admin_credentials()['recoveryPhone']??''))!==''?'configurada':'pendiente de configurar'?></p>
+    <p class="help" style="margin-top:12px">Acceso administrativo: usuario y contraseña.</p>
     <p class="help" style="margin-top:8px">Opiniones MySQL: <?=$pendingOpinions===null?'pendiente de configurar':'conectado'?></p>
   </section>
 </div>
