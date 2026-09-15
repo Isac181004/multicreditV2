@@ -34,7 +34,7 @@ $mcPrimaryWa = preg_replace('/\D+/', '', (string)($mcSiteFooter['whatsapp1'] ?? 
             $url = trim((string)($link['url'] ?? ''));
             if ($label === '' || $url === '') continue;
         ?>
-            <a href="<?= mc_h($url) ?>" target="_blank" rel="noopener noreferrer" class="text-gray-700 font-bold text-lg hover:text-brand-green transition"><?= mc_h($label) ?></a>
+            <a href="<?= mc_h($url) ?>" target="_blank" rel="noopener noreferrer" class="mc-interest-link font-bold text-lg transition"><?= mc_h($label) ?></a>
         <?php endforeach; ?>
     </div>
 
@@ -86,6 +86,7 @@ $mcPrimaryWa = preg_replace('/\D+/', '', (string)($mcSiteFooter['whatsapp1'] ?? 
 
 <style>
 .wa-float{background:#25D366;box-shadow:0 8px 24px rgba(37,211,102,.45);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s ease}.wa-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 14px 32px rgba(37,211,102,.55)}.wa-float::after{content:'';position:absolute;inset:0;border-radius:9999px;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:waPulse 2.6s ease-out infinite}@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}@media(prefers-reduced-motion:reduce){.wa-float::after{animation:none}}
+.mc-interest-link{color:#123b6d!important;text-decoration:none}.mc-interest-link:hover,.mc-interest-link:focus{color:#f26e22!important}
 </style>
 
 <?php require_once __DIR__ . '/cms/module_structured_runtime.php'; ?>
