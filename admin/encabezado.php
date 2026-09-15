@@ -5,7 +5,7 @@ $site = mc_site();
 $error = '';
 
 $fields = [
-    'brand_name','nav_home_label','nav_home_url','nav_credits_label','nav_credits_url','nav_services_label','nav_services_url',
+    'brand_name','nav_home_label','nav_home_url','nav_news_label','nav_news_url','nav_credits_label','nav_credits_url','nav_services_label','nav_services_url',
     'nav_about_label','nav_about_url','nav_contact_label','nav_contact_url','header_cta_label','header_cta_url',
     'credit_mega_title','credit_mega_subtitle','credit_mega_all_label','credit_mega_all_url',
     'credit_micro_title','credit_consumo_title',
@@ -45,16 +45,17 @@ mc_admin_header('Encabezado');
 <input type="hidden" name="csrf" value="<?=mc_h(mc_csrf_token())?>">
 <section class="card" style="margin-bottom:18px">
   <h2>Identidad y navegación</h2>
+  <p class="help">Orden público: Inicio · Noticias · Créditos · Servicios · Nosotros · Contacto · Administración.</p>
   <div class="form-grid">
     <div class="field"><label>Nombre institucional</label><input name="brand_name" value="<?=mc_h($site['brand_name'])?>"></div>
     <div class="field"><label>Logo</label><input type="file" name="logo" accept="image/*"><?php if(!empty($site['logo'])):?><img class="preview-img" style="display:block;margin-top:8px;max-height:100px" src="../<?=mc_h($site['logo'])?>"><?php endif;?></div>
     <?php
     $navs = [
-      ['home','Inicio'],['credits','Créditos'],['services','Servicios'],['about','Nosotros'],['contact','Contacto']
+      ['home','Inicio','index.php'],['news','Noticias','noticias.php'],['credits','Créditos','creditos.php'],['services','Servicios','servicios.php'],['about','Nosotros','conocenos.php'],['contact','Contacto','contacto.php']
     ];
-    foreach($navs as [$key,$fallback]): ?>
+    foreach($navs as [$key,$fallback,$fallbackUrl]): ?>
       <div class="field"><label>Texto <?=mc_h($fallback)?></label><input name="nav_<?=$key?>_label" value="<?=mc_h($site['nav_'.$key.'_label'] ?? $fallback)?>"></div>
-      <div class="field"><label>Enlace <?=mc_h($fallback)?></label><input name="nav_<?=$key?>_url" value="<?=mc_h($site['nav_'.$key.'_url'] ?? '')?>"></div>
+      <div class="field"><label>Enlace <?=mc_h($fallback)?></label><input name="nav_<?=$key?>_url" value="<?=mc_h($site['nav_'.$key.'_url'] ?? $fallbackUrl)?>"></div>
     <?php endforeach; ?>
     <div class="field"><label>Botón destacado</label><input name="header_cta_label" value="<?=mc_h($site['header_cta_label'] ?? 'Solicitar crédito')?>"></div>
     <div class="field"><label>Enlace botón destacado</label><input name="header_cta_url" value="<?=mc_h($site['header_cta_url'] ?? '')?>"></div>
