@@ -8,9 +8,9 @@
     <script>
         tailwind = window.tailwind || {};
         tailwind.config = {theme:{extend:{colors:{
-            'brand-green':'#0d5c2e',
-            'brand-green-dark':'#063718',
-            'brand-orange':'#f26e22'
+            'brand-green':'#0B1F3A',
+            'brand-green-dark':'#050B14',
+            'brand-orange':'#64748B'
         }}}};
     </script>
     <script src="https://cdn.tailwindcss.com"></script>

@@ -85,7 +85,7 @@ $mcPrimaryWa = preg_replace('/\D+/', '', (string)($mcSiteFooter['whatsapp1'] ?? 
 </footer>
 
 <style>
-.wa-float{background:#25D366;box-shadow:0 8px 24px rgba(37,211,102,.45);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s ease}.wa-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 14px 32px rgba(37,211,102,.55)}.wa-float::after{content:'';position:absolute;inset:0;border-radius:9999px;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:waPulse 2.6s ease-out infinite}@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}@media(prefers-reduced-motion:reduce){.wa-float::after{animation:none}}
+.wa-float{background:#1F4E79;box-shadow:0 8px 24px rgba(31,78,121,.45);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s ease}.wa-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 14px 32px rgba(31,78,121,.55)}.wa-float::after{content:'';position:absolute;inset:0;border-radius:9999px;box-shadow:0 0 0 0 rgba(31,78,121,.5);animation:waPulse 2.6s ease-out infinite}@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(31,78,121,.45)}70%{box-shadow:0 0 0 16px rgba(31,78,121,0)}100%{box-shadow:0 0 0 0 rgba(31,78,121,0)}}@media(prefers-reduced-motion:reduce){.wa-float::after{animation:none}}
 </style>
 
 <?php require_once __DIR__ . '/cms/module_structured_runtime.php'; ?>

@@ -12,9 +12,9 @@
         tailwind = window.tailwind || {};
         tailwind.config = {
             theme: { extend: { colors: {
-                'brand-green':'#2e9e43',
-                'brand-green-dark':'#1c7a30',
-                'brand-orange':'#f26e22'
+                'brand-green':'#1F4E79',
+                'brand-green-dark':'#0B1F3A',
+                'brand-orange':'#64748B'
             } } }
         };
     </script>
@@ -31,7 +31,7 @@
 
 <main class="pt-[88px] md:pt-[96px]">
      
-    <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0B1F3A] via-[#1F4E79] to-[#1F4E79] text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
         <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-white/10"></div>
         <div class="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24 relative z-10">
@@ -223,7 +223,7 @@
 
      
     <section class="px-4 md:px-10 py-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
+        <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#0B1F3A] to-[#1F4E79] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
             <div>
                 <span class="text-green-100 text-xs font-extrabold uppercase tracking-widest">CEPRODEMIC – Multicredit</span>
                 <h2 class="text-3xl md:text-4xl font-black mt-2">¿Quieres conocer si este crédito es para ti?</h2>

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   
  sections.forEach(sec=>{
-   const cta=sec.querySelector('div[class*="bg-gradient-to-r"],div[class*="from-[#052712]"],div[class*="from-[#176b2b]"]');
+   const cta=sec.querySelector('div[class*="bg-gradient-to-r"],div[class*="from-[#061426]"],div[class*="from-[#0B1F3A]"]');
    if(cta&&sec!==hero)cta.classList.add('mc-ultra-final');
  });
 

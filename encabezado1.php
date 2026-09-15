@@ -7,9 +7,9 @@
 
 
 :root {
-    --mc-green: #063718;
-    --mc-green-2: #0d5c2e;
-    --mc-orange: #f26e22;
+    --mc-green: #050B14;
+    --mc-green-2: #0B1F3A;
+    --mc-orange: #64748B;
 }
 
 
@@ -29,7 +29,7 @@
     z-index: 99999;
 
     background:
-        rgba(3, 43, 19, .88);
+        rgba(5,11,20,.88);
 
     border-bottom:
         1px solid
@@ -282,7 +282,7 @@
 
     box-shadow:
         0 8px 22px
-        rgba(242,110,34,.22);
+        rgba(100,116,139,.22);
 
     transition:
         transform .25s ease,
@@ -293,7 +293,7 @@
 #main-header .mc-header-button:hover {
 
     background:
-        #ff7c30;
+        #64748B;
 
     transform:
         translateY(-2px);
@@ -379,7 +379,7 @@
         18px;
 
     background:
-        rgba(3, 43, 19, .97);
+        rgba(5,11,20,.97);
 
     backdrop-filter:
         blur(18px);
@@ -474,7 +474,7 @@
 #main-header.scrolled {
 
     background:
-        rgba(3,43,19,.96);
+        rgba(5,11,20,.96);
 
     box-shadow:
         0 12px 35px
@@ -612,7 +612,11 @@
 </style>
 
  
+<link rel="icon" type="image/svg+xml" href="img/favicon-multicredit.svg">
+<link rel="alternate icon" type="image/png" href="img/favicon-multicredit.png">
+<meta name="theme-color" content="#0B1F3A">
 <link rel="stylesheet" href="css/mc-polish.css">
+<link rel="stylesheet" href="css/brand-theme.css">
 
 <a class="mc-skip-link" href="#contenido-principal">
     Saltar al contenido
@@ -632,7 +636,7 @@
         >
 
             <img
-                src="<?= mc_h($mcSiteHeader['logo']) ?>"
+                src="<?= mc_h($mcSiteHeader['logo_dark'] ?? 'img/logo-multicredit-oscuro.png') ?>"
                 alt="CEPRODEMIC MULTICREDIT"
             >
 
