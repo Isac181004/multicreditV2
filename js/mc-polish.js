@@ -27,9 +27,31 @@
         return file;
     }
 
+    function ensureNewsNavigation() {
+        const desktop = document.querySelector('#main-header .mc-desktop-nav');
+        if (desktop && !desktop.querySelector('a[href="noticias.php"]')) {
+            const first = desktop.querySelector('a[href]');
+            const news = document.createElement('a');
+            news.href = 'noticias.php';
+            news.textContent = 'Noticias';
+            if (first) first.insertAdjacentElement('afterend', news);
+            else desktop.prepend(news);
+        }
+
+        const mobile = document.getElementById('mc-mobile-menu');
+        if (mobile && !mobile.querySelector('a[href="noticias.php"]')) {
+            const first = mobile.querySelector('a[href]');
+            const news = document.createElement('a');
+            news.href = 'noticias.php';
+            news.innerHTML = '<i class="fas fa-newspaper" aria-hidden="true"></i> Noticias';
+            if (first) first.insertAdjacentElement('afterend', news);
+            else mobile.prepend(news);
+        }
+    }
+
     function markCurrentNavigation(file) {
         const activeHref = activeSection(file);
-        document.querySelectorAll('#main-header nav a[href]').forEach((link) => {
+        document.querySelectorAll('#main-header nav a[href], #mc-mobile-menu a[href]').forEach((link) => {
             const href = (link.getAttribute('href') || '').split('?')[0].split('#')[0];
             if (href !== activeHref) return;
             link.classList.add('active');
@@ -55,7 +77,8 @@
     function protectExternalLinks() {
         document.querySelectorAll('a[target="_blank"]').forEach((link) => {
             const values = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
-            values.add('noopener'); values.add('noreferrer');
+            values.add('noopener');
+            values.add('noreferrer');
             link.setAttribute('rel', Array.from(values).join(' '));
         });
     }
@@ -76,6 +99,7 @@
     function init() {
         const file = currentFile();
         document.body.classList.add('mc-site', `mc-page-${pageSlug(file)}`);
+        ensureNewsNavigation();
         markCurrentNavigation(file);
         prepareMainContent();
         improveImages();
