@@ -1,1 +1,58 @@
-{}
+{
+    "conocenos.php": {
+        "enabled": true,
+        "display_name": "",
+        "browser_title": "",
+        "heading": "",
+        "subtitle": "",
+        "hero_image": "",
+        "hero_selector": "",
+        "heading_selector": "main h1",
+        "subtitle_selector": "",
+        "replace_main": false,
+        "target_selector": "main",
+        "body_html": "",
+        "custom_css": "",
+        "structured": {
+            "history_image": "uploads/modules/20260915_182649_69623315.jpg",
+            "focus_image": "uploads/modules/20260905_183127_4773c0ce.jpg"
+        }
+    },
+    "contacto.php": {
+        "enabled": true,
+        "display_name": "",
+        "browser_title": "",
+        "heading": "",
+        "subtitle": "",
+        "hero_image": "",
+        "hero_selector": "",
+        "heading_selector": "main h1",
+        "subtitle_selector": "",
+        "replace_main": false,
+        "target_selector": "main",
+        "body_html": "",
+        "custom_css": "",
+        "structured": {
+            "photo_image": "uploads/modules/20260905_183404_aa19d559.webp",
+            "cta_image": "uploads/modules/20260905_183443_34940970.png"
+        }
+    },
+    "servicios.php": {
+        "enabled": true,
+        "display_name": "",
+        "browser_title": "",
+        "heading": "",
+        "subtitle": "",
+        "hero_image": "",
+        "hero_selector": "",
+        "heading_selector": "main h1",
+        "subtitle_selector": "",
+        "replace_main": false,
+        "target_selector": "main",
+        "body_html": "",
+        "custom_css": "",
+        "structured": {
+            "hero_card_image": "uploads/modules/20260905_195958_a3d74f3f.png"
+        }
+    }
+}

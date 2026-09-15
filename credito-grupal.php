@@ -67,12 +67,22 @@
                     <div class="w-14 h-14 rounded-2xl bg-green-100 text-brand-green flex items-center justify-center text-2xl"><i class="fas fa-landmark"></i></div>
                     <h3 class="text-2xl font-black mt-5">Bancos Comunales</h3>
                     <p class="text-gray-600 mt-2 leading-relaxed">Organización grupal, financiamiento, capacitación y acompañamiento bajo una metodología específica.</p>
+                    <div class="grid grid-cols-3 gap-2 mt-5 text-center">
+                        <div class="rounded-xl bg-green-50 px-2 py-3"><span class="block text-xs text-gray-500">Tasa mensual</span><strong class="block text-brand-green mt-1">3.00 %</strong></div>
+                        <div class="rounded-xl bg-green-50 px-2 py-3"><span class="block text-xs text-gray-500">Plazo</span><strong class="block text-brand-green mt-1">6 a 12 meses</strong></div>
+                        <div class="rounded-xl bg-green-50 px-2 py-3"><span class="block text-xs text-gray-500">Frecuencia</span><strong class="block text-brand-green mt-1">Mensual</strong></div>
+                    </div>
                     <span class="inline-flex items-center gap-2 text-brand-green font-extrabold text-sm mt-5">Conocer Bancos Comunales <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i></span>
                 </a>
                 <a href="grupos-solidarios.php" class="group bg-white rounded-3xl border border-gray-200 p-7 md:p-9 hover:-translate-y-1 hover:shadow-xl transition mc-ultra-card mc-group-option-card mc-visible">
                     <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl"><i class="fas fa-people-group"></i></div>
                     <h3 class="text-2xl font-black mt-5">Grupos Solidarios</h3>
                     <p class="text-gray-600 mt-2 leading-relaxed">Una alternativa basada en organización, confianza y responsabilidad compartida.</p>
+                    <div class="grid grid-cols-3 gap-2 mt-5 text-center">
+                        <div class="rounded-xl bg-purple-50 px-2 py-3"><span class="block text-xs text-gray-500">Tasa mensual</span><strong class="block text-purple-700 mt-1">3.6 %</strong></div>
+                        <div class="rounded-xl bg-purple-50 px-2 py-3"><span class="block text-xs text-gray-500">Plazo</span><strong class="block text-purple-700 mt-1">6 a 12 meses</strong></div>
+                        <div class="rounded-xl bg-purple-50 px-2 py-3"><span class="block text-xs text-gray-500">Frecuencia</span><strong class="block text-purple-700 mt-1">Mensual</strong></div>
+                    </div>
                     <span class="inline-flex items-center gap-2 text-brand-green font-extrabold text-sm mt-5">Conocer Grupos Solidarios <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i></span>
                 </a>
             </div>
@@ -138,32 +148,33 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto">
                 <span class="text-brand-orange text-xs font-extrabold uppercase tracking-widest">Información del producto</span>
-                <h2 class="text-3xl md:text-4xl font-black mt-2">Características a confirmar con tu asesor</h2>
-                <p class="text-gray-600 mt-3">Mostramos la estructura que tendrá la ficha comercial sin publicar datos que todavía no hemos validado.</p>
+                <h2 class="text-3xl md:text-4xl font-black mt-2">Condiciones principales de cada modalidad</h2>
+                <p class="text-gray-600 mt-3">Compara la tasa mensual, el plazo y la frecuencia de pago de Bancos Comunales y Grupos Solidarios.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
                 <div class="rounded-2xl border border-gray-200 p-5">
-                    <i class="fas fa-money-bill-wave text-brand-green text-2xl"></i>
-                    <h3 class="font-black mt-4">Monto</h3>
-                    <p class="text-sm text-gray-500 mt-1">Según evaluación y condiciones vigentes.</p>
+                    <i class="fas fa-landmark text-brand-green text-2xl"></i>
+                    <h3 class="font-black mt-4">Bancos Comunales</h3>
+                    <p class="text-sm text-gray-500 mt-1"><strong class="text-gray-800">3.00 % mensual</strong>.</p>
+                </div>
+                <div class="rounded-2xl border border-gray-200 p-5">
+                    <i class="fas fa-people-group text-purple-700 text-2xl"></i>
+                    <h3 class="font-black mt-4">Grupos Solidarios</h3>
+                    <p class="text-sm text-gray-500 mt-1"><strong class="text-gray-800">3.6 % mensual</strong>.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-calendar-alt text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Plazo</h3>
-                    <p class="text-sm text-gray-500 mt-1">Se determina según el producto y evaluación.</p>
+                    <p class="text-sm text-gray-500 mt-1"><strong class="text-gray-800">De 6 a 12 meses</strong> en ambas modalidades.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
-                    <i class="fas fa-percent text-brand-green text-2xl"></i>
-                    <h3 class="font-black mt-4">Tasa y costos</h3>
-                    <p class="text-sm text-gray-500 mt-1">Consulta las condiciones vigentes antes de contratar.</p>
-                </div>
-                <div class="rounded-2xl border border-gray-200 p-5">
-                    <i class="fas fa-handshake text-brand-green text-2xl"></i>
-                    <h3 class="font-black mt-4">Garantías</h3>
-                    <p class="text-sm text-gray-500 mt-1">Dependen del producto y del resultado de la evaluación.</p>
+                    <i class="fas fa-calendar-check text-brand-green text-2xl"></i>
+                    <h3 class="font-black mt-4">Frecuencia de pago</h3>
+                    <p class="text-sm text-gray-500 mt-1"><strong class="text-gray-800">Mensual</strong> en ambas modalidades.</p>
                 </div>
             </div>
+            <p class="text-center text-xs text-gray-500 mt-5">El monto, la aprobación y las demás condiciones están sujetos a evaluación crediticia y a las políticas vigentes de Multicredit.</p>
         </div>
     </section>
 

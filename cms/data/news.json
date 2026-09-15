@@ -24,6 +24,18 @@
         "updated_at": "2026-08-26 18:29:22"
     },
     {
+        "id": "sigue-el-trabajo-de-promoci-on-de-servicios-microfinancieros-en-ferias-regionales",
+        "title": "Sigue el trabajo de promoción de servicios microfinancieros en Ferias Regionales",
+        "category": "MULTICREDIT",
+        "date": "2016-08-10",
+        "summary": "",
+        "body": "Sigue el trabajo de promoción de servicios microfinancieros en Ferias Regionales, ahora tocó el turno al distrito de Matara-Cajamarca",
+        "image": "uploads/news/20260826_184951_2f259c70.webp",
+        "published": true,
+        "created_at": "2026-08-26 18:49:51",
+        "updated_at": "2026-08-26 18:49:51"
+    },
+    {
         "id": "luego-de-5-a-nos-del-programa-de-bancos-comunales",
         "title": "Luego de 5 años del Programa de Bancos Comunales",
         "category": "MULTICREDIT",
@@ -60,15 +72,15 @@
         "updated_at": "2026-08-26 18:26:30"
     },
     {
-        "id": "sigue-el-trabajo-de-promoci-on-de-servicios-microfinancieros-en-ferias-regionales",
-        "title": "Sigue el trabajo de promoción de servicios microfinancieros en Ferias Regionales",
-        "category": "MULTICREDIT",
-        "date": "2016-08-10",
-        "summary": "",
-        "body": "Sigue el trabajo de promoción de servicios microfinancieros en Ferias Regionales, ahora tocó el turno al distrito de Matara-Cajamarca",
-        "image": "uploads/news/20260826_184951_2f259c70.webp",
+        "id": "ceprodemic-multicredit-presente-en-ferias-agropecuarias-de-cajabamba-y-san-marcos",
+        "title": "CEPRODEMIC-MULTICREDIT Presente en ferias agropecuarias de Cajabamba y San Marcos",
+        "category": "CEPRODEMIC-MULTICREDIT",
+        "date": "2026-09-15",
+        "summary": "Estando próximos a la celebración de las fiestas patronales de la provincia de Cajabamba y San Marcos",
+        "body": "Estando próximos a la celebración de las fiestas patronales de la provincia de Cajabamba y San Marcos las mismas que se realizarán en el próximo mes de octubre nuestra institución estará promocionando sus nuevos productos crediticios: crédito diario, crédito empeño y crédito moto a fin de hacer conocer a la comunidad los requisitos y forma de acceso a dichos créditos",
+        "image": "uploads/news/20260915_183900_a941479d.jpg",
         "published": true,
-        "created_at": "2026-08-26 18:49:51",
-        "updated_at": "2026-08-26 18:49:51"
+        "created_at": "2026-09-15 18:39:00",
+        "updated_at": "2026-09-15 18:39:00"
     }
 ]

@@ -362,7 +362,8 @@ main .aos-animate{
             <div class="lg:col-span-2">
                 <span class="text-brand-orange text-xs font-extrabold uppercase tracking-[0.15em]">Conoce esta alternativa</span>
                 <h2 class="text-3xl md:text-4xl font-black mt-2">Pensado para una necesidad concreta</h2>
-                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Una alternativa de financiamiento orientada a pequeños emprendedores que necesitan recursos para capital de trabajo, inversión o necesidades propias de su actividad económica.</p>
+                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Una alternativa de financiamiento dirigida a pequeños emprendedores que necesitan recursos para fortalecer su negocio, incrementar su capital de trabajo o atender necesidades relacionadas con su actividad económica.<br>
+                Con el Crédito Ordinario de Multicredit puedes obtener el impulso necesario para continuar creciendo, mediante condiciones adaptadas a tu capacidad de pago y el acompañamiento personalizado de nuestros asesores.</p>
                 <p class="text-gray-500 text-sm leading-relaxed mt-4">
                     En CEPRODEMIC – Multicredit, cada solicitud es evaluada de acuerdo con el perfil del cliente,
                     su capacidad de pago, la finalidad del financiamiento y las condiciones vigentes del producto.
@@ -405,6 +406,17 @@ main .aos-animate{
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Comprar insumos o materia prima</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Realizar mejoras en el negocio</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Atender necesidades de liquidez de la actividad</span></li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
+                <h2 class="text-2xl md:text-3xl font-black mt-2">Principales beneficios</h2>
+                <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
+                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
+<li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Plazos flexibles según tu capacidad de pago.</span></li>
+<li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Tasa mensual referencial entre 3.6 % y 4 %.</span></li>
+<li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Evaluación personalizada.</span></li>
+<li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Atención cercana y asesoramiento durante todo el proceso.</span></li>
+<li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Financiamiento pensado para las necesidades reales de tu negocio.</span></li>
                 </ul>
             </div>
         </div>

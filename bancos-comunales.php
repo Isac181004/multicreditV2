@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bancos Comunales | CEPRODEMIC MULTICREDIT</title>
-    <meta name="description" content="Conoce la metodología de Bancos Comunales de CEPRODEMIC – Multicredit y cómo funciona el acompañamiento a grupos organizados.">
+    <meta name="description" content="Conoce Bancos Comunales de CEPRODEMIC – Multicredit: tasa mensual de 3.00 %, plazo de 6 a 12 meses y pagos mensuales.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{'brand-green':'#2e9e43','brand-green-dark':'#1c7a30','brand-orange':'#f26e22'}}}};</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,6 +13,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/mc-productos-ultra.css">
+    <style>
+        .mc-credit-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2rem;background:#fff!important;color:#12301f!important;border:1px solid rgba(13,92,46,.14);border-radius:24px;box-shadow:0 18px 55px rgba(0,0,0,.14);overflow:hidden}
+        .mc-credit-summary-item{padding:1.6rem 1rem;text-align:center}
+        .mc-credit-summary-item+.mc-credit-summary-item{border-left:1px solid #e5e7eb}
+        .mc-credit-summary-label{display:block;color:#607067!important;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+        .mc-credit-summary-value{display:block;color:var(--mc-accent)!important;font-family:'Poppins','Inter',sans-serif;font-size:clamp(1.35rem,2.5vw,2rem);font-weight:900;line-height:1.2;margin-top:.45rem}
+        .mc-benefit-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-top:2rem}
+        .mc-benefit-panel{background:#fff!important;color:#12301f!important;border:1px solid rgba(13,92,46,.14);border-radius:24px;padding:2rem;box-shadow:0 16px 45px rgba(3,29,14,.10)}
+        .mc-benefit-panel i{color:var(--mc-accent)!important;font-size:1.7rem}
+        .mc-benefit-panel h3{color:#12301f!important;font-size:1.25rem;font-weight:900;margin-top:1rem}
+        .mc-benefit-panel p{color:#526158!important;font-size:.95rem;line-height:1.7!important;margin-top:.55rem}
+        .mc-credit-summary,.mc-credit-summary *,.mc-benefit-layout,.mc-benefit-layout *,body[data-product="bancos"] .mc-reveal{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}
+        @media(max-width:767px){.mc-credit-summary{grid-template-columns:1fr}.mc-credit-summary-item+.mc-credit-summary-item{border-left:0;border-top:1px solid #e5e7eb}.mc-benefit-layout{grid-template-columns:1fr}}
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="bancos">
 <?php include 'encabezado.php'; ?>
@@ -42,6 +56,17 @@
   </div>
  </div>
 </section>
+<section class="py-12 px-4 md:px-10 bg-gray-50 mc-safe-section">
+ <div class="max-w-5xl mx-auto">
+  <div class="text-center max-w-3xl mx-auto"><span class="text-brand-orange text-xs font-black uppercase tracking-widest">Condiciones principales</span><h2 class="text-3xl md:text-4xl font-black mt-2">Bancos Comunales</h2><p class="text-gray-600 mt-3">Información financiera presentada en una sola ficha, clara y fácil de consultar.</p></div>
+  <div class="mc-credit-summary mc-visible" aria-label="Condiciones de Bancos Comunales">
+   <div class="mc-credit-summary-item"><span class="mc-credit-summary-label">Tasa mensual</span><strong class="mc-credit-summary-value">3.00 %</strong></div>
+   <div class="mc-credit-summary-item"><span class="mc-credit-summary-label">Plazo</span><strong class="mc-credit-summary-value">6 a 12 meses</strong></div>
+   <div class="mc-credit-summary-item"><span class="mc-credit-summary-label">Frecuencia de pago</span><strong class="mc-credit-summary-value">Mensual</strong></div>
+  </div>
+  <p class="text-center text-xs text-gray-500 mt-5">El monto, la aprobación y las demás condiciones están sujetos a evaluación crediticia y a las políticas vigentes de Multicredit.</p>
+ </div>
+</section>
 <section class="py-14 px-4 md:px-10 bg-gray-50">
  <div class="max-w-7xl mx-auto">
   <div class="text-center max-w-3xl mx-auto"><span class="text-brand-green text-xs font-black uppercase tracking-widest">Cómo funciona</span><h2 class="text-3xl md:text-4xl font-black mt-2">Un proceso basado en el trabajo colectivo</h2></div>
@@ -53,11 +78,13 @@
   </div>
  </div>
 </section>
-<section class="py-14 px-4 md:px-10 bg-white">
- <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-5">
-  <div class="rounded-3xl border border-gray-200 p-7"><i class="fas fa-users text-brand-green text-2xl"></i><h3 class="font-black text-xl mt-4">Trabajo en grupo</h3><p class="text-gray-600 text-sm mt-2">Promueve organización, participación y responsabilidad entre integrantes.</p></div>
-  <div class="rounded-3xl border border-gray-200 p-7"><i class="fas fa-graduation-cap text-brand-orange text-2xl"></i><h3 class="font-black text-xl mt-4">Capacitación</h3><p class="text-gray-600 text-sm mt-2">El desarrollo financiero puede complementarse con orientación y formación.</p></div>
-  <div class="rounded-3xl border border-gray-200 p-7"><i class="fas fa-store text-brand-green text-2xl"></i><h3 class="font-black text-xl mt-4">Fortalecimiento</h3><p class="text-gray-600 text-sm mt-2">El objetivo es contribuir al crecimiento de actividades económicas y pequeños negocios.</p></div>
+<section class="py-14 px-4 md:px-10 bg-white mc-safe-section">
+ <div class="max-w-6xl mx-auto">
+  <div class="text-center max-w-3xl mx-auto"><span class="text-brand-green text-xs font-black uppercase tracking-widest">Beneficios de la modalidad</span><h2 class="text-3xl md:text-4xl font-black mt-2">Organización que impulsa oportunidades</h2></div>
+  <div class="mc-benefit-layout mc-visible">
+   <div class="mc-benefit-panel"><i class="fas fa-users"></i><h3>Organización y capacitación</h3><p>Promueve la participación, la responsabilidad y el aprendizaje de los integrantes mediante reuniones y orientación.</p></div>
+   <div class="mc-benefit-panel"><i class="fas fa-store"></i><h3>Impulso a pequeños negocios</h3><p>El financiamiento puede destinarse al fortalecimiento de actividades económicas y negocios familiares, según evaluación.</p></div>
+  </div>
  </div>
 </section>
 <section class="px-4 md:px-10 pb-14"><div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6"><div><span class="text-green-100 text-xs font-black uppercase tracking-widest">CEPRODEMIC – Multicredit</span><h2 class="text-3xl font-black mt-2">¿Quieres conocer la metodología?</h2><p class="text-green-50 mt-2">Conversa con un asesor para conocer las condiciones vigentes.</p></div><a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20quiero%20conocer%20la%20metodolog%C3%ADa%20de%20Bancos%20Comunales." target="_blank" rel="noopener noreferrer" class="bg-brand-orange hover:bg-orange-500 px-7 py-4 rounded-full font-black inline-flex items-center gap-2"><i class="fab fa-whatsapp text-xl"></i> Solicitar información</a></div></section>

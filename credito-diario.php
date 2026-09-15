@@ -280,7 +280,8 @@ main .mc-reveal.mc-visible{
             <div class="lg:col-span-2">
                 <span class="text-brand-orange text-xs font-extrabold uppercase tracking-[0.15em]">Conoce esta alternativa</span>
                 <h2 class="text-3xl md:text-4xl font-black mt-2">Pensado para una necesidad concreta</h2>
-                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Financiamiento dirigido a emprendedores que manejan un flujo frecuente de ingresos y buscan una modalidad de pago diario, de acuerdo con las condiciones del producto.</p>
+                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Financiamiento dirigido a pequeños emprendedores que generan ingresos diariamente y necesitan una alternativa de pago acorde con el movimiento constante de su negocio.<br>
+                El Crédito Diario de Multicredit te permite obtener capital de manera oportuna y devolverlo mediante cuotas diarias durante un plazo establecido, facilitando la organización de tus pagos sin esperar hasta fin de mes.</p>
                 <p class="text-gray-500 text-sm leading-relaxed mt-4">
                     En CEPRODEMIC – Multicredit, cada solicitud es evaluada de acuerdo con el perfil del cliente,
                     su capacidad de pago, la finalidad del financiamiento y las condiciones vigentes del producto.
@@ -323,6 +324,17 @@ main .mc-reveal.mc-visible{
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Capital de trabajo</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Abastecimiento del negocio</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Necesidades operativas de corto plazo</span></li>
+                </ul>
+            </div>
+        <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
+                <h2 class="text-2xl md:text-3xl font-black mt-2">Principales beneficios</h2>
+                <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Cuotas diarias adaptadas al flujo frecuente de ingresos.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazo de financiamiento de 30 días.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Interés total referencial de 18.55 % para el periodo.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Evaluación personalizada.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Atención ágil y acompañamiento de nuestros asesores.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Una modalidad práctica para negocios con ventas diarias.</span></li>
                 </ul>
             </div>
         </div>

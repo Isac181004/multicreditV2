@@ -7,7 +7,7 @@
     "hero_subtitle": "Más de 15 años impulsando emprendedores y familias en Cajamarca.",
     "hero_image": "img/cajamarca.webp",
     "hero_primary_label": "Solicitar Crédito",
-    "hero_primary_url": "https://wa.me/51968876759?text=Hola%2C%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20un%20cr%C3%A9dito.",
+    "hero_primary_url": "https://wa.me/51968782473?text=Hola%2C%20deseo%20solicitar%20informaci%C3%B3n%20sobre%20un%20cr%C3%A9dito.",
     "hero_secondary_label": "Simular Crédito",
     "hero_secondary_url": "creditos.php",
     "value_eyebrow": "Tu crecimiento es nuestra prioridad",
@@ -32,10 +32,83 @@
     "whatsapp2": "51976782829",
     "whatsapp3": "51976327494",
     "whatsapp4": "51993647493",
+    "address": "Jr. Los Naranjos Nro. 513\r\nUrb. Los Rosales, Cajamarca",
+    "phone1": "968 876 759",
+    "whatsapp": "51968876759",
     "footer_tagline": "Financiamiento para crecer, oportunidades para avanzar.",
     "footer_since": "Desde 2009 acompañando a emprendedores y familias.",
     "copyright_year": "2026",
-    "address": "Jr. Los Naranjos Nro. 513\r\nUrb. Los Rosales, Cajamarca",
-    "phone1": "968 876 759",
-    "whatsapp": "51968876759"
+    "nav_home_label": "Inicio",
+    "nav_home_url": "index.php",
+    "nav_credits_label": "Créditos",
+    "nav_credits_url": "creditos.php",
+    "nav_services_label": "Servicios",
+    "nav_services_url": "servicios.php",
+    "nav_about_label": "Nosotros",
+    "nav_about_url": "conocenos.php",
+    "nav_contact_label": "Contacto",
+    "nav_contact_url": "contacto.php",
+    "header_cta_label": "Solicitar crédito",
+    "header_cta_url": "https://wa.me/51968782473?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20un%20cr%C3%A9dito.",
+    "credit_mega_title": "Encuentra el crédito ideal para ti",
+    "credit_mega_subtitle": "Soluciones para impulsar tu negocio y cumplir tus objetivos.",
+    "credit_mega_all_label": "Ver todos los créditos",
+    "credit_mega_all_url": "creditos.php",
+    "credit_micro_title": "Crédito Microempresa",
+    "credit_consumo_title": "Crédito Consumo",
+    "credit_ordinario_label": "Crédito Ordinario",
+    "credit_ordinario_desc": "Capital flexible para tu negocio.",
+    "credit_ordinario_url": "credito-ordinario.php",
+    "credit_diario_label": "Crédito Diario",
+    "credit_diario_desc": "Cuotas adaptadas al flujo diario.",
+    "credit_diario_url": "credito-diario.php",
+    "credit_empeno_label": "Crediempeño",
+    "credit_empeno_desc": "Liquidez con respaldo prendario.",
+    "credit_empeno_url": "crediempeno.php",
+    "credit_moto_label": "Credimoto",
+    "credit_moto_desc": "Financia la moto que necesitas.",
+    "credit_moto_url": "credimoto.php",
+    "credit_grupal_label": "Crédito Grupal",
+    "credit_grupal_desc": "Bancos comunales y grupos solidarios.",
+    "credit_grupal_url": "credito-grupal.php",
+    "credit_educacion_label": "Educación",
+    "credit_educacion_desc": "Invierte en estudios y capacitación.",
+    "credit_educacion_url": "educacion.php",
+    "credit_salud_label": "Salud",
+    "credit_salud_desc": "Respaldo para cuidar a tu familia.",
+    "credit_salud_url": "salud.php",
+    "credit_esparcimiento_label": "Esparcimiento",
+    "credit_esparcimiento_desc": "Haz realidad tus planes personales.",
+    "credit_esparcimiento_url": "esparcimiento.php",
+    "footer_interest_title": "Sitios de interés",
+    "interest_links": [
+        {
+            "label": "SBS",
+            "url": "https://www.sbs.gob.pe/"
+        },
+        {
+            "label": "FENACREP",
+            "url": "https://www.fenacrep.org/es"
+        },
+        {
+            "label": "SUNARP",
+            "url": "https://www.sunarp.gob.pe/"
+        },
+        {
+            "label": "SUNAT",
+            "url": "https://www.sunat.gob.pe/"
+        },
+        {
+            "label": "El Peruano",
+            "url": "https://elperuano.pe/"
+        },
+        {
+            "label": "RENIEC",
+            "url": "https://www.reniec.gob.pe/"
+        },
+        {
+            "label": "Experian",
+            "url": "https://www.experian.com.pe/"
+        }
+    ]
 }

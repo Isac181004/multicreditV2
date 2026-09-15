@@ -60,8 +60,9 @@
         <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-7">
             <div class="lg:col-span-2">
                 <span class="text-brand-orange text-xs font-extrabold uppercase tracking-[0.15em]">Conoce esta alternativa</span>
-                <h2 class="text-3xl md:text-4xl font-black mt-2">Pensado para una necesidad concreta</h2>
-                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Una alternativa de financiamiento orientada a atender gastos vinculados con necesidades de salud, de acuerdo con la evaluación y condiciones vigentes.</p>
+                <h2 class="text-3xl md:text-4xl font-black mt-2">Tu bienestar y el de tu familia son importantes</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Una alternativa de financiamiento orientada a cubrir gastos relacionados con el cuidado de la salud, permitiéndote atender oportunamente una necesidad médica personal o familiar.<br>
+                Con el Crédito Salud de Multicredit puedes disponer de recursos para afrontar consultas, tratamientos y otros gastos médicos, mediante condiciones adaptadas a tu capacidad de pago.</p>
                 <p class="text-gray-500 text-sm leading-relaxed mt-4">
                     En CEPRODEMIC – Multicredit, cada solicitud es evaluada de acuerdo con el perfil del cliente,
                     su capacidad de pago, la finalidad del financiamiento y las condiciones vigentes del producto.
@@ -71,7 +72,7 @@
                 <span class="text-xs font-extrabold uppercase tracking-wider text-gray-400">¿Quieres saber más?</span>
                 <h3 class="text-2xl font-black mt-2">Habla con un asesor</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3">Recibe orientación sobre requisitos, condiciones y el proceso de evaluación.</p>
-                <a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Salud." target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Salud." target="_blank" rel="noopener noreferrer"
                    class="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-5 py-3.5 rounded-full font-extrabold transition">
                     <i class="fab fa-whatsapp text-lg"></i> Solicitar información
                 </a>
@@ -103,6 +104,18 @@
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tratamientos</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Medicamentos</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Otros gastos relacionados con salud</span></li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
+                <h2 class="text-2xl md:text-3xl font-black mt-2">Principales beneficios</h2>
+                <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Financiamiento para necesidades de salud personales o familiares.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazos adaptados a tu capacidad de pago.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial entre 2.5 % y 3 %.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Evaluación personalizada.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Atención cercana y asesoramiento durante el proceso.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Una alternativa para organizar los gastos médicos sin descuidar otras responsabilidades.</span></li>
                 </ul>
             </div>
         </div>
@@ -215,7 +228,7 @@
                 <h2 class="text-3xl md:text-4xl font-black mt-2">¿Quieres conocer si este crédito es para ti?</h2>
                 <p class="text-green-50 mt-3 max-w-2xl">Habla con un asesor y recibe orientación sobre el producto y el proceso de evaluación.</p>
             </div>
-            <a href="https://wa.me/51968876759?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Salud." target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20deseo%20informaci%C3%B3n%20sobre%20Cr%C3%A9dito%20Salud." target="_blank" rel="noopener noreferrer"
                class="shrink-0 inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-500 text-white px-7 py-4 rounded-full font-extrabold shadow-lg transition">
                 <i class="fab fa-whatsapp text-xl"></i> Hablar con un asesor
             </a>

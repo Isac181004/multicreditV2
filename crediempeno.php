@@ -402,7 +402,8 @@ footer .mc-reveal-right{
             <div class="lg:col-span-2 mc-reveal">
                 <span class="text-brand-orange text-xs font-extrabold uppercase tracking-[0.15em]">Conoce esta alternativa</span>
                 <h2 class="text-3xl md:text-4xl font-black mt-2">Pensado para una necesidad concreta</h2>
-                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Una alternativa de financiamiento respaldada por una garantía prendaria. La operación está sujeta a la evaluación del bien ofrecido en garantía y a las condiciones del producto.</p>
+                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Una alternativa de financiamiento respaldada por una garantía prendaria, dirigida a personas y emprendedores que necesitan obtener dinero para atender una necesidad inmediata, fortalecer su negocio o aprovechar una oportunidad comercial.<br>
+                Con Crediempeño de Multicredit, el bien presentado es evaluado para determinar su valor y establecer el monto de financiamiento disponible. Al cumplir con el pago total del crédito según las condiciones acordadas, podrás recuperar tu garantía.</p>
                 <p class="text-gray-500 text-sm leading-relaxed mt-4">
                     En CEPRODEMIC – Multicredit, cada solicitud es evaluada de acuerdo con el perfil del cliente,
                     su capacidad de pago, la finalidad del financiamiento y las condiciones vigentes del producto.
@@ -429,12 +430,14 @@ footer .mc-reveal-right{
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
             <div class="bg-white rounded-2xl border border-gray-100 p-7 md:p-9 shadow-sm tilt-3d mc-reveal">
                 <div class="tilt-layer">
-                <span class="text-brand-green text-xs font-extrabold uppercase tracking-widest">¿Para quién está pensado?</span>
-                <h2 class="text-2xl md:text-3xl font-black mt-2">Una solución que parte de tu necesidad</h2>
+                <span class="text-brand-green text-xs font-extrabold uppercase tracking-widest">funcionamiento</span>
+                <h2 class="text-2xl md:text-3xl font-black mt-2">¿Cómo funciona?</h2>
                 <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
-                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Personas que necesitan liquidez</span></li>
-                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Emprendedores con una necesidad puntual de financiamiento</span></li>
-                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Clientes que pueden presentar una garantía prendaria aceptable</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Presentas el bien que deseas dejar como garantía.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Se evalúan sus características, estado y valor.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Se determina el monto de crédito disponible.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Se establecen el plazo, las cuotas y las condiciones del financiamiento.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Al cancelar completamente el crédito, recuperas el bien entregado en garantía.</span></li>
                 </ul>
                 </div>
             </div>
@@ -450,6 +453,17 @@ footer .mc-reveal-right{
                 </ul>
                 </div>
             </div>
+            <div class="bg-white rounded-2xl border border-gray-100 p-7 md:p-9 shadow-sm tilt-3d mc-reveal">
+                <div class="tilt-layer">
+                <h2 class="text-2xl md:text-3xl font-black mt-2">Principales beneficios</h2>
+                <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Financiamiento respaldado por un bien en garantía.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazo referencial de hasta 3 meses.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial entre 5 % y 6 %.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Atención clara y acompañamiento durante el proceso.</span></li>
+                </ul>
+                </div>
         </div>
     </section>
 

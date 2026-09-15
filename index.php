@@ -16,10 +16,10 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-green': '#0d5c2e',
+                        'brand-green': '#334576',
                         'brand-green-dark': '#083d1f',
                         'brand-green-deep': '#052712',
-                        'brand-orange': '#f26e22'
+                        'brand-orange': '#6F747A'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -851,47 +851,7 @@ body {
             </div>
         </div>
     </div>
-</section>
-
- 
-<section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="text-center mb-12 reveal">
-            <span class="text-brand-orange font-extrabold uppercase tracking-[.2em] text-sm">Experiencias</span>
-            <h2 class="font-display text-4xl font-black text-gray-900 mt-3">Lo que dicen nuestros clientes</h2>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-7">
-            <article class="testimonial-glass rounded-2xl p-8 reveal">
-                <div class="text-brand-orange tracking-widest">★★★★★</div>
-                <p class="text-gray-600 leading-relaxed mt-5">"Gracias a Multicredit pude ampliar mi negocio y seguir invirtiendo en mis metas."</p>
-                <div class="flex items-center gap-3 mt-7">
-                    <div class="w-11 h-11 rounded-full bg-brand-green text-white flex items-center justify-center font-bold">MD</div>
-                    <div><strong class="block">María Díaz</strong><span class="text-xs text-gray-400">Cliente</span></div>
-                </div>
-            </article>
-            <article class="testimonial-glass rounded-2xl p-8 reveal">
-                <div class="text-brand-orange tracking-widest">★★★★★</div>
-                <p class="text-gray-600 leading-relaxed mt-5">"La atención fue clara y el proceso resultó sencillo. Me orientaron en cada paso."</p>
-                <div class="flex items-center gap-3 mt-7">
-                    <div class="w-11 h-11 rounded-full bg-brand-orange text-white flex items-center justify-center font-bold">JR</div>
-                    <div><strong class="block">José Rojas</strong><span class="text-xs text-gray-400">Cliente</span></div>
-                </div>
-            </article>
-            <article class="testimonial-glass rounded-2xl p-8 reveal">
-                <div class="text-brand-orange tracking-widest">★★★★★</div>
-                <p class="text-gray-600 leading-relaxed mt-5">"Encontré una alternativa para continuar creciendo y recibí una atención cercana."</p>
-                <div class="flex items-center gap-3 mt-7">
-                    <div class="w-11 h-11 rounded-full bg-brand-green text-white flex items-center justify-center font-bold">LP</div>
-                    <div><strong class="block">Luis Pérez</strong><span class="text-xs text-gray-400">Cliente</span></div>
-                </div>
-            </article>
-        </div>
-        <p class="text-center text-xs text-gray-400 mt-6">*Los testimonios deben reemplazarse por testimonios reales y autorizados antes de publicar.</p>
-    </div>
-</section>
-
- 
+</section> 
 <section id="agencias" class="py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
         <div class="reveal">
@@ -956,6 +916,42 @@ body {
            class="btn-primary inline-flex items-center gap-2 mt-8 px-9 py-4">
             <i class="fab fa-whatsapp text-xl"></i> Solicitar Crédito
         </a>
+    </div>
+</section>
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-12 reveal">
+            <span class="text-brand-orange font-extrabold uppercase tracking-[.2em] text-sm">Experiencias</span>
+            <h2 class="font-display text-4xl font-black text-gray-900 mt-3">Lo que dicen nuestros clientes</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-7">
+            <article class="testimonial-glass rounded-2xl p-8 reveal">
+                <div class="text-brand-orange tracking-widest">★★★★★</div>
+                <p class="text-gray-600 leading-relaxed mt-5">"Gracias a Multicredit pude ampliar mi negocio y seguir invirtiendo en mis metas."</p>
+                <div class="flex items-center gap-3 mt-7">
+                    <div class="w-11 h-11 rounded-full bg-brand-green text-white flex items-center justify-center font-bold">MD</div>
+                    <div><strong class="block">María Díaz</strong><span class="text-xs text-gray-400">Cliente</span></div>
+                </div>
+            </article>
+            <article class="testimonial-glass rounded-2xl p-8 reveal">
+                <div class="text-brand-orange tracking-widest">★★★★★</div>
+                <p class="text-gray-600 leading-relaxed mt-5">"La atención fue clara y el proceso resultó sencillo. Me orientaron en cada paso."</p>
+                <div class="flex items-center gap-3 mt-7">
+                    <div class="w-11 h-11 rounded-full bg-brand-orange text-white flex items-center justify-center font-bold">JR</div>
+                    <div><strong class="block">José Rojas</strong><span class="text-xs text-gray-400">Cliente</span></div>
+                </div>
+            </article>
+            <article class="testimonial-glass rounded-2xl p-8 reveal">
+                <div class="text-brand-orange tracking-widest">★★★★★</div>
+                <p class="text-gray-600 leading-relaxed mt-5">"Encontré una alternativa para continuar creciendo y recibí una atención cercana."</p>
+                <div class="flex items-center gap-3 mt-7">
+                    <div class="w-11 h-11 rounded-full bg-brand-green text-white flex items-center justify-center font-bold">LP</div>
+                    <div><strong class="block">Luis Pérez</strong><span class="text-xs text-gray-400">Cliente</span></div>
+                </div>
+            </article>
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-6">*Los testimonios deben reemplazarse por testimonios reales y autorizados antes de publicar.</p>
     </div>
 </section>
 

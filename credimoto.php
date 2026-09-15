@@ -61,7 +61,8 @@
             <div class="lg:col-span-2">
                 <span class="text-brand-orange text-xs font-extrabold uppercase tracking-[0.15em]">Conoce esta alternativa</span>
                 <h2 class="text-3xl md:text-4xl font-black mt-2">Pensado para una necesidad concreta</h2>
-                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Financiamiento orientado a la adquisición de una motocicleta para trabajo, movilidad o generación de ingresos, sujeto a evaluación y a las condiciones vigentes.</p>
+                <p class="text-gray-600 text-lg leading-relaxed mt-5 max-w-4xl">Financiamiento orientado a la adquisición de una motocicleta para trabajo, movilidad personal o generación de nuevos ingresos.<br>
+                on Credimoto de Multicredit puedes adquirir una herramienta que te permita trasladarte con mayor facilidad, reducir tiempos, ampliar la atención de tu negocio o desarrollar actividades como reparto, transporte y ventas.</p>
                 <p class="text-gray-500 text-sm leading-relaxed mt-4">
                     En CEPRODEMIC – Multicredit, cada solicitud es evaluada de acuerdo con el perfil del cliente,
                     su capacidad de pago, la finalidad del financiamiento y las condiciones vigentes del producto.
@@ -104,6 +105,18 @@
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Movilidad para actividades comerciales</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Distribución o reparto</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Generación de ingresos mediante el uso de la motocicleta</span></li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-3xl border border-gray-100 p-7 md:p-9 shadow-sm">
+                <h2 class="text-2xl md:text-3xl font-black mt-2">Principales beneficios</h2>
+                <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Financiamiento destinado a la adquisición de una motocicleta.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazos adaptados a tu capacidad de pago.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial entre 3.6 % y 4 %.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Evaluación personalizada.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Asesoramiento durante el proceso de financiamiento.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Una alternativa pensada para emprendedores y trabajadores independientes.</span></li>
                 </ul>
             </div>
         </div>

@@ -1,6 +1,5 @@
- 
- 
 window.MULTICREDIT_ADMIN_CREDENTIALS = {
     "username": "multicredit",
-    "passwordHash": "$2y$10$ssijdxbUKvjq8zYL0Jnt3etDQJup9G/nGZ7tr1ARuxlwht9WfeeYS"
+    "passwordHash": "$2y$10$tpbLd4gOAdxJlh8jQVpqkewlFbEMEhkepFExkjMsZZj.sSg3PbMFO",
+    "recoveryPhone": "51927551284"
 };
