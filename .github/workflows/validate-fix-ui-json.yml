@@ -1,0 +1,29 @@
+name: Validar restauracion visual y opiniones JSON
+
+on:
+  push:
+    branches:
+      - fix/restaurar-web-opiniones-json-logo
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar PHP
+        run: |
+          php -l encabezado.php
+          php -l footer.php
+          php -l cms/opiniones.php
+          php -l opiniones_api.php
+      - name: Validar JSON y almacenamiento de opiniones
+        run: |
+          php -r "json_decode(file_get_contents('cms/data/site.json'), true, 512, JSON_THROW_ON_ERROR); echo 'site.json OK'.PHP_EOL;"
+          php -r "require 'cms/opiniones.php'; mc_opinions_install(); var_export(mc_opinions_summary()); echo PHP_EOL;"
+      - name: Validar JavaScript y recursos
+        run: |
+          node --check js/mc-polish.js
+          test -f img/multicredit-logo-color.webp
+          grep -q 'mc-interest-link' footer.php
+          grep -q 'nav_news_label' cms/data/site.json
+          ! grep -q 'mc-navy-theme.css' encabezado.php
