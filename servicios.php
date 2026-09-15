@@ -59,16 +59,16 @@
                     colors: {
 
                         'brand-green':
-                            '#0d5c2e',
+                            '#071525',
 
                         'brand-green-dark':
-                            '#083d1f',
+                            '#071525',
 
                         'brand-green-deep':
-                            '#052712',
+                            '#071525',
 
                         'brand-orange':
-                            '#f26e22'
+                            '#163A5F'
 
                     },
 
@@ -114,10 +114,10 @@
                 sans-serif;
 
             color:
-                #17221a;
+                #071525;
 
             background:
-                #ffffff;
+                #FFFFFF;
 
             line-height:
                 1.6;
@@ -159,7 +159,7 @@
                 hidden;
 
             background:
-                #063718;
+                #071525;
 
         }
 
@@ -220,10 +220,10 @@
 
                 linear-gradient(
                     90deg,
-                    rgba(3,38,17,.96) 0%,
-                    rgba(4,54,24,.85) 32%,
-                    rgba(5,62,28,.50) 66%,
-                    rgba(3,31,14,.12) 100%
+                    rgba(7,21,37,.96) 0%,
+                    rgba(7,21,37,.85) 32%,
+                    rgba(7,21,37,.50) 66%,
+                    rgba(7,21,37,.12) 100%
                 );
 
         }
@@ -251,7 +251,7 @@
                 linear-gradient(
                     to bottom,
                     transparent,
-                    rgba(0,0,0,.25)
+                    rgba(10,10,10,.25)
                 );
 
         }
@@ -326,7 +326,7 @@
                 blur(10px);
 
             color:
-                #ffffff;
+                #FFFFFF;
 
             font-size:
                 .74rem;
@@ -346,7 +346,7 @@
         .svc-eyebrow i {
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -388,7 +388,7 @@
         .svc-hero-title span {
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -454,10 +454,10 @@
                 10px;
 
             background:
-                #f26e22;
+                #163A5F;
 
             color:
-                #ffffff;
+                #FFFFFF;
 
             text-decoration:
                 none;
@@ -476,7 +476,7 @@
 
             box-shadow:
                 0 18px 44px
-                rgba(242,110,34,.30);
+                rgba(22,58,95,.30);
 
             transition:
                 transform .35s ease,
@@ -492,11 +492,11 @@
                 translateY(-4px);
 
             background:
-                #ff7d32;
+                #163A5F;
 
             box-shadow:
                 0 24px 52px
-                rgba(242,110,34,.40);
+                rgba(22,58,95,.40);
 
         }
 
@@ -567,7 +567,7 @@
                 white;
 
             color:
-                #0d5c2e;
+                #071525;
 
         }
 
@@ -602,7 +602,7 @@
 
             box-shadow:
                 0 30px 90px
-                rgba(0,0,0,.22);
+                rgba(10,10,10,.22);
 
         }
 
@@ -624,7 +624,7 @@
                     135deg,
                     rgba(255,255,255,.14),
                     transparent 45%,
-                    rgba(242,110,34,.12)
+                    rgba(22,58,95,.12)
                 );
 
         }
@@ -698,7 +698,7 @@
 
             box-shadow:
                 0 20px 45px
-                rgba(0,0,0,.22);
+                rgba(10,10,10,.22);
 
         }
 
@@ -709,7 +709,7 @@
                 block;
 
             color:
-                #0d5c2e;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -736,7 +736,7 @@
                 4px;
 
             color:
-                #67746c;
+                #374151;
 
             font-size:
                 .78rem;
@@ -787,7 +787,7 @@
 
             border:
                 1px solid
-                #e5ebe7;
+                #F3F4F6;
 
             border-radius:
                 20px;
@@ -797,7 +797,7 @@
 
             box-shadow:
                 0 25px 70px
-                rgba(5,39,18,.13);
+                rgba(7,21,37,.13);
 
         }
 
@@ -837,7 +837,7 @@
                 50%;
 
             background:
-                #e4ebe6;
+                #F3F4F6;
 
         }
 
@@ -845,7 +845,7 @@
         .svc-trust-number {
 
             color:
-                #0d5c2e;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -869,7 +869,7 @@
                 7px;
 
             color:
-                #69766f;
+                #374151;
 
             font-size:
                 .82rem;
@@ -903,7 +903,7 @@
         .svc-section-light {
 
             background:
-                #f7faf8;
+                #F3F4F6;
 
         }
 
@@ -922,7 +922,7 @@
         .svc-kicker {
 
             color:
-                #f26e22;
+                #163A5F;
 
             font-size:
                 .76rem;
@@ -959,7 +959,7 @@
                 12px;
 
             color:
-                #10271a;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -990,7 +990,7 @@
                 18px;
 
             color:
-                #69756e;
+                #374151;
 
             font-size:
                 1rem;
@@ -1055,7 +1055,7 @@
                 20px;
 
             background:
-                #e8f2ea;
+                #F3F4F6;
 
             z-index:
                 0;
@@ -1085,7 +1085,7 @@
 
             box-shadow:
                 0 30px 75px
-                rgba(5,39,18,.15);
+                rgba(7,21,37,.15);
 
         }
 
@@ -1118,11 +1118,11 @@
 
             border-left:
                 4px solid
-                #f26e22;
+                #163A5F;
 
             box-shadow:
                 0 20px 50px
-                rgba(5,39,18,.16);
+                rgba(7,21,37,.16);
 
         }
 
@@ -1133,7 +1133,7 @@
                 block;
 
             color:
-                #0d5c2e;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -1154,7 +1154,7 @@
                 7px;
 
             color:
-                #6b766f;
+                #374151;
 
             font-size:
                 .82rem;
@@ -1171,7 +1171,7 @@
                 12px;
 
             color:
-                #10271a;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -1202,7 +1202,7 @@
                 24px;
 
             color:
-                #67736c;
+                #374151;
 
             font-size:
                 1.04rem;
@@ -1246,16 +1246,16 @@
 
             border:
                 1px solid
-                #e2e9e4;
+                #F3F4F6;
 
             border-radius:
                 13px;
 
             background:
-                #f8faf9;
+                #F3F4F6;
 
             color:
-                #334138;
+                #374151;
 
             font-size:
                 .82rem;
@@ -1269,7 +1269,7 @@
         .svc-check i {
 
             color:
-                #f26e22;
+                #163A5F;
 
             margin-top:
                 3px;
@@ -1314,14 +1314,14 @@
 
             border:
                 1px solid
-                #e0e8e3;
+                #F3F4F6;
 
             background:
-                #ffffff;
+                #FFFFFF;
 
             box-shadow:
                 0 14px 38px
-                rgba(5,39,18,.05);
+                rgba(7,21,37,.05);
 
             transition:
                 transform .4s
@@ -1339,10 +1339,10 @@
 
             box-shadow:
                 0 28px 60px
-                rgba(5,39,18,.12);
+                rgba(7,21,37,.12);
 
             border-color:
-                rgba(13,92,46,.24);
+                rgba(7,21,37,.24);
 
         }
 
@@ -1417,9 +1417,9 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(4,37,17,.93),
-                    rgba(6,72,33,.57),
-                    rgba(3,42,19,.18)
+                    rgba(7,21,37,.93),
+                    rgba(7,21,37,.57),
+                    rgba(7,21,37,.18)
                 );
 
         }
@@ -1457,7 +1457,7 @@
                 23px;
 
             color:
-                #dce7df;
+                #F3F4F6;
 
             font-family:
                 'Poppins',
@@ -1496,10 +1496,10 @@
                 15px;
 
             background:
-                #edf7ef;
+                #F3F4F6;
 
             color:
-                #0d5c2e;
+                #071525;
 
             font-size:
                 1.2rem;
@@ -1510,10 +1510,10 @@
         .svc-card-icon-orange {
 
             background:
-                #fff0e7;
+                #F3F4F6;
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -1533,7 +1533,7 @@
                 rgba(255,255,255,.13);
 
             color:
-                #fff;
+                #FFFFFF;
 
         }
 
@@ -1553,7 +1553,7 @@
                 23px;
 
             color:
-                #16271d;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -1585,7 +1585,7 @@
                 11px;
 
             color:
-                #69756e;
+                #374151;
 
             font-size:
                 .88rem;
@@ -1622,7 +1622,7 @@
                 23px;
 
             color:
-                #0d5c2e;
+                #071525;
 
             text-decoration:
                 none;
@@ -1646,7 +1646,7 @@
                 14px;
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -1662,7 +1662,7 @@
         .svc-card-white a:hover {
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -1692,13 +1692,13 @@
             background:
                 linear-gradient(
                     135deg,
-                    #073818,
-                    #0d5c2e
+                    #071525,
+                    #071525
                 );
 
             box-shadow:
                 0 30px 75px
-                rgba(5,39,18,.16);
+                rgba(7,21,37,.16);
 
         }
 
@@ -1802,7 +1802,7 @@
         .svc-featured-item i {
 
             color:
-                #f26e22;
+                #163A5F;
 
             margin-top:
                 4px;
@@ -1857,7 +1857,7 @@
                 110px 20px;
 
             background:
-                #f7faf8;
+                #F3F4F6;
 
         }
 
@@ -1889,11 +1889,11 @@
                 center;
 
             background:
-                #063718;
+                #071525;
 
             box-shadow:
                 0 30px 75px
-                rgba(5,39,18,.17);
+                rgba(7,21,37,.17);
 
         }
 
@@ -1929,9 +1929,9 @@
             background:
                 linear-gradient(
                     90deg,
-                    rgba(3,37,16,.97),
-                    rgba(5,61,28,.75),
-                    rgba(5,45,21,.38)
+                    rgba(7,21,37,.97),
+                    rgba(7,21,37,.75),
+                    rgba(7,21,37,.38)
                 );
 
         }
@@ -2318,6 +2318,9 @@
 
     </style>
 
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 
 

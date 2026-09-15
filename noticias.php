@@ -37,13 +37,16 @@ usort($mcNews, function($a,$b){
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= mc_h($mcSite['news_title'] ?? 'Noticias') ?> | CEPRODEMIC MULTICREDIT</title>
 <meta name="description" content="<?= mc_h($mcSite['news_subtitle'] ?? 'Noticias y publicaciones de Multicredit') ?>">
-<script>tailwind=window.tailwind||{};tailwind.config={theme:{extend:{colors:{'brand-green':'#0b2a52','brand-green-dark':'#071a33','brand-orange':'#2f80c9'},fontFamily:{sans:['Inter','sans-serif'],display:['Poppins','sans-serif']}}}};</script>
+<script>tailwind=window.tailwind||{};tailwind.config={theme:{extend:{colors:{'brand-green':'#071525','brand-green-dark':'#071525','brand-orange':'#0B1F3A'},fontFamily:{sans:['Inter','sans-serif'],display:['Poppins','sans-serif']}}}};</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/mc-noticias.css">
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 <body class="overflow-x-hidden">
 <?php include 'encabezado.php'; ?>

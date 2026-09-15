@@ -56,16 +56,16 @@
                     colors: {
 
                         'brand-green':
-                            '#0d5c2e',
+                            '#071525',
 
                         'brand-green-dark':
-                            '#083d1f',
+                            '#071525',
 
                         'brand-green-deep':
-                            '#052712',
+                            '#071525',
 
                         'brand-orange':
-                            '#f26e22'
+                            '#163A5F'
 
                     },
 
@@ -111,10 +111,10 @@
                 sans-serif;
 
             color:
-                #17221a;
+                #071525;
 
             background:
-                #ffffff;
+                #FFFFFF;
 
             line-height:
                 1.6;
@@ -156,7 +156,7 @@
                 hidden;
 
             background:
-                #063718;
+                #071525;
 
         }
 
@@ -214,10 +214,10 @@
 
                 linear-gradient(
                     90deg,
-                    rgba(3,38,17,.97) 0%,
-                    rgba(5,57,27,.85) 40%,
-                    rgba(5,65,30,.49) 68%,
-                    rgba(3,31,14,.10) 100%
+                    rgba(7,21,37,.97) 0%,
+                    rgba(7,21,37,.85) 40%,
+                    rgba(7,21,37,.49) 68%,
+                    rgba(7,21,37,.10) 100%
                 );
 
         }
@@ -296,7 +296,7 @@
         .contact-eyebrow i {
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -338,7 +338,7 @@
         .contact-hero h1 span {
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -421,11 +421,11 @@
         .contact-btn-primary {
 
             background:
-                #f26e22;
+                #163A5F;
 
             box-shadow:
                 0 18px 42px
-                rgba(242,110,34,.28);
+                rgba(22,58,95,.28);
 
         }
 
@@ -459,7 +459,7 @@
                 white;
 
             color:
-                #0d5c2e;
+                #071525;
 
         }
 
@@ -479,7 +479,7 @@
         .contact-section-light {
 
             background:
-                #f7faf8;
+                #F3F4F6;
 
         }
 
@@ -526,7 +526,7 @@
 
             border:
                 1px solid
-                #e2e9e4;
+                #F3F4F6;
 
             border-radius:
                 22px;
@@ -536,7 +536,7 @@
 
             box-shadow:
                 0 18px 45px
-                rgba(5,39,18,.06);
+                rgba(7,21,37,.06);
 
             transition:
                 transform .35s ease,
@@ -552,7 +552,7 @@
 
             box-shadow:
                 0 27px 58px
-                rgba(5,39,18,.10);
+                rgba(7,21,37,.10);
 
         }
 
@@ -563,7 +563,7 @@
                 20px;
 
             color:
-                #10271a;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -584,7 +584,7 @@
                 10px;
 
             color:
-                #69756e;
+                #374151;
 
             line-height:
                 1.8;
@@ -613,10 +613,10 @@
                 16px;
 
             background:
-                #edf7ef;
+                #F3F4F6;
 
             color:
-                #0d5c2e;
+                #071525;
 
             font-size:
                 1.35rem;
@@ -658,13 +658,13 @@
 
             border:
                 1px solid
-                #e5ebe6;
+                #F3F4F6;
 
             border-radius:
                 14px;
 
             background:
-                #f8faf9;
+                #F3F4F6;
 
         }
 
@@ -693,10 +693,10 @@
                 12px;
 
             background:
-                #edf7ef;
+                #F3F4F6;
 
             color:
-                #0d5c2e;
+                #071525;
 
         }
 
@@ -707,10 +707,10 @@
         .contact-info-icon {
 
             background:
-                #fff0e7;
+                #F3F4F6;
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -721,7 +721,7 @@
                 block;
 
             color:
-                #1d2c23;
+                #071525;
 
             font-size:
                 .85rem;
@@ -739,7 +739,7 @@
                 3px;
 
             color:
-                #68756e;
+                #374151;
 
             font-size:
                 .82rem;
@@ -756,7 +756,7 @@
         .contact-info a:hover {
 
             color:
-                #0d5c2e;
+                #071525;
 
         }
 
@@ -775,7 +775,7 @@
 
             border-top:
                 1px solid
-                #e4ebe6;
+                #F3F4F6;
 
         }
 
@@ -783,7 +783,7 @@
         .agency-block h3 {
 
             color:
-                #192a20;
+                #071525;
 
             font-family:
                 'Poppins',
@@ -822,13 +822,13 @@
 
             border:
                 1px solid
-                #e2e9e4;
+                #F3F4F6;
 
             border-radius:
                 12px;
 
             background:
-                #f8faf9;
+                #F3F4F6;
 
         }
 
@@ -839,7 +839,7 @@
                 block;
 
             color:
-                #1d2c23;
+                #071525;
 
             font-size:
                 .82rem;
@@ -856,7 +856,7 @@
                 2px;
 
             color:
-                #7a847e;
+                #6B7280;
 
             font-size:
                 .76rem;
@@ -873,8 +873,8 @@
             background:
                 linear-gradient(
                     135deg,
-                    #ffffff,
-                    #f9fbfa
+                    #FFFFFF,
+                    #F3F4F6
                 );
 
         }
@@ -897,10 +897,10 @@
         .contact-form-heading .contact-main-icon {
 
             background:
-                #fff0e7;
+                #F3F4F6;
 
             color:
-                #f26e22;
+                #163A5F;
 
         }
 
@@ -922,7 +922,7 @@
                 7px;
 
             color:
-                #303d35;
+                #374151;
 
             font-size:
                 .82rem;
@@ -942,7 +942,7 @@
 
             border:
                 1px solid
-                #dfe7e2;
+                #F3F4F6;
 
             border-radius:
                 13px;
@@ -957,7 +957,7 @@
                 none;
 
             color:
-                #24332a;
+                #071525;
 
             font-size:
                 .9rem;
@@ -974,11 +974,11 @@
         .contact-textarea:focus {
 
             border-color:
-                #0d5c2e;
+                #071525;
 
             box-shadow:
                 0 0 0 4px
-                rgba(13,92,46,.09);
+                rgba(7,21,37,.09);
 
         }
 
@@ -1024,7 +1024,7 @@
                 11px;
 
             background:
-                #0d5c2e;
+                #071525;
 
             color:
                 white;
@@ -1037,7 +1037,7 @@
 
             box-shadow:
                 0 15px 32px
-                rgba(13,92,46,.18);
+                rgba(7,21,37,.18);
 
             transition:
                 transform .3s ease,
@@ -1052,7 +1052,7 @@
                 translateY(-3px);
 
             background:
-                #083d1f;
+                #071525;
 
         }
 
@@ -1092,10 +1092,10 @@
 
             box-shadow:
                 0 20px 50px
-                rgba(5,39,18,.12);
+                rgba(7,21,37,.12);
 
             background:
-                #dfe8e1;
+                #F3F4F6;
 
         }
 
@@ -1168,7 +1168,7 @@
             background:
                 linear-gradient(
                     to top,
-                    rgba(3,38,17,.85),
+                    rgba(7,21,37,.85),
                     transparent 65%
                 );
 
@@ -1226,7 +1226,7 @@
                 95px 20px;
 
             background:
-                #063718;
+                #071525;
 
             color:
                 white;
@@ -1265,9 +1265,9 @@
             background:
                 linear-gradient(
                     90deg,
-                    rgba(3,38,17,.96),
-                    rgba(5,59,27,.76),
-                    rgba(3,31,14,.38)
+                    rgba(7,21,37,.96),
+                    rgba(7,21,37,.76),
+                    rgba(7,21,37,.38)
                 );
 
         }
@@ -1495,6 +1495,9 @@
 
     </style>
 
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 
 
@@ -1866,7 +1869,7 @@
                         </h2>
 
                         <p
-                            class="text-[#69756e] mt-2"
+                            class="text-[#374151] mt-2"
                         >
 
                             Déjanos tus datos y elige

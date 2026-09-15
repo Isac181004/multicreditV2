@@ -7,9 +7,9 @@
 
 
 :root {
-    --mc-green: #063718;
-    --mc-green-2: #0d5c2e;
-    --mc-orange: #f26e22;
+    --mc-green: #071525;
+    --mc-green-2: #071525;
+    --mc-orange: #163A5F;
 }
 
 
@@ -29,7 +29,7 @@
     z-index: 99999;
 
     background:
-        rgba(3, 43, 19, .88);
+        rgba(7,21,37, .88);
 
     border-bottom:
         1px solid
@@ -282,7 +282,7 @@
 
     box-shadow:
         0 8px 22px
-        rgba(242,110,34,.22);
+        rgba(22,58,95,.22);
 
     transition:
         transform .25s ease,
@@ -293,7 +293,7 @@
 #main-header .mc-header-button:hover {
 
     background:
-        #ff7c30;
+        #163A5F;
 
     transform:
         translateY(-2px);
@@ -379,7 +379,7 @@
         18px;
 
     background:
-        rgba(3, 43, 19, .97);
+        rgba(7,21,37, .97);
 
     backdrop-filter:
         blur(18px);
@@ -389,7 +389,7 @@
 
     box-shadow:
         0 25px 60px
-        rgba(0,0,0,.30);
+        rgba(10,10,10,.30);
 
     padding:
         10px;
@@ -474,11 +474,11 @@
 #main-header.scrolled {
 
     background:
-        rgba(3,43,19,.96);
+        rgba(7,21,37,.96);
 
     box-shadow:
         0 12px 35px
-        rgba(0,0,0,.18);
+        rgba(10,10,10,.18);
 
 }
 

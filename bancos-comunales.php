@@ -6,7 +6,7 @@
     <title>Bancos Comunales | CEPRODEMIC MULTICREDIT</title>
     <meta name="description" content="Conoce Bancos Comunales de CEPRODEMIC – Multicredit: tasa mensual de 3.00 %, plazo de 6 a 12 meses y pagos mensuales.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{colors:{'brand-green':'#2e9e43','brand-green-dark':'#1c7a30','brand-orange':'#f26e22'}}}};</script>
+    <script>tailwind.config={theme:{extend:{colors:{'brand-green':'#0B1F3A','brand-green-dark':'#0B1F3A','brand-orange':'#163A5F'}}}};</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,25 +14,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/mc-productos-ultra.css">
     <style>
-        .mc-credit-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2rem;background:#fff!important;color:#12301f!important;border:1px solid rgba(13,92,46,.14);border-radius:24px;box-shadow:0 18px 55px rgba(0,0,0,.14);overflow:hidden}
+        .mc-credit-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2rem;background:#FFFFFF!important;color:#071525!important;border:1px solid rgba(7,21,37,.14);border-radius:24px;box-shadow:0 18px 55px rgba(10,10,10,.14);overflow:hidden}
         .mc-credit-summary-item{padding:1.6rem 1rem;text-align:center}
-        .mc-credit-summary-item+.mc-credit-summary-item{border-left:1px solid #e5e7eb}
-        .mc-credit-summary-label{display:block;color:#607067!important;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+        .mc-credit-summary-item+.mc-credit-summary-item{border-left:1px solid #F3F4F6}
+        .mc-credit-summary-label{display:block;color:#374151!important;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
         .mc-credit-summary-value{display:block;color:var(--mc-accent)!important;font-family:'Poppins','Inter',sans-serif;font-size:clamp(1.35rem,2.5vw,2rem);font-weight:900;line-height:1.2;margin-top:.45rem}
         .mc-benefit-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-top:2rem}
-        .mc-benefit-panel{background:#fff!important;color:#12301f!important;border:1px solid rgba(13,92,46,.14);border-radius:24px;padding:2rem;box-shadow:0 16px 45px rgba(3,29,14,.10)}
+        .mc-benefit-panel{background:#FFFFFF!important;color:#071525!important;border:1px solid rgba(7,21,37,.14);border-radius:24px;padding:2rem;box-shadow:0 16px 45px rgba(7,21,37,.10)}
         .mc-benefit-panel i{color:var(--mc-accent)!important;font-size:1.7rem}
-        .mc-benefit-panel h3{color:#12301f!important;font-size:1.25rem;font-weight:900;margin-top:1rem}
-        .mc-benefit-panel p{color:#526158!important;font-size:.95rem;line-height:1.7!important;margin-top:.55rem}
+        .mc-benefit-panel h3{color:#071525!important;font-size:1.25rem;font-weight:900;margin-top:1rem}
+        .mc-benefit-panel p{color:#374151!important;font-size:.95rem;line-height:1.7!important;margin-top:.55rem}
         .mc-credit-summary,.mc-credit-summary *,.mc-benefit-layout,.mc-benefit-layout *,body[data-product="bancos"] .mc-reveal{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}
-        @media(max-width:767px){.mc-credit-summary{grid-template-columns:1fr}.mc-credit-summary-item+.mc-credit-summary-item{border-left:0;border-top:1px solid #e5e7eb}.mc-benefit-layout{grid-template-columns:1fr}}
+        @media(max-width:767px){.mc-credit-summary{grid-template-columns:1fr}.mc-credit-summary-item+.mc-credit-summary-item{border-left:0;border-top:1px solid #F3F4F6}.mc-benefit-layout{grid-template-columns:1fr}}
     </style>
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="bancos">
 <?php include 'encabezado.php'; ?>
 <main class="pt-[88px] md:pt-[96px]">
-<section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
- <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
+<section class="relative overflow-hidden bg-gradient-to-br from-[#0B1F3A] via-[#0B1F3A] to-[#0B1F3A] text-white">
+ <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FFFFFF_1px,transparent_1px)] [background-size:18px_18px]"></div>
  <div class="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24 relative z-10">
   <a href="credito-grupal.php" class="inline-flex items-center gap-2 text-green-50 hover:text-white text-sm font-bold mb-7"><i class="fas fa-arrow-left"></i> Volver a Crédito Grupal</a>
   <span class="inline-flex bg-brand-orange px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest">Crédito Grupal</span>
@@ -87,7 +90,7 @@
   </div>
  </div>
 </section>
-<section class="px-4 md:px-10 pb-14"><div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6"><div><span class="text-green-100 text-xs font-black uppercase tracking-widest">CEPRODEMIC – Multicredit</span><h2 class="text-3xl font-black mt-2">¿Quieres conocer la metodología?</h2><p class="text-green-50 mt-2">Conversa con un asesor para conocer las condiciones vigentes.</p></div><a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20quiero%20conocer%20la%20metodolog%C3%ADa%20de%20Bancos%20Comunales." target="_blank" rel="noopener noreferrer" class="bg-brand-orange hover:bg-orange-500 px-7 py-4 rounded-full font-black inline-flex items-center gap-2"><i class="fab fa-whatsapp text-xl"></i> Solicitar información</a></div></section>
+<section class="px-4 md:px-10 pb-14"><div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#0B1F3A] to-[#0B1F3A] text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6"><div><span class="text-green-100 text-xs font-black uppercase tracking-widest">CEPRODEMIC – Multicredit</span><h2 class="text-3xl font-black mt-2">¿Quieres conocer la metodología?</h2><p class="text-green-50 mt-2">Conversa con un asesor para conocer las condiciones vigentes.</p></div><a href="https://wa.me/51968782473?text=Hola%20Multicredit%2C%20quiero%20conocer%20la%20metodolog%C3%ADa%20de%20Bancos%20Comunales." target="_blank" rel="noopener noreferrer" class="bg-brand-orange hover:bg-orange-500 px-7 py-4 rounded-full font-black inline-flex items-center gap-2"><i class="fab fa-whatsapp text-xl"></i> Solicitar información</a></div></section>
 </main>
 <?php include 'footer.php'; ?>
 

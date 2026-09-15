@@ -8,9 +8,9 @@
     <script>
         tailwind = window.tailwind || {};
         tailwind.config = {theme:{extend:{colors:{
-            'brand-green':'#0d5c2e',
-            'brand-green-dark':'#063718',
-            'brand-orange':'#f26e22'
+            'brand-green':'#071525',
+            'brand-green-dark':'#071525',
+            'brand-orange':'#163A5F'
         }}}};
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,9 +35,12 @@
     }
     .hover-scale:hover { 
         transform: translateY(-5px);
-        box-shadow: 0 18px 38px rgba(3,31,13,.12);
+        box-shadow: 0 18px 38px rgba(7,21,37,.12);
     }
     </style>
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 <?php include 'encabezado.php'; ?>
