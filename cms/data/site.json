@@ -1,6 +1,6 @@
 {
     "brand_name": "CEPRODEMIC MULTICREDIT",
-    "logo": "uploads/logo/20260904_232938_5c89c80d.png",
+    "logo": "img/multicredit-logo-color.webp",
     "hero_badge": "CEPRODEMIC MULTICREDIT",
     "hero_title": "Financiamiento rápido para",
     "hero_highlight": "hacer crecer tu negocio",
@@ -40,6 +40,8 @@
     "copyright_year": "2026",
     "nav_home_label": "Inicio",
     "nav_home_url": "index.php",
+    "nav_news_label": "Noticias",
+    "nav_news_url": "noticias.php",
     "nav_credits_label": "Créditos",
     "nav_credits_url": "creditos.php",
     "nav_services_label": "Servicios",
