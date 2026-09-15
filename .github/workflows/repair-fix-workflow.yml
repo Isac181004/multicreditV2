@@ -1,0 +1,36 @@
+name: Corregir workflow restauracion
+
+on:
+  push:
+    branches:
+      - fix/restaurar-web-opiniones-json-logo
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/restaurar-web-opiniones-json-logo
+      - name: Corregir sintaxis y guardar
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('.github/workflows/fix-restaurar-web-opiniones-json.yml')
+          s=p.read_text(encoding='utf-8')
+          old="    if: github.event.head_commit.message != 'fix: restaurar web, logo y opiniones JSON'"
+          new="    if: \"${{ github.event.head_commit.message != 'fix: restaurar web, logo y opiniones JSON' }}\""
+          if old not in s:
+              raise SystemExit('No se encontró la línea a corregir')
+          p.write_text(s.replace(old,new,1),encoding='utf-8')
+          PY
+          rm -f .github/workflows/repair-fix-workflow.yml
+          git config user.name "Isac181004"
+          git config user.email "isacvasquez017@gmail.com"
+          git add -A
+          git commit -m "ci: corregir workflow de restauración"
+          git push origin HEAD:fix/restaurar-web-opiniones-json-logo
