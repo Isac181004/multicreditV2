@@ -1,7 +1,3 @@
-
-
-
-
 (function () {
     'use strict';
 
@@ -20,28 +16,13 @@
 
     function activeSection(file) {
         const creditPages = new Set([
-            'creditos.php',
-            'credito-ordinario.php',
-            'credito-diario.php',
-            'crediempeno.php',
-            'credimoto.php',
-            'credito-grupal.php',
-            'bancos-comunales.php',
-            'grupos-solidarios.php',
-            'educacion.php',
-            'salud.php',
-            'esparcimiento.php'
+            'creditos.php','credito-ordinario.php','credito-diario.php','crediempeno.php','credimoto.php',
+            'credito-grupal.php','bancos-comunales.php','grupos-solidarios.php','educacion.php','salud.php','esparcimiento.php'
         ]);
-
-        const servicePages = new Set([
-            'servicios.php',
-            'microcredito.php',
-            'capacitacion_integral.php'
-        ]);
-
+        const servicePages = new Set(['servicios.php','microcredito.php','capacitacion_integral.php']);
         if (creditPages.has(file)) return 'creditos.php';
         if (servicePages.has(file)) return 'servicios.php';
-        if (file === 'noticias.php') return 'index.php';
+        if (file === 'noticias.php' || file === 'noticia.php') return 'noticias.php';
         if (file === 'informacion-legal.php') return 'contacto.php';
         return file;
     }
@@ -65,7 +46,7 @@
 
     function improveImages() {
         document.querySelectorAll('img').forEach((image) => {
-            const isPriority = image.closest('#main-header') || image.classList.contains('hero-image');
+            const isPriority = image.closest('#main-header') || image.classList.contains('hero-image') || image.classList.contains('mc-news-hero-bg');
             if (!image.hasAttribute('decoding')) image.setAttribute('decoding', 'async');
             if (!isPriority && !image.hasAttribute('loading')) image.setAttribute('loading', 'lazy');
         });
@@ -74,8 +55,7 @@
     function protectExternalLinks() {
         document.querySelectorAll('a[target="_blank"]').forEach((link) => {
             const values = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
-            values.add('noopener');
-            values.add('noreferrer');
+            values.add('noopener'); values.add('noreferrer');
             link.setAttribute('rel', Array.from(values).join(' '));
         });
     }
@@ -84,7 +64,6 @@
         const toggle = document.getElementById('mc-mobile-toggle');
         const menu = document.getElementById('mc-mobile-menu');
         if (!toggle || !menu) return;
-
         document.addEventListener('keydown', (event) => {
             if (event.key !== 'Escape' || !menu.classList.contains('open')) return;
             menu.classList.remove('open');
@@ -104,9 +83,6 @@
         addEscapeMenuClose();
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init, { once: true });
-    } else {
-        init();
-    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+    else init();
 })();
