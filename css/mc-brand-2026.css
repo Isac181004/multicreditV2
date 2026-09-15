@@ -1,5 +1,8 @@
 /* Multicredit 2026 · sistema visual corporativo
-   Paleta permitida: azul marino, grises, blanco y negro. */
+   Paleta: azul marino, grises, blanco y negro.
+   Esta capa se carga al final de cada <head> para unificar CSS heredado,
+   estilos inline y utilidades generadas por Tailwind sin alterar el layout. */
+
 :root {
   --mc-navy: #0B1F3A;
   --mc-navy-2: #163A5F;
@@ -19,7 +22,7 @@
   --mc-shadow: 0 14px 36px rgba(7,21,37,.12);
   --mc-shadow-lg: 0 24px 60px rgba(7,21,37,.18);
 
-  /* Alias heredados: conservamos nombres para no romper componentes existentes. */
+  /* Alias heredados: mantienen compatibilidad, pero ya no representan verde/naranja. */
   --mc-green: #0B1F3A;
   --mc-green-2: #163A5F;
   --mc-orange: #6B7280;
@@ -34,16 +37,15 @@ body {
   background: #F3F4F6 !important;
   color: #111827 !important;
 }
-
 ::selection { background: #163A5F; color: #FFFFFF; }
 
-/* Accesibilidad de teclado */
-:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+/* Accesibilidad */
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible {
   outline: 3px solid #163A5F !important;
   outline-offset: 3px !important;
 }
 
-/* Encabezado y navegación */
+/* Encabezado / navegación */
 #main-header,
 .mc-header,
 .site-header,
@@ -119,7 +121,7 @@ header.main-header {
   color: #FFFFFF !important;
 }
 
-/* Botones y llamadas a la acción */
+/* Botones */
 :where(.btn-primary,.button-primary,.primary-btn,.mc-btn-primary,.cta-button,.hero-cta,.submit-btn,
        button[type="submit"],input[type="submit"],input[type="button"]) {
   background: #0B1F3A !important;
@@ -151,7 +153,7 @@ article a:not([class*="btn"]):not([class*="button"]) { color: #163A5F; }
 main a:not([class*="btn"]):not([class*="button"]):hover,
 article a:not([class*="btn"]):not([class*="button"]):hover { color: #071525; }
 
-/* Fondos y superficies */
+/* Superficies */
 :where(.card,.service-card,.news-card,.product-card,.credit-card,.feature-card,.benefit-card,
        .info-card,.faq-item,.testimonial-card,.opinion-card,.form-card,.panel,.box,.content-box,
        [class*="-card"]):not(#main-header *) {
@@ -164,12 +166,10 @@ article a:not([class*="btn"]):not([class*="button"]):hover { color: #071525; }
 
 /* Tipografía */
 :where(h1,h2,h3,h4,h5,h6) { color: #0A0A0A; }
-:where(p,li,dd,figcaption,.caption,.subtitle,.description,.muted,.text-muted) { color: inherit; }
 :where(.text-muted,.muted,.caption,small) { color: #6B7280; }
 
 /* Formularios */
-:where(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
-       select,textarea) {
+:where(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),select,textarea) {
   background: #FFFFFF !important;
   color: #0A0A0A !important;
   border-color: #D1D5DB !important;
@@ -182,7 +182,7 @@ article a:not([class*="btn"]):not([class*="button"]):hover { color: #071525; }
 }
 input[type="checkbox"], input[type="radio"] { accent-color: #0B1F3A !important; }
 
-/* Tablas y grillas */
+/* Tablas / grillas */
 :where(table,.table,.data-grid) {
   background: #FFFFFF !important;
   color: #111827 !important;
@@ -197,7 +197,7 @@ input[type="checkbox"], input[type="radio"] { accent-color: #0B1F3A !important; 
 :where(tbody tr:nth-child(even),.table tbody tr:nth-child(even)) { background: #F3F4F6 !important; }
 :where(tbody tr:hover,.table tbody tr:hover) { background: #E5E7EB !important; }
 
-/* Alertas / banners: misma paleta, diferenciación por icono, texto y borde */
+/* Alertas: se conserva semántica por icono/texto, no por colores fuera de marca */
 :where(.alert,.notice,.notification,.banner,.message,.flash) {
   background: #F3F4F6 !important;
   color: #111827 !important;
@@ -210,7 +210,7 @@ input[type="checkbox"], input[type="radio"] { accent-color: #0B1F3A !important; 
   background: #E5E7EB !important;
 }
 
-/* Modales y overlays */
+/* Modales */
 :where(.modal,.dialog,.popup,.mc-modal,.admin-modal) {
   background: #FFFFFF !important;
   color: #111827 !important;
@@ -218,23 +218,107 @@ input[type="checkbox"], input[type="radio"] { accent-color: #0B1F3A !important; 
 }
 :where(.modal-overlay,.overlay,.backdrop,.mc-overlay) { background: rgba(7,21,37,.72) !important; }
 
-/* Opiniones / estrellas / badges */
+/* Opiniones / badges / iconos */
 :where(.stars,.star,.rating,.rating-star,[class*="star"]) { color: #163A5F !important; }
 :where(.badge,.pill,.tag,.chip) {
   background: #E5E7EB !important;
   color: #0B1F3A !important;
   border-color: #D1D5DB !important;
 }
-
-/* Separadores e iconos */
 hr { border-color: #D1D5DB !important; }
 :where(.icon-circle,.icon-box,.feature-icon,.service-icon,.credit-icon) {
   background: #E5E7EB !important;
   color: #0B1F3A !important;
 }
 
-/* Footer */
-footer,
+/* WhatsApp deja de usar verde para respetar identidad corporativa */
+:where(.whatsapp,.whatsapp-btn,.btn-whatsapp,[class*="whatsapp"],.wa-float) {
+  background-color: #0B1F3A !important;
+  border-color: #0B1F3A !important;
+  color: #FFFFFF !important;
+}
+:where(.whatsapp,.whatsapp-btn,.btn-whatsapp,[class*="whatsapp"],.wa-float):hover {
+  background-color: #163A5F !important;
+}
+
+/* Compatibilidad con clases Tailwind antiguas de colores.
+   Los tonos claros pasan a gris; los acentos/oscuros a navy. */
+:where(.bg-green-50,.bg-green-100,.bg-green-200,.bg-emerald-50,.bg-emerald-100,.bg-lime-50,
+       .bg-orange-50,.bg-orange-100,.bg-yellow-50,.bg-yellow-100,.bg-red-50,.bg-red-100,
+       .bg-blue-50,.bg-blue-100,.bg-indigo-50,.bg-indigo-100,.bg-purple-50,.bg-purple-100) {
+  background-color: #F3F4F6 !important;
+}
+:where(.bg-green-300,.bg-green-400,.bg-green-500,.bg-green-600,.bg-green-700,.bg-green-800,.bg-green-900,
+       .bg-emerald-300,.bg-emerald-400,.bg-emerald-500,.bg-emerald-600,.bg-emerald-700,.bg-emerald-800,.bg-emerald-900,
+       .bg-orange-300,.bg-orange-400,.bg-orange-500,.bg-orange-600,.bg-orange-700,.bg-orange-800,.bg-orange-900,
+       .bg-red-300,.bg-red-400,.bg-red-500,.bg-red-600,.bg-red-700,.bg-red-800,.bg-red-900,
+       .bg-yellow-300,.bg-yellow-400,.bg-yellow-500,.bg-yellow-600,.bg-yellow-700,.bg-yellow-800,.bg-yellow-900,
+       .bg-blue-300,.bg-blue-400,.bg-blue-500,.bg-blue-600,.bg-blue-700,.bg-blue-800,.bg-blue-900,
+       .bg-indigo-300,.bg-indigo-400,.bg-indigo-500,.bg-indigo-600,.bg-indigo-700,.bg-indigo-800,.bg-indigo-900,
+       .bg-purple-300,.bg-purple-400,.bg-purple-500,.bg-purple-600,.bg-purple-700,.bg-purple-800,.bg-purple-900) {
+  background-color: #0B1F3A !important;
+  color: #FFFFFF !important;
+}
+:where(.text-green-400,.text-green-500,.text-green-600,.text-green-700,.text-green-800,.text-green-900,
+       .text-emerald-400,.text-emerald-500,.text-emerald-600,.text-emerald-700,.text-emerald-800,.text-emerald-900,
+       .text-orange-400,.text-orange-500,.text-orange-600,.text-orange-700,.text-orange-800,.text-orange-900,
+       .text-red-400,.text-red-500,.text-red-600,.text-red-700,.text-red-800,.text-red-900,
+       .text-yellow-400,.text-yellow-500,.text-yellow-600,.text-yellow-700,.text-yellow-800,.text-yellow-900,
+       .text-blue-400,.text-blue-500,.text-blue-600,.text-blue-700,.text-blue-800,.text-blue-900,
+       .text-indigo-400,.text-indigo-500,.text-indigo-600,.text-indigo-700,.text-indigo-800,.text-indigo-900,
+       .text-purple-400,.text-purple-500,.text-purple-600,.text-purple-700,.text-purple-800,.text-purple-900) {
+  color: #163A5F !important;
+}
+:where(.border-green-100,.border-green-200,.border-green-300,.border-green-400,.border-green-500,
+       .border-orange-100,.border-orange-200,.border-orange-300,.border-orange-400,.border-orange-500,
+       .border-red-100,.border-red-200,.border-red-300,.border-red-400,.border-red-500,
+       .border-yellow-100,.border-yellow-200,.border-yellow-300,.border-yellow-400,.border-yellow-500,
+       .border-blue-100,.border-blue-200,.border-blue-300,.border-blue-400,.border-blue-500) {
+  border-color: #D1D5DB !important;
+}
+
+/* Footer: preserva las secciones claras del layout original con contraste correcto. */
+#pie-contacto { background: #071525 !important; color: #111827 !important; }
+#pie-contacto > .bg-brand-green {
+  background: #0B1F3A !important;
+  color: #FFFFFF !important;
+}
+#pie-contacto > .bg-white {
+  background: #FFFFFF !important;
+  color: #111827 !important;
+}
+#pie-contacto > .bg-gray-100 {
+  background: #F3F4F6 !important;
+  color: #111827 !important;
+}
+#pie-contacto > .bg-gray-200 {
+  background: #E5E7EB !important;
+  color: #374151 !important;
+}
+#pie-contacto .mc-interest-link,
+#pie-contacto > .bg-white a,
+#pie-contacto > .bg-gray-100 a,
+#pie-contacto > .bg-gray-200 a {
+  color: #0B1F3A !important;
+}
+#pie-contacto .mc-interest-link:hover,
+#pie-contacto > .bg-white a:hover,
+#pie-contacto > .bg-gray-100 a:hover,
+#pie-contacto > .bg-gray-200 a:hover {
+  color: #163A5F !important;
+}
+#pie-contacto .text-white { color: #FFFFFF !important; }
+#pie-contacto .text-gray-500 { color: #6B7280 !important; }
+#pie-contacto .text-gray-600,
+#pie-contacto .text-gray-700,
+#pie-contacto .text-gray-800 { color: #374151 !important; }
+#pie-contacto .bg-white.rounded-2xl,
+#pie-contacto a.bg-white { background: #FFFFFF !important; }
+#pie-contacto .bg-blue-800 { background: #0B1F3A !important; color: #FFFFFF !important; }
+#pie-contacto .text-blue-800 { color: #0B1F3A !important; }
+
+/* Footer genérico para páginas que no usan #pie-contacto */
+footer:not(#pie-contacto),
 #main-footer,
 .site-footer,
 .mc-footer {
@@ -242,49 +326,28 @@ footer,
   color: #FFFFFF !important;
   border-color: #374151 !important;
 }
-footer a,
-#main-footer a,
-.site-footer a,
-.mc-footer a { color: #FFFFFF !important; }
-footer a:hover,
-#main-footer a:hover,
-.site-footer a:hover,
-.mc-footer a:hover { color: #D1D5DB !important; }
-footer :where(p,small,span),
-#main-footer :where(p,small,span),
-.site-footer :where(p,small,span),
-.mc-footer :where(p,small,span) { color: #D1D5DB; }
+footer:not(#pie-contacto) a,
+#main-footer a,.site-footer a,.mc-footer a { color: #FFFFFF !important; }
+footer:not(#pie-contacto) a:hover,
+#main-footer a:hover,.site-footer a:hover,.mc-footer a:hover { color: #D1D5DB !important; }
 
 /* Panel administrativo */
-body.mc-admin-body,
-.admin-body { background: #F3F4F6 !important; color: #111827 !important; }
-.mc-admin-sidebar,
-.admin-sidebar { background: #071525 !important; color: #FFFFFF !important; }
-.mc-admin-sidebar a,
-.admin-sidebar a { color: #D1D5DB !important; }
-.mc-admin-sidebar a:hover,
-.mc-admin-sidebar a.active,
-.admin-sidebar a:hover,
-.admin-sidebar a.active {
+body.mc-admin-body,.admin-body { background: #F3F4F6 !important; color: #111827 !important; }
+.mc-admin-sidebar,.admin-sidebar { background: #071525 !important; color: #FFFFFF !important; }
+.mc-admin-sidebar a,.admin-sidebar a { color: #D1D5DB !important; }
+.mc-admin-sidebar a:hover,.mc-admin-sidebar a.active,
+.admin-sidebar a:hover,.admin-sidebar a.active {
   background: #163A5F !important;
   color: #FFFFFF !important;
 }
-.mc-admin-card,
-.admin-card { background: #FFFFFF !important; border-color: #D1D5DB !important; box-shadow: var(--mc-shadow) !important; }
-.mc-admin-topbar,
-.admin-topbar { background: #FFFFFF !important; border-color: #D1D5DB !important; }
-
-/* WhatsApp y otros botones de marca heredados: sin verde. */
-:where(.whatsapp,.whatsapp-btn,.btn-whatsapp,[class*="whatsapp"]) {
-  background-color: #0B1F3A !important;
-  border-color: #0B1F3A !important;
-  color: #FFFFFF !important;
+.mc-admin-card,.admin-card {
+  background: #FFFFFF !important;
+  border-color: #D1D5DB !important;
+  box-shadow: var(--mc-shadow) !important;
 }
-:where(.whatsapp,.whatsapp-btn,.btn-whatsapp,[class*="whatsapp"]):hover {
-  background-color: #163A5F !important;
-}
+.mc-admin-topbar,.admin-topbar { background: #FFFFFF !important; border-color: #D1D5DB !important; }
 
-/* Estados disabled */
+/* Disabled */
 :disabled,[aria-disabled="true"] {
   background-color: #D1D5DB !important;
   border-color: #D1D5DB !important;
@@ -292,5 +355,4 @@ body.mc-admin-body,
   cursor: not-allowed !important;
 }
 
-/* Scrollbar discreta */
 * { scrollbar-color: #6B7280 #F3F4F6; }
