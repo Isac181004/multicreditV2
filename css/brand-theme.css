@@ -1,0 +1,298 @@
+:root {
+    --brand-navy: #0B1F3A;
+    --brand-navy-dark: #050B14;
+    --brand-navy-mid: #1F4E79;
+    --brand-gray: #64748B;
+    --brand-gray-dark: #374151;
+    --brand-gray-light: #F3F4F6;
+    --brand-white: #FFFFFF;
+    --brand-black: #111827;
+    --mc-brand: var(--brand-navy);
+    --mc-brand-dark: var(--brand-navy-dark);
+    --mc-brand-deep: var(--brand-navy-dark);
+    --mc-green: var(--brand-navy);
+    --mc-green-2: var(--brand-navy-mid);
+    --mc-deep: var(--brand-navy-dark);
+    --mc-deeper: #000000;
+    --mc-orange: var(--brand-gray);
+    --mc-gold: var(--brand-gray);
+    --mc-accent: var(--brand-navy-mid);
+    --mc-accent-rgb: 31, 78, 121;
+    --mc-ink: var(--brand-black);
+    --mc-muted: var(--brand-gray);
+    --mc-surface: var(--brand-white);
+    --mc-surface-soft: var(--brand-gray-light);
+    --mc-line: #D1D5DB;
+}
+
+body[data-product] {
+    --mc-accent: var(--brand-navy-mid) !important;
+    --mc-accent-rgb: 31, 78, 121 !important;
+}
+
+html { color-scheme: light; }
+
+body.mc-site,
+body.mc-ultra-page {
+    color: var(--brand-black);
+    background-color: var(--brand-gray-light);
+}
+
+body.mc-site ::selection,
+body.mc-ultra-page ::selection {
+    color: var(--brand-white);
+    background: var(--brand-navy-mid);
+}
+
+body.mc-site :is(a, button, input, select, textarea):focus-visible,
+body.mc-ultra-page :is(a, button, input, select, textarea):focus-visible {
+    outline: 3px solid var(--brand-navy-mid) !important;
+    outline-offset: 3px;
+}
+
+.bg-brand-green,
+.bg-brand-green-dark { background-color: var(--brand-navy) !important; }
+.bg-brand-orange { background-color: var(--brand-gray-dark) !important; }
+.text-brand-green,
+.text-brand-green-dark { color: var(--brand-navy) !important; }
+.text-brand-orange { color: var(--brand-gray-dark) !important; }
+.border-brand-green { border-color: var(--brand-navy) !important; }
+.hover\:bg-brand-green:hover,
+.hover\:bg-brand-green-dark:hover { background-color: var(--brand-navy-dark) !important; }
+.hover\:text-brand-green:hover,
+.hover\:text-brand-orange:hover { color: var(--brand-navy-mid) !important; }
+
+/* Keep existing Tailwind utility names functional while removing legacy hues. */
+.bg-amber-50,
+.bg-blue-50,
+.bg-green-50,
+.bg-orange-50,
+.bg-purple-50,
+.bg-red-50 { background-color: var(--brand-gray-light) !important; }
+
+.bg-blue-100,
+.bg-green-100,
+.bg-purple-100,
+.bg-red-100 { background-color: #E5E7EB !important; }
+
+.bg-blue-800,
+.bg-green-700 { background-color: var(--brand-navy) !important; }
+
+.bg-orange-500 { background-color: var(--brand-navy-mid) !important; }
+
+.text-amber-600,
+.text-amber-700,
+.text-blue-500,
+.text-blue-600,
+.text-blue-700,
+.text-blue-800,
+.text-green-700,
+.text-orange-600,
+.text-purple-600,
+.text-purple-700,
+.text-red-600 { color: var(--brand-navy-mid) !important; }
+
+.text-green-50,
+.text-green-100,
+.text-orange-300,
+.text-yellow-300 { color: #E5E7EB !important; }
+
+.border-green-100,
+.border-orange-100 { border-color: #D1D5DB !important; }
+
+.border-green-800 { border-color: var(--brand-navy) !important; }
+
+[class*="from-green-"],
+[class*="from-orange-"],
+[class*="from-blue-"],
+[class*="from-purple-"] { --tw-gradient-from: var(--brand-navy) var(--tw-gradient-from-position) !important; }
+
+[class*="via-green-"],
+[class*="via-orange-"],
+[class*="via-blue-"],
+[class*="via-purple-"] { --tw-gradient-via: var(--brand-navy-mid) var(--tw-gradient-via-position) !important; }
+
+[class*="to-green-"],
+[class*="to-orange-"],
+[class*="to-blue-"],
+[class*="to-purple-"] { --tw-gradient-to: var(--brand-navy-dark) var(--tw-gradient-to-position) !important; }
+
+#main-header,
+#main-header.scrolled {
+    background: linear-gradient(110deg, #000000 0%, var(--brand-navy-dark) 38%, var(--brand-navy) 100%) !important;
+    border-bottom-color: rgba(255, 255, 255, .16) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, .24) !important;
+}
+
+#main-header::after {
+    background: linear-gradient(90deg, transparent 7%, var(--brand-gray) 50%, transparent 93%) !important;
+}
+
+#main-header .mc-logo {
+    min-width: 174px;
+}
+
+#main-header .mc-logo img {
+    width: 174px;
+    height: 66px;
+    max-width: 174px;
+    object-fit: contain;
+}
+
+#main-header .mc-desktop-nav a,
+#main-header .mc-mobile-nav a { color: rgba(255, 255, 255, .86); }
+
+#main-header .mc-desktop-nav a:hover,
+#main-header .mc-desktop-nav a.active,
+#main-header .mc-desktop-nav a[aria-current="page"] { color: var(--brand-white); }
+
+#main-header .mc-desktop-nav a::after { background: var(--brand-gray) !important; }
+
+#main-header .mc-header-button,
+.mc-ultra-action,
+a[class*="bg-brand-orange"],
+button[class*="bg-brand-orange"] {
+    color: var(--brand-white) !important;
+    background: var(--brand-navy-mid) !important;
+    border-color: rgba(255, 255, 255, .28) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .24) !important;
+}
+
+#main-header .mc-header-button:hover,
+.mc-ultra-action:hover,
+a[class*="bg-brand-orange"]:hover,
+button[class*="bg-brand-orange"]:hover {
+    color: var(--brand-white) !important;
+    background: var(--brand-navy-dark) !important;
+}
+
+#mc-mobile-menu,
+.mc-credit-mega,
+.mc-ultra-hero,
+.mc-tone-deep,
+.mc-tone-night,
+.mc-ultra-final,
+.sim-result,
+.sim-result-panel {
+    background-color: var(--brand-navy-dark) !important;
+}
+
+.mc-credit-mega { border-color: rgba(255, 255, 255, .16) !important; }
+
+.mc-ultra-hero::after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .96), rgba(5, 11, 20, .92) 40%, rgba(11, 31, 58, .66), rgba(0, 0, 0, .26)) !important;
+}
+
+.mc-tone-soft,
+.mc-tone-accent {
+    background: linear-gradient(135deg, var(--brand-gray-light), var(--brand-white) 56%, #E5E7EB) !important;
+}
+
+.mc-tone-deep,
+.mc-tone-night {
+    background: linear-gradient(135deg, #000000, var(--brand-navy-dark) 48%, var(--brand-navy)) !important;
+}
+
+.mc-ultra-card,
+.news-card,
+.card,
+article,
+details {
+    border-color: #D1D5DB !important;
+}
+
+.mc-ultra-card:hover,
+.news-card:hover,
+.card:hover {
+    border-color: var(--brand-navy-mid) !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    color: var(--brand-black);
+    background-color: var(--brand-white);
+    border-color: #9CA3AF !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+select:focus,
+textarea:focus {
+    border-color: var(--brand-navy-mid) !important;
+    box-shadow: 0 0 0 3px rgba(31, 78, 121, .20) !important;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] { accent-color: var(--brand-navy-mid) !important; }
+
+table thead,
+.table thead,
+.sim-table th {
+    color: var(--brand-white) !important;
+    background: var(--brand-navy) !important;
+}
+
+table th,
+table td,
+.table th,
+.table td { border-color: #D1D5DB !important; }
+
+table tbody tr:nth-child(even) { background-color: #F8FAFC; }
+table tbody tr:hover { background-color: #E5E7EB; }
+
+.alert,
+[role="alert"] {
+    color: var(--brand-black) !important;
+    background: var(--brand-gray-light) !important;
+    border: 1px solid #9CA3AF !important;
+    border-left: 5px solid var(--brand-navy-mid) !important;
+}
+
+.alert.error,
+.alert.danger {
+    border-left-color: var(--brand-black) !important;
+}
+
+.modal,
+[role="dialog"] {
+    color: var(--brand-black);
+}
+
+.modal-backdrop,
+.overlay,
+[class*="modal-overlay"] { background-color: rgba(0, 0, 0, .72) !important; }
+
+.modal-content,
+[role="dialog"] > div {
+    background-color: var(--brand-white);
+    border-color: #D1D5DB !important;
+}
+
+.mc-admin-overlay-mark {
+    font-size: 0 !important;
+    background-color: var(--brand-navy) !important;
+    background-image: url('../img/favicon-multicredit.svg') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+footer#pie-contacto .bg-brand-green { background: var(--brand-navy) !important; }
+footer#pie-contacto .bg-gray-100 { background: var(--brand-gray-light) !important; }
+footer#pie-contacto .bg-gray-200 { background: #E5E7EB !important; }
+
+.wa-float {
+    background: var(--brand-navy-mid) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .28) !important;
+}
+
+.wa-float:hover {
+    background: var(--brand-navy-dark) !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .34) !important;
+}
+
+@media (max-width: 640px) {
+    #main-header .mc-logo { min-width: 138px; }
+    #main-header .mc-logo img { width: 138px; height: 54px; max-width: 138px; }
+}

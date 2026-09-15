@@ -55,7 +55,7 @@ function mc_me_product_schema($label) {
         'groups'=>[
             mc_me_group('Portada del crédito','Imagen, categoría, nombre y frase principal.',[
                 mc_me_field('hero_image','Imagen de portada','image','','css',['rules'=>[
-                    ['selector'=>'main > section:first-of-type','property'=>'background','template'=>"linear-gradient(100deg,rgba(5,31,15,.84),rgba(9,66,31,.56)),url('%s') center/cover no-repeat"]
+                    ['selector'=>'main > section:first-of-type','property'=>'background','template'=>"linear-gradient(100deg,rgba(5,11,20,.84),rgba(6,20,38,.56)),url('%s') center/cover no-repeat"]
                 ]]),
                 mc_me_field('hero_badge','Categoría / etiqueta','text','main > section:first-of-type span.inline-flex','last_text'),
                 mc_me_field('hero_title','Nombre del crédito','text','main > section:first-of-type h1'),
@@ -77,14 +77,14 @@ function mc_me_product_schema($label) {
             mc_me_group('Proceso de solicitud','Cuatro pasos del proceso.',$process),
             mc_me_group('Preguntas frecuentes','Preguntas y respuestas del producto.',$faq),
             mc_me_group('Diseño de esta ficha','Estos colores solo afectan al módulo seleccionado.',[
-                mc_me_color('color_green','Verde principal','#176b2b',[
+                mc_me_color('color_green','Verde principal','#0B1F3A',[
                     ['selector'=>':root','property'=>'--mc-green','template'=>'%s'],
                     ['selector'=>'main .text-brand-green','property'=>'color','template'=>'%s']
                 ]),
-                mc_me_color('color_green_dark','Verde oscuro','#0b4d26',[
+                mc_me_color('color_green_dark','Verde oscuro','#061426',[
                     ['selector'=>':root','property'=>'--mc-green-dark','template'=>'%s']
                 ]),
-                mc_me_color('color_orange','Naranja / acento','#e85b10',[
+                mc_me_color('color_orange','Naranja / acento','#4B5563',[
                     ['selector'=>':root','property'=>'--mc-orange','template'=>'%s'],
                     ['selector'=>'main .text-brand-orange','property'=>'color','template'=>'%s'],
                     ['selector'=>'main .bg-brand-orange','property'=>'background-color','template'=>'%s']
@@ -121,10 +121,10 @@ function mc_me_group_credit_schema() {
                 mc_me_field('advisor_text','Tarjeta asesor · texto','textarea','main > section:nth-of-type(3) .rounded-3xl h3 + p'),
             ]),
             mc_me_group('Diseño','',[
-                mc_me_color('color_green','Verde principal','#176b2b',[
+                mc_me_color('color_green','Verde principal','#0B1F3A',[
                     ['selector'=>'main .text-brand-green','property'=>'color','template'=>'%s']
                 ]),
-                mc_me_color('color_orange','Naranja','#f26e22',[
+                mc_me_color('color_orange','Naranja','#64748B',[
                     ['selector'=>'main .text-brand-orange','property'=>'color','template'=>'%s'],
                     ['selector'=>'main .bg-brand-orange','property'=>'background-color','template'=>'%s']
                 ]),
@@ -166,10 +166,10 @@ function mc_me_group_method_schema($label) {
                 mc_me_field('cta_title','CTA · título','text','main > section:last-of-type h2'),
                 mc_me_field('cta_text','CTA · texto','textarea','main > section:last-of-type h2 + p'),
                 mc_me_field('cta_url','CTA · enlace','url','main > section:last-of-type a','attr',['attr'=>'href']),
-                mc_me_color('color_green','Verde principal','#176b2b',[
+                mc_me_color('color_green','Verde principal','#0B1F3A',[
                     ['selector'=>'main .text-brand-green','property'=>'color','template'=>'%s']
                 ]),
-                mc_me_color('color_orange','Naranja','#f26e22',[
+                mc_me_color('color_orange','Naranja','#64748B',[
                     ['selector'=>'main .text-brand-orange','property'=>'color','template'=>'%s'],
                     ['selector'=>'main .bg-brand-orange','property'=>'background-color','template'=>'%s']
                 ]),
@@ -220,11 +220,11 @@ function mc_me_services_schema() {
                 mc_me_field('final_text','CTA · texto','textarea','.svc-final-content p'),
             ]),
             mc_me_group('Colores','',[
-                mc_me_color('color_green','Verde principal','#0d5c2e',[
+                mc_me_color('color_green','Verde principal','#0B1F3A',[
                     ['selector'=>'.svc-hero,.svc-final-box','property'=>'background-color','template'=>'%s'],
                     ['selector'=>'.svc-intro-card strong,.svc-card-number','property'=>'color','template'=>'%s']
                 ]),
-                mc_me_color('color_orange','Naranja de acento','#f26e22',[
+                mc_me_color('color_orange','Naranja de acento','#64748B',[
                     ['selector'=>'.svc-btn-primary','property'=>'background-color','template'=>'%s'],
                     ['selector'=>'.svc-kicker,.svc-eyebrow i,.svc-check i','property'=>'color','template'=>'%s'],
                     ['selector'=>'.svc-intro-card','property'=>'border-left-color','template'=>'%s']
@@ -275,13 +275,13 @@ function mc_me_about_schema() {
                 mc_me_field('focus_image','Imagen del enfoque','image','.focus-image img','attr',['attr'=>'src']),
                 mc_me_field('focus_title','Título del enfoque','text','.focus-content h2'),
                 mc_me_field('focus_text','Texto del enfoque','textarea','.focus-content > p'),
-                mc_me_color('color_green','Verde institucional','#0d5c2e',[
+                mc_me_color('color_green','Verde institucional','#0B1F3A',[
                     ['selector'=>'.stat-number,.history-year strong','property'=>'color','template'=>'%s'],
-                    ['selector'=>'.purpose-card.mission','property'=>'background','template'=>'linear-gradient(145deg,#083d1f,%s)']
+                    ['selector'=>'.purpose-card.mission','property'=>'background','template'=>'linear-gradient(145deg,#102A43,%s)']
                 ]),
-                mc_me_color('color_orange','Naranja institucional','#f26e22',[
+                mc_me_color('color_orange','Naranja institucional','#64748B',[
                     ['selector'=>'.hero-title span,.hero-eyebrow i','property'=>'color','template'=>'%s'],
-                    ['selector'=>'.purpose-card.vision','property'=>'background','template'=>'linear-gradient(145deg,%s,#d85812)']
+                    ['selector'=>'.purpose-card.vision','property'=>'background','template'=>'linear-gradient(145deg,%s,#374151)']
                 ]),
             ]),
         ]
@@ -320,11 +320,11 @@ function mc_me_contact_schema() {
                 mc_me_field('cta_image','Imagen del CTA','image','.contact-cta-image','attr',['attr'=>'src']),
                 mc_me_field('cta_title','CTA · título','text','.contact-cta-content h2'),
                 mc_me_field('cta_text','CTA · texto','textarea','.contact-cta-content p'),
-                mc_me_color('color_green','Verde principal','#0d5c2e',[
+                mc_me_color('color_green','Verde principal','#0B1F3A',[
                     ['selector'=>'.contact-hero,.contact-cta','property'=>'background-color','template'=>'%s'],
                     ['selector'=>'.contact-submit','property'=>'background-color','template'=>'%s']
                 ]),
-                mc_me_color('color_orange','Naranja','#f26e22',[
+                mc_me_color('color_orange','Naranja','#64748B',[
                     ['selector'=>'.contact-eyebrow i','property'=>'color','template'=>'%s'],
                     ['selector'=>'.contact-btn-primary','property'=>'background-color','template'=>'%s']
                 ]),
@@ -350,7 +350,7 @@ function mc_me_credits_schema() {
         'groups'=>[
             mc_me_group('Hero del catálogo','',[
                 mc_me_field('hero_image','Imagen de fondo','image','','css',['rules'=>[
-                    ['selector'=>'.credit-page .credit-hero','property'=>'background','template'=>"linear-gradient(90deg,rgba(10,55,20,.92),rgba(10,55,20,.55)),url('%s') center/cover no-repeat"]
+                    ['selector'=>'.credit-page .credit-hero','property'=>'background','template'=>"linear-gradient(90deg,rgba(6,20,38,.92),rgba(6,20,38,.55)),url('%s') center/cover no-repeat"]
                 ]]),
                 mc_me_field('hero_badge','Etiqueta','text','.credit-hero span.inline-flex','last_text'),
                 mc_me_field('hero_title','Título antes del destacado','text','.credit-hero h1','first_text'),
@@ -376,12 +376,12 @@ function mc_me_credits_schema() {
                 mc_me_field('sim_title','Título del simulador','text','#simulador .max-w-3xl h2'),
                 mc_me_field('sim_text','Descripción del simulador','textarea','#simulador .max-w-3xl h2 + p'),
                 mc_me_field('sim_background','Fondo del simulador','image','','css',['rules'=>[
-                    ['selector'=>'#simulador','property'=>'background','template'=>"linear-gradient(180deg,rgba(238,245,240,.80),rgba(248,250,248,.88)),url('%s') center/cover no-repeat"]
+                    ['selector'=>'#simulador','property'=>'background','template'=>"linear-gradient(180deg,rgba(243,244,246,.80),rgba(255,255,255,.88)),url('%s') center/cover no-repeat"]
                 ]]),
-                mc_me_color('color_green','Verde principal','#2e9e43',[
+                mc_me_color('color_green','Verde principal','#1F4E79',[
                     ['selector'=>'.credit-page .text-brand-green,#simulador h2','property'=>'color','template'=>'%s']
                 ]),
-                mc_me_color('color_orange','Naranja','#f26e22',[
+                mc_me_color('color_orange','Naranja','#64748B',[
                     ['selector'=>'.credit-page .text-brand-orange','property'=>'color','template'=>'%s'],
                     ['selector'=>'.credit-page .bg-brand-orange','property'=>'background-color','template'=>'%s']
                 ]),
@@ -421,11 +421,11 @@ function mc_me_microcredit_schema() {
                 mc_me_field('timeline_title','Título de trayectoria','text','main > section:nth-of-type(3) .text-center h2'),
             ],$timeline)),
             mc_me_group('Diseño','',[
-                mc_me_color('color_green','Verde','#0d5c2e',[
+                mc_me_color('color_green','Verde','#0B1F3A',[
                     ['selector'=>'main .text-brand-green','property'=>'color','template'=>'%s'],
                     ['selector'=>'main .bg-brand-green','property'=>'background-color','template'=>'%s']
                 ]),
-                mc_me_color('color_orange','Naranja','#f26e22',[
+                mc_me_color('color_orange','Naranja','#64748B',[
                     ['selector'=>'main .text-brand-orange','property'=>'color','template'=>'%s'],
                     ['selector'=>'main .bg-brand-orange','property'=>'background-color','template'=>'%s']
                 ]),
@@ -445,8 +445,8 @@ function mc_me_simple_schema($label) {
                 mc_me_field('hero_image','Imagen principal','image','[data-cms-hero] img, main section:first-of-type img, body > section:first-of-type img','attr',['attr'=>'src']),
             ]),
             mc_me_group('Diseño','',[
-                mc_me_color('color_green','Verde principal','#0d5c2e',[[ 'selector'=>':root','property'=>'--mc-green','template'=>'%s' ]]),
-                mc_me_color('color_orange','Naranja','#f26e22',[[ 'selector'=>':root','property'=>'--mc-orange','template'=>'%s' ]]),
+                mc_me_color('color_green','Verde principal','#0B1F3A',[[ 'selector'=>':root','property'=>'--mc-green','template'=>'%s' ]]),
+                mc_me_color('color_orange','Naranja','#64748B',[[ 'selector'=>':root','property'=>'--mc-orange','template'=>'%s' ]]),
             ]),
         ]
     ];

@@ -7,9 +7,9 @@
 
 
 :root {
-    --mc-green: #063718;
-    --mc-green-2: #0d5c2e;
-    --mc-orange: #f26e22;
+    --mc-green: #050B14;
+    --mc-green-2: #0B1F3A;
+    --mc-orange: #64748B;
 }
 
 
@@ -29,7 +29,7 @@
     z-index: 99999;
 
     background:
-        rgba(3, 43, 19, .88);
+        rgba(5,11,20,.88);
 
     border-bottom:
         1px solid
@@ -314,7 +314,7 @@
         0;
 
     border:
-        1px solid rgba(6,55,24,.12);
+        1px solid rgba(5,11,20,.12);
 
     border-top:
         4px solid var(--mc-orange);
@@ -323,7 +323,7 @@
         0 0 22px 22px;
 
     background:
-        #ffffff;
+        #FFFFFF;
 
     box-shadow:
         0 28px 65px rgba(0,0,0,.24);
@@ -388,7 +388,7 @@
         19px 24px;
 
     background:
-        linear-gradient(110deg, #063718 0%, #0d5c2e 72%, #14743c 100%);
+        linear-gradient(110deg, #050B14 0%, #0B1F3A 72%, #0B1F3A 100%);
 
     color:
         white;
@@ -528,7 +528,7 @@
         22px 24px 25px;
 
     background:
-        linear-gradient(180deg, #ffffff 0%, #f6faf7 100%);
+        linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
 
 }
 
@@ -560,7 +560,7 @@
         9px;
 
     background:
-        #eaf4ed;
+        #F3F4F6;
 
     color:
         var(--mc-green-2);
@@ -630,16 +630,16 @@
         11px 12px !important;
 
     border:
-        1px solid #dfe9e2;
+        1px solid #CBD5E1;
 
     border-radius:
         12px;
 
     background:
-        #ffffff;
+        #FFFFFF;
 
     color:
-        #1d2a22 !important;
+        #061426 !important;
 
     text-align:
         left;
@@ -651,7 +651,7 @@
         0 !important;
 
     box-shadow:
-        0 7px 18px rgba(6,55,24,.05);
+        0 7px 18px rgba(5,11,20,.05);
 
     transition:
         transform .25s ease,
@@ -686,7 +686,7 @@
         11px;
 
     background:
-        #edf7ef;
+        #F3F4F6;
 
     color:
         var(--mc-green-2);
@@ -707,7 +707,7 @@
         block;
 
     color:
-        #152219;
+        #050B14;
 
     font-size:
         .72rem;
@@ -729,7 +729,7 @@
         4px;
 
     color:
-        #718077;
+        #64748B;
 
     font-size:
         .61rem;
@@ -745,7 +745,7 @@
 #main-header .mc-credit-card > .fa-arrow-right {
 
     color:
-        #a8b7ad;
+        #9CA3AF;
 
     font-size:
         .67rem;
@@ -759,13 +759,13 @@
 #main-header .mc-credit-card:hover {
 
     border-color:
-        rgba(242,110,34,.55);
+        rgba(100,116,139,.55);
 
     background:
-        #fffaf7;
+        #FFFFFF;
 
     box-shadow:
-        0 14px 28px rgba(6,55,24,.11);
+        0 14px 28px rgba(5,11,20,.11);
 
     transform:
         translateY(-3px);
@@ -874,7 +874,7 @@
 
     box-shadow:
         0 8px 22px
-        rgba(242,110,34,.22);
+        rgba(100,116,139,.22);
 
     transition:
         transform .25s ease,
@@ -885,7 +885,7 @@
 #main-header .mc-header-button:hover {
 
     background:
-        #ff7c30;
+        #64748B;
 
     transform:
         translateY(-2px);
@@ -971,7 +971,7 @@
         18px;
 
     background:
-        rgba(3, 43, 19, .97);
+        rgba(5,11,20,.97);
 
     backdrop-filter:
         blur(18px);
@@ -1066,7 +1066,7 @@
 #main-header.scrolled {
 
     background:
-        rgba(3,43,19,.96);
+        rgba(5,11,20,.96);
 
     box-shadow:
         0 12px 35px
@@ -1204,7 +1204,11 @@
 </style>
 
  
+<link rel="icon" type="image/svg+xml" href="img/favicon-multicredit.svg">
+<link rel="alternate icon" type="image/png" href="img/favicon-multicredit.png">
+<meta name="theme-color" content="#0B1F3A">
 <link rel="stylesheet" href="css/mc-polish.css">
+<link rel="stylesheet" href="css/brand-theme.css">
 
 <a class="mc-skip-link" href="#contenido-principal">
     Saltar al contenido
@@ -1224,7 +1228,7 @@
         >
 
             <img
-                src="<?= mc_h($mcSiteHeader['logo']) ?>"
+                src="<?= mc_h($mcSiteHeader['logo_dark'] ?? 'img/logo-multicredit-oscuro.png') ?>"
                 alt="CEPRODEMIC MULTICREDIT"
             >
 

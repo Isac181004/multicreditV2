@@ -8,9 +8,9 @@
     <script>
         tailwind = window.tailwind || {};
         tailwind.config = {theme:{extend:{colors:{
-            'brand-green':'#0d5c2e',
-            'brand-green-dark':'#063718',
-            'brand-orange':'#f26e22'
+            'brand-green':'#0B1F3A',
+            'brand-green-dark':'#050B14',
+            'brand-orange':'#64748B'
         }}}};
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,7 +35,7 @@
     }
     .hover-scale:hover { 
         transform: translateY(-5px);
-        box-shadow: 0 18px 38px rgba(3,31,13,.12);
+        box-shadow: 0 18px 38px rgba(5,11,20,.12);
     }
     </style>
 </head>

@@ -12,9 +12,9 @@
         tailwind = window.tailwind || {};
         tailwind.config = {
             theme: { extend: { colors: {
-                'brand-green':'#2e9e43',
-                'brand-green-dark':'#1c7a30',
-                'brand-orange':'#f26e22'
+                'brand-green':'#1F4E79',
+                'brand-green-dark':'#0B1F3A',
+                'brand-orange':'#64748B'
             } } }
         };
     </script>
@@ -28,11 +28,11 @@
 
 <style id="mc-ordinario-legibilidad-final">
 :root{
-    --mc-green:#176b2b;
-    --mc-green-dark:#0b4d26;
-    --mc-orange:#e85b10;
-    --mc-text:#172b20;
-    --mc-text-soft:#3f5146;
+    --mc-green:#0B1F3A;
+    --mc-green-dark:#061426;
+    --mc-orange:#4B5563;
+    --mc-text:#061426;
+    --mc-text-soft:#0B1F3A;
 }
 
  
@@ -44,10 +44,10 @@ main > section:first-of-type{
     overflow:hidden;
     background:
         linear-gradient(100deg,
-            rgba(5,31,15,.84) 0%,
-            rgba(9,66,31,.68) 42%,
-            rgba(9,66,31,.40) 72%,
-            rgba(9,66,31,.18) 100%),
+            rgba(5,11,20,.84) 0%,
+            rgba(6,20,38,.68) 42%,
+            rgba(6,20,38,.40) 72%,
+            rgba(6,20,38,.18) 100%),
         url("img/img7.webp")
         center/cover no-repeat !important;
 }
@@ -55,50 +55,50 @@ main > section:first-of-type h1,
 main > section:first-of-type p,
 main > section:first-of-type a,
 main > section:first-of-type span{
-    color:#fff !important;
+    color:#FFFFFF !important;
 }
 main > section:first-of-type h1{
     text-shadow:0 8px 28px rgba(0,0,0,.35);
 }
 main > section:first-of-type p{
-    color:#f2fff5 !important;
+    color:#F3F4F6 !important;
     text-shadow:0 3px 14px rgba(0,0,0,.28);
 }
 
  
 main > section:nth-of-type(2){
     background:
-        linear-gradient(rgba(248,250,248,.84),rgba(248,250,248,.84)),
+        linear-gradient(rgba(255,255,255,.84),rgba(255,255,255,.84)),
         url("img/font1.jpg")
         center/cover no-repeat !important;
 }
 main > section:nth-of-type(3){
     background:
-        linear-gradient(rgba(242,247,243,.72),rgba(247,249,247,.78)),
+        linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.78)),
         url("img/font1.jpg")
         center/cover no-repeat !important;
 }
 main > section:nth-of-type(4){
     background:
-        linear-gradient(rgba(250,250,250,.86),rgba(248,250,248,.88)),
+        linear-gradient(rgba(255,255,255,.86),rgba(255,255,255,.88)),
         url("img/font1.jpg")
         center/cover no-repeat !important;
 }
 main > section:nth-of-type(5){
     background:
-        linear-gradient(rgba(243,247,244,.74),rgba(249,250,249,.80)),
+        linear-gradient(rgba(255,255,255,.74),rgba(255,255,255,.80)),
         url("img/font1.jpg")
         center/cover no-repeat !important;
 }
 main > section:nth-of-type(6){
     background:
-        linear-gradient(rgba(249,250,249,.86),rgba(247,249,247,.88)),
+        linear-gradient(rgba(255,255,255,.86),rgba(255,255,255,.88)),
         url("img/font1.jpg")
         center/cover no-repeat !important;
 }
 main > section:nth-of-type(7){
     background:
-        linear-gradient(rgba(242,247,243,.78),rgba(249,250,249,.84)),
+        linear-gradient(rgba(255,255,255,.78),rgba(255,255,255,.84)),
         url("img/font1s.jpg")
         center/cover no-repeat !important;
 }
@@ -146,7 +146,7 @@ main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border,
 main > section:nth-of-type(n+2):not(:last-of-type) details.group{
     background:rgba(255,255,255,.93) !important;
     border-color:rgba(255,255,255,.78) !important;
-    box-shadow:0 18px 45px rgba(16,34,24,.12) !important;
+    box-shadow:0 18px 45px rgba(5,11,20,.12) !important;
     backdrop-filter:blur(10px);
 }
 
@@ -166,7 +166,7 @@ main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 h2,
 main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 h3,
 main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border h3,
 main > section:nth-of-type(n+2):not(:last-of-type) details.group summary{
-    color:#163222 !important;
+    color:#061426 !important;
 }
 
  
@@ -178,7 +178,7 @@ main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 li,
 main > section:nth-of-type(n+2):not(:last-of-type) .rounded-3xl.bg-gray-50 li span,
 main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border p,
 main > section:nth-of-type(n+2):not(:last-of-type) details.group p{
-    color:#42554a !important;
+    color:#0B1F3A !important;
 }
 
  
@@ -186,41 +186,41 @@ main > section:nth-of-type(3) .grid > div{
     background:rgba(255,255,255,.94) !important;
 }
 main > section:nth-of-type(3) .grid > div:first-child{
-    border-top:4px solid #2e9e43 !important;
+    border-top:4px solid #1F4E79 !important;
 }
 main > section:nth-of-type(3) .grid > div:last-child{
-    border-top:4px solid #f26e22 !important;
+    border-top:4px solid #64748B !important;
 }
 main > section:nth-of-type(3) h2{
-    color:#153a25 !important;
+    color:#061426 !important;
 }
 main > section:nth-of-type(3) ul,
 main > section:nth-of-type(3) li,
 main > section:nth-of-type(3) li span{
-    color:#33483b !important;
+    color:#061426 !important;
 }
 main > section:nth-of-type(3) li i{
-    color:#17783b !important;
+    color:#0B1F3A !important;
 }
 
  
 main > section:nth-of-type(5) > div > .text-center span{
-    color:#0f6b35 !important;
+    color:#061426 !important;
 }
 main > section:nth-of-type(5) > div > .text-center h2{
-    color:#10331f !important;
+    color:#061426 !important;
 }
 main > section:nth-of-type(5) > div > .text-center p{
-    color:#405348 !important;
+    color:#0B1F3A !important;
 }
 main > section:nth-of-type(5) .mt-9.bg-white{
     background:rgba(255,255,255,.94) !important;
 }
 main > section:nth-of-type(5) .mt-9.bg-white span{
-    color:#394c41 !important;
+    color:#0B1F3A !important;
 }
 main > section:nth-of-type(5) .mt-9.bg-white i{
-    color:#e85b10 !important;
+    color:#4B5563 !important;
 }
 
  
@@ -228,39 +228,39 @@ main > section:nth-of-type(4) .grid > div{
     background:rgba(255,255,255,.95) !important;
 }
 main > section:nth-of-type(4) .grid > div h3{
-    color:#143923 !important;
+    color:#061426 !important;
 }
 main > section:nth-of-type(4) .grid > div p{
-    color:#506257 !important;
+    color:#0B1F3A !important;
 }
 
  
 main > section:nth-of-type(6) .grid > div h3{
-    color:#133b23 !important;
+    color:#061426 !important;
 }
 main > section:nth-of-type(6) .grid > div p{
-    color:#52655a !important;
+    color:#0B1F3A !important;
 }
 
  
 main > section:nth-of-type(7) summary span{
-    color:#173522 !important;
+    color:#061426 !important;
 }
 main > section:nth-of-type(7) details p{
-    color:#46594d !important;
+    color:#0B1F3A !important;
 }
 
  
 main > section:last-of-type .rounded-3xl{
     background:
-        linear-gradient(115deg,rgba(7,54,27,.88),rgba(36,128,57,.82)),
+        linear-gradient(115deg,rgba(5,11,20,.88),rgba(11,31,58,.82)),
         url("img/img4.png")
         center/cover no-repeat !important;
 }
 main > section:last-of-type h2,
 main > section:last-of-type p,
 main > section:last-of-type span{
-    color:#fff !important;
+    color:#FFFFFF !important;
 }
 main > section:last-of-type h2{
     text-shadow:0 4px 16px rgba(0,0,0,.26);
@@ -278,7 +278,7 @@ main .rounded-3xl.bg-gray-50:hover,
 main .rounded-2xl.border:hover,
 main details.group:hover{
     transform:translateY(-4px);
-    box-shadow:0 25px 55px rgba(16,34,24,.16) !important;
+    box-shadow:0 25px 55px rgba(5,11,20,.16) !important;
 }
 
  
@@ -332,7 +332,7 @@ main .aos-animate{
 
 <main class="pt-[88px] md:pt-[96px]">
      
-    <section class="relative overflow-hidden bg-gradient-to-br from-[#176b2b] via-[#23863a] to-[#2e9e43] text-white">
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0B1F3A] via-[#1F4E79] to-[#1F4E79] text-white">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
         <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-white/10"></div>
         <div class="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24 relative z-10">
@@ -523,7 +523,7 @@ main .aos-animate{
 
      
     <section class="px-4 md:px-10 py-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#176b2b] to-[#2e9e43] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
+        <div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-r from-[#0B1F3A] to-[#1F4E79] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7">
             <div>
                 <span class="text-green-100 text-xs font-extrabold uppercase tracking-widest">CEPRODEMIC – Multicredit</span>
                 <h2 class="text-3xl md:text-4xl font-black mt-2">¿Quieres conocer si este crédito es para ti?</h2>

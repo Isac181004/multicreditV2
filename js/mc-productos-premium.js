@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  main.querySelectorAll('a[class*="bg-brand-orange"],a[class*="bg-orange"],button[class*="bg-brand-orange"],button[class*="bg-orange"]').forEach(x=>x.classList.add('mc-action'));
  const sections=[...main.querySelectorAll(':scope > section')];
  sections.forEach(sec=>{
-   const cta=sec.querySelector('div[class*="bg-gradient-to-r"],div[class*="from-[#052712]"],div[class*="from-[#176b2b]"]');
+   const cta=sec.querySelector('div[class*="bg-gradient-to-r"],div[class*="from-[#061426]"],div[class*="from-[#0B1F3A]"]');
    if(cta && sec!==hero) cta.classList.add('mc-final-cta');
  });
 

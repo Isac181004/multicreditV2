@@ -1,0 +1,91 @@
+:root {
+    --g: #0B1F3A;
+    --gd: #050B14;
+    --o: #64748B;
+    --bg: #F3F4F6;
+    --text: #111827;
+    --muted: #64748B;
+    --line: #D1D5DB;
+    --white: #FFFFFF;
+}
+
+body { background: var(--bg); color: var(--text); }
+
+.sidebar {
+    background: linear-gradient(180deg, #000000, #050B14 48%, #0B1F3A);
+}
+
+.brand-mark,
+.login-logo {
+    background-color: #0B1F3A;
+    background-image: url('../../img/favicon-multicredit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,.22);
+}
+
+.sidebar nav a { color: #E5E7EB; }
+.sidebar nav a:hover,
+.sidebar nav a.active { color: #FFFFFF; background: rgba(255,255,255,.12); }
+.brand small,
+.sidebar-user { color: #CBD5E1; }
+
+.card,
+.media-item,
+.login-card { border-color: #D1D5DB; box-shadow: 0 12px 34px rgba(0,0,0,.08); }
+
+.stat b { color: #0B1F3A; }
+.field label { color: #374151; }
+
+.field input,
+.field textarea,
+.field select {
+    color: #111827;
+    background: #FFFFFF;
+    border-color: #9CA3AF;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    border-color: #1F4E79;
+    box-shadow: 0 0 0 3px rgba(31,78,121,.18);
+}
+
+.btn.primary,
+.btn.orange { color: #FFFFFF; background: #0B1F3A; }
+.btn.primary:hover,
+.btn.orange:hover { background: #050B14; }
+.btn.light { color: #0B1F3A; background: #E5E7EB; }
+.btn.danger { color: #111827; background: #D1D5DB; border: 1px solid #9CA3AF; }
+
+.alert,
+.alert.success,
+.alert.error {
+    color: #111827;
+    background: #F3F4F6;
+    border: 1px solid #9CA3AF;
+    border-left: 5px solid #1F4E79;
+}
+.alert.error { border-left-color: #000000; }
+
+.table th,
+.table td { border-color: #D1D5DB; }
+.table th { color: #FFFFFF; background: #0B1F3A; }
+.table tbody tr:nth-child(even) { background: #F8FAFC; }
+.table tbody tr:hover { background: #E5E7EB; }
+
+.badge.ok,
+.badge.off { color: #111827; background: #E5E7EB; }
+
+.login-body {
+    background: radial-gradient(circle at 18% 18%, rgba(31,78,121,.24), transparent 32%), linear-gradient(135deg, #000000, #0B1F3A);
+}
+
+.notice { color: #374151; background: #F3F4F6; border-color: #D1D5DB; }
+
+:is(a,button,input,select,textarea):focus-visible {
+    outline: 3px solid #1F4E79;
+    outline-offset: 3px;
+}

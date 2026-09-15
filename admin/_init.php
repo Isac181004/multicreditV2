@@ -97,10 +97,10 @@ function mc_upload_image($field, $subdir = 'media') {
 function mc_admin_header($title) {
     $user = mc_admin_credentials();
     $flash = mc_flash();
-    ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><?=mc_h($title)?> | Multicredit Admin</title><link rel="stylesheet" href="assets/admin.css"></head><body>
+    ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><?=mc_h($title)?> | Multicredit Admin</title><link rel="icon" type="image/svg+xml" href="../img/favicon-multicredit.svg"><meta name="theme-color" content="#0B1F3A"><link rel="stylesheet" href="assets/admin.css"><link rel="stylesheet" href="assets/admin-brand.css"></head><body>
     <div class="admin-shell">
       <aside class="sidebar">
-        <a class="brand" href="index.php"><span class="brand-mark">M</span><span><b>Multicredit</b><small>Administración</small></span></a>
+        <a class="brand" href="index.php"><span class="brand-mark" aria-hidden="true"></span><span><b>Multicredit</b><small>Administración</small></span></a>
         <nav>
           <a href="index.php">▦ Dashboard</a>
           <a href="encabezado.php">▤ Encabezado</a>
