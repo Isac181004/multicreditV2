@@ -12,10 +12,10 @@
         tailwind = window.tailwind || {};
         tailwind.config = {
             theme: { extend: { colors: {
-                'brand-green':'#0d5c2e',
-                'brand-green-dark':'#083d1f',
-                'brand-green-deep':'#052712',
-                'brand-orange':'#f26e22'
+                'brand-green':'#071525',
+                'brand-green-dark':'#071525',
+                'brand-green-deep':'#071525',
+                'brand-orange':'#163A5F'
             } } }
         };
     </script>
@@ -35,13 +35,13 @@
 
 
 :root{
-    --mc-green:#0d5c2e;
-    --mc-green-dark:#083d1f;
-    --mc-green-deep:#052712;
-    --mc-orange:#e85b10;
-    --mc-gold:#b7791f;
-    --mc-text:#172b20;
-    --mc-text-soft:#3f5146;
+    --mc-green:#071525;
+    --mc-green-dark:#071525;
+    --mc-green-deep:#071525;
+    --mc-orange:#0B1F3A;
+    --mc-gold:#0B1F3A;
+    --mc-text:#071525;
+    --mc-text-soft:#374151;
 }
 
  
@@ -53,10 +53,10 @@ main > section:first-of-type{
     overflow:hidden;
     background:
         linear-gradient(100deg,
-            rgba(5,31,15,.86) 0%,
-            rgba(8,61,31,.72) 42%,
-            rgba(13,92,46,.46) 74%,
-            rgba(13,92,46,.20) 100%),
+            rgba(7,21,37,.86) 0%,
+            rgba(7,21,37,.72) 42%,
+            rgba(7,21,37,.46) 74%,
+            rgba(7,21,37,.20) 100%),
         url("./img/font15.webp")
         center/cover no-repeat !important;
 }
@@ -64,7 +64,7 @@ main > section:first-of-type{
 main > section:first-of-type::after{
     content:"";
     position:absolute;left:0;right:0;bottom:0;height:120px;
-    background:linear-gradient(to top, rgba(249,250,251,1), rgba(249,250,251,0));
+    background:linear-gradient(to top, rgba(243,244,246,1), rgba(243,244,246,0));
     pointer-events:none;
 }
 
@@ -72,16 +72,16 @@ main > section:first-of-type h1,
 main > section:first-of-type p,
 main > section:first-of-type a,
 main > section:first-of-type span{
-    color:#fff !important;
+    color:#FFFFFF !important;
 }
 
 main > section:first-of-type h1{
-    text-shadow:0 8px 28px rgba(0,0,0,.38);
+    text-shadow:0 8px 28px rgba(10,10,10,.38);
 }
 
 main > section:first-of-type p{
-    color:#f2fff5 !important;
-    text-shadow:0 3px 14px rgba(0,0,0,.28);
+    color:#F3F4F6 !important;
+    text-shadow:0 3px 14px rgba(10,10,10,.28);
 }
 
  
@@ -89,14 +89,14 @@ main > section:first-of-type p{
     z-index:1;
     opacity:.96;
     animation:heroCircleFloat 7s ease-in-out infinite alternate;
-    box-shadow:0 24px 60px rgba(0,0,0,.30);
+    box-shadow:0 24px 60px rgba(10,10,10,.30);
 }
 .hero-corner-photo::after{
     content:"";
     position:absolute;
     inset:0;
     border-radius:9999px;
-    background:linear-gradient(135deg,rgba(5,39,18,.10),rgba(242,110,34,.10));
+    background:linear-gradient(135deg,rgba(7,21,37,.10),rgba(22,58,95,.10));
     pointer-events:none;
 }
 .hero-corner-photo img{
@@ -110,51 +110,51 @@ main > section:first-of-type p{
 
  
 main > section:first-of-type .w-20.h-20{
-    background:rgba(255,250,235,.94) !important;
-    color:#a16207 !important;
+    background:rgba(243,244,246,.94) !important;
+    color:#0B1F3A !important;
     border:1px solid rgba(255,255,255,.65);
-    box-shadow:0 18px 40px rgba(0,0,0,.22);
+    box-shadow:0 18px 40px rgba(10,10,10,.22);
 }
 
  
 main > section:nth-of-type(2){
     background:
-        linear-gradient(rgba(248,250,248,.84),rgba(248,250,248,.84)),
+        linear-gradient(rgba(243,244,246,.84),rgba(243,244,246,.84)),
         url("img/font4.webp")
         center/cover no-repeat !important;
 }
 
 main > section:nth-of-type(3){
     background:
-        linear-gradient(rgba(242,247,243,.72),rgba(247,249,247,.78)),
+        linear-gradient(rgba(243,244,246,.72),rgba(255,255,255,.78)),
         url("img/font4.webp")
         center/cover no-repeat !important;
 }
 
 main > section:nth-of-type(4){
     background:
-        linear-gradient(rgba(250,250,250,.86),rgba(248,250,248,.88)),
+        linear-gradient(rgba(255,255,255,.86),rgba(243,244,246,.88)),
         url("img/font4.webp")
         center/cover no-repeat !important;
 }
 
 main > section:nth-of-type(5){
     background:
-        linear-gradient(rgba(243,247,244,.74),rgba(249,250,249,.80)),
+        linear-gradient(rgba(243,244,246,.74),rgba(255,255,255,.80)),
         url("img/font4.webp")
         center/cover no-repeat !important;
 }
 
 main > section:nth-of-type(6){
     background:
-        linear-gradient(rgba(249,250,249,.86),rgba(247,249,247,.88)),
+        linear-gradient(rgba(255,255,255,.86),rgba(255,255,255,.88)),
         url("img/font4.webp")
         center/cover no-repeat !important;
 }
 
 main > section:nth-of-type(7){
     background:
-        linear-gradient(rgba(242,247,243,.78),rgba(249,250,249,.84)),
+        linear-gradient(rgba(243,244,246,.78),rgba(255,255,255,.84)),
         url("img/font4.webp")
         center/cover no-repeat !important;
 }
@@ -197,7 +197,7 @@ main > section:nth-of-type(n+2):not(:last-of-type) .rounded-2xl.border,
 main > section:nth-of-type(n+2):not(:last-of-type) details.group{
     background:rgba(255,255,255,.94) !important;
     border-color:rgba(255,255,255,.80) !important;
-    box-shadow:0 18px 45px rgba(16,34,24,.12) !important;
+    box-shadow:0 18px 45px rgba(7,21,37,.12) !important;
     backdrop-filter:blur(10px);
 }
 
@@ -214,21 +214,21 @@ main > section:nth-of-type(3) .grid > div{
     background:rgba(255,255,255,.95) !important;
 }
 main > section:nth-of-type(3) .grid > div:first-child{
-    border-top:4px solid #0d5c2e !important;
+    border-top:4px solid #071525 !important;
 }
 main > section:nth-of-type(3) .grid > div:last-child{
-    border-top:4px solid #f26e22 !important;
+    border-top:4px solid #163A5F !important;
 }
 main > section:nth-of-type(3) h2{
-    color:#153a25 !important;
+    color:#071525 !important;
 }
 main > section:nth-of-type(3) ul,
 main > section:nth-of-type(3) li,
 main > section:nth-of-type(3) li span{
-    color:#33483b !important;
+    color:#0B1F3A !important;
 }
 main > section:nth-of-type(3) li i{
-    color:#17783b !important;
+    color:#0B1F3A !important;
 }
 
  
@@ -236,62 +236,62 @@ main > section:nth-of-type(4) .grid > div{
     background:rgba(255,255,255,.95) !important;
 }
 main > section:nth-of-type(4) .grid > div h3{
-    color:#143923 !important;
+    color:#071525 !important;
 }
 main > section:nth-of-type(4) .grid > div p{
-    color:#506257 !important;
+    color:#374151 !important;
 }
 
  
 main > section:nth-of-type(5) > div > .text-center span{
-    color:#0f6b35 !important;
+    color:#071525 !important;
 }
 main > section:nth-of-type(5) > div > .text-center h2{
-    color:#10331f !important;
+    color:#071525 !important;
 }
 main > section:nth-of-type(5) > div > .text-center p{
-    color:#405348 !important;
+    color:#374151 !important;
 }
 main > section:nth-of-type(5) .mt-9.bg-white{
     background:rgba(255,255,255,.95) !important;
 }
 main > section:nth-of-type(5) .mt-9.bg-white span{
-    color:#394c41 !important;
+    color:#374151 !important;
 }
 main > section:nth-of-type(5) .mt-9.bg-white i{
-    color:#e85b10 !important;
+    color:#0B1F3A !important;
 }
 
  
 main > section:nth-of-type(6) .grid > div h3{
-    color:#133b23 !important;
+    color:#071525 !important;
 }
 main > section:nth-of-type(6) .grid > div p{
-    color:#52655a !important;
+    color:#374151 !important;
 }
 
  
 main > section:nth-of-type(7) summary span{
-    color:#173522 !important;
+    color:#071525 !important;
 }
 main > section:nth-of-type(7) details p{
-    color:#46594d !important;
+    color:#374151 !important;
 }
 
  
 main > section:last-of-type .rounded-2xl{
     background:
-        linear-gradient(115deg,rgba(5,39,18,.88),rgba(13,92,46,.82)),
+        linear-gradient(115deg,rgba(7,21,37,.88),rgba(7,21,37,.82)),
         url("img/bank.webp")
         center/cover no-repeat !important;
 }
 main > section:last-of-type h2,
 main > section:last-of-type p,
 main > section:last-of-type span{
-    color:#fff !important;
+    color:#FFFFFF !important;
 }
 main > section:last-of-type h2{
-    text-shadow:0 4px 16px rgba(0,0,0,.26);
+    text-shadow:0 4px 16px rgba(10,10,10,.26);
 }
 
  
@@ -318,7 +318,7 @@ main .rounded-2xl.bg-gray-50:hover,
 main .rounded-2xl.border:hover,
 main details.group:hover{
     transform:translateY(-4px);
-    box-shadow:0 25px 55px rgba(16,34,24,.16) !important;
+    box-shadow:0 25px 55px rgba(7,21,37,.16) !important;
 }
 
  
@@ -362,14 +362,17 @@ footer .mc-reveal-right{
 }
 </style>
 
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="empeno">
 <?php include 'encabezado.php'; ?>
 
 <main class="pt-[88px] md:pt-[96px]">
      
-    <section class="relative overflow-hidden text-white bg-gradient-to-br from-[#052712] via-[#083d1f] to-[#0d5c2e]">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px]"></div>
+    <section class="relative overflow-hidden text-white bg-gradient-to-br from-[#071525] via-[#071525] to-[#071525]">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FFFFFF_1px,transparent_1px)] [background-size:18px_18px]"></div>
         <div class="absolute -right-20 -top-20 w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-[10px] border-white/15 shadow-2xl hero-corner-photo">
             <img src="https://i.blogs.es/94e5d4/ipad/1200_900.jpeg"
                  alt="Joyas y garantía prendaria"
@@ -552,7 +555,7 @@ footer .mc-reveal-right{
 
      
     <section class="px-4 md:px-10 py-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto rounded-2xl bg-gradient-to-r from-[#052712] to-[#0d5c2e] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7 mc-reveal">
+        <div class="max-w-7xl mx-auto rounded-2xl bg-gradient-to-r from-[#071525] to-[#071525] text-white p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-7 mc-reveal">
             <div>
                 <span class="text-green-100 text-xs font-extrabold uppercase tracking-widest">CEPRODEMIC – Multicredit</span>
                 <h2 class="text-3xl md:text-4xl font-black mt-2">¿Quieres conocer si este crédito es para ti?</h2>

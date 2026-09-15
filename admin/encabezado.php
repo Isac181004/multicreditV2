@@ -78,7 +78,7 @@ mc_admin_header('Encabezado');
     'educacion'=>'Educación','salud'=>'Salud','esparcimiento'=>'Esparcimiento'
   ];
   foreach($products as $key=>$fallback): ?>
-    <div style="margin-top:14px;padding:14px;border:1px solid #e3ebe5;border-radius:12px">
+    <div style="margin-top:14px;padding:14px;border:1px solid #F3F4F6;border-radius:12px">
       <strong><?=mc_h($fallback)?></strong>
       <div class="form-grid" style="margin-top:10px">
         <div class="field"><label>Nombre</label><input name="credit_<?=$key?>_label" value="<?=mc_h($site['credit_'.$key.'_label'] ?? $fallback)?>"></div>

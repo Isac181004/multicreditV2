@@ -10,7 +10,7 @@ if (!defined('MC_DATA_DIR')) {
 function mc_default_site() {
     return [
         'brand_name' => 'CEPRODEMIC MULTICREDIT',
-        'logo' => 'img/logo.jpg',
+        'logo' => 'uploads/logo/20260904_232938_5c89c80d.png',
         'hero_badge' => 'CEPRODEMIC MULTICREDIT',
         'hero_title' => 'Financiamiento rápido para',
         'hero_highlight' => 'hacer crecer tu negocio',

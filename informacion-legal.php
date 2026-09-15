@@ -8,9 +8,9 @@
     <script>
         tailwind = window.tailwind || {};
         tailwind.config = {theme:{extend:{colors:{
-            'brand-green':'#0d5c2e',
-            'brand-green-dark':'#063718',
-            'brand-orange':'#f26e22'
+            'brand-green':'#071525',
+            'brand-green-dark':'#071525',
+            'brand-orange':'#163A5F'
         },fontFamily:{sans:['Inter','sans-serif'],display:['Poppins','sans-serif']}}}};
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,6 +18,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 <?php include 'encabezado.php'; ?>

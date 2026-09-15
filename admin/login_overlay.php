@@ -4,15 +4,15 @@ $mcOverlayConfigured = mc_admin_is_configured();
 $mcOverlayLogged = mc_admin_logged_in();
 ?>
 <style>
-.mc-admin-overlay{position:fixed;inset:0;z-index:2147483600;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(3,22,10,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.mc-admin-overlay{position:fixed;inset:0;z-index:2147483600;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(7,21,37,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .mc-admin-overlay.open{display:flex}
-.mc-admin-overlay-card{position:relative;width:min(460px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:22px;box-shadow:0 34px 90px rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.75);padding:28px}
-.mc-admin-overlay-close{position:absolute;right:16px;top:14px;width:36px;height:36px;border:0;border-radius:10px;background:#f2f5f3;color:#26352d;font-size:19px;cursor:pointer}
-.mc-admin-overlay-brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}.mc-admin-overlay-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#063718,#0d5c2e);color:#fff;font:900 22px/1 Poppins,Arial,sans-serif;box-shadow:0 10px 24px rgba(6,55,24,.2)}
-.mc-admin-overlay h2{margin:0;color:#14301f;font:800 1.35rem/1.2 Poppins,Arial,sans-serif}.mc-admin-overlay p{color:#68756d;font-size:.9rem;margin:6px 0 0}
-.mc-admin-field{margin-bottom:13px}.mc-admin-field label{display:block;font-size:.78rem;font-weight:800;color:#31463a;margin-bottom:5px}.mc-admin-field input{width:100%;box-sizing:border-box;border:1px solid #d7e1da;border-radius:11px;padding:12px 13px;font:inherit;outline:none}.mc-admin-field input:focus{border-color:#0d5c2e;box-shadow:0 0 0 3px rgba(13,92,46,.10)}
-.mc-admin-submit{width:100%;border:0;border-radius:11px;background:#f26e22;color:white;padding:13px 16px;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(242,110,34,.22)}.mc-admin-submit:disabled{opacity:.6;cursor:wait}
-.mc-admin-msg{display:none;margin:12px 0;padding:10px 12px;border-radius:10px;font-size:.83rem;font-weight:700}.mc-admin-msg.show{display:block}.mc-admin-msg.error{background:#fff1f1;color:#a92d2d}.mc-admin-msg.success{background:#edf9f1;color:#176c38}.mc-admin-panel-link{display:inline-flex;align-items:center;justify-content:center;width:100%;box-sizing:border-box;text-decoration:none;border-radius:11px;background:#0d5c2e;color:#fff;padding:13px 16px;font-weight:900}
+.mc-admin-overlay-card{position:relative;width:min(460px,100%);max-height:92vh;overflow:auto;background:#FFFFFF;border-radius:22px;box-shadow:0 34px 90px rgba(10,10,10,.34);border:1px solid rgba(255,255,255,.75);padding:28px}
+.mc-admin-overlay-close{position:absolute;right:16px;top:14px;width:36px;height:36px;border:0;border-radius:10px;background:#FFFFFF;color:#071525;font-size:19px;cursor:pointer}
+.mc-admin-overlay-brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}.mc-admin-overlay-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#071525,#071525);color:#FFFFFF;font:900 22px/1 Poppins,Arial,sans-serif;box-shadow:0 10px 24px rgba(7,21,37,.2)}
+.mc-admin-overlay h2{margin:0;color:#071525;font:800 1.35rem/1.2 Poppins,Arial,sans-serif}.mc-admin-overlay p{color:#374151;font-size:.9rem;margin:6px 0 0}
+.mc-admin-field{margin-bottom:13px}.mc-admin-field label{display:block;font-size:.78rem;font-weight:800;color:#071525;margin-bottom:5px}.mc-admin-field input{width:100%;box-sizing:border-box;border:1px solid #F3F4F6;border-radius:11px;padding:12px 13px;font:inherit;outline:none}.mc-admin-field input:focus{border-color:#071525;box-shadow:0 0 0 3px rgba(7,21,37,.10)}
+.mc-admin-submit{width:100%;border:0;border-radius:11px;background:#163A5F;color:white;padding:13px 16px;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(22,58,95,.22)}.mc-admin-submit:disabled{opacity:.6;cursor:wait}
+.mc-admin-msg{display:none;margin:12px 0;padding:10px 12px;border-radius:10px;font-size:.83rem;font-weight:700}.mc-admin-msg.show{display:block}.mc-admin-msg.error{background:#F3F4F6;color:#0B1F3A}.mc-admin-msg.success{background:#F3F4F6;color:#0B1F3A}.mc-admin-panel-link{display:inline-flex;align-items:center;justify-content:center;width:100%;box-sizing:border-box;text-decoration:none;border-radius:11px;background:#071525;color:#FFFFFF;padding:13px 16px;font-weight:900}
 @media(max-width:520px){.mc-admin-overlay-card{padding:22px 18px;border-radius:18px}}
 </style>
 <div class="mc-admin-overlay" id="mc-admin-overlay" aria-hidden="true">

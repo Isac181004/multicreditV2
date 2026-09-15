@@ -97,7 +97,10 @@ function mc_upload_image($field, $subdir = 'media') {
 function mc_admin_header($title) {
     $user = mc_admin_credentials();
     $flash = mc_flash();
-    ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><?=mc_h($title)?> | Multicredit Admin</title><link rel="stylesheet" href="assets/admin.css"></head><body>
+    ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><?=mc_h($title)?> | Multicredit Admin</title><link rel="stylesheet" href="assets/admin.css">
+    <link rel="stylesheet" href="../css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="../uploads/logo/20260904_232938_5c89c80d.png">
+</head><body>
     <div class="admin-shell">
       <aside class="sidebar">
         <a class="brand" href="index.php"><span class="brand-mark">M</span><span><b>Multicredit</b><small>Administración</small></span></a>

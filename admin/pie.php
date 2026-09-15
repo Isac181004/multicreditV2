@@ -59,7 +59,7 @@ mc_admin_header('Pie de página');
       $phoneKey = $i===1 ? 'telefono' : 'phone'.$i;
       $waKey = 'whatsapp'.$i;
     ?>
-      <div class="field full" style="padding-top:10px;border-top:1px solid #edf1ee"><strong>Sede <?=$i?></strong></div>
+      <div class="field full" style="padding-top:10px;border-top:1px solid #FFFFFF"><strong>Sede <?=$i?></strong></div>
       <div class="field full"><label>Dirección sede <?=$i?></label><textarea name="address<?=$i?>" rows="2"><?=mc_h($site['address'.$i] ?? '')?></textarea></div>
       <div class="field"><label>Teléfono sede <?=$i?></label><input name="<?=$phoneKey?>" value="<?=mc_h($site[$phoneKey] ?? '')?>"></div>
       <div class="field"><label>WhatsApp sede <?=$i?> (código país)</label><input name="<?=$waKey?>" value="<?=mc_h($site[$waKey] ?? '')?>"></div>

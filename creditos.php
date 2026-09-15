@@ -14,9 +14,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-green': '#2e9e43',
-                        'brand-green-dark': '#1c7a30',
-                        'brand-orange': '#f26e22'
+                        'brand-green': '#0B1F3A',
+                        'brand-green-dark': '#0B1F3A',
+                        'brand-orange': '#163A5F'
                     }
                 }
             }
@@ -28,7 +28,7 @@
 <style>
     .service-hero {
         background:
-            linear-gradient(90deg, rgba(10,55,20,.92), rgba(10,55,20,.62), rgba(10,55,20,.18)),
+            linear-gradient(90deg, rgba(7,21,37,.92), rgba(7,21,37,.62), rgba(7,21,37,.18)),
             url('img/cajamarca.webp') center/cover no-repeat;
     }
 </style>
@@ -42,47 +42,47 @@
         
          
         .simulator-section {
-            background: linear-gradient(180deg, #f7f9f8 0%, #eef3ef 100%);
+            background: linear-gradient(180deg, #FFFFFF 0%, #F3F4F6 100%);
         }
         .simulator-shell {
-            border: 1px solid #e3e9e4;
+            border: 1px solid #F3F4F6;
             border-radius: 28px;
-            box-shadow: 0 22px 60px rgba(15, 23, 42, .09);
+            box-shadow: 0 22px 60px rgba(7,21,37, .09);
             overflow: hidden;
         }
         .sim-card {
-            background: #fff;
-            border: 1px solid #e8ece9;
+            background: #FFFFFF;
+            border: 1px solid #F3F4F6;
             border-radius: 22px;
         }
         .sim-label {
-            color: #475569;
+            color: #0B1F3A;
             font-size: .82rem;
             font-weight: 700;
         }
         .sim-number {
-            border: 1px solid #dbe3dd;
+            border: 1px solid #F3F4F6;
             border-radius: 12px;
-            background: #fbfcfb;
-            color: #166534;
+            background: #FFFFFF;
+            color: #0B1F3A;
             font-weight: 800;
             padding: .55rem .7rem;
             outline: none;
         }
         .sim-number:focus {
-            border-color: #2e9e43;
-            box-shadow: 0 0 0 4px rgba(46,158,67,.10);
+            border-color: #0B1F3A;
+            box-shadow: 0 0 0 4px rgba(11,31,58,.10);
         }
         .sim-range {
             width: 100%;
-            accent-color: #2e9e43;
+            accent-color: #0B1F3A;
             cursor: pointer;
         }
         .sim-result {
             background:
                 radial-gradient(circle at 90% 8%, rgba(255,255,255,.16), transparent 25%),
-                linear-gradient(145deg, #176b2b 0%, #23863a 60%, #2e9e43 100%);
-            color: #fff;
+                linear-gradient(145deg, #0B1F3A 0%, #0B1F3A 60%, #0B1F3A 100%);
+            color: #FFFFFF;
             position: relative;
             overflow: hidden;
         }
@@ -119,8 +119,8 @@
         .sim-result-row:last-child { border-bottom: 0; }
         .sim-muted { color: rgba(255,255,255,.70); }
         .sim-chart-card {
-            background: #fff;
-            border: 1px solid #e7ece8;
+            background: #FFFFFF;
+            border: 1px solid #F3F4F6;
             border-radius: 20px;
             padding: 18px;
             min-height: 315px;
@@ -134,8 +134,8 @@
             border-collapse: collapse;
         }
         .sim-table th {
-            background: #176b2b;
-            color: #fff;
+            background: #0B1F3A;
+            color: #FFFFFF;
             padding: 12px 10px;
             font-size: .72rem;
             text-transform: uppercase;
@@ -147,25 +147,25 @@
         .sim-table td:first-child { text-align: center; }
         .sim-table td {
             padding: 10px;
-            border-bottom: 1px solid #edf1ee;
-            color: #475569;
+            border-bottom: 1px solid #FFFFFF;
+            color: #0B1F3A;
             font-size: .78rem;
             text-align: right;
             white-space: nowrap;
         }
-        .sim-table tbody tr:nth-child(even) { background: #f8faf9; }
-        .sim-table tbody tr:hover { background: #edf8ef; }
+        .sim-table tbody tr:nth-child(even) { background: #F3F4F6; }
+        .sim-table tbody tr:hover { background: #F3F4F6; }
         .sim-toggle {
-            border: 1px solid #dbe5dd;
-            background: #fff;
-            color: #166534;
+            border: 1px solid #F3F4F6;
+            background: #FFFFFF;
+            color: #0B1F3A;
         }
-        .sim-toggle:hover { background: #f0f8f2; }
+        .sim-toggle:hover { background: #F3F4F6; }
         .sim-whatsapp {
-            background: #20c765;
-            box-shadow: 0 10px 25px rgba(32,199,101,.18);
+            background: #0B1F3A;
+            box-shadow: 0 10px 25px rgba(11,31,58,.18);
         }
-        .sim-whatsapp:hover { background: #18ae56; }
+        .sim-whatsapp:hover { background: #0B1F3A; }
         @media (max-width: 767px) {
             .simulator-shell { border-radius: 20px; }
             .sim-chart-card { min-height: 290px; }
@@ -177,7 +177,7 @@
  
 .credit-page{
     overflow-x:hidden;
-    color:#17221a;
+    color:#071525;
 }
 .credit-page .credit-hero{
     position:relative;
@@ -186,7 +186,7 @@
     min-height:52vh !important;
     padding:80px 0 !important;
     background:
-        linear-gradient(90deg, rgba(10,55,20,.92), rgba(10,55,20,.62), rgba(10,55,20,.18)),
+        linear-gradient(90deg, rgba(7,21,37,.92), rgba(7,21,37,.62), rgba(7,21,37,.18)),
         url('img/cajamarca.webp') center/cover no-repeat !important;
     overflow:hidden;
 }
@@ -203,13 +203,13 @@
     z-index:3;
 }
 .credit-page .credit-hero h1{
-    color:#fff !important;
+    color:#FFFFFF !important;
 }
 .credit-page .credit-hero p{
     color:rgba(255,255,255,.92) !important;
 }
 .credit-page .credit-hero .text-brand-orange{
-    color:#f26e22 !important;
+    color:#163A5F !important;
 }
 
  
@@ -221,20 +221,20 @@
 }
 .credit-page .credit-intro-main{
     min-width:0;
-    background:#f8faf9 !important;
-    border:1px solid #e5ece7 !important;
+    background:#F3F4F6 !important;
+    border:1px solid #F3F4F6 !important;
     border-radius:28px !important;
     padding:28px 32px !important;
-    color:#17221a !important;
+    color:#071525 !important;
     overflow:visible;
 }
 .credit-page .credit-intro-main h2{
-    color:#1f2937 !important;
+    color:#071525 !important;
     opacity:1 !important;
     visibility:visible !important;
 }
 .credit-page .credit-intro-main p{
-    color:#475569 !important;
+    color:#0B1F3A !important;
     opacity:1 !important;
     visibility:visible !important;
 }
@@ -243,17 +243,17 @@
 
 .credit-page .credit-help-card{
     min-width:0;
-    background:linear-gradient(135deg,#1c7a30 0%,#2e9e43 100%) !important;
-    color:#fff !important;
+    background:linear-gradient(135deg,#0B1F3A 0%,#0B1F3A 100%) !important;
+    color:#FFFFFF !important;
     border-radius:28px !important;
     padding:28px 32px !important;
     display:flex !important;
     flex-direction:column !important;
     justify-content:center !important;
-    box-shadow:0 16px 35px rgba(23,107,43,.16);
+    box-shadow:0 16px 35px rgba(11,31,58,.16);
 }
 .credit-page .credit-help-card *{
-    color:#fff !important;
+    color:#FFFFFF !important;
     opacity:1 !important;
     visibility:visible !important;
 }
@@ -272,15 +272,15 @@
 
 
 .credit-page .credit-advisor-card{
-    background:linear-gradient(135deg,#1c7a30 0%,#145a25 100%) !important;
-    color:#fff !important;
+    background:linear-gradient(135deg,#0B1F3A 0%,#071525 100%) !important;
+    color:#FFFFFF !important;
     border-radius:28px !important;
     padding:28px !important;
     min-height:310px;
     display:flex !important;
     flex-direction:column !important;
     justify-content:space-between !important;
-    box-shadow:0 16px 35px rgba(23,107,43,.18);
+    box-shadow:0 16px 35px rgba(11,31,58,.18);
 }
 .credit-page .credit-advisor-card *{
     opacity:1 !important;
@@ -288,7 +288,7 @@
 }
 .credit-page .credit-advisor-card h3,
 .credit-page .credit-advisor-card p{
-    color:#fff !important;
+    color:#FFFFFF !important;
 }
 .credit-page .credit-advisor-card p{
     color:rgba(255,255,255,.90) !important;
@@ -298,8 +298,8 @@
     background:rgba(255,255,255,.12) !important;
 }
 .credit-page .credit-advisor-card a{
-    background:#f26e22 !important;
-    color:#fff !important;
+    background:#163A5F !important;
+    color:#FFFFFF !important;
 }
 
  
@@ -307,20 +307,20 @@
     min-width:0;
     min-height:310px !important;
     overflow:visible !important;
-    color:#17221a !important;
+    color:#071525 !important;
 }
 .credit-page .credit-product-card-fix h3{
-    color:#1f2937 !important;
+    color:#071525 !important;
     opacity:1 !important;
     visibility:visible !important;
 }
 .credit-page .credit-product-card-fix p{
-    color:#475569 !important;
+    color:#0B1F3A !important;
     opacity:1 !important;
     visibility:visible !important;
 }
 .credit-page .credit-product-card-fix a{
-    color:#1c7a30 !important;
+    color:#0B1F3A !important;
     opacity:1 !important;
     visibility:visible !important;
 }
@@ -354,17 +354,17 @@
 
 
 :root{
-    --mc-deep:#062713;
-    --mc-deep-2:#0b3a20;
-    --mc-green:#2e9e43;
-    --mc-orange:#f26e22;
-    --mc-ink:#132019;
+    --mc-deep:#071525;
+    --mc-deep-2:#071525;
+    --mc-green:#0B1F3A;
+    --mc-orange:#163A5F;
+    --mc-ink:#071525;
 }
 
 html{scroll-behavior:smooth}
 
 body.credit-page{
-    background:#f3f7f4;
+    background:#F3F4F6;
     color:var(--mc-ink);
 }
 
@@ -378,10 +378,10 @@ body.credit-page{
     isolation:isolate;
     background:
         linear-gradient(100deg,
-            rgba(3,24,12,.95) 0%,
-            rgba(5,45,22,.86) 38%,
-            rgba(7,61,29,.62) 68%,
-            rgba(7,61,29,.28) 100%),
+            rgba(7,21,37,.95) 0%,
+            rgba(7,21,37,.86) 38%,
+            rgba(7,21,37,.62) 68%,
+            rgba(7,21,37,.28) 100%),
         url("img/font1.jpg")
         center 42% / cover no-repeat !important;
 }
@@ -393,8 +393,8 @@ body.credit-page{
     z-index:0;
     pointer-events:none;
     background:
-        radial-gradient(circle at 18% 25%,rgba(46,158,67,.30),transparent 26%),
-        radial-gradient(circle at 82% 18%,rgba(242,110,34,.18),transparent 23%);
+        radial-gradient(circle at 18% 25%,rgba(11,31,58,.30),transparent 26%),
+        radial-gradient(circle at 82% 18%,rgba(22,58,95,.18),transparent 23%);
     animation:mcGlow 7s ease-in-out infinite alternate;
 }
 
@@ -405,7 +405,7 @@ body.credit-page{
     height:120px;
     z-index:0;
     pointer-events:none;
-    background:linear-gradient(to top,#f3f7f4 0%,rgba(243,247,244,0) 100%);
+    background:linear-gradient(to top,#F3F4F6 0%,rgba(243,244,246,0) 100%);
 }
 
 .credit-page .credit-hero > div{
@@ -413,7 +413,7 @@ body.credit-page{
 }
 
 .credit-page .credit-hero h1{
-    text-shadow:0 8px 30px rgba(0,0,0,.25);
+    text-shadow:0 8px 30px rgba(10,10,10,.25);
 }
 
 .credit-page .credit-hero .max-w-3xl{
@@ -425,13 +425,13 @@ body.credit-page{
 }
 .credit-page .credit-hero a:hover{
     transform:translateY(-3px);
-    box-shadow:0 16px 36px rgba(0,0,0,.20);
+    box-shadow:0 16px 36px rgba(10,10,10,.20);
 }
 
  
 .credit-page section:nth-of-type(2){
     background:
-        linear-gradient(90deg,rgba(247,250,248,.97),rgba(247,250,248,.92)),
+        linear-gradient(90deg,rgba(243,244,246,.97),rgba(243,244,246,.92)),
         url("img/font4.jpg")
         center/cover no-repeat !important;
 }
@@ -439,32 +439,32 @@ body.credit-page{
 .credit-page .credit-intro-main{
     background:rgba(255,255,255,.88) !important;
     border:1px solid rgba(255,255,255,.72) !important;
-    box-shadow:0 22px 55px rgba(15,23,42,.10) !important;
+    box-shadow:0 22px 55px rgba(7,21,37,.10) !important;
     backdrop-filter:blur(13px);
 }
 
 .credit-page .credit-help-card{
     background:
-        linear-gradient(135deg,rgba(8,58,28,.92),rgba(34,135,58,.88)),
+        linear-gradient(135deg,rgba(7,21,37,.92),rgba(11,31,58,.88)),
         url("img/font2.jpg")
         center/cover no-repeat !important;
     background-blend-mode:multiply;
-    box-shadow:0 24px 58px rgba(20,90,42,.22) !important;
+    box-shadow:0 24px 58px rgba(7,21,37,.22) !important;
 }
 
  
 #microempresa{
     background:
-        linear-gradient(180deg,rgba(235,244,237,.94),rgba(247,249,247,.97)),
+        linear-gradient(180deg,rgba(243,244,246,.94),rgba(255,255,255,.97)),
         url("img/font3.jpg")
         center/cover no-repeat !important;
 }
 
 #microempresa .credit-product-card-fix{
     min-height:330px !important;
-    background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(250,252,250,.90)) !important;
+    background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(243,244,246,.90)) !important;
     border:1px solid rgba(255,255,255,.75) !important;
-    box-shadow:0 15px 38px rgba(15,23,42,.09);
+    box-shadow:0 15px 38px rgba(7,21,37,.09);
     transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease,border-color .35s ease;
     position:relative;
     overflow:hidden !important;
@@ -483,8 +483,8 @@ body.credit-page{
 
 #microempresa .credit-product-card-fix:hover{
     transform:translateY(-9px);
-    box-shadow:0 28px 58px rgba(15,23,42,.16);
-    border-color:rgba(46,158,67,.28) !important;
+    box-shadow:0 28px 58px rgba(7,21,37,.16);
+    border-color:rgba(11,31,58,.28) !important;
 }
 
 #microempresa .credit-product-card-fix:hover::after{
@@ -493,23 +493,23 @@ body.credit-page{
 
 .credit-page .credit-advisor-card{
     background:
-        linear-gradient(150deg,rgba(5,47,22,.91),rgba(28,122,48,.88)),
+        linear-gradient(150deg,rgba(7,21,37,.91),rgba(11,31,58,.88)),
         url("img/font2.jpg")
         center/cover no-repeat !important;
     background-blend-mode:multiply;
-    box-shadow:0 24px 55px rgba(17,83,39,.20) !important;
+    box-shadow:0 24px 55px rgba(7,21,37,.20) !important;
     transition:transform .35s ease,box-shadow .35s ease;
 }
 
 .credit-page .credit-advisor-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 32px 68px rgba(17,83,39,.27) !important;
+    box-shadow:0 32px 68px rgba(7,21,37,.27) !important;
 }
 
  
 #consumo{
     background:
-        linear-gradient(180deg,rgba(255,255,255,.94),rgba(247,249,247,.97)),
+        linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,255,255,.97)),
         url("img/font4.jpg")
         center/cover no-repeat !important;
 }
@@ -519,7 +519,7 @@ body.credit-page{
     overflow:hidden;
     background:rgba(255,255,255,.92) !important;
     border:1px solid rgba(255,255,255,.78) !important;
-    box-shadow:0 16px 38px rgba(15,23,42,.09);
+    box-shadow:0 16px 38px rgba(7,21,37,.09);
     transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease;
 }
 
@@ -534,43 +534,43 @@ body.credit-page{
 
 #consumo article:hover{
     transform:translateY(-9px);
-    box-shadow:0 28px 58px rgba(15,23,42,.15);
+    box-shadow:0 28px 58px rgba(7,21,37,.15);
 }
 
  
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50{
     background:
-        linear-gradient(90deg,rgba(8,48,24,.94),rgba(17,84,39,.88)),
+        linear-gradient(90deg,rgba(7,21,37,.94),rgba(7,21,37,.88)),
         url("img/font4.jpg")
         center/cover no-repeat !important;
 }
 
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 h2,
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 > div > div > p{
-    color:#fff !important;
+    color:#FFFFFF !important;
 }
 
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a{
     background:rgba(255,255,255,.93) !important;
     border:1px solid rgba(255,255,255,.60) !important;
-    box-shadow:0 14px 34px rgba(0,0,0,.13);
+    box-shadow:0 14px 34px rgba(10,10,10,.13);
     transition:transform .3s ease,box-shadow .3s ease;
 }
 
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a:hover{
     transform:translateY(-7px);
-    box-shadow:0 24px 45px rgba(0,0,0,.20);
+    box-shadow:0 24px 45px rgba(10,10,10,.20);
 }
 
  
 .credit-page section.px-4.md\:px-10.pb-10.bg-gray-50{
-    background:#eef4ef !important;
+    background:#F3F4F6 !important;
 }
 
  
 #simulador{
     background:
-        linear-gradient(180deg,rgba(238,245,240,.93),rgba(248,250,248,.97)),
+        linear-gradient(180deg,rgba(243,244,246,.93),rgba(243,244,246,.97)),
         url("img/requisitos.webp")
         center/cover no-repeat !important;
 }
@@ -578,7 +578,7 @@ body.credit-page{
 #simulador > div > .grid > div:first-child{
     background:rgba(255,255,255,.94) !important;
     border:1px solid rgba(255,255,255,.78) !important;
-    box-shadow:0 25px 60px rgba(15,23,42,.12) !important;
+    box-shadow:0 25px 60px rgba(7,21,37,.12) !important;
     backdrop-filter:blur(12px);
 }
 
@@ -592,21 +592,21 @@ body.credit-page{
 #simulador .sim-plazo:hover,
 #simulador .sim-monto:hover{
     transform:translateY(-2px);
-    box-shadow:0 10px 22px rgba(15,23,42,.08);
+    box-shadow:0 10px 22px rgba(7,21,37,.08);
 }
 
 #simulador .sim-result-panel{
     background:
-        linear-gradient(145deg,rgba(5,45,22,.93),rgba(23,112,48,.86)),
+        linear-gradient(145deg,rgba(7,21,37,.93),rgba(11,31,58,.86)),
         url("img/requisitos.webp")
         center/cover no-repeat !important;
     background-blend-mode:multiply;
-    box-shadow:0 28px 65px rgba(19,89,40,.26) !important;
+    box-shadow:0 28px 65px rgba(7,21,37,.26) !important;
 }
 
 #simTablaWrap{
     background:rgba(255,255,255,.96) !important;
-    box-shadow:0 25px 60px rgba(15,23,42,.11) !important;
+    box-shadow:0 25px 60px rgba(7,21,37,.11) !important;
 }
 
  
@@ -672,10 +672,10 @@ body.credit-page{
 .credit-page .credit-hero{
     background:
         linear-gradient(100deg,
-            rgba(3,24,12,.78) 0%,
-            rgba(5,45,22,.60) 40%,
-            rgba(7,61,29,.34) 70%,
-            rgba(7,61,29,.16) 100%),
+            rgba(7,21,37,.78) 0%,
+            rgba(7,21,37,.60) 40%,
+            rgba(7,21,37,.34) 70%,
+            rgba(7,21,37,.16) 100%),
         url("img/cajamarca.webp")
         center 42% / cover no-repeat !important;
 }
@@ -683,24 +683,24 @@ body.credit-page{
     opacity:.58 !important;
 }
 .credit-page .credit-hero h1{
-    color:#ffffff !important;
-    text-shadow:0 6px 24px rgba(0,0,0,.42);
+    color:#FFFFFF !important;
+    text-shadow:0 6px 24px rgba(10,10,10,.42);
 }
 .credit-page .credit-hero h1 .text-brand-orange{
-    color:#ff8a3d !important;
+    color:#163A5F !important;
 }
 .credit-page .credit-hero p{
-    color:#f1fff4 !important;
-    text-shadow:0 3px 14px rgba(0,0,0,.34);
+    color:#F3F4F6 !important;
+    text-shadow:0 3px 14px rgba(10,10,10,.34);
 }
 .credit-page .credit-hero > div > div > span{
-    color:#ffffff !important;
+    color:#FFFFFF !important;
 }
 
  
 .credit-page section:nth-of-type(2){
     background:
-        linear-gradient(90deg,rgba(247,250,248,.79),rgba(247,250,248,.70)),
+        linear-gradient(90deg,rgba(243,244,246,.79),rgba(243,244,246,.70)),
         url("img/font3.jpg")
         center/cover no-repeat !important;
 }
@@ -708,206 +708,206 @@ body.credit-page{
     background:rgba(255,255,255,.82) !important;
 }
 .credit-page .credit-intro-main span{
-    color:#e85c10 !important;
+    color:#0B1F3A !important;
 }
 .credit-page .credit-intro-main h2{
-    color:#0b4c28 !important;
+    color:#071525 !important;
 }
 .credit-page .credit-intro-main p{
-    color:#263c30 !important;
+    color:#071525 !important;
 }
 .credit-page .credit-help-card{
     background:
-        linear-gradient(135deg,rgba(8,58,28,.72),rgba(34,135,58,.66)),
+        linear-gradient(135deg,rgba(7,21,37,.72),rgba(11,31,58,.66)),
         url("img/target7.webp")
         center/cover no-repeat !important;
 }
 .credit-page .credit-help-card h3{
-    color:#ffffff !important;
-    text-shadow:0 2px 10px rgba(0,0,0,.34);
+    color:#FFFFFF !important;
+    text-shadow:0 2px 10px rgba(10,10,10,.34);
 }
 .credit-page .credit-help-card p{
-    color:#effff3 !important;
+    color:#F3F4F6 !important;
 }
 
  
 #microempresa{
     background:
-        linear-gradient(180deg,rgba(235,244,237,.74),rgba(247,249,247,.81)),
+        linear-gradient(180deg,rgba(243,244,246,.74),rgba(255,255,255,.81)),
         url("img/font4.jpg")
         center/cover no-repeat !important;
 }
 #microempresa > div > div:first-child span{
-    color:#d9530b !important;
+    color:#0B1F3A !important;
 }
 #microempresa > div > div:first-child h2{
-    color:#0a562c !important;
+    color:#071525 !important;
     text-shadow:0 1px 0 rgba(255,255,255,.85);
 }
 #microempresa > div > div:first-child p{
-    color:#254334 !important;
+    color:#071525 !important;
 }
 #microempresa .credit-product-card-fix{
     background:rgba(255,255,255,.88) !important;
 }
 #microempresa .credit-product-card-fix h3{
-    color:#0a562c !important;
+    color:#071525 !important;
 }
 #microempresa .credit-product-card-fix p{
-    color:#374a40 !important;
+    color:#374151 !important;
 }
 #microempresa .credit-product-card-fix a{
-    color:#d95b12 !important;
+    color:#0B1F3A !important;
 }
 #microempresa .credit-product-card-fix a:hover{
-    color:#a84008 !important;
+    color:#0B1F3A !important;
 }
 
  
-#microempresa article:nth-child(1) h3{color:#d95b12 !important;}
-#microempresa article:nth-child(2) h3{color:#16813a !important;}
-#microempresa article:nth-child(3) h3{color:#a66a00 !important;}
-#microempresa article:nth-child(4) h3{color:#2468b4 !important;}
-#microempresa article:nth-child(5) h3{color:#7042a5 !important;}
+#microempresa article:nth-child(1) h3{color:#0B1F3A !important;}
+#microempresa article:nth-child(2) h3{color:#0B1F3A !important;}
+#microempresa article:nth-child(3) h3{color:#0B1F3A !important;}
+#microempresa article:nth-child(4) h3{color:#0B1F3A !important;}
+#microempresa article:nth-child(5) h3{color:#0B1F3A !important;}
 
  
 .credit-page .credit-advisor-card{
     background:
-        linear-gradient(150deg,rgba(5,47,22,.68),rgba(28,122,48,.61)),
+        linear-gradient(150deg,rgba(7,21,37,.68),rgba(11,31,58,.61)),
         url("img/historia.webp")
         center/cover no-repeat !important;
 }
 .credit-page .credit-advisor-card h3{
-    color:#ffffff !important;
-    text-shadow:0 2px 10px rgba(0,0,0,.34);
+    color:#FFFFFF !important;
+    text-shadow:0 2px 10px rgba(10,10,10,.34);
 }
 .credit-page .credit-advisor-card p{
-    color:#effff3 !important;
+    color:#F3F4F6 !important;
 }
 
  
 #consumo{
     background:
-        linear-gradient(180deg,rgba(255,255,255,.72),rgba(247,249,247,.80)),
+        linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.80)),
         url("img/font4.jpg")
         center/cover no-repeat !important;
 }
 #consumo > div > div:first-child span{
-    color:#1d66b0 !important;
+    color:#0B1F3A !important;
 }
 #consumo > div > div:first-child h2{
-    color:#123f70 !important;
+    color:#0B1F3A !important;
 }
 #consumo > div > div:first-child p{
-    color:#33485d !important;
+    color:#0B1F3A !important;
 }
 #consumo article{
     background:rgba(255,255,255,.86) !important;
 }
-#consumo article:nth-child(1) h3{color:#1e65ae !important;}
-#consumo article:nth-child(2) h3{color:#bf3948 !important;}
-#consumo article:nth-child(3) h3{color:#7846a8 !important;}
+#consumo article:nth-child(1) h3{color:#0B1F3A !important;}
+#consumo article:nth-child(2) h3{color:#0B1F3A !important;}
+#consumo article:nth-child(3) h3{color:#0B1F3A !important;}
 #consumo article p{
-    color:#3f4d56 !important;
+    color:#374151 !important;
 }
 #consumo article a{
-    color:#0c6c36 !important;
+    color:#071525 !important;
 }
 
  
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50{
     background:
-        linear-gradient(90deg,rgba(7,43,21,.72),rgba(17,84,39,.61)),
+        linear-gradient(90deg,rgba(7,21,37,.72),rgba(7,21,37,.61)),
         url("img/font4.jpg")
         center/cover no-repeat !important;
 }
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .text-brand-orange{
-    color:#ff9a55 !important;
+    color:#163A5F !important;
 }
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 h2{
-    color:#ffffff !important;
-    text-shadow:0 4px 16px rgba(0,0,0,.35);
+    color:#FFFFFF !important;
+    text-shadow:0 4px 16px rgba(10,10,10,.35);
 }
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 > div > div > p{
-    color:#eaffef !important;
+    color:#F3F4F6 !important;
 }
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a h3{
-    color:#0b542b !important;
+    color:#071525 !important;
 }
 .credit-page section.py-16.px-4.md\:px-10.bg-gray-50 .grid > a p{
-    color:#475569 !important;
+    color:#0B1F3A !important;
 }
 
  
 .credit-page section.px-4.md\:px-10.pb-10.bg-gray-50{
-    background:linear-gradient(180deg,#eaf3ec,#f3f7f4) !important;
+    background:linear-gradient(180deg,#F3F4F6,#F3F4F6) !important;
 }
 .credit-page section.px-4.md\:px-10.pb-10.bg-gray-50 > div > div{
     background:rgba(255,255,255,.88) !important;
-    color:#43584b !important;
+    color:#374151 !important;
 }
 
  
 #simulador{
     background:
-        linear-gradient(180deg,rgba(238,245,240,.72),rgba(248,250,248,.82)),
+        linear-gradient(180deg,rgba(243,244,246,.72),rgba(243,244,246,.82)),
         url("img/font1.jpg")
         center/cover no-repeat !important;
 }
 #simulador > div > .max-w-3xl > span{
-    color:#d95b12 !important;
+    color:#0B1F3A !important;
 }
 #simulador > div > .max-w-3xl > h2{
-    color:#0a562c !important;
+    color:#071525 !important;
 }
 #simulador > div > .max-w-3xl > p{
-    color:#31483a !important;
+    color:#071525 !important;
 }
 #simulador > div > .grid > div:first-child{
     background:rgba(255,255,255,.89) !important;
 }
 #simulador .sim-result-panel{
     background:
-        linear-gradient(145deg,rgba(5,45,22,.70),rgba(23,112,48,.61)),
+        linear-gradient(145deg,rgba(7,21,37,.70),rgba(11,31,58,.61)),
         url("img/requisitos.webp")
         center/cover no-repeat !important;
 }
 #simulador .sim-result-panel .sim-main-number{
-    color:#ffffff !important;
-    text-shadow:0 5px 18px rgba(0,0,0,.30);
+    color:#FFFFFF !important;
+    text-shadow:0 5px 18px rgba(10,10,10,.30);
 }
 #simulador .sim-result-panel .sim-pill{
-    color:#ffffff !important;
+    color:#FFFFFF !important;
 }
 #simulador .sim-result-panel .sim-row-label{
-    color:#d9f8e1 !important;
+    color:#F3F4F6 !important;
 }
 #simulador .sim-result-panel b{
-    color:#ffffff !important;
+    color:#FFFFFF !important;
 }
 #simulador .sim-table-btn{
-    color:#0b5b2f !important;
+    color:#071525 !important;
 }
 #simulador .sim-whatsapp-btn{
-    color:#ffffff !important;
+    color:#FFFFFF !important;
 }
 
  
 #simulador .sim-producto b{
-    color:#173d27 !important;
+    color:#071525 !important;
 }
 #simulador .sim-producto span{
-    color:#617166 !important;
+    color:#374151 !important;
 }
 #simulador .sim-producto.sim-activo b{
-    color:#0a6c32 !important;
+    color:#071525 !important;
 }
 #simulador #simMontoVista{
-    color:#0b6a34 !important;
+    color:#071525 !important;
 }
 #simulador #simTasa{
-    color:#0c5c30 !important;
-    background:#ffffff !important;
+    color:#071525 !important;
+    background:#FFFFFF !important;
 }
 
  
@@ -915,7 +915,7 @@ body.credit-page{
 #microempresa,
 #consumo,
 #simulador{
-    background-color:#edf4ef;
+    background-color:#F3F4F6;
 }
 
  
@@ -931,6 +931,9 @@ body.credit-page{
 }
 </style>
 
+
+    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 <body class="bg-gray-50 overflow-x-hidden credit-page">
 
@@ -1390,23 +1393,23 @@ include 'encabezado.php';
 </div></section>
 
 <style id="simulador-visible-fix">
-.sim-result-panel{background:#176b2b !important;background:linear-gradient(145deg,#145a25 0%,#1f7b35 55%,#2e9e43 100%) !important;color:#fff !important;min-height:520px;box-shadow:0 18px 45px rgba(23,107,43,.20);}
+.sim-result-panel{background:#0B1F3A !important;background:linear-gradient(145deg,#071525 0%,#0B1F3A 55%,#0B1F3A 100%) !important;color:#FFFFFF !important;min-height:520px;box-shadow:0 18px 45px rgba(11,31,58,.20);}
 .sim-result-panel *{color:inherit;}
-.sim-result-panel .sim-pill{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:#fff !important;}
+.sim-result-panel .sim-pill{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:#FFFFFF !important;}
 .sim-result-panel .sim-muted{color:rgba(255,255,255,.78) !important;}
-.sim-result-panel .sim-main-number{color:#fff !important;font-size:clamp(2.7rem,5vw,4rem);line-height:1;font-weight:900;letter-spacing:-.045em;}
-.sim-result-panel .sim-result-box{background:rgba(0,0,0,.13);border:1px solid rgba(255,255,255,.15);border-radius:18px;color:#fff !important;}
+.sim-result-panel .sim-main-number{color:#FFFFFF !important;font-size:clamp(2.7rem,5vw,4rem);line-height:1;font-weight:900;letter-spacing:-.045em;}
+.sim-result-panel .sim-result-box{background:rgba(10,10,10,.13);border:1px solid rgba(255,255,255,.15);border-radius:18px;color:#FFFFFF !important;}
 .sim-result-panel .sim-row-label{color:rgba(255,255,255,.72) !important;}
-.sim-result-panel b{color:#fff !important;}
-.sim-result-panel .sim-table-btn{display:block;background:#fff !important;color:#176b2b !important;text-align:center;border:0;cursor:pointer;}
-.sim-result-panel .sim-whatsapp-btn{display:inline-flex;background:#20c765 !important;color:#fff !important;text-decoration:none;}
+.sim-result-panel b{color:#FFFFFF !important;}
+.sim-result-panel .sim-table-btn{display:block;background:#FFFFFF !important;color:#0B1F3A !important;text-align:center;border:0;cursor:pointer;}
+.sim-result-panel .sim-whatsapp-btn{display:inline-flex;background:#0B1F3A !important;color:#FFFFFF !important;text-decoration:none;}
 .sim-result-panel .sim-note{color:rgba(255,255,255,.62) !important;}
 @media(max-width:1023px){.sim-result-panel{min-height:auto;position:relative!important;top:auto!important;}}
 </style>
 <style>
-.sede-option:focus{outline:none;box-shadow:0 0 0 4px rgba(46,158,67,.10)}
+.sede-option:focus{outline:none;box-shadow:0 0 0 4px rgba(11,31,58,.10)}
 #enviarSedeWhatsApp:disabled{opacity:.7}
-.sim-producto.sim-activo{border-color:#187038;background:#f0fdf4}.sim-plazo{border:1px solid #e5e7eb;background:#fff;padding:.7rem 1rem;border-radius:9999px;font-weight:800}.sim-plazo.sim-activo{background:#187038;color:#fff}.sim-monto.sim-activo{background:#f0fdf4;color:#187038}
+.sim-producto.sim-activo{border-color:#0B1F3A;background:#F3F4F6}.sim-plazo{border:1px solid #F3F4F6;background:#FFFFFF;padding:.7rem 1rem;border-radius:9999px;font-weight:800}.sim-plazo.sim-activo{background:#0B1F3A;color:#FFFFFF}.sim-monto.sim-activo{background:#F3F4F6;color:#0B1F3A}
 </style>
 <script>
  
@@ -1777,7 +1780,7 @@ amount(100)})();
 
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
         <button type="button" id="cancelarSede" class="sm:w-1/3 rounded-full border border-gray-200 bg-white py-3.5 font-bold text-gray-600 hover:bg-gray-50">Cancelar</button>
-        <button type="button" id="enviarSedeWhatsApp" disabled class="sm:flex-1 rounded-full bg-[#20c765] disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-3.5 font-extrabold flex items-center justify-center gap-2 shadow-lg">
+        <button type="button" id="enviarSedeWhatsApp" disabled class="sm:flex-1 rounded-full bg-[#0B1F3A] disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-3.5 font-extrabold flex items-center justify-center gap-2 shadow-lg">
           <i class="fab fa-whatsapp text-lg"></i> Continuar por WhatsApp
         </button>
       </div>
