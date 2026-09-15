@@ -1,217 +1,245 @@
 <?php
 
-function mc_opinions_db_config() {
-    $config = [
-        'host' => (string)(getenv('MC_DB_HOST') ?: '127.0.0.1'),
-        'port' => (string)(getenv('MC_DB_PORT') ?: '3306'),
-        'database' => (string)(getenv('MC_DB_NAME') ?: 'multicreditv2'),
-        'username' => (string)(getenv('MC_DB_USER') ?: 'root'),
-        'password' => (string)(getenv('MC_DB_PASSWORD') ?: ''),
-        'charset' => 'utf8mb4',
-    ];
-
-    $local = __DIR__ . '/config/database.php';
-    if (is_file($local)) {
-        $custom = include $local;
-        if (is_array($custom)) $config = array_merge($config, $custom);
-    }
-
-    $config['database'] = preg_replace('/[^a-zA-Z0-9_]/', '', (string)$config['database']) ?: 'multicreditv2';
-    $config['port'] = preg_replace('/\D+/', '', (string)$config['port']) ?: '3306';
-    $config['charset'] = 'utf8mb4';
-    return $config;
-}
-
-function mc_opinions_db($allowCreateDatabase = true) {
-    static $pdo = null;
-    if ($pdo instanceof PDO) return $pdo;
-    if (!class_exists('PDO')) throw new RuntimeException('PDO no está disponible en PHP.');
-
-    $cfg = mc_opinions_db_config();
-    $baseDsn = 'mysql:host=' . $cfg['host'] . ';port=' . $cfg['port'] . ';charset=utf8mb4';
-    $dbDsn = $baseDsn . ';dbname=' . $cfg['database'];
-    $options = [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::ATTR_EMULATE_PREPARES => false,
-    ];
-
-    try {
-        $pdo = new PDO($dbDsn, $cfg['username'], $cfg['password'], $options);
-        return $pdo;
-    } catch (PDOException $e) {
-        $unknownDatabase = (string)$e->getCode() === '1049' || stripos($e->getMessage(), 'Unknown database') !== false;
-        if (!$allowCreateDatabase || !$unknownDatabase) throw $e;
-    }
-
-    $server = new PDO($baseDsn, $cfg['username'], $cfg['password'], $options);
-    $db = str_replace('`', '', $cfg['database']);
-    $server->exec("CREATE DATABASE IF NOT EXISTS `{$db}` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    $server = null;
-
-    $pdo = new PDO($dbDsn, $cfg['username'], $cfg['password'], $options);
-    return $pdo;
-}
-
-function mc_opinions_install() {
-    static $installed = false;
-    if ($installed) return true;
-
-    $pdo = mc_opinions_db(true);
-    $pdo->exec("CREATE TABLE IF NOT EXISTS opiniones (
-        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        nombre VARCHAR(100) NULL,
-        sede VARCHAR(60) NOT NULL,
-        calificacion TINYINT UNSIGNED NOT NULL,
-        comentario VARCHAR(700) NOT NULL,
-        consentimiento TINYINT(1) NOT NULL DEFAULT 1,
-        estado ENUM('pendiente','publicado','rechazado','oculto') NOT NULL DEFAULT 'pendiente',
-        destacado TINYINT(1) NOT NULL DEFAULT 0,
-        ip_hash CHAR(64) NULL,
-        created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        PRIMARY KEY (id),
-        INDEX idx_opiniones_estado (estado, destacado, created_at),
-        INDEX idx_opiniones_ip (ip_hash, created_at)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-
-    $installed = true;
-    return true;
-}
-
 function mc_opinion_sedes() {
     return ['Cajamarca', 'San Marcos', 'Cajabamba', 'Huamachuco'];
 }
 
-function mc_opinion_initials($name) {
-    $name = trim((string)$name);
-    if ($name === '') return 'MC';
-    $parts = preg_split('/\s+/u', $name, -1, PREG_SPLIT_NO_EMPTY);
-    $letters = '';
-    foreach (array_slice($parts ?: [], 0, 2) as $part) {
-        $letters .= function_exists('mb_substr') ? mb_substr($part, 0, 1, 'UTF-8') : substr($part, 0, 1);
-    }
-    return function_exists('mb_strtoupper') ? mb_strtoupper($letters, 'UTF-8') : strtoupper($letters);
+function mc_opinions_storage_path() {
+    return __DIR__ . '/data/opiniones.json';
 }
 
-function mc_opinions_summary() {
-    mc_opinions_install();
-    $row = mc_opinions_db()->query("SELECT COUNT(*) AS total, COALESCE(AVG(calificacion),0) AS promedio FROM opiniones WHERE estado='publicado'")->fetch();
+function mc_opinions_install() {
+    $path = mc_opinions_storage_path();
+    $dir = dirname($path);
+    if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
+        throw new RuntimeException('No se pudo crear la carpeta de opiniones.');
+    }
+    if (!is_file($path)) {
+        $initial = ['next_id' => 1, 'items' => []];
+        $json = json_encode($initial, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        if ($json === false || @file_put_contents($path, $json . PHP_EOL, LOCK_EX) === false) {
+            throw new RuntimeException('No se pudo crear el archivo JSON de opiniones.');
+        }
+    }
+    return true;
+}
+
+function mc_opinions_normalize_state($state) {
+    if (!is_array($state)) $state = [];
+    $items = isset($state['items']) && is_array($state['items']) ? array_values($state['items']) : [];
+    $maxId = 0;
+    foreach ($items as &$item) {
+        if (!is_array($item)) $item = [];
+        $item['id'] = max(0, (int)($item['id'] ?? 0));
+        $maxId = max($maxId, $item['id']);
+        $item['nombre'] = trim((string)($item['nombre'] ?? ''));
+        $item['sede'] = trim((string)($item['sede'] ?? ''));
+        $item['calificacion'] = max(1, min(5, (int)($item['calificacion'] ?? 5)));
+        $item['comentario'] = trim((string)($item['comentario'] ?? ''));
+        $item['consentimiento'] = !empty($item['consentimiento']) ? 1 : 0;
+        $item['estado'] = in_array(($item['estado'] ?? ''), ['pendiente','publicado','rechazado','oculto'], true)
+            ? $item['estado'] : 'pendiente';
+        $item['destacado'] = !empty($item['destacado']) ? 1 : 0;
+        $item['ip_hash'] = (string)($item['ip_hash'] ?? '');
+        $item['created_at'] = (string)($item['created_at'] ?? date('Y-m-d H:i:s'));
+        $item['updated_at'] = (string)($item['updated_at'] ?? $item['created_at']);
+    }
+    unset($item);
     return [
-        'total' => (int)($row['total'] ?? 0),
-        'average' => round((float)($row['promedio'] ?? 0), 1),
+        'next_id' => max($maxId + 1, (int)($state['next_id'] ?? 1)),
+        'items' => $items,
     ];
 }
 
-function mc_opinions_public($limit = 12) {
+function mc_opinions_read_state() {
     mc_opinions_install();
-    $limit = max(1, min(30, (int)$limit));
-    $stmt = mc_opinions_db()->query("SELECT id,nombre,sede,calificacion,comentario,destacado,created_at FROM opiniones WHERE estado='publicado' ORDER BY destacado DESC, created_at DESC, id DESC LIMIT {$limit}");
-    $rows = $stmt->fetchAll();
-    foreach ($rows as &$row) {
-        $row['id'] = (int)$row['id'];
-        $row['calificacion'] = (int)$row['calificacion'];
-        $row['destacado'] = (bool)$row['destacado'];
-        $row['nombre'] = trim((string)($row['nombre'] ?? '')) ?: 'Cliente de Multicredit';
-        $row['initials'] = mc_opinion_initials($row['nombre']);
-    }
-    unset($row);
-    return $rows;
+    $raw = @file_get_contents(mc_opinions_storage_path());
+    if ($raw === false) throw new RuntimeException('No se pudo leer el archivo JSON de opiniones.');
+    $decoded = json_decode($raw, true);
+    if (!is_array($decoded)) throw new RuntimeException('El archivo JSON de opiniones no tiene un formato válido.');
+    return mc_opinions_normalize_state($decoded);
 }
 
-function mc_opinion_ip_hash($ip = null) {
-    if ($ip === null) $ip = (string)($_SERVER['REMOTE_ADDR'] ?? '');
-    return hash('sha256', (string)$ip . '|multicredit-opiniones|' . date('Y-m'));
+function mc_opinions_write_state($state) {
+    $state = mc_opinions_normalize_state($state);
+    $json = json_encode($state, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    if ($json === false) throw new RuntimeException('No se pudo convertir las opiniones a JSON.');
+    if (@file_put_contents(mc_opinions_storage_path(), $json . PHP_EOL, LOCK_EX) === false) {
+        throw new RuntimeException('No se pudo guardar el archivo JSON de opiniones.');
+    }
+    return true;
+}
+
+function mc_opinion_ip_hash() {
+    $ip = trim((string)($_SERVER['REMOTE_ADDR'] ?? ''));
+    if ($ip === '') $ip = 'local';
+    return hash('sha256', 'multicredit-opiniones|' . $ip);
 }
 
 function mc_opinion_rate_limited($ipHash, $minutes = 10) {
-    mc_opinions_install();
-    $minutes = max(1, min(1440, (int)$minutes));
-    $stmt = mc_opinions_db()->prepare("SELECT COUNT(*) FROM opiniones WHERE ip_hash=? AND created_at >= DATE_SUB(NOW(), INTERVAL {$minutes} MINUTE)");
-    $stmt->execute([(string)$ipHash]);
-    return (int)$stmt->fetchColumn() > 0;
+    if ($ipHash === '') return false;
+    $limit = time() - max(1, (int)$minutes) * 60;
+    $state = mc_opinions_read_state();
+    foreach ($state['items'] as $item) {
+        if (!hash_equals((string)($item['ip_hash'] ?? ''), (string)$ipHash)) continue;
+        $created = strtotime((string)($item['created_at'] ?? '')) ?: 0;
+        if ($created >= $limit) return true;
+    }
+    return false;
 }
 
 function mc_opinion_create($data) {
-    mc_opinions_install();
-    $stmt = mc_opinions_db()->prepare("INSERT INTO opiniones (nombre,sede,calificacion,comentario,consentimiento,estado,destacado,ip_hash) VALUES (?,?,?,?,1,'pendiente',0,?)");
-    $stmt->execute([
-        trim((string)($data['nombre'] ?? '')) ?: null,
-        trim((string)($data['sede'] ?? '')),
-        (int)($data['calificacion'] ?? 0),
-        trim((string)($data['comentario'] ?? '')),
-        (string)($data['ip_hash'] ?? ''),
-    ]);
-    return (int)mc_opinions_db()->lastInsertId();
+    $state = mc_opinions_read_state();
+    $id = (int)$state['next_id'];
+    $now = date('Y-m-d H:i:s');
+    $sede = trim((string)($data['sede'] ?? ''));
+    $rating = (int)($data['calificacion'] ?? 0);
+    $comment = trim((string)($data['comentario'] ?? ''));
+    if (!in_array($sede, mc_opinion_sedes(), true)) throw new RuntimeException('Selecciona una sede válida.');
+    if ($rating < 1 || $rating > 5) throw new RuntimeException('La calificación debe estar entre 1 y 5.');
+    if ($comment === '') throw new RuntimeException('El comentario no puede quedar vacío.');
+    $state['items'][] = [
+        'id' => $id,
+        'nombre' => trim((string)($data['nombre'] ?? '')),
+        'sede' => $sede,
+        'calificacion' => $rating,
+        'comentario' => $comment,
+        'consentimiento' => 1,
+        'estado' => 'pendiente',
+        'destacado' => 0,
+        'ip_hash' => (string)($data['ip_hash'] ?? ''),
+        'created_at' => $now,
+        'updated_at' => $now,
+    ];
+    $state['next_id'] = $id + 1;
+    mc_opinions_write_state($state);
+    return $id;
+}
+
+function mc_opinions_public($limit = 18) {
+    $state = mc_opinions_read_state();
+    $items = array_values(array_filter($state['items'], function ($item) {
+        return ($item['estado'] ?? '') === 'publicado' && !empty($item['consentimiento']);
+    }));
+    usort($items, function ($a, $b) {
+        $featured = (int)($b['destacado'] ?? 0) <=> (int)($a['destacado'] ?? 0);
+        if ($featured !== 0) return $featured;
+        $date = (strtotime((string)($b['created_at'] ?? '')) ?: 0) <=> (strtotime((string)($a['created_at'] ?? '')) ?: 0);
+        if ($date !== 0) return $date;
+        return (int)($b['id'] ?? 0) <=> (int)($a['id'] ?? 0);
+    });
+    return array_slice($items, 0, max(1, min(100, (int)$limit)));
+}
+
+function mc_opinions_summary() {
+    $items = mc_opinions_public(10000);
+    $count = count($items);
+    $sum = 0;
+    foreach ($items as $item) $sum += (int)($item['calificacion'] ?? 0);
+    return ['average' => $count > 0 ? round($sum / $count, 1) : 0, 'count' => $count];
 }
 
 function mc_opinions_admin_stats() {
-    mc_opinions_install();
-    $stats = ['total'=>0,'pendiente'=>0,'publicado'=>0,'rechazado'=>0,'oculto'=>0,'average'=>0.0];
-    $rows = mc_opinions_db()->query("SELECT estado,COUNT(*) AS cantidad FROM opiniones GROUP BY estado")->fetchAll();
-    foreach ($rows as $row) {
-        $estado = (string)$row['estado'];
-        $cantidad = (int)$row['cantidad'];
-        if (array_key_exists($estado, $stats)) $stats[$estado] = $cantidad;
-        $stats['total'] += $cantidad;
+    $state = mc_opinions_read_state();
+    $stats = ['total'=>0,'pendiente'=>0,'publicado'=>0,'rechazado'=>0,'oculto'=>0,'average'=>0];
+    $publishedSum = 0;
+    $publishedCount = 0;
+    foreach ($state['items'] as $item) {
+        $stats['total']++;
+        $status = (string)($item['estado'] ?? 'pendiente');
+        if (isset($stats[$status])) $stats[$status]++;
+        if ($status === 'publicado') {
+            $publishedSum += (int)($item['calificacion'] ?? 0);
+            $publishedCount++;
+        }
     }
-    $avg = mc_opinions_db()->query("SELECT COALESCE(AVG(calificacion),0) FROM opiniones WHERE estado='publicado'")->fetchColumn();
-    $stats['average'] = round((float)$avg, 1);
+    $stats['average'] = $publishedCount > 0 ? round($publishedSum / $publishedCount, 1) : 0;
     return $stats;
 }
 
-function mc_opinions_admin_list($status = '') {
-    mc_opinions_install();
-    $allowed = ['pendiente','publicado','rechazado','oculto'];
-    if (in_array($status, $allowed, true)) {
-        $stmt = mc_opinions_db()->prepare("SELECT * FROM opiniones WHERE estado=? ORDER BY created_at DESC,id DESC");
-        $stmt->execute([$status]);
-        return $stmt->fetchAll();
+function mc_opinions_admin_list($filter = '') {
+    $state = mc_opinions_read_state();
+    $items = $state['items'];
+    if ($filter !== '') {
+        $items = array_values(array_filter($items, fn($item) => ($item['estado'] ?? '') === $filter));
     }
-    return mc_opinions_db()->query("SELECT * FROM opiniones ORDER BY CASE estado WHEN 'pendiente' THEN 0 WHEN 'publicado' THEN 1 WHEN 'oculto' THEN 2 ELSE 3 END, created_at DESC,id DESC")->fetchAll();
+    usort($items, function ($a, $b) {
+        $date = (strtotime((string)($b['created_at'] ?? '')) ?: 0) <=> (strtotime((string)($a['created_at'] ?? '')) ?: 0);
+        if ($date !== 0) return $date;
+        return (int)($b['id'] ?? 0) <=> (int)($a['id'] ?? 0);
+    });
+    return $items;
 }
 
 function mc_opinion_get($id) {
-    mc_opinions_install();
-    $stmt = mc_opinions_db()->prepare('SELECT * FROM opiniones WHERE id=? LIMIT 1');
-    $stmt->execute([(int)$id]);
-    $row = $stmt->fetch();
-    return $row ?: null;
+    $state = mc_opinions_read_state();
+    foreach ($state['items'] as $item) {
+        if ((int)($item['id'] ?? 0) === (int)$id) return $item;
+    }
+    return null;
 }
 
 function mc_opinion_set_status($id, $status) {
-    $allowed = ['pendiente','publicado','rechazado','oculto'];
-    if (!in_array($status, $allowed, true)) return false;
-    mc_opinions_install();
-    $stmt = mc_opinions_db()->prepare('UPDATE opiniones SET estado=? WHERE id=?');
-    return $stmt->execute([$status, (int)$id]);
+    if (!in_array($status, ['pendiente','publicado','rechazado','oculto'], true)) throw new RuntimeException('Estado de opinión no válido.');
+    $state = mc_opinions_read_state();
+    $found = false;
+    foreach ($state['items'] as &$item) {
+        if ((int)($item['id'] ?? 0) !== (int)$id) continue;
+        $item['estado'] = $status;
+        $item['updated_at'] = date('Y-m-d H:i:s');
+        $found = true;
+        break;
+    }
+    unset($item);
+    if (!$found) throw new RuntimeException('Opinión no encontrada.');
+    return mc_opinions_write_state($state);
 }
 
 function mc_opinion_toggle_featured($id) {
-    mc_opinions_install();
-    $stmt = mc_opinions_db()->prepare('UPDATE opiniones SET destacado=IF(destacado=1,0,1) WHERE id=?');
-    return $stmt->execute([(int)$id]);
-}
-
-function mc_opinion_update($id, $data) {
-    $allowed = ['pendiente','publicado','rechazado','oculto'];
-    $status = (string)($data['estado'] ?? 'pendiente');
-    if (!in_array($status, $allowed, true)) $status = 'pendiente';
-    mc_opinions_install();
-    $stmt = mc_opinions_db()->prepare('UPDATE opiniones SET nombre=?,sede=?,calificacion=?,comentario=?,estado=?,destacado=? WHERE id=?');
-    return $stmt->execute([
-        trim((string)($data['nombre'] ?? '')) ?: null,
-        trim((string)($data['sede'] ?? '')),
-        max(1, min(5, (int)($data['calificacion'] ?? 5))),
-        trim((string)($data['comentario'] ?? '')),
-        $status,
-        !empty($data['destacado']) ? 1 : 0,
-        (int)$id,
-    ]);
+    $state = mc_opinions_read_state();
+    $found = false;
+    foreach ($state['items'] as &$item) {
+        if ((int)($item['id'] ?? 0) !== (int)$id) continue;
+        $item['destacado'] = empty($item['destacado']) ? 1 : 0;
+        $item['updated_at'] = date('Y-m-d H:i:s');
+        $found = true;
+        break;
+    }
+    unset($item);
+    if (!$found) throw new RuntimeException('Opinión no encontrada.');
+    return mc_opinions_write_state($state);
 }
 
 function mc_opinion_delete($id) {
-    mc_opinions_install();
-    $stmt = mc_opinions_db()->prepare('DELETE FROM opiniones WHERE id=?');
-    return $stmt->execute([(int)$id]);
+    $state = mc_opinions_read_state();
+    $before = count($state['items']);
+    $state['items'] = array_values(array_filter($state['items'], fn($item) => (int)($item['id'] ?? 0) !== (int)$id));
+    if ($before === count($state['items'])) throw new RuntimeException('Opinión no encontrada.');
+    return mc_opinions_write_state($state);
+}
+
+function mc_opinion_update($id, $data) {
+    $state = mc_opinions_read_state();
+    $found = false;
+    foreach ($state['items'] as &$item) {
+        if ((int)($item['id'] ?? 0) !== (int)$id) continue;
+        $sede = trim((string)($data['sede'] ?? $item['sede']));
+        $rating = (int)($data['calificacion'] ?? $item['calificacion']);
+        $status = (string)($data['estado'] ?? $item['estado']);
+        if (!in_array($sede, mc_opinion_sedes(), true)) throw new RuntimeException('Selecciona una sede válida.');
+        if ($rating < 1 || $rating > 5) throw new RuntimeException('La calificación debe estar entre 1 y 5.');
+        if (!in_array($status, ['pendiente','publicado','rechazado','oculto'], true)) throw new RuntimeException('Estado de opinión no válido.');
+        $item['nombre'] = trim((string)($data['nombre'] ?? $item['nombre']));
+        $item['sede'] = $sede;
+        $item['calificacion'] = $rating;
+        $item['comentario'] = trim((string)($data['comentario'] ?? $item['comentario']));
+        $item['estado'] = $status;
+        $item['destacado'] = !empty($data['destacado']) ? 1 : 0;
+        $item['updated_at'] = date('Y-m-d H:i:s');
+        $found = true;
+        break;
+    }
+    unset($item);
+    if (!$found) throw new RuntimeException('Opinión no encontrada.');
+    return mc_opinions_write_state($state);
 }
