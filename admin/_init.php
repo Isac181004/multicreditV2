@@ -200,7 +200,7 @@ function mc_admin_header($title) {
 }
 
 function mc_admin_footer() { ?>
-      <footer class="admin-footer">CEPRODEMIC MULTICREDIT · CMS por módulos · opiniones MySQL</footer></main></div>
+      <footer class="admin-footer">CEPRODEMIC MULTICREDIT · CMS por módulos · opiniones JSON</footer></main></div>
       <script>document.querySelectorAll('.sidebar a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop())a.classList.add('active')});</script>
     </body></html><?php }
 ?>

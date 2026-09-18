@@ -317,6 +317,33 @@ body.credit-page main :is(.text-green-50, .text-green-100) {
     color: #F3F4F6 !important;
 }
 
+/* Texto claro y legible únicamente cuando el fondo del módulo es azul oscuro. */
+body[data-product] main :is(.mc-tone-deep, .mc-tone-night) :is(h1, h2, h3, h4, strong, b, a),
+body.credit-page main :is(.mc-tone-deep, .mc-tone-night) :is(h1, h2, h3, h4, strong, b, a) {
+    color: #FFFFFF !important;
+}
+
+body[data-product] main :is(.mc-tone-deep, .mc-tone-night) :is(p, li, span, .text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900),
+body.credit-page main :is(.mc-tone-deep, .mc-tone-night) :is(p, li, span, .text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900) {
+    color: #E5E7EB !important;
+}
+
+body[data-product] main :is(.mc-tone-deep, .mc-tone-night) .mc-ultra-card i,
+body.credit-page main :is(.mc-tone-deep, .mc-tone-night) .mc-ultra-card i {
+    color: #BFDBFE !important;
+}
+
+/* Estas dos páginas colocan tarjetas blancas dentro de secciones oscuras. */
+body[data-product="bancos"] main :is(.mc-tone-deep, .mc-tone-night) .mc-ultra-card :is(h1, h2, h3, h4, strong, b, a),
+body[data-product="solidarios"] main :is(.mc-tone-deep, .mc-tone-night) .mc-ultra-card :is(h1, h2, h3, h4, strong, b, a) {
+    color: #111827 !important;
+}
+
+body[data-product="bancos"] main :is(.mc-tone-deep, .mc-tone-night) .mc-ultra-card :is(p, li, span),
+body[data-product="solidarios"] main :is(.mc-tone-deep, .mc-tone-night) .mc-ultra-card :is(p, li, span) {
+    color: #374151 !important;
+}
+
 @media (max-width: 640px) {
     #main-header .mc-logo { min-width: 138px; }
     #main-header .mc-logo img { width: 138px; height: 54px; max-width: 138px; }
