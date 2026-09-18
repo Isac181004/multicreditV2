@@ -41,7 +41,7 @@
 
         if (creditPages.has(file)) return 'creditos.php';
         if (servicePages.has(file)) return 'servicios.php';
-        if (file === 'noticias.php') return 'index.php';
+        if (file === 'noticias.php' || file === 'noticia.php') return 'noticias.php';
         if (file === 'informacion-legal.php') return 'contacto.php';
         return file;
     }

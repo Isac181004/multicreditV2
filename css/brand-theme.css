@@ -295,6 +295,28 @@ footer#pie-contacto .bg-gray-200 .bg-white { color: var(--brand-black) !importan
     box-shadow: 0 14px 32px rgba(0, 0, 0, .34) !important;
 }
 
+/* Contraste de texto unificado en el catálogo y en cada tipo de crédito. */
+body[data-product] main :is(.text-gray-400, .text-gray-500, .text-gray-600),
+body.credit-page main :is(.text-gray-400, .text-gray-500, .text-gray-600) {
+    color: #374151 !important;
+}
+
+body[data-product] main :is(.text-gray-700, .text-gray-800, .text-gray-900),
+body.credit-page main :is(.text-gray-700, .text-gray-800, .text-gray-900) {
+    color: #111827 !important;
+}
+
+body[data-product] main > section:first-of-type :is(h1, h2, h3, p, a, span),
+body[data-product] main > section:last-of-type :is(h1, h2, h3, p, a, span) {
+    color: #FFFFFF !important;
+}
+
+body[data-product] main > section:first-of-type :is(.text-green-50, .text-green-100),
+body[data-product] main > section:last-of-type :is(.text-green-50, .text-green-100),
+body.credit-page main :is(.text-green-50, .text-green-100) {
+    color: #F3F4F6 !important;
+}
+
 @media (max-width: 640px) {
     #main-header .mc-logo { min-width: 138px; }
     #main-header .mc-logo img { width: 138px; height: 54px; max-width: 138px; }
