@@ -363,7 +363,46 @@ footer .mc-reveal-right{
 </style>
 
 
-    <link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    
+<link rel="stylesheet" href="css/mc-brand-2026.css?v=20260915">
+    <style id="mc-crediempeno-contraste-cards">
+    /* CrediEmpeño: conserva el diseño compartido y fuerza contraste legible
+       en la sección de funcionamiento/uso, igual que las demás fichas de crédito. */
+    body[data-product="empeno"] main > section:nth-of-type(3){
+        background:
+            radial-gradient(circle at 85% 18%, rgba(22,58,95,.24), transparent 30%),
+            linear-gradient(135deg,#071525 0%,#0B1F3A 100%) !important;
+        color:#FFFFFF !important;
+    }
+    body[data-product="empeno"] main > section:nth-of-type(3) .grid > div{
+        background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.055)) !important;
+        border-color:rgba(255,255,255,.14) !important;
+        box-shadow:0 18px 55px rgba(0,0,0,.20) !important;
+        color:#FFFFFF !important;
+    }
+    body[data-product="empeno"] main > section:nth-of-type(3) h2,
+    body[data-product="empeno"] main > section:nth-of-type(3) h3{
+        color:#FFFFFF !important;
+        text-shadow:none !important;
+        opacity:1 !important;
+    }
+    body[data-product="empeno"] main > section:nth-of-type(3) span[class*="uppercase"]{
+        color:#D1D5DB !important;
+        opacity:1 !important;
+    }
+    body[data-product="empeno"] main > section:nth-of-type(3) ul,
+    body[data-product="empeno"] main > section:nth-of-type(3) li,
+    body[data-product="empeno"] main > section:nth-of-type(3) li span{
+        color:#E5E7EB !important;
+        opacity:1 !important;
+        visibility:visible !important;
+        text-shadow:none !important;
+    }
+    body[data-product="empeno"] main > section:nth-of-type(3) li i{
+        color:#BFDBFE !important;
+        opacity:1 !important;
+    }
+    </style>
     <link rel="icon" type="image/png" href="uploads/logo/20260904_232938_5c89c80d.png">
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden mc-ultra-page" data-product="empeno">
