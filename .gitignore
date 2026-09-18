@@ -3,3 +3,6 @@ admin/config/recovery_state.json
 admin/config/*.tmp
 cms/config/database.php
 uploads/.tmp/
+cms/data/*.bak
+cms/data/*.lock
+cms/data/*.tmp.*

@@ -279,8 +279,11 @@ table tbody tr:hover { background-color: #E5E7EB; }
 }
 
 footer#pie-contacto .bg-brand-green { background: var(--brand-navy) !important; }
-footer#pie-contacto .bg-gray-100 { background: var(--brand-gray-light) !important; }
-footer#pie-contacto .bg-gray-200 { background: #E5E7EB !important; }
+footer#pie-contacto .bg-gray-100 { color: var(--brand-white); background: var(--brand-navy) !important; }
+footer#pie-contacto .bg-gray-100 > div > div:first-child :is(p,a) { color: #E5E7EB !important; }
+footer#pie-contacto .bg-gray-200 { color: #E5E7EB !important; background: var(--brand-navy-dark) !important; }
+footer#pie-contacto .bg-gray-200 :is(a,span) { color: #E5E7EB; }
+footer#pie-contacto .bg-gray-200 .bg-white { color: var(--brand-black) !important; }
 
 .wa-float {
     background: var(--brand-navy-mid) !important;

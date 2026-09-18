@@ -1243,6 +1243,10 @@
                 <?= mc_h($mcSiteHeader['nav_home_label']) ?>
             </a>
 
+            <a href="<?= mc_h($mcSiteHeader['nav_news_url'] ?? 'noticias.php') ?>">
+                <?= mc_h($mcSiteHeader['nav_news_label'] ?? 'Noticias') ?>
+            </a>
+
             <div class="mc-credit-menu">
 
                 <a
@@ -1521,6 +1525,14 @@
             <i class="fas fa-house"></i>
 
             <?= mc_h($mcSiteHeader['nav_home_label']) ?>
+
+        </a>
+
+        <a href="<?= mc_h($mcSiteHeader['nav_news_url'] ?? 'noticias.php') ?>">
+
+            <i class="fas fa-newspaper"></i>
+
+            <?= mc_h($mcSiteHeader['nav_news_label'] ?? 'Noticias') ?>
 
         </a>
 

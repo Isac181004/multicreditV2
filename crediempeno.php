@@ -457,10 +457,10 @@ footer .mc-reveal-right{
                 <div class="tilt-layer">
                 <h2 class="text-2xl md:text-3xl font-black mt-2">Principales beneficios</h2>
                 <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
-                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Financiamiento respaldado por un bien en garantía.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Financiamiento respaldado por equipos de cómputo, aparatos telefónicos, electrodomésticos o joyas de oro.</span></li>
                     <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazo referencial de hasta 3 meses.</span></li>
                     <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
-                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial entre 5 % y 6 %.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial de 5 %.</span></li>
                     <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Atención clara y acompañamiento durante el proceso.</span></li>
                 </ul>
                 </div>
@@ -478,9 +478,9 @@ footer .mc-reveal-right{
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
                 <div class="rounded-2xl border border-gray-200 p-5 tilt-3d mc-reveal"><div class="tilt-layer"><i class="fas fa-money-bill-wave text-brand-green text-2xl"></i><h3 class="font-black mt-4">Monto</h3><p class="text-sm text-gray-500 mt-1">Según evaluación y condiciones vigentes.</p></div></div>
-                <div class="rounded-2xl border border-gray-200 p-5 tilt-3d mc-reveal"><div class="tilt-layer"><i class="fas fa-calendar-alt text-brand-green text-2xl"></i><h3 class="font-black mt-4">Plazo</h3><p class="text-sm text-gray-500 mt-1">Se determina según el producto y evaluación.</p></div></div>
-                <div class="rounded-2xl border border-gray-200 p-5 tilt-3d mc-reveal"><div class="tilt-layer"><i class="fas fa-percent text-brand-green text-2xl"></i><h3 class="font-black mt-4">Tasa y costos</h3><p class="text-sm text-gray-500 mt-1">Consulta las condiciones vigentes antes de contratar.</p></div></div>
-                <div class="rounded-2xl border border-gray-200 p-5 tilt-3d mc-reveal"><div class="tilt-layer"><i class="fas fa-handshake text-brand-green text-2xl"></i><h3 class="font-black mt-4">Garantías</h3><p class="text-sm text-gray-500 mt-1">Dependen del producto y del resultado de la evaluación.</p></div></div>
+                <div class="rounded-2xl border border-gray-200 p-5 tilt-3d mc-reveal"><div class="tilt-layer"><i class="fas fa-calendar-alt text-brand-green text-2xl"></i><h3 class="font-black mt-4">Plazo</h3><p class="text-sm text-gray-500 mt-1">Máximo 3 meses.</p></div></div>
+                <div class="rounded-2xl border border-gray-200 p-5 tilt-3d mc-reveal"><div class="tilt-layer"><i class="fas fa-percent text-brand-green text-2xl"></i><h3 class="font-black mt-4">Tasa y costos</h3><p class="text-sm text-gray-500 mt-1">Tasa mensual referencial de 5 %.</p></div></div>
+                <div class="rounded-2xl border border-gray-200 p-5 tilt-3d mc-reveal"><div class="tilt-layer"><i class="fas fa-handshake text-brand-green text-2xl"></i><h3 class="font-black mt-4">Garantías</h3><p class="text-sm text-gray-500 mt-1">Equipos de cómputo, teléfonos, electrodomésticos y joyas de oro en óptimas condiciones.</p></div></div>
             </div>
         </div>
     </section>
@@ -497,8 +497,8 @@ footer .mc-reveal-right{
                 <div class="grid md:grid-cols-2 gap-5 text-gray-600">
                     <div class="flex gap-3"><i class="fas fa-id-card text-brand-orange mt-1"></i><span>Documento de identidad vigente.</span></div>
                     <div class="flex gap-3"><i class="fas fa-chart-line text-brand-orange mt-1"></i><span>Información que permita conocer tu capacidad de pago.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-file-lines text-brand-orange mt-1"></i><span>Documentación relacionada con la finalidad del crédito, cuando corresponda.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-folder-open text-brand-orange mt-1"></i><span>Documentación adicional según el producto y evaluación.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-file-lines text-brand-orange mt-1"></i><span>Presentar el bien que se desea empeñar para su revisión y valorización.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-folder-open text-brand-orange mt-1"></i><span>Los bienes a empeñar deben encontrarse en óptimas condiciones.</span></div>
                 </div>
                 <div class="mt-7 rounded-xl bg-orange-50 border border-orange-100 p-4 text-sm text-gray-600">
                     <i class="fas fa-circle-info text-brand-orange mr-1"></i>

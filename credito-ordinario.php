@@ -412,7 +412,7 @@ main .aos-animate{
                 <h2 class="text-2xl md:text-3xl font-black mt-2">Principales beneficios</h2>
                 <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
                     <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
-<li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Plazos flexibles según tu capacidad de pago.</span></li>
+<li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Plazo desde 3 meses hasta un máximo de 10 años.</span></li>
 <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Tasa mensual referencial entre 3.6 % y 4 %.</span></li>
 <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Evaluación personalizada.</span></li>
 <li class="flex gap-3"><i class="fas fa-check-circle text-brand-green mt-1"></i><span>Atención cercana y asesoramiento durante todo el proceso.</span></li>
@@ -435,12 +435,12 @@ main .aos-animate{
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-money-bill-wave text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Monto</h3>
-                    <p class="text-sm text-gray-500 mt-1">Según evaluación y condiciones vigentes.</p>
+                    <p class="text-sm text-gray-500 mt-1">Desde S/ 500; monto máximo según evaluación y garantías.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-calendar-alt text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Plazo</h3>
-                    <p class="text-sm text-gray-500 mt-1">Se determina según el producto y evaluación.</p>
+                    <p class="text-sm text-gray-500 mt-1">Mínimo 3 meses y máximo 120 meses (10 años).</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-percent text-brand-green text-2xl"></i>

@@ -353,12 +353,12 @@ main .mc-reveal.mc-visible{
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-money-bill-wave text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Monto</h3>
-                    <p class="text-sm text-gray-500 mt-1">Según evaluación y condiciones vigentes.</p>
+                    <p class="text-sm text-gray-500 mt-1">Desde S/ 200 hasta S/ 5,000.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-calendar-alt text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Plazo</h3>
-                    <p class="text-sm text-gray-500 mt-1">Se determina según el producto y evaluación.</p>
+                    <p class="text-sm text-gray-500 mt-1">Plazo único de 30 días con pagos diarios.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-percent text-brand-green text-2xl"></i>

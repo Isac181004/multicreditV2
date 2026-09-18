@@ -57,6 +57,8 @@ function mc_default_site() {
         // Encabezado editable.
         'nav_home_label' => 'Inicio',
         'nav_home_url' => 'index.php',
+        'nav_news_label' => 'Noticias',
+        'nav_news_url' => 'noticias.php',
         'nav_credits_label' => 'Créditos',
         'nav_credits_url' => 'creditos.php',
         'nav_services_label' => 'Servicios',
@@ -103,12 +105,11 @@ function mc_default_site() {
         'footer_interest_title' => 'Sitios de interés',
         'interest_links' => [
             ['label'=>'SBS','url'=>'https://www.sbs.gob.pe/'],
-            ['label'=>'FENACREP','url'=>'https://www.fenacrep.org/es'],
             ['label'=>'SUNARP','url'=>'https://www.sunarp.gob.pe/'],
             ['label'=>'SUNAT','url'=>'https://www.sunat.gob.pe/'],
             ['label'=>'El Peruano','url'=>'https://elperuano.pe/'],
             ['label'=>'RENIEC','url'=>'https://www.reniec.gob.pe/'],
-            ['label'=>'Experian','url'=>'https://www.experian.com.pe/'],
+            ['label'=>'Equifax','url'=>'https://www.equifax.com.pe/'],
         ],
     ];
 }
@@ -166,9 +167,30 @@ function mc_write_json($file, $data) {
     if (!is_dir(dirname($file))) @mkdir(dirname($file), 0775, true);
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     if ($json === false) return false;
-    $tmp = $file . '.tmp';
-    if (@file_put_contents($tmp, $json . PHP_EOL, LOCK_EX) === false) return false;
-    return @rename($tmp, $file);
+    $lock = @fopen($file . '.lock', 'c');
+    if (!$lock || !@flock($lock, LOCK_EX)) {
+        if ($lock) @fclose($lock);
+        return false;
+    }
+
+    $current = is_file($file) ? @file_get_contents($file) : false;
+    if ($current !== false && trim($current) !== '') {
+        json_decode($current, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            @flock($lock, LOCK_UN);
+            @fclose($lock);
+            return false; // Nunca sobrescribir silenciosamente un JSON dañado.
+        }
+        @file_put_contents($file . '.bak', $current, LOCK_EX);
+    }
+
+    $tmp = $file . '.tmp.' . bin2hex(random_bytes(4));
+    $written = @file_put_contents($tmp, $json . PHP_EOL, LOCK_EX) !== false;
+    $saved = $written && (@rename($tmp, $file) || (@copy($tmp, $file) && @unlink($tmp)));
+    if (!$saved && is_file($tmp)) @unlink($tmp);
+    @flock($lock, LOCK_UN);
+    @fclose($lock);
+    return $saved;
 }
 
 function mc_site() {
@@ -179,6 +201,22 @@ function mc_site() {
 
 function mc_news($publishedOnly = false) {
     $items = mc_read_json(MC_DATA_DIR . '/news.json', mc_default_news());
+    foreach ($items as &$item) {
+        if (!isset($item['images']) || !is_array($item['images'])) $item['images'] = [];
+        if (!$item['images'] && !empty($item['image'])) {
+            $item['images'][] = ['id'=>'legacy-'.substr(sha1((string)$item['image']),0,10),'path'=>$item['image'],'order'=>0];
+        }
+        foreach ($item['images'] as $i=>&$image) {
+            if (is_string($image)) $image=['id'=>'image-'.substr(sha1($image.$i),0,10),'path'=>$image,'order'=>$i];
+            $image['id']=(string)($image['id']??'image-'.substr(sha1(($image['path']??'').$i),0,10));
+            $image['path']=mc_safe_local_path((string)($image['path']??''));
+            $image['order']=(int)($image['order']??$i);
+        }
+        unset($image);
+        usort($item['images'],function($a,$b){return ($a['order']<=>$b['order'])?:strcmp($a['id'],$b['id']);});
+        $item['image']=(string)($item['images'][0]['path']??$item['image']??'');
+    }
+    unset($item);
     if ($publishedOnly) {
         $items = array_values(array_filter($items, function($n){ return !empty($n['published']); }));
     }
@@ -186,6 +224,13 @@ function mc_news($publishedOnly = false) {
         return strcmp((string)($b['date'] ?? ''), (string)($a['date'] ?? ''));
     });
     return $items;
+}
+
+function mc_news_get($id, $publishedOnly = false) {
+    foreach (mc_news($publishedOnly) as $item) {
+        if ((string)($item['id']??'') === (string)$id) return $item;
+    }
+    return null;
 }
 
 function mc_h($value) {

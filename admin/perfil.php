@@ -10,22 +10,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $current = (string)($_POST['current_password'] ?? '');
     $newUser = trim((string)($_POST['username'] ?? ''));
+    $displayName = trim((string)($_POST['display_name'] ?? ''));
     $newPass = (string)($_POST['new_password'] ?? '');
     $newPass2 = (string)($_POST['new_password2'] ?? '');
+    $duplicate = false;
+    foreach (mc_admin_users() as $candidate) {
+        if ((string)($candidate['id'] ?? '') !== (string)($c['id'] ?? '') && strcasecmp((string)($candidate['username'] ?? ''), $newUser) === 0) {
+            $duplicate = true;
+            break;
+        }
+    }
 
     if (!password_verify($current, (string)$c['passwordHash'])) $error = 'La contraseña actual no es correcta.';
     elseif (strlen($newUser) < 3) $error = 'El usuario debe tener al menos 3 caracteres.';
+    elseif ($duplicate) $error = 'Ese nombre de usuario ya está registrado.';
     elseif ($newPass !== '' && strlen($newPass) < 8) $error = 'La nueva contraseña debe tener al menos 8 caracteres.';
     elseif ($newPass !== $newPass2) $error = 'Las nuevas contraseñas no coinciden.';
     else {
         $hash = $newPass !== '' ? password_hash($newPass, PASSWORD_BCRYPT) : $c['passwordHash'];
+        $users=mc_admin_users();
+        foreach($users as &$user)if((string)($user['id']??'')===(string)($c['id']??'')){$user['display_name']=$displayName?:$newUser;break;}unset($user);
+        mc_write_admin_users($users);
         if (mc_write_admin_credentials($newUser, $hash)) {
             $_SESSION['mc_admin_user'] = $newUser;
             mc_flash('success', 'Usuario y contraseña actualizados correctamente.');
             header('Location: perfil.php');
             exit;
         }
-        $error = 'No se pudo escribir admin/config/admin_credentials.js.';
+        $error = 'No se pudo actualizar cms/data/admin_users.json. Revisa sus permisos.';
     }
 }
 
@@ -41,7 +53,7 @@ mc_admin_header('Usuario y contraseña');
         <input type="hidden" name="csrf" value="<?=mc_h(mc_csrf_token())?>">
         <div class="form-grid">
             <div class="field"><label>Usuario</label><input name="username" required minlength="3" value="<?=mc_h($c['username'])?>"></div>
-            <div></div>
+            <div class="field"><label>Nombre para mostrar</label><input name="display_name" value="<?=mc_h($c['display_name']??'')?>"></div>
             <div class="field"><label>Contraseña actual</label><input type="password" name="current_password" required autocomplete="current-password"></div>
             <div></div>
             <div class="field"><label>Nueva contraseña (opcional)</label><input type="password" name="new_password" minlength="8" autocomplete="new-password"></div>
