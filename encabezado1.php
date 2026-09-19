@@ -651,6 +651,10 @@
                 Inicio
             </a>
 
+            <a href="noticias.php">
+                Noticias
+            </a>
+
             <a href="creditos.php">
                 Créditos
             </a>
@@ -714,6 +718,14 @@
             <i class="fas fa-house"></i>
 
             Inicio
+
+        </a>
+
+        <a href="noticias.php">
+
+            <i class="fas fa-newspaper"></i>
+
+            Noticias
 
         </a>
 

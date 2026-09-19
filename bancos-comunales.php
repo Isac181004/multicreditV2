@@ -45,7 +45,7 @@
   <div class="lg:col-span-2">
    <span class="text-brand-orange text-xs font-black uppercase tracking-widest">Una metodología con acompañamiento</span>
    <h2 class="text-3xl md:text-4xl font-black mt-2">Más que financiamiento: organización y desarrollo</h2>
-   <p class="text-gray-600 text-lg leading-relaxed mt-5">El modelo de Bancos Comunales busca acercar servicios financieros a personas organizadas en grupos, acompañando el proceso con reuniones, orientación y capacitación según la metodología y condiciones vigentes de Multicredit.</p>
+   <p class="text-gray-600 text-lg leading-relaxed mt-5">Los Bancos Comunales están dirigidos exclusivamente a mujeres organizadas en grupos de mínimo 10 integrantes de zonas semiurbanas o rurales.</p>
    <p class="text-gray-500 leading-relaxed mt-4">La experiencia histórica de CEPRODEMIC – Multicredit incluye el trabajo con Bancos Comunales y programas de capacitación orientados al fortalecimiento de pequeños negocios familiares.</p>
   </div>
   <div class="rounded-3xl bg-gray-50 border border-gray-200 p-7 shadow-sm">
@@ -71,10 +71,10 @@
  <div class="max-w-7xl mx-auto">
   <div class="text-center max-w-3xl mx-auto"><span class="text-brand-green text-xs font-black uppercase tracking-widest">Cómo funciona</span><h2 class="text-3xl md:text-4xl font-black mt-2">Un proceso basado en el trabajo colectivo</h2></div>
   <div class="grid md:grid-cols-4 gap-5 mt-10">
-   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">01</span><h3 class="font-black text-xl mt-3">Organización</h3><p class="text-sm text-gray-600 mt-2">Se conforma el grupo de acuerdo con la metodología vigente.</p></div>
-   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">02</span><h3 class="font-black text-xl mt-3">Capacitación</h3><p class="text-sm text-gray-600 mt-2">Se brinda orientación sobre organización, compromiso y manejo del crédito.</p></div>
-   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">03</span><h3 class="font-black text-xl mt-3">Financiamiento</h3><p class="text-sm text-gray-600 mt-2">Las solicitudes son evaluadas según las condiciones del producto.</p></div>
-   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">04</span><h3 class="font-black text-xl mt-3">Acompañamiento</h3><p class="text-sm text-gray-600 mt-2">El grupo continúa con reuniones y seguimiento según la metodología.</p></div>
+   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">01</span><h3 class="font-black text-xl mt-3">Formar el grupo</h3><p class="text-sm text-gray-600 mt-2">Reunir como mínimo 10 mujeres de una zona semiurbana o rural.</p></div>
+   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">02</span><h3 class="font-black text-xl mt-3">Evaluación individual</h3><p class="text-sm text-gray-600 mt-2">Cada integrante es evaluada para aprobar su monto y todas deben estar bien en el sistema.</p></div>
+   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">03</span><h3 class="font-black text-xl mt-3">Definir la actividad</h3><p class="text-sm text-gray-600 mt-2">El grupo debe tener claro en qué actividades utilizará el dinero recibido.</p></div>
+   <div class="bg-white rounded-3xl border border-gray-100 p-7 shadow-sm"><span class="text-brand-orange font-black text-sm">04</span><h3 class="font-black text-xl mt-3">Garantía mancomunada</h3><p class="text-sm text-gray-600 mt-2">Todas aceptan responder solidariamente por las obligaciones del grupo.</p></div>
   </div>
  </div>
 </section>

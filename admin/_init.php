@@ -3,9 +3,25 @@ if (session_status() !== PHP_SESSION_ACTIVE && !headers_sent()) session_start();
 require_once dirname(__DIR__) . '/cms/bootstrap.php';
 
 define('MC_ADMIN_CREDENTIAL_FILE', __DIR__ . '/config/admin_credentials.js');
+define('MC_ADMIN_USERS_FILE', MC_DATA_DIR . '/admin_users.json');
+
+function mc_admin_users() {
+    $users = mc_read_json(MC_ADMIN_USERS_FILE, []);
+    return is_array($users) ? array_values(array_filter($users, 'is_array')) : [];
+}
+
+function mc_write_admin_users($users) {
+    return mc_write_json(MC_ADMIN_USERS_FILE, array_values($users));
+}
 
 function mc_admin_credentials() {
-    $defaults = ['username'=>'','passwordHash'=>''];
+    $defaults = ['id'=>'','username'=>'','display_name'=>'','passwordHash'=>'','active'=>true];
+    $users = mc_admin_users();
+    $wanted = (string)($_SESSION['mc_admin_user_id'] ?? '');
+    foreach ($users as $user) {
+        if ($wanted !== '' && (string)($user['id']??'') === $wanted) return array_merge($defaults,$user);
+    }
+    foreach ($users as $user) if (!empty($user['active'])) return array_merge($defaults,$user);
     $raw = @file_get_contents(MC_ADMIN_CREDENTIAL_FILE);
     if ($raw === false) return $defaults;
     if (!preg_match('/=\s*(\{.*?\})\s*;/s', $raw, $m)) return $defaults;
@@ -14,17 +30,36 @@ function mc_admin_credentials() {
 }
 
 function mc_write_admin_credentials($username, $passwordHash) {
-    $payload = [
-        'username' => trim((string)$username),
-        'passwordHash' => (string)$passwordHash,
-    ];
-    $js = "window.MULTICREDIT_ADMIN_CREDENTIALS = " . json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . ";\n";
-    return @file_put_contents(MC_ADMIN_CREDENTIAL_FILE, $js, LOCK_EX) !== false;
+    $users=mc_admin_users();
+    $id=(string)($_SESSION['mc_admin_user_id']??'');
+    $updated=false;
+    foreach($users as &$user){
+        if(($id!==''&&(string)($user['id']??'')===$id)||($id===''&&!$updated)){
+            $user['username']=trim((string)$username);
+            $user['display_name']=(string)($user['display_name']??$user['username']);
+            $user['passwordHash']=(string)$passwordHash;
+            $user['active']=true;
+            $user['updated_at']=date('Y-m-d H:i:s');
+            $updated=true;
+            if($id==='')break;
+        }
+    }
+    unset($user);
+    if(!$updated)$users[]=['id'=>'admin-'.bin2hex(random_bytes(5)),'username'=>trim((string)$username),'display_name'=>'Administrador','passwordHash'=>(string)$passwordHash,'active'=>true,'created_at'=>date('Y-m-d H:i:s'),'updated_at'=>date('Y-m-d H:i:s')];
+    return mc_write_admin_users($users);
+}
+
+function mc_admin_authenticate($username,$password) {
+    foreach(mc_admin_users() as $user){
+        if(empty($user['active']))continue;
+        if(hash_equals((string)($user['username']??''),trim((string)$username))&&password_verify((string)$password,(string)($user['passwordHash']??'')))return $user;
+    }
+    return null;
 }
 
 function mc_admin_is_configured() {
-    $c = mc_admin_credentials();
-    return trim((string)$c['username']) !== '' && trim((string)$c['passwordHash']) !== '';
+    foreach(mc_admin_users() as $user)if(!empty($user['active'])&&trim((string)($user['username']??''))!==''&&trim((string)($user['passwordHash']??''))!=='')return true;
+    return false;
 }
 
 function mc_admin_logged_in() {
@@ -94,6 +129,48 @@ function mc_upload_image($field, $subdir = 'media') {
     return ['ok'=>true,'path'=>'uploads/' . $subdir . '/' . $name];
 }
 
+function mc_store_news_image($file) {
+    if (($file['error']??UPLOAD_ERR_NO_FILE)===UPLOAD_ERR_NO_FILE) return ['ok'=>true,'path'=>''];
+    if (($file['error']??UPLOAD_ERR_OK)!==UPLOAD_ERR_OK) return ['ok'=>false,'error'=>'Una de las imágenes no pudo cargarse.'];
+    if (($file['size']??0)>12*1024*1024) return ['ok'=>false,'error'=>'Cada imagen debe pesar como máximo 12 MB.'];
+    $info=@getimagesize($file['tmp_name']??'');
+    $mime=(string)($info['mime']??'');
+    if(!$info||!in_array($mime,['image/jpeg','image/png','image/webp'],true))return ['ok'=>false,'error'=>'Usa imágenes JPG, PNG o WEBP.'];
+    $dir=MC_ROOT.'/uploads/news';
+    if(!is_dir($dir)&&!@mkdir($dir,0775,true))return ['ok'=>false,'error'=>'No se pudo crear uploads/news.'];
+    $base=date('Ymd_His').'_'.bin2hex(random_bytes(4));
+    $canOptimize=function_exists('imagecreatetruecolor')&&function_exists('imagewebp');
+    if($canOptimize){
+        $source=$mime==='image/jpeg'?@imagecreatefromjpeg($file['tmp_name']):($mime==='image/png'?@imagecreatefrompng($file['tmp_name']):@imagecreatefromwebp($file['tmp_name']));
+        if($source){
+            $width=imagesx($source);$height=imagesy($source);$max=1800;$scale=min(1,$max/max($width,$height));
+            $newW=max(1,(int)round($width*$scale));$newH=max(1,(int)round($height*$scale));
+            $canvas=imagecreatetruecolor($newW,$newH);imagealphablending($canvas,false);imagesavealpha($canvas,true);
+            $transparent=imagecolorallocatealpha($canvas,0,0,0,127);imagefill($canvas,0,0,$transparent);
+            imagecopyresampled($canvas,$source,0,0,0,0,$newW,$newH,$width,$height);
+            $dest=$dir.'/'.$base.'.webp';$saved=@imagewebp($canvas,$dest,82);imagedestroy($canvas);imagedestroy($source);
+            if($saved)return ['ok'=>true,'path'=>'uploads/news/'.$base.'.webp'];
+        }
+    }
+    $ext=['image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp'][$mime];
+    $dest=$dir.'/'.$base.'.'.$ext;
+    if(!@move_uploaded_file($file['tmp_name'],$dest))return ['ok'=>false,'error'=>'No se pudo guardar una de las imágenes.'];
+    return ['ok'=>true,'path'=>'uploads/news/'.$base.'.'.$ext];
+}
+
+function mc_upload_news_images($field='photos') {
+    if(empty($_FILES[$field])||!is_array($_FILES[$field]))return ['ok'=>true,'paths'=>[]];
+    $source=$_FILES[$field];$paths=[];$count=is_array($source['name']??null)?count($source['name']):0;
+    if($count>50)return ['ok'=>false,'error'=>'Puedes subir hasta 50 imágenes por operación.','paths'=>[]];
+    for($i=0;$i<$count;$i++){
+        $file=['name'=>$source['name'][$i]??'','type'=>$source['type'][$i]??'','tmp_name'=>$source['tmp_name'][$i]??'','error'=>$source['error'][$i]??UPLOAD_ERR_NO_FILE,'size'=>$source['size'][$i]??0];
+        $result=mc_store_news_image($file);
+        if(!$result['ok'])return ['ok'=>false,'error'=>$result['error'],'paths'=>$paths];
+        if($result['path']!=='')$paths[]=$result['path'];
+    }
+    return ['ok'=>true,'paths'=>$paths];
+}
+
 function mc_admin_header($title) {
     $user = mc_admin_credentials();
     $flash = mc_flash();
@@ -111,6 +188,7 @@ function mc_admin_header($title) {
           <a href="media.php">▧ Biblioteca de imágenes</a>
           <a href="pie.php">▥ Pie de página</a>
           <a href="perfil.php">⚙ Usuario y contraseña</a>
+          <a href="usuarios.php">♟ Usuarios administradores</a>
           <a href="../index.php" target="_blank">↗ Ver sitio público</a>
           <a href="logout.php">⇥ Cerrar sesión</a>
         </nav>
@@ -122,7 +200,7 @@ function mc_admin_header($title) {
 }
 
 function mc_admin_footer() { ?>
-      <footer class="admin-footer">CEPRODEMIC MULTICREDIT · CMS por módulos · opiniones MySQL</footer></main></div>
+      <footer class="admin-footer">CEPRODEMIC MULTICREDIT · CMS por módulos · opiniones JSON</footer></main></div>
       <script>document.querySelectorAll('.sidebar a').forEach(a=>{if(a.getAttribute('href')===location.pathname.split('/').pop())a.classList.add('active')});</script>
     </body></html><?php }
 ?>

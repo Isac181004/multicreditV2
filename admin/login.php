@@ -7,10 +7,11 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
     mc_csrf_check();
     $u=trim((string)($_POST['username']??''));
     $p=(string)($_POST['password']??'');
-    $c=mc_admin_credentials();
-    if (hash_equals((string)$c['username'],$u) && password_verify($p,(string)$c['passwordHash'])) {
+    $c=mc_admin_authenticate($u,$p);
+    if ($c) {
         $_SESSION['mc_admin_auth']=true;
         $_SESSION['mc_admin_user']=$u;
+        $_SESSION['mc_admin_user_id']=(string)($c['id']??'');
         session_regenerate_id(true);
         header('Location: index.php');
         exit;

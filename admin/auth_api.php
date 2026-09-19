@@ -37,7 +37,6 @@ if ($action !== 'login') {
     mc_auth_json(false, 'Acción no válida.', [], 400);
 }
 
-$credentials = mc_admin_credentials();
 $username = trim((string)($_POST['username'] ?? ''));
 $password = (string)($_POST['password'] ?? '');
 
@@ -45,15 +44,15 @@ if ($username === '' || $password === '') {
     mc_auth_json(false, 'Completa usuario y contraseña.', [], 422);
 }
 
-$validUser = hash_equals((string)($credentials['username'] ?? ''), $username);
-$validPass = $validUser && password_verify($password, (string)($credentials['passwordHash'] ?? ''));
+$authenticated = mc_admin_authenticate($username, $password);
 
-if (!$validPass) {
+if (!$authenticated) {
     usleep(250000);
     mc_auth_json(false, 'Usuario o contraseña incorrectos.', [], 401);
 }
 
 $_SESSION['mc_admin_auth'] = true;
 $_SESSION['mc_admin_user'] = $username;
+$_SESSION['mc_admin_user_id'] = (string)($authenticated['id'] ?? '');
 session_regenerate_id(true);
 mc_auth_json(true, 'Acceso correcto.', ['redirect' => 'admin/index.php']);

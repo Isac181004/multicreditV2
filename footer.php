@@ -3,12 +3,11 @@ if (!function_exists('mc_site')) require_once __DIR__ . '/cms/bootstrap.php';
 $mcSiteFooter = mc_site();
 $mcInterestLinks = $mcSiteFooter['interest_links'] ?? [
     ['label'=>'SBS','url'=>'https://www.sbs.gob.pe/'],
-    ['label'=>'FENACREP','url'=>'https://www.fenacrep.org/es'],
     ['label'=>'SUNARP','url'=>'https://www.sunarp.gob.pe/'],
     ['label'=>'SUNAT','url'=>'https://www.sunat.gob.pe/'],
     ['label'=>'El Peruano','url'=>'https://elperuano.pe/'],
     ['label'=>'RENIEC','url'=>'https://www.reniec.gob.pe/'],
-    ['label'=>'Experian','url'=>'https://www.experian.com.pe/'],
+    ['label'=>'Equifax','url'=>'https://www.equifax.com.pe/'],
 ];
 $mcSedes = [];
 for ($i=1; $i<=4; $i++) {
@@ -41,7 +40,7 @@ $mcPrimaryWa = preg_replace('/\D+/', '', (string)($mcSiteFooter['whatsapp1'] ?? 
     <div class="bg-gray-100 py-12 px-4 md:px-12">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.15fr_2fr] gap-10 items-start">
             <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <img src="<?= mc_h($mcSiteFooter['logo']) ?>" alt="<?= mc_h($mcSiteFooter['brand_name'] ?? 'CEPRODEMIC MULTICREDIT') ?>" class="h-16 w-auto object-contain mb-3">
+                <img src="<?= mc_h($mcSiteFooter['logo_dark'] ?? $mcSiteFooter['logo']) ?>" alt="<?= mc_h($mcSiteFooter['brand_name'] ?? 'CEPRODEMIC MULTICREDIT') ?>" class="h-16 w-auto object-contain mb-3">
                 <p class="font-bold text-gray-800"><?= mc_h($mcSiteFooter['footer_tagline'] ?? '') ?></p>
                 <p class="text-sm text-gray-500 mt-2"><?= mc_h($mcSiteFooter['footer_since'] ?? '') ?></p>
                 <?php if (!empty($mcSiteFooter['email'])): ?>
@@ -65,7 +64,7 @@ $mcPrimaryWa = preg_replace('/\D+/', '', (string)($mcSiteFooter['whatsapp1'] ?? 
 
     <div class="bg-gray-200 py-6 px-4 md:px-20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-700">
         <div class="flex items-center gap-3">
-            <img src="<?= mc_h($mcSiteFooter['logo']) ?>" alt="Logo <?= mc_h($mcSiteFooter['brand_name'] ?? 'CEPRODEMIC MULTICREDIT') ?>" class="h-8 w-auto object-contain">
+            <img src="<?= mc_h($mcSiteFooter['logo_dark'] ?? $mcSiteFooter['logo']) ?>" alt="Logo <?= mc_h($mcSiteFooter['brand_name'] ?? 'CEPRODEMIC MULTICREDIT') ?>" class="h-8 w-auto object-contain">
             <span class="font-semibold">© <?= mc_h($mcSiteFooter['brand_name'] ?? 'CEPRODEMIC MULTICREDIT') ?> <?= mc_h($mcSiteFooter['copyright_year'] ?? date('Y')) ?></span>
         </div>
 

@@ -5,7 +5,7 @@ $site = mc_site();
 $error = '';
 
 $fields = [
-    'brand_name','nav_home_label','nav_home_url','nav_credits_label','nav_credits_url','nav_services_label','nav_services_url',
+    'brand_name','nav_home_label','nav_home_url','nav_news_label','nav_news_url','nav_credits_label','nav_credits_url','nav_services_label','nav_services_url',
     'nav_about_label','nav_about_url','nav_contact_label','nav_contact_url','header_cta_label','header_cta_url',
     'credit_mega_title','credit_mega_subtitle','credit_mega_all_label','credit_mega_all_url',
     'credit_micro_title','credit_consumo_title',
@@ -50,7 +50,7 @@ mc_admin_header('Encabezado');
     <div class="field"><label>Logo</label><input type="file" name="logo" accept="image/*"><?php if(!empty($site['logo'])):?><img class="preview-img" style="display:block;margin-top:8px;max-height:100px" src="../<?=mc_h($site['logo'])?>"><?php endif;?></div>
     <?php
     $navs = [
-      ['home','Inicio'],['credits','Créditos'],['services','Servicios'],['about','Nosotros'],['contact','Contacto']
+      ['home','Inicio'],['news','Noticias'],['credits','Créditos'],['services','Servicios'],['about','Nosotros'],['contact','Contacto']
     ];
     foreach($navs as [$key,$fallback]): ?>
       <div class="field"><label>Texto <?=mc_h($fallback)?></label><input name="nav_<?=$key?>_label" value="<?=mc_h($site['nav_'.$key.'_label'] ?? $fallback)?>"></div>

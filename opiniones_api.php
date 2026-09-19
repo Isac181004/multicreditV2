@@ -24,7 +24,7 @@ function mc_opinion_public_csrf() {
 try {
     mc_opinions_install();
 } catch (Throwable $e) {
-    mc_opinion_json(false, 'El módulo de opiniones aún no puede conectarse a MySQL.', [
+    mc_opinion_json(false, 'No se pudo acceder al archivo JSON de opiniones. Revisa los permisos de cms/data.', [
         'setup_required' => true,
     ], 503);
 }

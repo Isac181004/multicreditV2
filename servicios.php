@@ -1371,6 +1371,96 @@
         }
 
 
+        .svc-card-training {
+
+            grid-column:
+                1 / -1;
+
+            min-height:
+                auto;
+
+            color:
+                #FFFFFF;
+
+            background:
+                linear-gradient(135deg,#050B14,#0B1F3A 58%,#1F4E79);
+
+        }
+
+
+        .svc-card.svc-card-training h3,
+        .svc-card-training p,
+        .svc-card-training a {
+
+            color:
+                #FFFFFF;
+
+        }
+
+
+        .svc-training-list {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,minmax(0,1fr));
+
+            gap:
+                12px;
+
+            margin-top:
+                24px;
+
+        }
+
+
+        .svc-training-item {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                10px;
+
+            padding:
+                14px;
+
+            border:
+                1px solid rgba(255,255,255,.16);
+
+            border-radius:
+                13px;
+
+            color:
+                rgba(255,255,255,.91);
+
+            background:
+                rgba(255,255,255,.07);
+
+            font-size:
+                .86rem;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .svc-training-item i {
+
+            margin-top:
+                3px;
+
+            color:
+                #E5E7EB;
+
+        }
+
+
         .svc-card-image {
 
             position:
@@ -2089,6 +2179,14 @@
             }
 
 
+            .svc-training-list {
+
+                grid-template-columns:
+                    repeat(2,minmax(0,1fr));
+
+            }
+
+
             .svc-featured {
 
                 grid-template-columns:
@@ -2251,6 +2349,14 @@
 
                 grid-column:
                     span 1;
+
+            }
+
+
+            .svc-training-list {
+
+                grid-template-columns:
+                    1fr;
 
             }
 
@@ -2879,6 +2985,39 @@
                         <i class="fas fa-arrow-right"></i>
 
                     </a>
+
+            </article>
+
+
+            <article class="svc-card svc-card-training svc-reveal">
+
+                <span class="svc-card-number">05</span>
+
+                <div class="svc-card-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <h3>Capacitación empresarial</h3>
+
+                <p>
+                    Desarrollamos actividades prácticas para fortalecer la administración,
+                    promoción y atención de los pequeños negocios.
+                </p>
+
+                <div class="svc-training-list" aria-label="Áreas de capacitación empresarial">
+                    <div class="svc-training-item"><i class="fas fa-circle-check"></i><span>Gestión empresarial</span></div>
+                    <div class="svc-training-item"><i class="fas fa-circle-check"></i><span>Contabilidad básica</span></div>
+                    <div class="svc-training-item"><i class="fas fa-circle-check"></i><span>Marketing digital</span></div>
+                    <div class="svc-training-item"><i class="fas fa-circle-check"></i><span>Herramientas informáticas para tu negocio</span></div>
+                    <div class="svc-training-item"><i class="fas fa-circle-check"></i><span>Asesoría legal empresarial</span></div>
+                    <div class="svc-training-item"><i class="fas fa-circle-check"></i><span>Servicio al cliente</span></div>
+                    <div class="svc-training-item"><i class="fas fa-circle-check"></i><span>Salud mental y manejo del estrés</span></div>
+                </div>
+
+                <a href="contacto.php">
+                    Consultar próximas capacitaciones
+                    <i class="fas fa-arrow-right"></i>
+                </a>
 
             </article>
 

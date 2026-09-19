@@ -821,33 +821,33 @@ body {
         <div class="text-center max-w-2xl mx-auto mb-14 reveal">
             <span class="text-brand-orange font-extrabold uppercase tracking-[.2em] text-sm">Simple y transparente</span>
             <h2 class="font-display text-4xl font-black text-gray-900 mt-3">Solicita tu crédito en 4 pasos</h2>
-            <p class="text-gray-500 mt-4">Te acompañamos desde la primera consulta hasta el desembolso.</p>
+            <p class="text-gray-500 mt-4">Te acompañamos desde el primer contacto hasta recibir una respuesta.</p>
         </div>
 
         <div class="grid md:grid-cols-4 gap-6">
             <div class="service-card rounded-2xl p-7 text-center reveal">
                 <div class="w-16 h-16 mx-auto rounded-2xl bg-green-50 text-brand-green flex items-center justify-center text-2xl"><i class="fas fa-comments"></i></div>
                 <span class="block text-brand-orange font-black text-sm mt-5">01</span>
-                <h3 class="font-bold text-xl mt-1">Solicita información</h3>
-                <p class="text-gray-500 text-sm mt-3">Cuéntanos qué necesitas y recibe orientación.</p>
+                <h3 class="font-bold text-xl mt-1">Comunícate con nosotros</h3>
+                <p class="text-gray-500 text-sm mt-3">Contáctanos desde el módulo Contacto mediante correo, WhatsApp o llamada telefónica.</p>
             </div>
             <div class="service-card rounded-2xl p-7 text-center reveal">
                 <div class="w-16 h-16 mx-auto rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center text-2xl"><i class="fas fa-file-signature"></i></div>
                 <span class="block text-brand-orange font-black text-sm mt-5">02</span>
-                <h3 class="font-bold text-xl mt-1">Evaluación</h3>
-                <p class="text-gray-500 text-sm mt-3">Revisamos tu solicitud y documentación.</p>
+                <h3 class="font-bold text-xl mt-1">Presenta documentos</h3>
+                <p class="text-gray-500 text-sm mt-3">Documentos personales, del negocio o proyecto y, cuando corresponda, los necesarios para constituir garantías.</p>
             </div>
             <div class="service-card rounded-2xl p-7 text-center reveal">
                 <div class="w-16 h-16 mx-auto rounded-2xl bg-green-50 text-brand-green flex items-center justify-center text-2xl"><i class="fas fa-check-circle"></i></div>
                 <span class="block text-brand-orange font-black text-sm mt-5">03</span>
-                <h3 class="font-bold text-xl mt-1">Aprobación</h3>
-                <p class="text-gray-500 text-sm mt-3">Conoce el resultado y las condiciones de tu crédito.</p>
+                <h3 class="font-bold text-xl mt-1">Evaluación</h3>
+                <p class="text-gray-500 text-sm mt-3">Verificamos la información, capacidad de pago y situación del cliente en el sistema.</p>
             </div>
             <div class="service-card rounded-2xl p-7 text-center reveal">
                 <div class="w-16 h-16 mx-auto rounded-2xl bg-orange-50 text-brand-orange flex items-center justify-center text-2xl"><i class="fas fa-hand-holding-usd"></i></div>
                 <span class="block text-brand-orange font-black text-sm mt-5">04</span>
-                <h3 class="font-bold text-xl mt-1">Desembolso</h3>
-                <p class="text-gray-500 text-sm mt-3">Recibe los fondos para impulsar tus objetivos.</p>
+                <h3 class="font-bold text-xl mt-1">Respuesta en 24 horas</h3>
+                <p class="text-gray-500 text-sm mt-3">Enviamos la respuesta por el mismo medio de contacto en un plazo máximo de 24 horas.</p>
             </div>
         </div>
     </div>
@@ -897,7 +897,7 @@ body {
                 <div class="p-7">
                     <div class="text-xs font-bold text-brand-orange uppercase"><?= mc_h($noticia['category']) ?> · <?= mc_h(mc_month_label($noticia['date'])) ?></div>
                     <h3 class="font-bold text-xl mt-3"><?= mc_h($noticia['title']) ?></h3>
-                    <a href="noticias.php#noticia-<?= rawurlencode((string)$noticia['id']) ?>" class="inline-block mt-5 text-brand-green font-bold">Leer más →</a>
+                    <a href="noticia.php?id=<?= rawurlencode((string)$noticia['id']) ?>" class="inline-block mt-5 text-brand-green font-bold">Leer más →</a>
                 </div>
             </article>
             <?php endforeach; endif; ?>

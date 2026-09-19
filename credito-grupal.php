@@ -66,7 +66,7 @@
                 <a href="bancos-comunales.php" class="group bg-white rounded-3xl border border-gray-200 p-7 md:p-9 hover:-translate-y-1 hover:shadow-xl transition mc-ultra-card mc-group-option-card mc-visible">
                     <div class="w-14 h-14 rounded-2xl bg-green-100 text-brand-green flex items-center justify-center text-2xl"><i class="fas fa-landmark"></i></div>
                     <h3 class="text-2xl font-black mt-5">Bancos Comunales</h3>
-                    <p class="text-gray-600 mt-2 leading-relaxed">Organización grupal, financiamiento, capacitación y acompañamiento bajo una metodología específica.</p>
+                    <p class="text-gray-600 mt-2 leading-relaxed">Modalidad exclusiva para grupos de mínimo 10 mujeres de zonas semiurbanas o rurales.</p>
                     <div class="grid grid-cols-3 gap-2 mt-5 text-center">
                         <div class="rounded-xl bg-green-50 px-2 py-3"><span class="block text-xs text-gray-500">Tasa mensual</span><strong class="block text-brand-green mt-1">3.00 %</strong></div>
                         <div class="rounded-xl bg-green-50 px-2 py-3"><span class="block text-xs text-gray-500">Plazo</span><strong class="block text-brand-green mt-1">6 a 12 meses</strong></div>
@@ -77,9 +77,9 @@
                 <a href="grupos-solidarios.php" class="group bg-white rounded-3xl border border-gray-200 p-7 md:p-9 hover:-translate-y-1 hover:shadow-xl transition mc-ultra-card mc-group-option-card mc-visible">
                     <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-2xl"><i class="fas fa-people-group"></i></div>
                     <h3 class="text-2xl font-black mt-5">Grupos Solidarios</h3>
-                    <p class="text-gray-600 mt-2 leading-relaxed">Una alternativa basada en organización, confianza y responsabilidad compartida.</p>
+                    <p class="text-gray-600 mt-2 leading-relaxed">Modalidad mixta para hombres y mujeres, basada en organización y garantía mancomunada.</p>
                     <div class="grid grid-cols-3 gap-2 mt-5 text-center">
-                        <div class="rounded-xl bg-purple-50 px-2 py-3"><span class="block text-xs text-gray-500">Tasa mensual</span><strong class="block text-purple-700 mt-1">3.6 %</strong></div>
+                        <div class="rounded-xl bg-purple-50 px-2 py-3"><span class="block text-xs text-gray-500">Tasa mensual</span><strong class="block text-purple-700 mt-1">3.5 %</strong></div>
                         <div class="rounded-xl bg-purple-50 px-2 py-3"><span class="block text-xs text-gray-500">Plazo</span><strong class="block text-purple-700 mt-1">6 a 12 meses</strong></div>
                         <div class="rounded-xl bg-purple-50 px-2 py-3"><span class="block text-xs text-gray-500">Frecuencia</span><strong class="block text-purple-700 mt-1">Mensual</strong></div>
                     </div>
@@ -161,7 +161,7 @@
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-people-group text-purple-700 text-2xl"></i>
                     <h3 class="font-black mt-4">Grupos Solidarios</h3>
-                    <p class="text-sm text-gray-500 mt-1"><strong class="text-gray-800">3.6 % mensual</strong>.</p>
+                    <p class="text-sm text-gray-500 mt-1"><strong class="text-gray-800">3.5 % mensual</strong>.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-calendar-alt text-brand-green text-2xl"></i>
@@ -188,10 +188,10 @@
             </div>
             <div class="mt-9 bg-white rounded-3xl border border-gray-200 p-7 md:p-9">
                 <div class="grid md:grid-cols-2 gap-5 text-gray-600">
-                    <div class="flex gap-3"><i class="fas fa-id-card text-brand-orange mt-1"></i><span>Documento de identidad vigente.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-chart-line text-brand-orange mt-1"></i><span>Información que permita conocer tu capacidad de pago.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-file-lines text-brand-orange mt-1"></i><span>Documentación relacionada con la finalidad del crédito, cuando corresponda.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-folder-open text-brand-orange mt-1"></i><span>Documentación adicional según el producto y evaluación.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-users text-brand-orange mt-1"></i><span>Formar el grupo conforme a la modalidad elegida; Bancos Comunales requiere mínimo 10 mujeres.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-chart-line text-brand-orange mt-1"></i><span>Evaluación individual para aprobar cada monto; todos deben estar bien en el sistema.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-file-lines text-brand-orange mt-1"></i><span>Definir claramente las actividades en las que se utilizará el dinero.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-handshake text-brand-orange mt-1"></i><span>Aceptar la garantía mancomunada: todos responden por todos.</span></div>
                 </div>
                 <div class="mt-7 rounded-2xl bg-orange-50 border border-orange-100 p-4 text-sm text-gray-600">
                     <i class="fas fa-circle-info text-brand-orange mr-1"></i>

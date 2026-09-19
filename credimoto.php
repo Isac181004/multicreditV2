@@ -101,7 +101,7 @@
                 <span class="text-brand-orange text-xs font-extrabold uppercase tracking-widest">¿En qué puedes utilizarlo?</span>
                 <h2 class="text-2xl md:text-3xl font-black mt-2">Financiamiento con un propósito</h2>
                 <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
-                    <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Adquisición de motocicleta</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Adquisición de motocicletas SUMO mediante convenio con GRUPO SUMO NORTE EIRL, proveedor de la marca en Cajamarca.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Movilidad para actividades comerciales</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Distribución o reparto</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Generación de ingresos mediante el uso de la motocicleta</span></li>
@@ -112,7 +112,8 @@
                 <ul class="mt-7 space-y-4 text-gray-600 leading-relaxed">
                     <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Financiamiento destinado a la adquisición de una motocicleta.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
-<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazos adaptados a tu capacidad de pago.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazo mínimo de 3 meses y máximo de 12 meses.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>La motocicleta adquirida queda como garantía del crédito.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial entre 3.6 % y 4 %.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Evaluación personalizada.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Asesoramiento durante el proceso de financiamiento.</span></li>
@@ -140,7 +141,7 @@
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-calendar-alt text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Plazo</h3>
-                    <p class="text-sm text-gray-500 mt-1">Se determina según el producto y evaluación.</p>
+                    <p class="text-sm text-gray-500 mt-1">Desde 3 hasta 12 meses.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-percent text-brand-green text-2xl"></i>
@@ -150,7 +151,7 @@
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-handshake text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Garantías</h3>
-                    <p class="text-sm text-gray-500 mt-1">Dependen del producto y del resultado de la evaluación.</p>
+                    <p class="text-sm text-gray-500 mt-1">La motocicleta comprada queda como garantía del crédito.</p>
                 </div>
             </div>
         </div>
@@ -166,10 +167,10 @@
             </div>
             <div class="mt-9 bg-white rounded-3xl border border-gray-200 p-7 md:p-9">
                 <div class="grid md:grid-cols-2 gap-5 text-gray-600">
-                    <div class="flex gap-3"><i class="fas fa-id-card text-brand-orange mt-1"></i><span>Documento de identidad vigente.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-chart-line text-brand-orange mt-1"></i><span>Información que permita conocer tu capacidad de pago.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-file-lines text-brand-orange mt-1"></i><span>Documentación relacionada con la finalidad del crédito, cuando corresponda.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-folder-open text-brand-orange mt-1"></i><span>Documentación adicional según el producto y evaluación.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-motorcycle text-brand-orange mt-1"></i><span>Reservar el modelo en la tienda ubicada en Jr. Vía de Evitamiento Norte 605.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-id-card text-brand-orange mt-1"></i><span>Solicitar una evaluación previa en CEPRODEMIC MULTICREDIT adjuntando fotografía del DNI.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-chart-line text-brand-orange mt-1"></i><span>Acreditar capacidad de pago y la información solicitada durante la evaluación.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-folder-open text-brand-orange mt-1"></i><span>Sujetarse al procedimiento completo de evaluación de CEPRODEMIC MULTICREDIT hasta el desembolso.</span></div>
                 </div>
                 <div class="mt-7 rounded-2xl bg-orange-50 border border-orange-100 p-4 text-sm text-gray-600">
                     <i class="fas fa-circle-info text-brand-orange mr-1"></i>

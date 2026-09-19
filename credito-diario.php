@@ -26,169 +26,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/mc-productos-ultra.css?v=<?= filemtime(__DIR__ . '/css/mc-productos-ultra.css') ?>">
 
-<style id="mc-diario-color-visible">
-:root{
-  --verde-oscuro:#061426;
-  --verde:#0B1F3A;
-  --verde-claro:#F3F4F6;
-  --naranja:#4B5563;
-  --azul:#0B1F3A;
-  --morado:#1F4E79;
-  --dorado:#0B1F3A;
-  --rojo:#1F4E79;
-  --texto:#061426;
-  --texto-suave:#0B1F3A;
-  --blanco:#FFFFFF;
-}
-
-html{scroll-behavior:smooth}
-body.mc-ultra-page{background:#F3F4F6!important;color:var(--texto)!important;font-family:'Inter',sans-serif!important}
-body.mc-ultra-page h1,body.mc-ultra-page h2,body.mc-ultra-page h3{font-family:'Poppins',sans-serif!important}
-
- 
-main > section:nth-of-type(1){
-  min-height:70vh;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(100deg,rgba(5,11,20,.82) 0%,rgba(6,20,38,.66) 43%,rgba(6,20,38,.30) 75%,rgba(6,20,38,.12) 100%),
-    url('img/font11.webp') center/cover no-repeat!important;
-  position:relative;
-}
-main > section:nth-of-type(1)::after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(to top,#F3F4F6,transparent);pointer-events:none}
-main > section:nth-of-type(1)>div{position:relative;z-index:2}
-main > section:nth-of-type(1) h1{color:#FFFFFF!important;text-shadow:0 7px 24px rgba(0,0,0,.38)}
-main > section:nth-of-type(1) p{color:#F3F4F6!important;text-shadow:0 3px 14px rgba(0,0,0,.34)}
-main > section:nth-of-type(1) a{color:#FFFFFF!important}
-main > section:nth-of-type(1) a:hover{color:#FFFFFF!important}
-main > section:nth-of-type(1) span{color:#FFFFFF!important}
-main > section:nth-of-type(1) .w-20{background:rgba(255,255,255,.94)!important;color:var(--verde)!important}
-
- 
-main > section:nth-of-type(2){
-  background:
-    linear-gradient(90deg,rgba(255,255,255,.76),rgba(255,255,255,.70)),
-    url('img/font3.jpg') center/cover no-repeat!important;
-}
-main > section:nth-of-type(2) .lg\\:col-span-2{background:rgba(255,255,255,.80);padding:28px;border-radius:28px;box-shadow:0 18px 44px rgba(5,11,20,.10);backdrop-filter:blur(10px)}
-main > section:nth-of-type(2) .lg\\:col-span-2>span{color:var(--naranja)!important}
-main > section:nth-of-type(2) h2{color:var(--verde-oscuro)!important}
-main > section:nth-of-type(2) p{color:#061426!important}
-main > section:nth-of-type(2) .rounded-3xl{background:rgba(255,255,255,.91)!important;border-color:rgba(255,255,255,.72)!important;box-shadow:0 20px 48px rgba(6,20,38,.14)!important}
-main > section:nth-of-type(2) .rounded-3xl>span{color:var(--azul)!important}
-main > section:nth-of-type(2) .rounded-3xl h3{color:var(--verde-oscuro)!important}
-main > section:nth-of-type(2) .rounded-3xl p{color:#0B1F3A!important}
-main > section:nth-of-type(2) a.border{color:var(--verde-oscuro)!important;border-color:var(--verde)!important;background:#F3F4F6!important}
-
- 
-main > section:nth-of-type(3){
-  background:
-    linear-gradient(180deg,rgba(243,244,246,.72),rgba(255,255,255,.80)),
-    url('img/font3.jpg') center/cover no-repeat!important;
-}
-main > section:nth-of-type(3) .bg-white{background:rgba(255,255,255,.89)!important;backdrop-filter:blur(10px);box-shadow:0 20px 48px rgba(5,11,20,.11)!important}
-main > section:nth-of-type(3) .bg-white:first-child>span{color:var(--verde)!important}
-main > section:nth-of-type(3) .bg-white:last-child>span{color:var(--naranja)!important}
-main > section:nth-of-type(3) h2{color:var(--verde-oscuro)!important}
-main > section:nth-of-type(3) li span{color:#061426!important;font-weight:600}
-main > section:nth-of-type(3) li i{color:var(--verde)!important}
-
- 
-main > section:nth-of-type(4){
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.77),rgba(255,255,255,.83)),
-    url('img/font3.jpg') center/cover no-repeat!important;
-}
-main > section:nth-of-type(4) .text-center>span{color:var(--naranja)!important}
-main > section:nth-of-type(4) .text-center h2{color:var(--verde-oscuro)!important}
-main > section:nth-of-type(4) .text-center p{color:#0B1F3A!important}
-main > section:nth-of-type(4) .grid>div{background:rgba(255,255,255,.90)!important;border-color:rgba(255,255,255,.74)!important;box-shadow:0 16px 38px rgba(5,11,20,.10);transition:transform .28s ease,box-shadow .28s ease}
-main > section:nth-of-type(4) .grid>div:hover{transform:translateY(-6px);box-shadow:0 24px 52px rgba(5,11,20,.15)}
-main > section:nth-of-type(4) .grid>div:nth-child(1) i,main > section:nth-of-type(4) .grid>div:nth-child(1) h3{color:var(--verde)!important}
-main > section:nth-of-type(4) .grid>div:nth-child(2) i,main > section:nth-of-type(4) .grid>div:nth-child(2) h3{color:var(--azul)!important}
-main > section:nth-of-type(4) .grid>div:nth-child(3) i,main > section:nth-of-type(4) .grid>div:nth-child(3) h3{color:var(--naranja)!important}
-main > section:nth-of-type(4) .grid>div:nth-child(4) i,main > section:nth-of-type(4) .grid>div:nth-child(4) h3{color:var(--morado)!important}
-main > section:nth-of-type(4) .grid p{color:#0B1F3A!important}
-
- 
-main > section:nth-of-type(5){
-  background:
-    linear-gradient(180deg,rgba(243,244,246,.75),rgba(255,255,255,.82)),
-    url('img/font3.jpg') center/cover no-repeat!important;
-}
-main > section:nth-of-type(5) .text-center>span{color:var(--verde)!important}
-main > section:nth-of-type(5) .text-center h2{color:var(--verde-oscuro)!important}
-main > section:nth-of-type(5) .text-center p{color:#0B1F3A!important}
-main > section:nth-of-type(5) .mt-9.bg-white{background:rgba(255,255,255,.91)!important;box-shadow:0 20px 48px rgba(5,11,20,.12)!important}
-main > section:nth-of-type(5) .grid span{color:#061426!important;font-weight:600}
-main > section:nth-of-type(5) .grid i{color:var(--naranja)!important}
-main > section:nth-of-type(5) .bg-orange-50{background:#F3F4F6!important;color:#0B1F3A!important;border-color:#CBD5E1!important}
-main > section:nth-of-type(5) .bg-orange-50 i{color:var(--naranja)!important}
-
- 
-main > section:nth-of-type(6){
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.80),rgba(255,255,255,.84)),
-    url('img/font3.jpg') center/cover no-repeat!important;
-}
-main > section:nth-of-type(6) .text-center>span{color:var(--naranja)!important}
-main > section:nth-of-type(6) .text-center h2{color:var(--verde-oscuro)!important}
-main > section:nth-of-type(6) .grid>div{background:rgba(255,255,255,.88);border-radius:22px;padding:24px 16px;box-shadow:0 14px 34px rgba(5,11,20,.09)}
-main > section:nth-of-type(6) .grid>div:nth-child(1) .rounded-full{background:#F3F4F6!important;color:var(--verde)!important}
-main > section:nth-of-type(6) .grid>div:nth-child(2) .rounded-full{background:#F3F4F6!important;color:var(--azul)!important}
-main > section:nth-of-type(6) .grid>div:nth-child(3) .rounded-full{background:#F3F4F6!important;color:var(--naranja)!important}
-main > section:nth-of-type(6) .grid>div:nth-child(4) .rounded-full{background:#F3F4F6!important;color:var(--morado)!important}
-main > section:nth-of-type(6) h3{color:#061426!important}
-main > section:nth-of-type(6) p{color:#0B1F3A!important}
-
- 
-main > section:nth-of-type(7){
-  background:
-    linear-gradient(180deg,rgba(243,244,246,.76),rgba(255,255,255,.84)),
-    url('img/font3.jpg') center/cover no-repeat!important;
-}
-main > section:nth-of-type(7) .text-center>span{color:var(--verde)!important}
-main > section:nth-of-type(7) .text-center h2{color:var(--verde-oscuro)!important}
-main > section:nth-of-type(7) details{background:rgba(255,255,255,.91)!important;border-color:rgba(255,255,255,.76)!important;box-shadow:0 12px 30px rgba(5,11,20,.08)}
-main > section:nth-of-type(7) summary span{color:#061426!important}
-main > section:nth-of-type(7) summary i{color:var(--naranja)!important}
-main > section:nth-of-type(7) details p{color:#0B1F3A!important}
-
- 
-main > section:nth-of-type(8){
-  background:
-    linear-gradient(180deg,rgba(243,244,246,.72),rgba(255,255,255,.84)),
-    url('img/font3.jpg') center/cover no-repeat!important;
-}
-main > section:nth-of-type(8) .rounded-3xl{
-  background:
-    linear-gradient(105deg,rgba(5,11,20,.78),rgba(11,31,58,.70)),
-    url('img/bank.webp') center/cover no-repeat!important;
-  box-shadow:0 24px 58px rgba(6,20,38,.24)!important;
-}
-main > section:nth-of-type(8) span{color:#CBD5E1!important}
-main > section:nth-of-type(8) h2{color:#FFFFFF!important;text-shadow:0 4px 14px rgba(0,0,0,.28)}
-main > section:nth-of-type(8) p{color:#F3F4F6!important}
-main > section:nth-of-type(8) a{color:#FFFFFF!important;background:var(--naranja)!important}
-
- 
-main .text-gray-800{color:#061426!important}
-main .text-gray-600{color:#0B1F3A!important}
-main .text-gray-500{color:#0B1F3A!important}
-main .text-gray-400{color:#64748B!important}
-main .text-brand-green{color:var(--verde)!important}
-main .text-brand-orange{color:var(--naranja)!important}
-
- 
-main .rounded-3xl,main .rounded-2xl,main details{transition:transform .28s ease,box-shadow .28s ease}
-main .rounded-3xl:hover,main .rounded-2xl:hover,main details:hover{transform:translateY(-4px)}
-
-@media(max-width:900px){
- main>section:nth-of-type(1){min-height:60vh;background-position:66% center!important}
- main>section:nth-of-type(n+2){background-position:center!important}
- main>section:nth-of-type(2) .lg\\:col-span-2{padding:22px}
-}
-</style>
 
 
 <style id="mc-footer-visibility-fix">
@@ -353,12 +190,12 @@ main .mc-reveal.mc-visible{
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-money-bill-wave text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Monto</h3>
-                    <p class="text-sm text-gray-500 mt-1">Según evaluación y condiciones vigentes.</p>
+                    <p class="text-sm text-gray-500 mt-1">Desde S/ 200 hasta S/ 5,000.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-calendar-alt text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Plazo</h3>
-                    <p class="text-sm text-gray-500 mt-1">Se determina según el producto y evaluación.</p>
+                    <p class="text-sm text-gray-500 mt-1">Plazo único de 30 días con pagos diarios.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-percent text-brand-green text-2xl"></i>

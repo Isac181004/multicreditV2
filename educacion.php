@@ -112,7 +112,7 @@
                     <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Financiamiento para diferentes niveles educativos.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Cuotas mensuales.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Plazos adaptados a tu capacidad de pago.</span></li>
-<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial entre 3 % y 3.6 %.</span></li>
+<li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Tasa mensual referencial de 4 %.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Evaluación personalizada.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Atención cercana y asesoramiento durante el proceso.</span></li>
 <li class="flex gap-3"><i class="fas fa-circle-check text-brand-green mt-1"></i><span>Posibilidad de financiar tus estudios o los de un familiar.</span></li>
@@ -144,7 +144,7 @@
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-percent text-brand-green text-2xl"></i>
                     <h3 class="font-black mt-4">Tasa y costos</h3>
-                    <p class="text-sm text-gray-500 mt-1">Consulta las condiciones vigentes antes de contratar.</p>
+                    <p class="text-sm text-gray-500 mt-1">Tasa mensual referencial de 4 %.</p>
                 </div>
                 <div class="rounded-2xl border border-gray-200 p-5">
                     <i class="fas fa-handshake text-brand-green text-2xl"></i>
@@ -165,10 +165,10 @@
             </div>
             <div class="mt-9 bg-white rounded-3xl border border-gray-200 p-7 md:p-9">
                 <div class="grid md:grid-cols-2 gap-5 text-gray-600">
-                    <div class="flex gap-3"><i class="fas fa-id-card text-brand-orange mt-1"></i><span>Documento de identidad vigente.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-id-card text-brand-orange mt-1"></i><span>Presentar documentos personales vigentes.</span></div>
                     <div class="flex gap-3"><i class="fas fa-chart-line text-brand-orange mt-1"></i><span>Información que permita conocer tu capacidad de pago.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-file-lines text-brand-orange mt-1"></i><span>Documentación relacionada con la finalidad del crédito, cuando corresponda.</span></div>
-                    <div class="flex gap-3"><i class="fas fa-folder-open text-brand-orange mt-1"></i><span>Documentación adicional según el producto y evaluación.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-file-lines text-brand-orange mt-1"></i><span>Ficha de matrícula, constancia de pensiones o derechos de enseñanza.</span></div>
+                    <div class="flex gap-3"><i class="fas fa-folder-open text-brand-orange mt-1"></i><span>Recibos u otros documentos que evidencien el uso educativo del dinero.</span></div>
                 </div>
                 <div class="mt-7 rounded-2xl bg-orange-50 border border-orange-100 p-4 text-sm text-gray-600">
                     <i class="fas fa-circle-info text-brand-orange mr-1"></i>

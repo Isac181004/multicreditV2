@@ -1078,8 +1078,8 @@ include 'encabezado.php';
                 </div>
                 <h3 class="text-xl font-black text-gray-800 mt-5">CrediEmpeño</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3 flex-1">
-                    Opción de financiamiento respaldada por una garantía prendaria,
-                    sujeta a la evaluación y condiciones del producto.
+                    Financiamiento al 5 % mensual respaldado por equipos de cómputo,
+                    teléfonos, electrodomésticos o joyas de oro en óptimas condiciones.
                 </p>
                 <a href="crediempeno.php"
                    class="mt-6 inline-flex items-center gap-2 text-brand-green font-extrabold text-sm hover:text-brand-green-dark">
@@ -1097,8 +1097,8 @@ include 'encabezado.php';
                 </div>
                 <h3 class="text-xl font-black text-gray-800 mt-5">CrediMoto</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3 flex-1">
-                    Financiamiento orientado a la adquisición de una motocicleta para
-                    trabajo, movilidad o generación de ingresos, según evaluación.
+                    Motocicletas SUMO financiadas en convenio con GRUPO SUMO NORTE EIRL;
+                    la unidad adquirida queda como garantía del crédito.
                 </p>
                 <a href="credimoto.php"
                    class="mt-6 inline-flex items-center gap-2 text-brand-green font-extrabold text-sm hover:text-brand-green-dark">
@@ -1181,7 +1181,7 @@ include 'encabezado.php';
                 <h3 class="text-xl font-black text-gray-800 mt-5">Educación</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3">
                     Para atender necesidades relacionadas con estudios, formación y
-                    otros gastos educativos, de acuerdo con las condiciones del producto.
+                    otros gastos educativos, con tasa mensual referencial de 4 %.
                 </p>
                 <a href="educacion.php"
                    class="inline-flex items-center gap-2 mt-6 text-brand-green font-extrabold text-sm">
@@ -1196,7 +1196,7 @@ include 'encabezado.php';
                 <h3 class="text-xl font-black text-gray-800 mt-5">Salud</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3">
                     Una alternativa para afrontar gastos vinculados a atención y
-                    necesidades de salud, según evaluación.
+                    necesidades de salud, con tasa mensual referencial de 4 %.
                 </p>
                 <a href="salud.php"
                    class="inline-flex items-center gap-2 mt-6 text-brand-green font-extrabold text-sm">
@@ -1211,7 +1211,7 @@ include 'encabezado.php';
                 <h3 class="text-xl font-black text-gray-800 mt-5">Esparcimiento</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mt-3">
                     Financiamiento destinado a actividades y necesidades de
-                    esparcimiento, sujeto a las condiciones y evaluación correspondientes.
+                    esparcimiento, con tasa mensual referencial de 4 %.
                 </p>
                 <a href="esparcimiento.php"
                    class="inline-flex items-center gap-2 mt-6 text-brand-green font-extrabold text-sm">
@@ -1313,10 +1313,10 @@ include 'encabezado.php';
   </div>
 </div>
 <div>
-<div class="flex items-end justify-between mb-3"><div><p class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Paso 2</p><h3 class="font-display text-xl font-extrabold mt-1">¿Cuánto necesitas?</h3></div><div class="text-right"><div class="text-xs text-gray-500">Monto solicitado</div><div id="simMontoVista" class="text-3xl font-extrabold text-brand-green">S/ 100</div></div></div>
-<div class="flex items-center gap-2 bg-gray-50 rounded-2xl border border-gray-200 px-4 py-3"><span class="font-extrabold text-gray-500">S/</span><input id="simMonto" type="number" min="100" step="100" value="100" class="w-full bg-transparent outline-none text-2xl font-extrabold" inputmode="numeric"></div>
-<input id="simMontoSlider" type="range" min="100" max="20000" step="100" value="100" class="w-full mt-5">
-<div class="flex justify-between text-xs text-gray-400 mt-1"><span>S/ 100</span><span id="simMaxMontoLabel">S/ 20,000</span></div>
+<div class="flex items-end justify-between mb-3"><div><p class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Paso 2</p><h3 class="font-display text-xl font-extrabold mt-1">¿Cuánto necesitas?</h3></div><div class="text-right"><div class="text-xs text-gray-500">Monto solicitado</div><div id="simMontoVista" class="text-3xl font-extrabold text-brand-green">S/ 500</div></div></div>
+<div class="flex items-center gap-2 bg-gray-50 rounded-2xl border border-gray-200 px-4 py-3"><span class="font-extrabold text-gray-500">S/</span><input id="simMonto" type="number" min="500" step="100" value="500" class="w-full bg-transparent outline-none text-2xl font-extrabold" inputmode="numeric"></div>
+<input id="simMontoSlider" type="range" min="500" max="100000" step="100" value="500" class="w-full mt-5">
+<div class="flex justify-between text-xs text-gray-400 mt-1"><span id="simMinMontoLabel">S/ 500</span><span id="simMaxMontoLabel">Según evaluación</span></div>
 <div class="flex flex-wrap gap-2 mt-4">
 <button type="button" class="sim-monto bg-gray-100 px-4 py-2 rounded-full text-sm font-bold" data-monto="500">S/ 500</button>
 <button type="button" class="sim-monto bg-gray-100 px-4 py-2 rounded-full text-sm font-bold" data-monto="1000">S/ 1,000</button>
@@ -1336,7 +1336,7 @@ include 'encabezado.php';
 <p class="sim-muted text-sm mt-6">Cuota referencial</p><div id="simCuota" class="sim-main-number mt-1">S/ 0</div><p id="simFrecuencia" class="sim-muted">mensual</p>
 <div class="sim-result-box mt-7 p-4 space-y-1 text-sm">
 <div class="flex justify-between"><span class="sim-row-label">Producto</span><b id="simResultadoProducto">Crédito Ordinario</b></div>
-<div class="flex justify-between"><span class="sim-row-label">Monto</span><b id="simResultadoMonto">S/ 100</b></div>
+<div class="flex justify-between"><span class="sim-row-label">Monto</span><b id="simResultadoMonto">S/ 500</b></div>
 <div class="flex justify-between"><span class="sim-row-label">Tasa</span><b id="simResultadoTasa">3.6%</b></div>
 <div class="flex justify-between"><span class="sim-row-label">Plazo</span><b id="simResultadoPlazo">12 meses</b></div>
 <div class="flex justify-between"><span class="sim-row-label">Total estimado</span><b id="simTotal">S/ 0</b></div>
@@ -1411,16 +1411,16 @@ include 'encabezado.php';
 <script>
  
 (()=>{const C={
-Ordinario:{a:3.6,b:4,r:3.6,s:.1,t:6,T:24,m:20000,d:1},
-Diario:{a:18.50,b:18.60,r:18.55,s:.01,t:30,T:30,m:10000,d:30},
-CrediEmpeño:{a:5,b:6,r:5,s:.1,t:3,T:3,m:20000,d:1},
-CrediMoto:{a:3.6,b:4,r:3.6,s:.1,t:6,T:24,m:30000,d:1},
-"Grupos Solidarios":{a:3.6,b:3.6,r:3.6,s:.1,t:6,T:12,m:20000,d:1},
-"Bancos Comunales":{a:3,b:3,r:3,s:.1,t:6,T:12,m:20000,d:1},
-Educación:{a:3,b:3.6,r:3,s:.1,t:6,T:24,m:15000,d:1},
-Salud:{a:2.5,b:3,r:2.5,s:.1,t:3,T:24,m:15000,d:1},
-Esparcimiento:{a:3.6,b:4,r:3.6,s:.1,t:6,T:24,m:15000,d:1}};
-let s={p:"Ordinario",a:100,r:3.6,n:12,rows:[]};const $=x=>document.getElementById(x),money=x=>"S/ "+Number(x||0).toLocaleString("es-PE",{minimumFractionDigits:2,maximumFractionDigits:2}),m0=x=>"S/ "+Math.round(x||0).toLocaleString("es-PE");
+Ordinario:{a:3.6,b:4,r:3.6,s:.1,t:3,T:120,i:500,m:100000,d:1,openMax:true},
+Diario:{a:18.50,b:18.60,r:18.55,s:.01,t:30,T:30,i:200,m:5000,d:30},
+CrediEmpeño:{a:5,b:5,r:5,s:.1,t:1,T:3,i:200,m:20000,d:1},
+CrediMoto:{a:3.6,b:4,r:3.6,s:.1,t:3,T:12,i:500,m:30000,d:1},
+"Grupos Solidarios":{a:3.5,b:3.5,r:3.5,s:.1,t:6,T:12,i:200,m:20000,d:1},
+"Bancos Comunales":{a:3,b:3,r:3,s:.1,t:6,T:12,i:200,m:20000,d:1},
+Educación:{a:4,b:4,r:4,s:.1,t:3,T:24,i:500,m:15000,d:1},
+Salud:{a:4,b:4,r:4,s:.1,t:3,T:24,i:500,m:15000,d:1},
+Esparcimiento:{a:4,b:4,r:4,s:.1,t:3,T:24,i:500,m:15000,d:1}};
+let s={p:"Ordinario",a:500,r:3.6,n:12,rows:[]};const $=x=>document.getElementById(x),money=x=>"S/ "+Number(x||0).toLocaleString("es-PE",{minimumFractionDigits:2,maximumFractionDigits:2}),m0=x=>"S/ "+Math.round(x||0).toLocaleString("es-PE");
 function rates(){
   const c=C[s.p], q=$("simTasa");
   q.min=c.a;
@@ -1433,8 +1433,8 @@ function rates(){
     ? `Tasa fija: ${s.r}%`
     : `Rango permitido: ${c.a}% a ${c.b}%`;
 }
-function terms(){let c=C[s.p],w=$("simPlazos");w.innerHTML="";$("simDiarioInfo").classList.toggle("hidden",s.p!=="Diario");$("simPlazoWrap").classList.toggle("hidden",s.p==="Diario");if(s.p==="Diario"){s.n=30;return} s.n=Math.min(c.T,Math.max(c.t,s.n));for(let n=c.t;n<=c.T;n++){let b=document.createElement("button");b.className="sim-plazo"+(n===s.n?" sim-activo":"");b.textContent=n+" meses";b.onclick=()=>{s.n=n;terms();calc()};w.appendChild(b)}}
-function amount(v){v=Math.round(Number(v)/100)*100;if(!isFinite(v))v=100;v=Math.max(100,Math.min(C[s.p].m,v));s.a=v;$("simMonto").value=v;$("simMontoSlider").value=v;$("simMontoVista").textContent=m0(v);$("simResultadoMonto").textContent=money(v);calc()}
+function terms(){let c=C[s.p],w=$("simPlazos");w.innerHTML="";$("simDiarioInfo").classList.toggle("hidden",s.p!=="Diario");$("simPlazoWrap").classList.toggle("hidden",s.p==="Diario");if(s.p==="Diario"){s.n=30;return}s.n=Math.min(c.T,Math.max(c.t,s.n));let values=c.T-c.t>36?[3,6,12,18,24,36,48,60,72,84,96,108,120].filter(n=>n>=c.t&&n<=c.T):Array.from({length:c.T-c.t+1},(_,i)=>c.t+i);if(!values.includes(s.n))s.n=values.reduce((a,b)=>Math.abs(b-s.n)<Math.abs(a-s.n)?b:a);values.forEach(n=>{let b=document.createElement("button");b.className="sim-plazo"+(n===s.n?" sim-activo":"");b.textContent=n+" meses";b.onclick=()=>{s.n=n;terms();calc()};w.appendChild(b)})}
+function amount(v){let c=C[s.p];v=Math.round(Number(v)/100)*100;if(!isFinite(v))v=c.i;v=Math.max(c.i,Math.min(c.m,v));s.a=v;$("simMonto").value=v;$("simMontoSlider").value=v;$("simMontoVista").textContent=m0(v);$("simResultadoMonto").textContent=money(v);calc()}
 function monthly(){
   const P=Number(s.a);
   const displayedRate=Number(s.r)/100;
@@ -1673,11 +1673,11 @@ $("enviarSedeWhatsApp")?.addEventListener("click",()=>{
 function product(p){
   s.p=p;
   let c=C[p];
-  s.a=Math.min(s.a,c.m);
+  s.a=Math.max(c.i,Math.min(s.a,c.m));
   $("simProductoBadge").textContent=p;
   document.querySelectorAll(".sim-producto").forEach(x=>x.classList.toggle("sim-activo",x.dataset.producto===p));
-  $("simMontoSlider").max=c.m;
-  $("simMaxMontoLabel").textContent=m0(c.m);
+  $("simMonto").min=c.i;$("simMontoSlider").min=c.i;$("simMontoSlider").max=c.m;
+  $("simMinMontoLabel").textContent=m0(c.i);$("simMaxMontoLabel").textContent=c.openMax?"Según evaluación y garantías":m0(c.m);
   rates();
   const rango=$("simTasaRango");
   if(rango){
@@ -1721,9 +1721,9 @@ if($("simTasaRango")){
   $("simTasaRango").textContent=` Rango: ${C.Ordinario.a}% - ${C.Ordinario.b}%.`;
 }
 terms();
-$("simMaxMontoLabel").textContent=m0(C.Ordinario.m);
+$("simMinMontoLabel").textContent=m0(C.Ordinario.i);$("simMaxMontoLabel").textContent="Según evaluación y garantías";
 if($("simFecha")&&!$("simFecha").value){$("simFecha").value="2026-08-11"}
-amount(100)})();
+amount(500)})();
 </script>
 
  
@@ -1750,7 +1750,7 @@ amount(100)})();
           <div class="w-11 h-11 rounded-xl bg-green-100 text-brand-green flex items-center justify-center"><i class="fas fa-calculator"></i></div>
           <div>
             <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Tu simulación</p>
-            <p id="sedeResumenSimulacion" class="font-extrabold text-gray-800 mt-1">Crédito Ordinario · S/ 100 · 12 meses</p>
+            <p id="sedeResumenSimulacion" class="font-extrabold text-gray-800 mt-1">Crédito Ordinario · S/ 500 · 12 meses</p>
           </div>
         </div>
       </div>

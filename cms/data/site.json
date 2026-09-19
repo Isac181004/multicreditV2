@@ -41,6 +41,8 @@
     "copyright_year": "2026",
     "nav_home_label": "Inicio",
     "nav_home_url": "index.php",
+    "nav_news_label": "Noticias",
+    "nav_news_url": "noticias.php",
     "nav_credits_label": "Créditos",
     "nav_credits_url": "creditos.php",
     "nav_services_label": "Servicios",
@@ -88,10 +90,6 @@
             "url": "https://www.sbs.gob.pe/"
         },
         {
-            "label": "FENACREP",
-            "url": "https://www.fenacrep.org/es"
-        },
-        {
             "label": "SUNARP",
             "url": "https://www.sunarp.gob.pe/"
         },
@@ -108,8 +106,8 @@
             "url": "https://www.reniec.gob.pe/"
         },
         {
-            "label": "Experian",
-            "url": "https://www.experian.com.pe/"
+            "label": "Equifax",
+            "url": "https://www.equifax.com.pe/"
         }
     ]
 }

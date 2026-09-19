@@ -39,7 +39,7 @@ mc_admin_header('Dashboard'); ?>
     <p class="help"><?=mc_nl2br($site['address1']??'')?></p>
     <p class="help"><?=mc_h($site['email']??'')?> · <?=mc_h($site['telefono']??'')?></p>
     <p class="help" style="margin-top:12px">Acceso administrativo: usuario y contraseña.</p>
-    <p class="help" style="margin-top:8px">Opiniones MySQL: <?=$pendingOpinions===null?'pendiente de configurar':'conectado'?></p>
+    <p class="help" style="margin-top:8px">Opiniones JSON: <?=$pendingOpinions===null?'revisar permisos de cms/data':'activo'?></p>
   </section>
 </div>
 <?php mc_admin_footer(); ?>

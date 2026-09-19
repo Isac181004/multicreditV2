@@ -3,14 +3,14 @@ require_once __DIR__ . '/_init.php';
 require_once dirname(__DIR__) . '/cms/opiniones.php';
 mc_admin_require_login();
 
-$dbError='';
+$storageError='';
 try {
     mc_opinions_install();
 } catch (Throwable $e) {
-    $dbError='No se pudo conectar al MySQL de opiniones. En XAMPP se usa por defecto 127.0.0.1, base multicreditv2, usuario root y contraseña vacía. Si tu MySQL usa otros datos, crea cms/config/database.php a partir de database.example.php.';
+    $storageError='No se pudo abrir el archivo cms/data/opiniones.json. Verifica que la carpeta cms/data tenga permisos de lectura y escritura.';
 }
 
-if ($dbError==='' && $_SERVER['REQUEST_METHOD']==='POST') {
+if ($storageError==='' && $_SERVER['REQUEST_METHOD']==='POST') {
     mc_csrf_check();
     $action=(string)($_POST['action']??'');
     $id=(int)($_POST['id']??0);
@@ -60,14 +60,14 @@ $stats=['total'=>0,'pendiente'=>0,'publicado'=>0,'rechazado'=>0,'oculto'=>0,'ave
 $opinions=[];
 $editing=null;
 
-if ($dbError==='') {
+if ($storageError==='') {
     try {
         $stats=mc_opinions_admin_stats();
         $opinions=mc_opinions_admin_list($filter);
         $editId=(int)($_GET['edit']??0);
         if ($editId>0) $editing=mc_opinion_get($editId);
     } catch (Throwable $e) {
-        $dbError='No se pudieron leer las opiniones desde MySQL.';
+        $storageError='No se pudieron leer las opiniones desde cms/data/opiniones.json.';
     }
 }
 
@@ -87,11 +87,11 @@ mc_admin_header('Opiniones y calificaciones');
 .op-stats{grid-template-columns:repeat(5,minmax(0,1fr))}.op-stars{color:#64748B;letter-spacing:2px}.op-table{width:100%;border-collapse:collapse}.op-table th,.op-table td{padding:12px 10px;border-bottom:1px solid #F3F4F6;text-align:left;vertical-align:top}.op-table th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#64748B}.op-comment{max-width:430px;line-height:1.55}.op-actions{display:flex;flex-wrap:wrap;gap:6px}.op-mini{border:0;border-radius:8px;padding:7px 9px;font-weight:700;cursor:pointer;font-size:12px}.op-green{background:#F3F4F6;color:#0B1F3A}.op-orange{background:#F3F4F6;color:#1F4E79}.op-red{background:#F3F4F6;color:#1F4E79}.op-gray{background:#F3F4F6;color:#64748B}.op-blue{background:#F3F4F6;color:#1F4E79}.op-filter{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}.op-filter a{padding:8px 12px;border:1px solid #F3F4F6;border-radius:999px;text-decoration:none;color:#374151;font-weight:700;font-size:13px}.op-filter a.active{background:#0B1F3A;color:white;border-color:#0B1F3A}.op-consent{font-size:11px;color:#9CA3AF}.op-edit{margin-bottom:18px}@media(max-width:1000px){.op-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.op-table{min-width:900px}.op-table-wrap{overflow:auto}}
 </style>
 
-<?php if($dbError): ?>
-<div class="alert error"><?=mc_h($dbError)?></div>
+<?php if($storageError): ?>
+<div class="alert error"><?=mc_h($storageError)?></div>
 <section class="card">
-    <h2>Configuración de MySQL</h2>
-    <p class="help">En XAMPP normalmente no necesitas configurar nada: el módulo intenta crear automáticamente la base <b>multicreditv2</b> y la tabla <b>opiniones</b>. Si tu MySQL tiene contraseña o usa otro usuario, copia <b>cms/config/database.example.php</b> como <b>cms/config/database.php</b> y coloca tus datos locales.</p>
+    <h2>Almacenamiento JSON</h2>
+    <p class="help">El módulo no utiliza MySQL. Las reseñas se guardan en <b>cms/data/opiniones.json</b>. En el servidor, la carpeta <b>cms/data</b> debe permitir lectura y escritura al usuario de PHP.</p>
 </section>
 <?php else: ?>
 
