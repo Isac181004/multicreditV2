@@ -344,6 +344,23 @@ body[data-product="solidarios"] main :is(.mc-tone-deep, .mc-tone-night) .mc-ultr
     color: #374151 !important;
 }
 
+/* Texto oscuro dentro de las fichas blancas de las modalidades grupales. */
+body:is([data-product="bancos"], [data-product="solidarios"]) main :is(.mc-tone-deep, .mc-tone-night) .mc-credit-summary-label {
+    color: #4B5563 !important;
+}
+
+body:is([data-product="bancos"], [data-product="solidarios"]) main :is(.mc-tone-deep, .mc-tone-night) .mc-credit-summary-value {
+    color: #1F4E79 !important;
+}
+
+body:is([data-product="bancos"], [data-product="solidarios"]) main :is(.mc-tone-deep, .mc-tone-night) .mc-benefit-panel h3 {
+    color: #111827 !important;
+}
+
+body:is([data-product="bancos"], [data-product="solidarios"]) main :is(.mc-tone-deep, .mc-tone-night) .mc-benefit-panel p {
+    color: #374151 !important;
+}
+
 @media (max-width: 640px) {
     #main-header .mc-logo { min-width: 138px; }
     #main-header .mc-logo img { width: 138px; height: 54px; max-width: 138px; }
