@@ -5,4 +5,4 @@ uploads/.tmp/
 cms/data/*.bak
 cms/data/*.lock
 cms/data/*.tmp.*
-!cms/data/opiniones.json
+cms/data/opiniones.json
