@@ -1388,7 +1388,7 @@
         }
 
 
-        .svc-card-training h3,
+        .svc-card.svc-card-training h3,
         .svc-card-training p,
         .svc-card-training a {
 
